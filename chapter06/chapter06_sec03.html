@@ -1,0 +1,1127 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6.3 Partielle Ableitungen und Gradient &#8212; Mathematik 2: Vertiefung</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter06/chapter06_sec03';</script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.4 Höhere partielle Ableitungen und Hesse-Matrix" href="chapter06_sec04.html" />
+    <link rel="prev" title="6.2 Stetigkeit von Funktionen mehrerer Variablen" href="chapter06_sec02.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo-sl.png" class="logo__image only-light" alt="Mathematik 2: Vertiefung - Home"/>
+    <img src="../_static/logo-sl.png" class="logo__image only-dark pst-js-only" alt="Mathematik 2: Vertiefung - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Vorlesungsskript Mathematik 2: Vertiefung
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen zum Selbststudium</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen zum Selbstudium</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen zum Selbststudium</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen zum Selbststudium</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen zum Selbststudium</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec02.html">6.2 Stetigkeit von Funktionen mehrerer Variablen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec05.html">Übungen zum Selbststudium</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02-sl.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen zum Selbstudium</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter06/chapter06_sec03.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter06/chapter06_sec03.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>6.3 Partielle Ableitungen und Gradient</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partielle-ableitungen">Partielle Ableitungen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-das-partielle-ableiten">Beispiel für das partielle Ableiten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient">Gradient</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="partielle-ableitungen-und-gradient">
+<h1>6.3 Partielle Ableitungen und Gradient<a class="headerlink" href="#partielle-ableitungen-und-gradient" title="Link to this heading">#</a></h1>
+<p>In den vorherigen Kapiteln haben wir Funktionen mehrerer Variablen kennengelernt
+und den Begriff der Stetigkeit auf solche Funktionen erweitert. Nun befassen wir
+uns mit der Frage, wie das Konzept der Ableitung auf Funktionen mehrerer
+Variablen übertragen werden kann. Bei Funktionen einer Variablen gibt die
+Ableitung die Änderungsrate oder Steigung an einer bestimmten Stelle an. Bei
+Funktionen mehrerer Variablen müssen wir berücksichtigen, dass die Änderungsrate
+von der Richtung abhängt, in der wir uns bewegen. Hier kommt der Begriff der
+partiellen Ableitung ins Spiel.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
+<div class="goals admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können den Begriff der <strong>partiellen Ableitung</strong> einer Funktion mehrerer
+Variablen erklären und verstehen seine geometrische Bedeutung.</p></li>
+<li><p>Sie können partielle Ableitungen von Funktionen mehrerer Variablen berechnen.</p></li>
+<li><p>Sie verstehen die Bedeutung des <strong>Gradienten</strong> als Richtung des steilsten
+Anstiegs.</p></li>
+<li><p>Sie können den Gradienten einer Funktion mehrerer Variablen berechnen und
+interpretieren.</p></li>
+</ul>
+</div>
+</section>
+<section id="partielle-ableitungen">
+<h2>Partielle Ableitungen<a class="headerlink" href="#partielle-ableitungen" title="Link to this heading">#</a></h2>
+<p>Stellen Sie sich vor, wir betrachten eine hügelige Landschaft, die durch eine
+Funktion <span class="math notranslate nohighlight">\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)</span> repräsentiert wird, wobei <span class="math notranslate nohighlight">\(x\)</span>
+und <span class="math notranslate nohighlight">\(y\)</span> die Koordinaten auf der horizontalen Ebene sind und <span class="math notranslate nohighlight">\(f(x,y)\)</span> die Höhe an
+der Position <span class="math notranslate nohighlight">\((x,y)\)</span> angibt. Nun möchten wir wissen, wie sich die Höhe ändert,
+wenn wir uns in Richtung der x-Achse bewegen, während wir die y-Koordinate
+konstant halten.</p>
+<p>Die partielle Ableitung von <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(x\)</span> gibt uns genau diese Information. Sie
+zeigt uns die Steigung der Funktion in x-Richtung an jedem Punkt <span class="math notranslate nohighlight">\((x,y)\)</span> auf der
+Landschaft. Wenn die partielle Ableitung positiv ist, bedeutet dies, dass die
+Höhe zunimmt, wenn wir uns in positiver x-Richtung bewegen. Die Höhe nimmt ab,
+wenn die partielle Ableitung negativ ist. Und wir bleiben uns auf konstanter
+Höhe entlang der x-Achse, wenn die partielle Ableitung Null ist.</p>
+<p>Analog dazu gibt uns die partielle Ableitung von <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(y\)</span>, die Steigung der
+Funktion in y-Richtung an jedem Punkt <span class="math notranslate nohighlight">\((x, y)\)</span> auf der Landschaft. Partielle
+Ableitungen helfen aber nicht die Steigung des Geländes zu verstehen, wenn wir
+querfeldein gehen, d.h. nicht entlang der x- oder y-Achse.</p>
+<p>Insgesamt helfen uns partielle Ableitungen, die Steigungen einer Funktion mit
+mehreren Variablen zu verstehen, indem sie uns zeigen, wie sich die Funktion in
+Bezug auf jede ihrer Variablen ändert, während die anderen konstant gehalten
+werden.</p>
+<p>Um die 1. partielle Ableitung einer Funktion mathematisch zu notieren, können
+wir aber nicht mehr einfach nur einen Strich nehmen <span class="math notranslate nohighlight">\(f'(x,y)\)</span>, da ja dann die
+Information fehlen würde, entlang welcher Koordinatenachse wir uns bewegen.
+Daher wird die Notation des sogenannten Differentialquotienten <span class="math notranslate nohighlight">\(df/dx\)</span>
+modifiziert. Aus dem <span class="math notranslate nohighlight">\(d\)</span> wird ein <span class="math notranslate nohighlight">\(\partial\)</span>.</p>
+<p>Die 1. partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(x\)</span> wird als</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x}\]</div>
+<p>notiert und die 1. partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(y\)</span> als</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial y}.\]</div>
+<p>Partielle Ableitungen können nicht nur für Funktionen von zwei unabhängigen
+Variablen gebildet werden. Ist die Funktion <span class="math notranslate nohighlight">\(f\)</span> beispielsweise von den drei
+unabhängigen Variablen <span class="math notranslate nohighlight">\(x_1, x_2\)</span> und <span class="math notranslate nohighlight">\(x_3\)</span> abhängig, so würden die 1.
+partiellen Ableitungen als</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2},
+\frac{\partial f}{\partial x_3}\]</div>
+<p>notiert werden.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die partielle Ableitung?</p>
+<p>Gegeben ist eine Funktion <span class="math notranslate nohighlight">\(f\)</span> von mehreren unabhängigen Variablen <span class="math notranslate nohighlight">\(x_1, x_2,
+\ldots, x_n\)</span>. Die partielle Ableitung von <span class="math notranslate nohighlight">\(f\)</span> nach der Variablen <span class="math notranslate nohighlight">\(x_i\)</span> ist die
+“normale” Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(x_i\)</span>, wobei aber alle anderen
+Variablen konstant gehalten werden.</p>
+</div>
+<p>Die partielle Ableitung wird also gebildet, indem nur eine der mehreren
+Variablen als echte Variable angesehen wird und die übrigen Variablen als
+Konstanten aufgefasst werden. Formal ergibt sich die partielle Ableitung wie
+auch schon die “normale” Ableitung als Grenzwert des Differentialquotienten in
+Richtung der Koordinatenachsen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Motivation partielle Ableitung” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4ppZE30P2Yw"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Partielle Ableitung Definition” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KqpLPQvboPY"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="beispiel-fur-das-partielle-ableiten">
+<h2>Beispiel für das partielle Ableiten<a class="headerlink" href="#beispiel-fur-das-partielle-ableiten" title="Link to this heading">#</a></h2>
+<p>Im Folgenden wird ein Beispiel für das partielle Ableiten gezeigt, das ich von
+Mathematrick übernommen habe (siehe nachfolgend verlinktes Video). Wir
+betrachten eine Funktion, die von zwei unabhängigen Variablen abhängt, nämlich</p>
+<div class="math notranslate nohighlight">
+\[f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3.\]</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+</div>
+</div>
+<p>Als erstes bilden wir die 1. partielle Ableitung nach <span class="math notranslate nohighlight">\(x\)</span>. Wir bewegen uns also
+entlang der x-Achse und betrachten <span class="math notranslate nohighlight">\(y\)</span> nicht als eine Variable, sondern als eine
+Konstante. Diese Konstante nennen wir <span class="math notranslate nohighlight">\(c\)</span>. Um das Ableiten übersichtlicher zu
+gestalten, setzen wir jetzt tatsächlich die Konstante <span class="math notranslate nohighlight">\(c\)</span> für die Variable <span class="math notranslate nohighlight">\(y\)</span>
+ein. Was übrig bleibt, ist eine Funktion, die nur noch der Variablen <span class="math notranslate nohighlight">\(x\)</span>
+abhängt. Diese Funktion nennen wir <span class="math notranslate nohighlight">\(g\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[g(x) = x^3 + c^3 - x^2 + 2c^2 - 5x + c + 3.\]</div>
+<p>Diese Funktion wird nun nach <span class="math notranslate nohighlight">\(x\)</span> abgeleitet:</p>
+<div class="math notranslate nohighlight">
+\[g'(x) = 3x^2 + 0 - 2x + 0 - 5 + 0 + 0.\]</div>
+<p>Also ist die 1. partielle Ableitung von <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(x\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f(x,y)}{\partial x} = 3x^2 - 2x - 5.\]</div>
+<p>Jetzt betrachten wir die partielle Ableitung nach <span class="math notranslate nohighlight">\(y\)</span> und setzen dafür anstatt
+der Variablen <span class="math notranslate nohighlight">\(x\)</span> die Konstante <span class="math notranslate nohighlight">\(c\)</span> ein. Diese Funktion nennen wir <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[h(y) = c^3 + y^3 - c^2 + 2y^2 - 5c + y + 3.\]</div>
+<p>Diese Funktion nach <span class="math notranslate nohighlight">\(y\)</span> abgeleitet ergibt</p>
+<div class="math notranslate nohighlight">
+\[h'(y) = 0 + 3y^2 - 0 + 4y - 0 + 1 + 0.\]</div>
+<p>Somit ist die 1. partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(y\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f(x,y)}{\partial y} = 3y^2 + 4y + 1.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Partielle Ableitung einfach erklärt” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N0Y9E0wdLKk"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="gradient">
+<h2>Gradient<a class="headerlink" href="#gradient" title="Link to this heading">#</a></h2>
+<p>Die partiellen Ableitungen sind unabhängig voneinander. Kehren wir zu dem
+Beispiel mit der Hügellandschaft zurück. Mit Hilfe der partiellen Ableitung nach
+<span class="math notranslate nohighlight">\(x\)</span> kann die Steigung in x-Richtung bestimmt werden, mit der partiellen
+Ableitung nach <span class="math notranslate nohighlight">\(y\)</span> die Steigung in die <span class="math notranslate nohighlight">\(y\)</span>-Richtung. Fassen wir beide Steigungen
+in einem Vektor zusammen, zeigt der Vektor in die Richtung des steilsten
+Anstiegs und seine Länge entspricht dem Betrag der Steigung in diese Richtung.</p>
+<p>Bei Funktionen von mehreren unabhängigen Variablen <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> bis <span class="math notranslate nohighlight">\(x_n\)</span> gilt
+diese Erkenntnis ebenfalls. Der Vektor, der aus den partiellen Ableitungen nach
+allen <span class="math notranslate nohighlight">\(x_i\)</span>, also allen Koordinatenachsen, gebildet wird, zeigt in die Richtung
+des steilsten Anstiegs. Diese Information über eine Funktion von mehreren
+Variablen ist so wichtig, dass der Vektor einen eigenen Namen hat: <strong>Gradient</strong>.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … der Gradient?</p>
+<p>Wir betrachten eine Funktion <span class="math notranslate nohighlight">\(f\)</span> von mehreren Variablen <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span>.
+Der Zeilenvektor mit allen 1. partiellen Ableitungen wird Gradient genannt. Es
+gibt sogar ein eigenes Formelzeichen für den Gradienten, das
+“Nabla”ausgesproichen wird und so aussieht: <span class="math notranslate nohighlight">\(\nabla\)</span>.</p>
+<p>Es gilt also</p>
+<div class="math notranslate nohighlight">
+\[\nabla f(x_1, x_2, \ldots, x_n) = \left(\frac{\partial f(x_1,
+\ldots,x_n)}{\partial x_1}, \frac{\partial f(x_1, \ldots,x_n)}{\partial x_2},
+\ldots, \frac{\partial f(x_1, \ldots,x_n)}{\partial x_n},\right).\]</div>
+</div>
+<p>Für die Funktion <span class="math notranslate nohighlight">\(f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3\)</span> haben wir die
+partiellen Ableitungen bereits berechnet.</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x}(x,y) = 3x^2 - 2x - 5\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial y}(x,y) = 3y^2 + 4y + 1\]</div>
+<p>Wir müssen die partiellen Ableitungen nur noch als Zeilenvektor aufschreiben, um
+den Gradienten der Funktion zu bestimmen:</p>
+<div class="math notranslate nohighlight">
+\[\nabla f(x,y) = \left(3x^2 - 2x - 5, 3y^2 + 4y + 1\right).\]</div>
+<p>Zur Veranschaulichung berechnen wir den Gradienten an einigen spezifischen Punkten:</p>
+<ol class="arabic simple">
+<li><p>Am Punkt <span class="math notranslate nohighlight">\((0,0)\)</span>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\nabla f(0,0) = (3 \cdot 0^2 - 2 \cdot 0 - 5,  3 \cdot 0^2 + 4 \cdot 0 + 1) = (-5, 1)\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Am Punkt <span class="math notranslate nohighlight">\((1,1)\)</span>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\nabla f(1,1) = (3 \cdot 1^2 - 2 \cdot 1 - 5, 3 \cdot 1^2 + 4 \cdot 1 + 1) =  (-4, 8)\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Am Punkt <span class="math notranslate nohighlight">\((2,-1)\)</span>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\nabla f(2,-1) = (3 \cdot 2^2 - 2 \cdot 2 - 5, 3 \cdot (-1)^2 + 4 \cdot (-1) + 1) = (3,0)\]</div>
+<p>Der Gradient an einem bestimmten Punkt zeigt stets in die Richtung des steilsten
+Anstiegs der Funktion an diesem Punkt. Der Betrag des Gradienten gibt die Stärke
+(Steigung) dieses Anstiegs an. So ist beispielsweise am Punkt <span class="math notranslate nohighlight">\((1,1)\)</span> die
+Steigung in Richtung des Gradienten</p>
+<div class="math notranslate nohighlight">
+\[\|\nabla f(1,1)\| = \sqrt{(-4)^2 + 8^2} = \sqrt{16 + 64} = \sqrt{80} \approx
+8.94.\]</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">48</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span> 
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="c1"># Füge den Konturplot hinzu</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+<span class="ne">---&gt; </span><span class="mi">48</span>     <span class="n">go</span><span class="o">.</span><span class="n">Contour</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>         <span class="n">z</span><span class="o">=</span><span class="n">Z</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>         <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span>
+
+<span class="nn">File ~/S&amp;L/14 UAS Frankfurt/03 SoSe26/99 Skript/venv/lib/python3.14/site-packages/plotly/graph_objs/_contour.py:2635,</span> in <span class="ni">Contour.__init__</span><span class="nt">(self, arg, autocolorscale, autocontour, coloraxis, colorbar, colorscale, connectgaps, contours, customdata, customdatasrc, dx, dy, fillcolor, hoverinfo, hoverinfosrc, hoverlabel, hoverongaps, hovertemplate, hovertemplatefallback, hovertemplatesrc, hovertext, hovertextsrc, ids, idssrc, legend, legendgroup, legendgrouptitle, legendrank, legendwidth, line, meta, metasrc, name, ncontours, opacity, reversescale, showlegend, showscale, stream, text, textfont, textsrc, texttemplate, texttemplatefallback, transpose, uid, uirevision, visible, x, x0, xaxis, xcalendar, xhoverformat, xperiod, xperiod0, xperiodalignment, xsrc, xtype, y, y0, yaxis, ycalendar, yhoverformat, yperiod, yperiod0, yperiodalignment, ysrc, ytype, z, zauto, zhoverformat, zmax, zmid, zmin, zorder, zsrc, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2633</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_property</span><span class="p">(</span><span class="s2">&quot;autocontour&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">autocontour</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2634</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_property</span><span class="p">(</span><span class="s2">&quot;coloraxis&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">coloraxis</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2635</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_property</span><span class="p">(</span><span class="s2">&quot;colorbar&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">colorbar</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2636</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_property</span><span class="p">(</span><span class="s2">&quot;colorscale&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">colorscale</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2637</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_property</span><span class="p">(</span><span class="s2">&quot;connectgaps&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">connectgaps</span><span class="p">)</span>
+
+<span class="nn">File ~/S&amp;L/14 UAS Frankfurt/03 SoSe26/99 Skript/venv/lib/python3.14/site-packages/plotly/basedatatypes.py:4403,</span> in <span class="ni">BasePlotlyType._set_property</span><span class="nt">(self, name, arg, provided)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4397</span> <span class="k">def</span><span class="w"> </span><span class="nf">_set_property</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">provided</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">4398</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">4399</span><span class="sd">     Initialize a property of this object using the provided value</span>
+<span class="g g-Whitespace">   </span><span class="mi">4400</span><span class="sd">     or a value popped from the arguments dictionary. If neither</span>
+<span class="g g-Whitespace">   </span><span class="mi">4401</span><span class="sd">     is available, do not set the property.</span>
+<span class="g g-Whitespace">   </span><span class="mi">4402</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">4403</span>     <span class="n">_set_property_provided_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">provided</span><span class="p">)</span>
+
+<span class="nn">File ~/S&amp;L/14 UAS Frankfurt/03 SoSe26/99 Skript/venv/lib/python3.14/site-packages/plotly/basedatatypes.py:398,</span> in <span class="ni">_set_property_provided_value</span><span class="nt">(obj, name, arg, provided)</span>
+<span class="g g-Whitespace">    </span><span class="mi">396</span> <span class="n">val</span> <span class="o">=</span> <span class="n">provided</span> <span class="k">if</span> <span class="n">provided</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">val</span>
+<span class="g g-Whitespace">    </span><span class="mi">397</span> <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">398</span>     <span class="n">obj</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+
+<span class="nn">File ~/S&amp;L/14 UAS Frankfurt/03 SoSe26/99 Skript/venv/lib/python3.14/site-packages/plotly/basedatatypes.py:4924,</span> in <span class="ni">BasePlotlyType.__setitem__</span><span class="nt">(self, prop, value)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4922</span> <span class="c1"># ### Handle compound property ###</span>
+<span class="g g-Whitespace">   </span><span class="mi">4923</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">validator</span><span class="p">,</span> <span class="n">CompoundValidator</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">4924</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_set_compound_prop</span><span class="p">(</span><span class="n">prop</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4926</span> <span class="c1"># ### Handle compound array property ###</span>
+<span class="g g-Whitespace">   </span><span class="mi">4927</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">validator</span><span class="p">,</span> <span class="p">(</span><span class="n">CompoundArrayValidator</span><span class="p">,</span> <span class="n">BaseDataValidator</span><span class="p">)):</span>
+
+<span class="nn">File ~/S&amp;L/14 UAS Frankfurt/03 SoSe26/99 Skript/venv/lib/python3.14/site-packages/plotly/basedatatypes.py:5335,</span> in <span class="ni">BasePlotlyType._set_compound_prop</span><span class="nt">(self, prop, val)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5332</span> <span class="c1"># Import value</span>
+<span class="g g-Whitespace">   </span><span class="mi">5333</span> <span class="c1"># ------------</span>
+<span class="g g-Whitespace">   </span><span class="mi">5334</span> <span class="n">validator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_validator</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">5335</span> <span class="n">val</span> <span class="o">=</span> <span class="n">validator</span><span class="o">.</span><span class="n">validate_coerce</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">skip_invalid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_skip_invalid</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5337</span> <span class="c1"># Save deep copies of current and new states</span>
+<span class="g g-Whitespace">   </span><span class="mi">5338</span> <span class="c1"># ------------------------------------------</span>
+<span class="g g-Whitespace">   </span><span class="mi">5339</span> <span class="n">curr_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compound_props</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">prop</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="nn">File ~/S&amp;L/14 UAS Frankfurt/03 SoSe26/99 Skript/venv/lib/python3.14/site-packages/_plotly_utils/basevalidators.py:2468,</span> in <span class="ni">CompoundValidator.validate_coerce</span><span class="nt">(self, v, skip_invalid, _validate)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2465</span>     <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_class</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">2467</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">2468</span>     <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_class</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">skip_invalid</span><span class="o">=</span><span class="n">skip_invalid</span><span class="p">,</span> <span class="n">_validate</span><span class="o">=</span><span class="n">_validate</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2470</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_class</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">2471</span>     <span class="c1"># Copy object</span>
+<span class="g g-Whitespace">   </span><span class="mi">2472</span>     <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_class</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+<span class="nn">File ~/S&amp;L/14 UAS Frankfurt/03 SoSe26/99 Skript/venv/lib/python3.14/site-packages/plotly/graph_objs/contour/_colorbar.py:1738,</span> in <span class="ni">ColorBar.__init__</span><span class="nt">(self, arg, bgcolor, bordercolor, borderwidth, dtick, exponentformat, labelalias, len, lenmode, minexponent, nticks, orientation, outlinecolor, outlinewidth, separatethousands, showexponent, showticklabels, showtickprefix, showticksuffix, thickness, thicknessmode, tick0, tickangle, tickcolor, tickfont, tickformat, tickformatstops, tickformatstopdefaults, ticklabeloverflow, ticklabelposition, ticklabelstep, ticklen, tickmode, tickprefix, ticks, ticksuffix, ticktext, ticktextsrc, tickvals, tickvalssrc, tickwidth, title, x, xanchor, xpad, xref, y, yanchor, ypad, yref, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1736</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_property</span><span class="p">(</span><span class="s2">&quot;ypad&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">ypad</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1737</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_property</span><span class="p">(</span><span class="s2">&quot;yref&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">yref</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1738</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_kwargs</span><span class="p">(</span><span class="o">**</span><span class="nb">dict</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1739</span> <span class="bp">self</span><span class="o">.</span><span class="n">_skip_invalid</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="nn">File ~/S&amp;L/14 UAS Frankfurt/03 SoSe26/99 Skript/venv/lib/python3.14/site-packages/plotly/basedatatypes.py:4451,</span> in <span class="ni">BasePlotlyType._process_kwargs</span><span class="nt">(self, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4449</span>     <span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+<span class="g g-Whitespace">   </span><span class="mi">4450</span> <span class="k">elif</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_skip_invalid</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">4451</span>     <span class="k">raise</span> <span class="n">err</span>
+
+<span class="ne">ValueError</span>: Invalid property specified for object of type plotly.graph_objs.contour.ColorBar: &#39;titleside&#39;
+
+<span class="n">Did</span> <span class="n">you</span> <span class="n">mean</span> <span class="s2">&quot;title&quot;</span><span class="o">?</span>
+
+    <span class="n">Valid</span> <span class="n">properties</span><span class="p">:</span>
+        <span class="n">bgcolor</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">color</span> <span class="n">of</span> <span class="n">padded</span> <span class="n">area</span><span class="o">.</span>
+        <span class="n">bordercolor</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">axis</span> <span class="n">line</span> <span class="n">color</span><span class="o">.</span>
+        <span class="n">borderwidth</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">width</span> <span class="p">(</span><span class="ow">in</span> <span class="n">px</span><span class="p">)</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">border</span> <span class="n">enclosing</span> <span class="n">this</span>
+            <span class="n">color</span> <span class="n">bar</span><span class="o">.</span>
+        <span class="n">dtick</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">step</span> <span class="ow">in</span><span class="o">-</span><span class="n">between</span> <span class="n">ticks</span> <span class="n">on</span> <span class="n">this</span> <span class="n">axis</span><span class="o">.</span> <span class="n">Use</span> <span class="k">with</span>
+            <span class="err">`</span><span class="n">tick0</span><span class="err">`</span><span class="o">.</span> <span class="n">Must</span> <span class="n">be</span> <span class="n">a</span> <span class="n">positive</span> <span class="n">number</span><span class="p">,</span> <span class="ow">or</span> <span class="n">special</span> <span class="n">strings</span>
+            <span class="n">available</span> <span class="n">to</span> <span class="s2">&quot;log&quot;</span> <span class="ow">and</span> <span class="s2">&quot;date&quot;</span> <span class="n">axes</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">axis</span> <span class="err">`</span><span class="nb">type</span><span class="err">`</span>
+            <span class="ow">is</span> <span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">then</span> <span class="n">ticks</span> <span class="n">are</span> <span class="nb">set</span> <span class="n">every</span> <span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">dtick</span><span class="p">)</span> <span class="n">where</span> <span class="n">n</span>
+            <span class="ow">is</span> <span class="n">the</span> <span class="n">tick</span> <span class="n">number</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">to</span> <span class="nb">set</span> <span class="n">a</span> <span class="n">tick</span> <span class="n">mark</span> <span class="n">at</span>
+<span class="g g-Whitespace">            </span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="o">...</span> <span class="nb">set</span> <span class="n">dtick</span> <span class="n">to</span> <span class="mf">1.</span> <span class="n">To</span> <span class="nb">set</span> <span class="n">tick</span> <span class="n">marks</span>
+            <span class="n">at</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="o">...</span> <span class="nb">set</span> <span class="n">dtick</span> <span class="n">to</span> <span class="mf">2.</span> <span class="n">To</span> <span class="nb">set</span> <span class="n">tick</span> <span class="n">marks</span>
+            <span class="n">at</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">625</span><span class="p">,</span> <span class="mi">3125</span><span class="p">,</span> <span class="o">...</span> <span class="nb">set</span> <span class="n">dtick</span> <span class="n">to</span>
+            <span class="n">log_10</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="ow">or</span> <span class="mf">0.69897000433</span><span class="o">.</span> <span class="s2">&quot;log&quot;</span> <span class="n">has</span> <span class="n">several</span> <span class="n">special</span>
+            <span class="n">values</span><span class="p">;</span> <span class="s2">&quot;L&lt;f&gt;&quot;</span><span class="p">,</span> <span class="n">where</span> <span class="err">`</span><span class="n">f</span><span class="err">`</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">positive</span> <span class="n">number</span><span class="p">,</span> <span class="n">gives</span>
+            <span class="n">ticks</span> <span class="n">linearly</span> <span class="n">spaced</span> <span class="ow">in</span> <span class="n">value</span> <span class="p">(</span><span class="n">but</span> <span class="ow">not</span> <span class="n">position</span><span class="p">)</span><span class="o">.</span> <span class="n">For</span>
+            <span class="n">example</span> <span class="err">`</span><span class="n">tick0</span><span class="err">`</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="err">`</span><span class="n">dtick</span><span class="err">`</span> <span class="o">=</span> <span class="s2">&quot;L0.5&quot;</span> <span class="n">will</span> <span class="n">put</span> <span class="n">ticks</span>
+            <span class="n">at</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.6</span> <span class="n">etc</span><span class="o">.</span> <span class="n">To</span> <span class="n">show</span> <span class="n">powers</span> <span class="n">of</span> <span class="mi">10</span> <span class="n">plus</span>
+            <span class="n">small</span> <span class="n">digits</span> <span class="n">between</span><span class="p">,</span> <span class="n">use</span> <span class="s2">&quot;D1&quot;</span> <span class="p">(</span><span class="nb">all</span> <span class="n">digits</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;D2&quot;</span>
+            <span class="p">(</span><span class="n">only</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span> <span class="err">`</span><span class="n">tick0</span><span class="err">`</span> <span class="ow">is</span> <span class="n">ignored</span> <span class="k">for</span> <span class="s2">&quot;D1&quot;</span> <span class="ow">and</span> <span class="s2">&quot;D2&quot;</span><span class="o">.</span>
+            <span class="n">If</span> <span class="n">the</span> <span class="n">axis</span> <span class="err">`</span><span class="nb">type</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="n">then</span> <span class="n">you</span> <span class="n">must</span> <span class="n">convert</span> <span class="n">the</span>
+            <span class="n">time</span> <span class="n">to</span> <span class="n">milliseconds</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">to</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">interval</span>
+            <span class="n">between</span> <span class="n">ticks</span> <span class="n">to</span> <span class="n">one</span> <span class="n">day</span><span class="p">,</span> <span class="nb">set</span> <span class="err">`</span><span class="n">dtick</span><span class="err">`</span> <span class="n">to</span> <span class="mf">86400000.0</span><span class="o">.</span>
+            <span class="s2">&quot;date&quot;</span> <span class="n">also</span> <span class="n">has</span> <span class="n">special</span> <span class="n">values</span> <span class="s2">&quot;M&lt;n&gt;&quot;</span> <span class="n">gives</span> <span class="n">ticks</span>
+            <span class="n">spaced</span> <span class="n">by</span> <span class="n">a</span> <span class="n">number</span> <span class="n">of</span> <span class="n">months</span><span class="o">.</span> <span class="err">`</span><span class="n">n</span><span class="err">`</span> <span class="n">must</span> <span class="n">be</span> <span class="n">a</span> <span class="n">positive</span>
+            <span class="n">integer</span><span class="o">.</span> <span class="n">To</span> <span class="nb">set</span> <span class="n">ticks</span> <span class="n">on</span> <span class="n">the</span> <span class="mi">15</span><span class="n">th</span> <span class="n">of</span> <span class="n">every</span> <span class="n">third</span> <span class="n">month</span><span class="p">,</span>
+            <span class="nb">set</span> <span class="err">`</span><span class="n">tick0</span><span class="err">`</span> <span class="n">to</span> <span class="s2">&quot;2000-01-15&quot;</span> <span class="ow">and</span> <span class="err">`</span><span class="n">dtick</span><span class="err">`</span> <span class="n">to</span> <span class="s2">&quot;M3&quot;</span><span class="o">.</span> <span class="n">To</span> <span class="nb">set</span>
+            <span class="n">ticks</span> <span class="n">every</span> <span class="mi">4</span> <span class="n">years</span><span class="p">,</span> <span class="nb">set</span> <span class="err">`</span><span class="n">dtick</span><span class="err">`</span> <span class="n">to</span> <span class="s2">&quot;M48&quot;</span>
+        <span class="n">exponentformat</span>
+            <span class="n">Determines</span> <span class="n">a</span> <span class="n">formatting</span> <span class="n">rule</span> <span class="k">for</span> <span class="n">the</span> <span class="n">tick</span> <span class="n">exponents</span><span class="o">.</span>
+            <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">consider</span> <span class="n">the</span> <span class="n">number</span> <span class="mi">1</span><span class="p">,</span><span class="mi">000</span><span class="p">,</span><span class="mi">000</span><span class="p">,</span><span class="mf">000.</span> <span class="n">If</span>
+            <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">it</span> <span class="n">appears</span> <span class="k">as</span> <span class="mi">1</span><span class="p">,</span><span class="mi">000</span><span class="p">,</span><span class="mi">000</span><span class="p">,</span><span class="mf">000.</span> <span class="n">If</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="mf">1e+9</span><span class="o">.</span> <span class="n">If</span>
+            <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="mf">1E+9</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;power&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="n">x10</span><span class="o">^</span><span class="mi">9</span> <span class="p">(</span><span class="k">with</span> <span class="mi">9</span> <span class="ow">in</span> <span class="n">a</span> <span class="nb">super</span>
+            <span class="n">script</span><span class="p">)</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;SI&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="n">G</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="n">B</span><span class="o">.</span> <span class="s2">&quot;SI&quot;</span> <span class="n">uses</span> <span class="n">prefixes</span>
+            <span class="kn">from</span><span class="w"> </span><span class="s2">&quot;femto&quot;</span> <span class="n">f</span> <span class="p">(</span><span class="mi">10</span><span class="o">^-</span><span class="mi">15</span><span class="p">)</span> <span class="n">to</span> <span class="s2">&quot;tera&quot;</span> <span class="n">T</span> <span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span> <span class="o">*</span><span class="n">SI</span>
+            <span class="n">extended</span><span class="o">*</span> <span class="n">covers</span> <span class="n">instead</span> <span class="n">the</span> <span class="n">full</span> <span class="n">SI</span> <span class="nb">range</span> <span class="kn">from</span>
+<span class="w">            </span><span class="s2">&quot;quecto&quot;</span> <span class="n">q</span> <span class="p">(</span><span class="mi">10</span><span class="o">^-</span><span class="mi">30</span><span class="p">)</span> <span class="n">to</span> <span class="s2">&quot;quetta&quot;</span> <span class="n">Q</span> <span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;SI&quot;</span> <span class="ow">or</span>
+            <span class="o">*</span><span class="n">SI</span> <span class="n">extended</span><span class="o">*</span> <span class="ow">is</span> <span class="n">used</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">exponent</span> <span class="ow">is</span> <span class="n">beyond</span> <span class="n">the</span>
+            <span class="n">above</span> <span class="n">ranges</span><span class="p">,</span> <span class="n">the</span> <span class="n">formatting</span> <span class="n">rule</span> <span class="n">will</span> <span class="n">automatically</span> <span class="n">be</span>
+            <span class="n">switched</span> <span class="n">to</span> <span class="n">the</span> <span class="n">power</span> <span class="n">notation</span><span class="o">.</span>
+        <span class="n">labelalias</span>
+            <span class="n">Replacement</span> <span class="n">text</span> <span class="k">for</span> <span class="n">specific</span> <span class="n">tick</span> <span class="ow">or</span> <span class="n">hover</span> <span class="n">labels</span><span class="o">.</span> <span class="n">For</span>
+            <span class="n">example</span> <span class="n">using</span> <span class="p">{</span><span class="n">US</span><span class="p">:</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="n">CA</span><span class="p">:</span> <span class="s1">&#39;Canada&#39;</span><span class="p">}</span> <span class="n">changes</span> <span class="n">US</span> <span class="n">to</span>
+            <span class="n">USA</span> <span class="ow">and</span> <span class="n">CA</span> <span class="n">to</span> <span class="n">Canada</span><span class="o">.</span> <span class="n">The</span> <span class="n">labels</span> <span class="n">we</span> <span class="n">would</span> <span class="n">have</span> <span class="n">shown</span>
+            <span class="n">must</span> <span class="n">match</span> <span class="n">the</span> <span class="n">keys</span> <span class="n">exactly</span><span class="p">,</span> <span class="n">after</span> <span class="n">adding</span> <span class="nb">any</span>
+            <span class="n">tickprefix</span> <span class="ow">or</span> <span class="n">ticksuffix</span><span class="o">.</span> <span class="n">For</span> <span class="n">negative</span> <span class="n">numbers</span> <span class="n">the</span>
+            <span class="n">minus</span> <span class="n">sign</span> <span class="n">symbol</span> <span class="n">used</span> <span class="p">(</span><span class="n">U</span><span class="o">+</span><span class="mi">2212</span><span class="p">)</span> <span class="ow">is</span> <span class="n">wider</span> <span class="n">than</span> <span class="n">the</span>
+            <span class="n">regular</span> <span class="n">ascii</span> <span class="n">dash</span><span class="o">.</span> <span class="n">That</span> <span class="n">means</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">use</span> <span class="err">−</span><span class="mi">1</span>
+            <span class="n">instead</span> <span class="n">of</span> <span class="o">-</span><span class="mf">1.</span> <span class="n">labelalias</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="k">with</span> <span class="nb">any</span> <span class="n">axis</span>
+            <span class="nb">type</span><span class="p">,</span> <span class="ow">and</span> <span class="n">both</span> <span class="n">keys</span> <span class="p">(</span><span class="k">if</span> <span class="n">needed</span><span class="p">)</span> <span class="ow">and</span> <span class="n">values</span> <span class="p">(</span><span class="k">if</span> <span class="n">desired</span><span class="p">)</span>
+            <span class="n">can</span> <span class="n">include</span> <span class="n">html</span><span class="o">-</span><span class="n">like</span> <span class="n">tags</span> <span class="ow">or</span> <span class="n">MathJax</span><span class="o">.</span>
+        <span class="nb">len</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">length</span> <span class="n">of</span> <span class="n">the</span> <span class="n">color</span> <span class="n">bar</span> <span class="n">This</span> <span class="n">measure</span> <span class="n">excludes</span>
+            <span class="n">the</span> <span class="n">padding</span> <span class="n">of</span> <span class="n">both</span> <span class="n">ends</span><span class="o">.</span> <span class="n">That</span> <span class="ow">is</span><span class="p">,</span> <span class="n">the</span> <span class="n">color</span> <span class="n">bar</span> <span class="n">length</span>
+            <span class="ow">is</span> <span class="n">this</span> <span class="n">length</span> <span class="n">minus</span> <span class="n">the</span> <span class="n">padding</span> <span class="n">on</span> <span class="n">both</span> <span class="n">ends</span><span class="o">.</span>
+        <span class="n">lenmode</span>
+            <span class="n">Determines</span> <span class="n">whether</span> <span class="n">this</span> <span class="n">color</span> <span class="n">bar</span><span class="s1">&#39;s length (i.e. the</span>
+            <span class="n">measure</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">color</span> <span class="n">variation</span> <span class="n">direction</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">set</span> <span class="ow">in</span>
+            <span class="n">units</span> <span class="n">of</span> <span class="n">plot</span> <span class="s2">&quot;fraction&quot;</span> <span class="ow">or</span> <span class="ow">in</span> <span class="o">*</span><span class="n">pixels</span><span class="o">.</span> <span class="n">Use</span> <span class="err">`</span><span class="nb">len</span><span class="err">`</span> <span class="n">to</span>
+            <span class="nb">set</span> <span class="n">the</span> <span class="n">value</span><span class="o">.</span>
+        <span class="n">minexponent</span>
+            <span class="n">Hide</span> <span class="n">SI</span> <span class="n">prefix</span> <span class="k">for</span> <span class="mi">10</span><span class="o">^</span><span class="n">n</span> <span class="k">if</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="ow">is</span> <span class="n">below</span> <span class="n">this</span> <span class="n">number</span><span class="o">.</span>
+            <span class="n">This</span> <span class="n">only</span> <span class="n">has</span> <span class="n">an</span> <span class="n">effect</span> <span class="n">when</span> <span class="err">`</span><span class="n">tickformat</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;SI&quot;</span> <span class="ow">or</span>
+            <span class="s2">&quot;B&quot;</span><span class="o">.</span>
+        <span class="n">nticks</span>
+            <span class="n">Specifies</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">ticks</span> <span class="k">for</span> <span class="n">the</span>
+            <span class="n">particular</span> <span class="n">axis</span><span class="o">.</span> <span class="n">The</span> <span class="n">actual</span> <span class="n">number</span> <span class="n">of</span> <span class="n">ticks</span> <span class="n">will</span> <span class="n">be</span>
+            <span class="n">chosen</span> <span class="n">automatically</span> <span class="n">to</span> <span class="n">be</span> <span class="n">less</span> <span class="n">than</span> <span class="ow">or</span> <span class="n">equal</span> <span class="n">to</span>
+            <span class="err">`</span><span class="n">nticks</span><span class="err">`</span><span class="o">.</span> <span class="n">Has</span> <span class="n">an</span> <span class="n">effect</span> <span class="n">only</span> <span class="k">if</span> <span class="err">`</span><span class="n">tickmode</span><span class="err">`</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">to</span>
+            <span class="s2">&quot;auto&quot;</span><span class="o">.</span>
+        <span class="n">orientation</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">orientation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">colorbar</span><span class="o">.</span>
+        <span class="n">outlinecolor</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">axis</span> <span class="n">line</span> <span class="n">color</span><span class="o">.</span>
+        <span class="n">outlinewidth</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">width</span> <span class="p">(</span><span class="ow">in</span> <span class="n">px</span><span class="p">)</span> <span class="n">of</span> <span class="n">the</span> <span class="n">axis</span> <span class="n">line</span><span class="o">.</span>
+        <span class="n">separatethousands</span>
+            <span class="n">If</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span> <span class="n">even</span> <span class="mi">4</span><span class="o">-</span><span class="n">digit</span> <span class="n">integers</span> <span class="n">are</span> <span class="n">separated</span>
+        <span class="n">showexponent</span>
+            <span class="n">If</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="nb">all</span> <span class="n">exponents</span> <span class="n">are</span> <span class="n">shown</span> <span class="n">besides</span> <span class="n">their</span>
+            <span class="n">significands</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;first&quot;</span><span class="p">,</span> <span class="n">only</span> <span class="n">the</span> <span class="n">exponent</span> <span class="n">of</span> <span class="n">the</span>
+            <span class="n">first</span> <span class="n">tick</span> <span class="ow">is</span> <span class="n">shown</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;last&quot;</span><span class="p">,</span> <span class="n">only</span> <span class="n">the</span> <span class="n">exponent</span> <span class="n">of</span>
+            <span class="n">the</span> <span class="n">last</span> <span class="n">tick</span> <span class="ow">is</span> <span class="n">shown</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">no</span> <span class="n">exponents</span> <span class="n">appear</span><span class="o">.</span>
+        <span class="n">showticklabels</span>
+            <span class="n">Determines</span> <span class="n">whether</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">the</span> <span class="n">tick</span> <span class="n">labels</span> <span class="n">are</span> <span class="n">drawn</span><span class="o">.</span>
+        <span class="n">showtickprefix</span>
+            <span class="n">If</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="nb">all</span> <span class="n">tick</span> <span class="n">labels</span> <span class="n">are</span> <span class="n">displayed</span> <span class="k">with</span> <span class="n">a</span> <span class="n">prefix</span><span class="o">.</span>
+            <span class="n">If</span> <span class="s2">&quot;first&quot;</span><span class="p">,</span> <span class="n">only</span> <span class="n">the</span> <span class="n">first</span> <span class="n">tick</span> <span class="ow">is</span> <span class="n">displayed</span> <span class="k">with</span> <span class="n">a</span>
+            <span class="n">prefix</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;last&quot;</span><span class="p">,</span> <span class="n">only</span> <span class="n">the</span> <span class="n">last</span> <span class="n">tick</span> <span class="ow">is</span> <span class="n">displayed</span> <span class="k">with</span>
+            <span class="n">a</span> <span class="n">suffix</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">tick</span> <span class="n">prefixes</span> <span class="n">are</span> <span class="n">hidden</span><span class="o">.</span>
+        <span class="n">showticksuffix</span>
+            <span class="n">Same</span> <span class="k">as</span> <span class="err">`</span><span class="n">showtickprefix</span><span class="err">`</span> <span class="n">but</span> <span class="k">for</span> <span class="n">tick</span> <span class="n">suffixes</span><span class="o">.</span>
+        <span class="n">thickness</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">thickness</span> <span class="n">of</span> <span class="n">the</span> <span class="n">color</span> <span class="n">bar</span> <span class="n">This</span> <span class="n">measure</span>
+            <span class="n">excludes</span> <span class="n">the</span> <span class="n">size</span> <span class="n">of</span> <span class="n">the</span> <span class="n">padding</span><span class="p">,</span> <span class="n">ticks</span> <span class="ow">and</span> <span class="n">labels</span><span class="o">.</span>
+        <span class="n">thicknessmode</span>
+            <span class="n">Determines</span> <span class="n">whether</span> <span class="n">this</span> <span class="n">color</span> <span class="n">bar</span><span class="s1">&#39;s thickness (i.e. the</span>
+            <span class="n">measure</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">constant</span> <span class="n">color</span> <span class="n">direction</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">set</span> <span class="ow">in</span>
+            <span class="n">units</span> <span class="n">of</span> <span class="n">plot</span> <span class="s2">&quot;fraction&quot;</span> <span class="ow">or</span> <span class="ow">in</span> <span class="s2">&quot;pixels&quot;</span><span class="o">.</span> <span class="n">Use</span>
+            <span class="err">`</span><span class="n">thickness</span><span class="err">`</span> <span class="n">to</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">value</span><span class="o">.</span>
+        <span class="n">tick0</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">placement</span> <span class="n">of</span> <span class="n">the</span> <span class="n">first</span> <span class="n">tick</span> <span class="n">on</span> <span class="n">this</span> <span class="n">axis</span><span class="o">.</span> <span class="n">Use</span>
+            <span class="k">with</span> <span class="err">`</span><span class="n">dtick</span><span class="err">`</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">axis</span> <span class="err">`</span><span class="nb">type</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">then</span> <span class="n">you</span>
+            <span class="n">must</span> <span class="n">take</span> <span class="n">the</span> <span class="n">log</span> <span class="n">of</span> <span class="n">your</span> <span class="n">starting</span> <span class="n">tick</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">to</span> <span class="nb">set</span>
+            <span class="n">the</span> <span class="n">starting</span> <span class="n">tick</span> <span class="n">to</span> <span class="mi">100</span><span class="p">,</span> <span class="nb">set</span> <span class="n">the</span> <span class="err">`</span><span class="n">tick0</span><span class="err">`</span> <span class="n">to</span> <span class="mi">2</span><span class="p">)</span> <span class="k">except</span>
+            <span class="n">when</span> <span class="err">`</span><span class="n">dtick</span><span class="err">`</span><span class="o">=*</span><span class="n">L</span><span class="o">&lt;</span><span class="n">f</span><span class="o">&gt;*</span> <span class="p">(</span><span class="n">see</span> <span class="err">`</span><span class="n">dtick</span><span class="err">`</span> <span class="k">for</span> <span class="n">more</span> <span class="n">info</span><span class="p">)</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span>
+            <span class="n">axis</span> <span class="err">`</span><span class="nb">type</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="n">it</span> <span class="n">should</span> <span class="n">be</span> <span class="n">a</span> <span class="n">date</span> <span class="n">string</span><span class="p">,</span> <span class="n">like</span>
+            <span class="n">date</span> <span class="n">data</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">axis</span> <span class="err">`</span><span class="nb">type</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">it</span> <span class="n">should</span>
+            <span class="n">be</span> <span class="n">a</span> <span class="n">number</span><span class="p">,</span> <span class="n">using</span> <span class="n">the</span> <span class="n">scale</span> <span class="n">where</span> <span class="n">each</span> <span class="n">category</span> <span class="ow">is</span>
+            <span class="n">assigned</span> <span class="n">a</span> <span class="n">serial</span> <span class="n">number</span> <span class="kn">from</span><span class="w"> </span><span class="nn">zero</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">order</span> <span class="n">it</span>
+            <span class="n">appears</span><span class="o">.</span>
+        <span class="n">tickangle</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">angle</span> <span class="n">of</span> <span class="n">the</span> <span class="n">tick</span> <span class="n">labels</span> <span class="k">with</span> <span class="n">respect</span> <span class="n">to</span> <span class="n">the</span>
+            <span class="n">horizontal</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">a</span> <span class="err">`</span><span class="n">tickangle</span><span class="err">`</span> <span class="n">of</span> <span class="o">-</span><span class="mi">90</span> <span class="n">draws</span> <span class="n">the</span>
+            <span class="n">tick</span> <span class="n">labels</span> <span class="n">vertically</span><span class="o">.</span>
+        <span class="n">tickcolor</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">tick</span> <span class="n">color</span><span class="o">.</span>
+        <span class="n">tickfont</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">color</span> <span class="n">bar</span><span class="s1">&#39;s tick label font</span>
+        <span class="n">tickformat</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">tick</span> <span class="n">label</span> <span class="n">formatting</span> <span class="n">rule</span> <span class="n">using</span> <span class="n">d3</span> <span class="n">formatting</span>
+            <span class="n">mini</span><span class="o">-</span><span class="n">languages</span> <span class="n">which</span> <span class="n">are</span> <span class="n">very</span> <span class="n">similar</span> <span class="n">to</span> <span class="n">those</span> <span class="ow">in</span>
+            <span class="n">Python</span><span class="o">.</span> <span class="n">For</span> <span class="n">numbers</span><span class="p">,</span> <span class="n">see</span><span class="p">:</span>
+            <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">d3</span><span class="o">/</span><span class="n">d3</span><span class="o">-</span><span class="nb">format</span><span class="o">/</span><span class="n">tree</span><span class="o">/</span><span class="n">v1</span><span class="mf">.4.5</span><span class="c1">#d3-format.</span>
+            <span class="n">And</span> <span class="k">for</span> <span class="n">dates</span> <span class="n">see</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">d3</span><span class="o">/</span><span class="n">d3</span><span class="o">-</span><span class="n">time</span><span class="o">-</span>
+            <span class="nb">format</span><span class="o">/</span><span class="n">tree</span><span class="o">/</span><span class="n">v2</span><span class="mf">.2.3</span><span class="c1">#locale_format. We add two items to</span>
+            <span class="n">d3</span><span class="s1">&#39;s date formatter: &quot;%h&quot; for half of the year as a</span>
+            <span class="n">decimal</span> <span class="n">number</span> <span class="k">as</span> <span class="n">well</span> <span class="k">as</span> <span class="s2">&quot;%</span><span class="si">{n}</span><span class="s2">f&quot;</span> <span class="k">for</span> <span class="n">fractional</span>
+            <span class="n">seconds</span> <span class="k">with</span> <span class="n">n</span> <span class="n">digits</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="o">*</span><span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">13</span>
+<span class="g g-Whitespace">            </span><span class="mi">09</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mf">23.456</span><span class="o">*</span> <span class="k">with</span> <span class="n">tickformat</span> <span class="s2">&quot;%H~%M~%S.</span><span class="si">%2f</span><span class="s2">&quot;</span> <span class="n">would</span>
+            <span class="n">display</span> <span class="s2">&quot;09~15~23.46&quot;</span>
+        <span class="n">tickformatstops</span>
+            <span class="n">A</span> <span class="nb">tuple</span> <span class="n">of</span> <span class="p">:</span><span class="n">class</span><span class="p">:</span><span class="err">`</span><span class="n">plotly</span><span class="o">.</span><span class="n">graph_objects</span><span class="o">.</span><span class="n">contour</span><span class="o">.</span><span class="n">colorba</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">Tickformatstop</span><span class="err">`</span> <span class="n">instances</span> <span class="ow">or</span> <span class="n">dicts</span> <span class="k">with</span> <span class="n">compatible</span>
+            <span class="n">properties</span>
+        <span class="n">tickformatstopdefaults</span>
+            <span class="n">When</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">template</span> <span class="p">(</span><span class="k">as</span> <span class="n">layout</span><span class="o">.</span><span class="n">template</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">contou</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">colorbar</span><span class="o">.</span><span class="n">tickformatstopdefaults</span><span class="p">),</span> <span class="n">sets</span> <span class="n">the</span> <span class="n">default</span>
+            <span class="nb">property</span> <span class="n">values</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">elements</span> <span class="n">of</span>
+            <span class="n">contour</span><span class="o">.</span><span class="n">colorbar</span><span class="o">.</span><span class="n">tickformatstops</span>
+        <span class="n">ticklabeloverflow</span>
+            <span class="n">Determines</span> <span class="n">how</span> <span class="n">we</span> <span class="n">handle</span> <span class="n">tick</span> <span class="n">labels</span> <span class="n">that</span> <span class="n">would</span>
+            <span class="n">overflow</span> <span class="n">either</span> <span class="n">the</span> <span class="n">graph</span> <span class="n">div</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">domain</span> <span class="n">of</span> <span class="n">the</span>
+            <span class="n">axis</span><span class="o">.</span> <span class="n">The</span> <span class="n">default</span> <span class="n">value</span> <span class="k">for</span> <span class="n">inside</span> <span class="n">tick</span> <span class="n">labels</span> <span class="ow">is</span> <span class="o">*</span><span class="n">hide</span>
+            <span class="n">past</span> <span class="n">domain</span><span class="o">*.</span> <span class="n">In</span> <span class="n">other</span> <span class="n">cases</span> <span class="n">the</span> <span class="n">default</span> <span class="ow">is</span> <span class="o">*</span><span class="n">hide</span> <span class="n">past</span>
+            <span class="n">div</span><span class="o">*.</span>
+        <span class="n">ticklabelposition</span>
+            <span class="n">Determines</span> <span class="n">where</span> <span class="n">tick</span> <span class="n">labels</span> <span class="n">are</span> <span class="n">drawn</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">the</span>
+            <span class="n">ticks</span><span class="o">.</span> <span class="n">Left</span> <span class="ow">and</span> <span class="n">right</span> <span class="n">options</span> <span class="n">are</span> <span class="n">used</span> <span class="n">when</span>
+            <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="n">top</span> <span class="ow">and</span> <span class="n">bottom</span> <span class="n">when</span> <span class="err">`</span><span class="n">orientation</span><span class="err">`</span>
+            <span class="ow">is</span> <span class="s2">&quot;v&quot;</span><span class="o">.</span>
+        <span class="n">ticklabelstep</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">spacing</span> <span class="n">between</span> <span class="n">tick</span> <span class="n">labels</span> <span class="k">as</span> <span class="n">compared</span> <span class="n">to</span> <span class="n">the</span>
+            <span class="n">spacing</span> <span class="n">between</span> <span class="n">ticks</span><span class="o">.</span> <span class="n">A</span> <span class="n">value</span> <span class="n">of</span> <span class="mi">1</span> <span class="p">(</span><span class="n">default</span><span class="p">)</span> <span class="n">means</span>
+            <span class="n">each</span> <span class="n">tick</span> <span class="n">gets</span> <span class="n">a</span> <span class="n">label</span><span class="o">.</span> <span class="n">A</span> <span class="n">value</span> <span class="n">of</span> <span class="mi">2</span> <span class="n">means</span> <span class="n">shows</span> <span class="n">every</span>
+<span class="g g-Whitespace">            </span><span class="mi">2</span><span class="n">nd</span> <span class="n">label</span><span class="o">.</span> <span class="n">A</span> <span class="n">larger</span> <span class="n">value</span> <span class="n">n</span> <span class="n">means</span> <span class="n">only</span> <span class="n">every</span> <span class="n">nth</span> <span class="n">tick</span>
+            <span class="ow">is</span> <span class="n">labeled</span><span class="o">.</span> <span class="err">`</span><span class="n">tick0</span><span class="err">`</span> <span class="n">determines</span> <span class="n">which</span> <span class="n">labels</span> <span class="n">are</span> <span class="n">shown</span><span class="o">.</span>
+            <span class="n">Not</span> <span class="n">implemented</span> <span class="k">for</span> <span class="n">axes</span> <span class="k">with</span> <span class="err">`</span><span class="nb">type</span><span class="err">`</span> <span class="s2">&quot;log&quot;</span> <span class="ow">or</span>
+            <span class="s2">&quot;multicategory&quot;</span><span class="p">,</span> <span class="ow">or</span> <span class="n">when</span> <span class="err">`</span><span class="n">tickmode</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;array&quot;</span><span class="o">.</span>
+        <span class="n">ticklen</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">tick</span> <span class="n">length</span> <span class="p">(</span><span class="ow">in</span> <span class="n">px</span><span class="p">)</span><span class="o">.</span>
+        <span class="n">tickmode</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">tick</span> <span class="n">mode</span> <span class="k">for</span> <span class="n">this</span> <span class="n">axis</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="n">the</span> <span class="n">number</span>
+            <span class="n">of</span> <span class="n">ticks</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">via</span> <span class="err">`</span><span class="n">nticks</span><span class="err">`</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">the</span>
+            <span class="n">placement</span> <span class="n">of</span> <span class="n">the</span> <span class="n">ticks</span> <span class="ow">is</span> <span class="n">determined</span> <span class="n">by</span> <span class="n">a</span> <span class="n">starting</span>
+            <span class="n">position</span> <span class="err">`</span><span class="n">tick0</span><span class="err">`</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">tick</span> <span class="n">step</span> <span class="err">`</span><span class="n">dtick</span><span class="err">`</span> <span class="p">(</span><span class="s2">&quot;linear&quot;</span> <span class="ow">is</span>
+            <span class="n">the</span> <span class="n">default</span> <span class="n">value</span> <span class="k">if</span> <span class="err">`</span><span class="n">tick0</span><span class="err">`</span> <span class="ow">and</span> <span class="err">`</span><span class="n">dtick</span><span class="err">`</span> <span class="n">are</span> <span class="n">provided</span><span class="p">)</span><span class="o">.</span>
+            <span class="n">If</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span> <span class="n">the</span> <span class="n">placement</span> <span class="n">of</span> <span class="n">the</span> <span class="n">ticks</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">via</span>
+            <span class="err">`</span><span class="n">tickvals</span><span class="err">`</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">tick</span> <span class="n">text</span> <span class="ow">is</span> <span class="err">`</span><span class="n">ticktext</span><span class="err">`</span><span class="o">.</span> <span class="p">(</span><span class="s2">&quot;array&quot;</span> <span class="ow">is</span>
+            <span class="n">the</span> <span class="n">default</span> <span class="n">value</span> <span class="k">if</span> <span class="err">`</span><span class="n">tickvals</span><span class="err">`</span> <span class="ow">is</span> <span class="n">provided</span><span class="p">)</span><span class="o">.</span>
+        <span class="n">tickprefix</span>
+            <span class="n">Sets</span> <span class="n">a</span> <span class="n">tick</span> <span class="n">label</span> <span class="n">prefix</span><span class="o">.</span>
+        <span class="n">ticks</span>
+            <span class="n">Determines</span> <span class="n">whether</span> <span class="n">ticks</span> <span class="n">are</span> <span class="n">drawn</span> <span class="ow">or</span> <span class="ow">not</span><span class="o">.</span> <span class="n">If</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">this</span>
+            <span class="n">axis</span><span class="s1">&#39; ticks are not drawn. If &quot;outside&quot; (&quot;inside&quot;),</span>
+            <span class="n">this</span> <span class="n">axis</span><span class="s1">&#39; are drawn outside (inside) the axis lines.</span>
+        <span class="n">ticksuffix</span>
+            <span class="n">Sets</span> <span class="n">a</span> <span class="n">tick</span> <span class="n">label</span> <span class="n">suffix</span><span class="o">.</span>
+        <span class="n">ticktext</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">text</span> <span class="n">displayed</span> <span class="n">at</span> <span class="n">the</span> <span class="n">ticks</span> <span class="n">position</span> <span class="n">via</span>
+            <span class="err">`</span><span class="n">tickvals</span><span class="err">`</span><span class="o">.</span> <span class="n">Only</span> <span class="n">has</span> <span class="n">an</span> <span class="n">effect</span> <span class="k">if</span> <span class="err">`</span><span class="n">tickmode</span><span class="err">`</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">to</span>
+            <span class="s2">&quot;array&quot;</span><span class="o">.</span> <span class="n">Used</span> <span class="k">with</span> <span class="err">`</span><span class="n">tickvals</span><span class="err">`</span><span class="o">.</span>
+        <span class="n">ticktextsrc</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">source</span> <span class="n">reference</span> <span class="n">on</span> <span class="n">Chart</span> <span class="n">Studio</span> <span class="n">Cloud</span> <span class="k">for</span>
+            <span class="err">`</span><span class="n">ticktext</span><span class="err">`</span><span class="o">.</span>
+        <span class="n">tickvals</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">values</span> <span class="n">at</span> <span class="n">which</span> <span class="n">ticks</span> <span class="n">on</span> <span class="n">this</span> <span class="n">axis</span> <span class="n">appear</span><span class="o">.</span>
+            <span class="n">Only</span> <span class="n">has</span> <span class="n">an</span> <span class="n">effect</span> <span class="k">if</span> <span class="err">`</span><span class="n">tickmode</span><span class="err">`</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">to</span> <span class="s2">&quot;array&quot;</span><span class="o">.</span>
+            <span class="n">Used</span> <span class="k">with</span> <span class="err">`</span><span class="n">ticktext</span><span class="err">`</span><span class="o">.</span>
+        <span class="n">tickvalssrc</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">source</span> <span class="n">reference</span> <span class="n">on</span> <span class="n">Chart</span> <span class="n">Studio</span> <span class="n">Cloud</span> <span class="k">for</span>
+            <span class="err">`</span><span class="n">tickvals</span><span class="err">`</span><span class="o">.</span>
+        <span class="n">tickwidth</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">tick</span> <span class="n">width</span> <span class="p">(</span><span class="ow">in</span> <span class="n">px</span><span class="p">)</span><span class="o">.</span>
+        <span class="n">title</span>
+            <span class="p">:</span><span class="n">class</span><span class="p">:</span><span class="err">`</span><span class="n">plotly</span><span class="o">.</span><span class="n">graph_objects</span><span class="o">.</span><span class="n">contour</span><span class="o">.</span><span class="n">colorbar</span><span class="o">.</span><span class="n">Title</span><span class="err">`</span>
+            <span class="n">instance</span> <span class="ow">or</span> <span class="nb">dict</span> <span class="k">with</span> <span class="n">compatible</span> <span class="n">properties</span>
+        <span class="n">x</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">x</span> <span class="n">position</span> <span class="k">with</span> <span class="n">respect</span> <span class="n">to</span> <span class="err">`</span><span class="n">xref</span><span class="err">`</span> <span class="n">of</span> <span class="n">the</span> <span class="n">color</span>
+            <span class="n">bar</span> <span class="p">(</span><span class="ow">in</span> <span class="n">plot</span> <span class="n">fraction</span><span class="p">)</span><span class="o">.</span> <span class="n">When</span> <span class="err">`</span><span class="n">xref</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;paper&quot;</span><span class="p">,</span>
+            <span class="n">defaults</span> <span class="n">to</span> <span class="mf">1.02</span> <span class="n">when</span> <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;v&quot;</span> <span class="ow">and</span> <span class="mf">0.5</span> <span class="n">when</span>
+            <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;h&quot;</span><span class="o">.</span> <span class="n">When</span> <span class="err">`</span><span class="n">xref</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;container&quot;</span><span class="p">,</span>
+            <span class="n">defaults</span> <span class="n">to</span> <span class="mi">1</span> <span class="n">when</span> <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;v&quot;</span> <span class="ow">and</span> <span class="mf">0.5</span> <span class="n">when</span>
+            <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;h&quot;</span><span class="o">.</span> <span class="n">Must</span> <span class="n">be</span> <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span> <span class="k">if</span> <span class="err">`</span><span class="n">xref</span><span class="err">`</span>
+            <span class="ow">is</span> <span class="s2">&quot;container&quot;</span> <span class="ow">and</span> <span class="n">between</span> <span class="s2">&quot;-2&quot;</span> <span class="ow">and</span> <span class="mi">3</span> <span class="k">if</span> <span class="err">`</span><span class="n">xref</span><span class="err">`</span> <span class="ow">is</span>
+            <span class="s2">&quot;paper&quot;</span><span class="o">.</span>
+        <span class="n">xanchor</span>
+            <span class="n">Sets</span> <span class="n">this</span> <span class="n">color</span> <span class="n">bar</span><span class="s1">&#39;s horizontal position anchor. This</span>
+            <span class="n">anchor</span> <span class="n">binds</span> <span class="n">the</span> <span class="err">`</span><span class="n">x</span><span class="err">`</span> <span class="n">position</span> <span class="n">to</span> <span class="n">the</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span>
+            <span class="ow">or</span> <span class="s2">&quot;right&quot;</span> <span class="n">of</span> <span class="n">the</span> <span class="n">color</span> <span class="n">bar</span><span class="o">.</span> <span class="n">Defaults</span> <span class="n">to</span> <span class="s2">&quot;left&quot;</span> <span class="n">when</span>
+            <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;v&quot;</span> <span class="ow">and</span> <span class="s2">&quot;center&quot;</span> <span class="n">when</span> <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span>
+            <span class="s2">&quot;h&quot;</span><span class="o">.</span>
+        <span class="n">xpad</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">padding</span> <span class="p">(</span><span class="ow">in</span> <span class="n">px</span><span class="p">)</span> <span class="n">along</span> <span class="n">the</span> <span class="n">x</span>
+            <span class="n">direction</span><span class="o">.</span>
+        <span class="n">xref</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">container</span> <span class="err">`</span><span class="n">x</span><span class="err">`</span> <span class="n">refers</span> <span class="n">to</span><span class="o">.</span> <span class="s2">&quot;container&quot;</span> <span class="n">spans</span> <span class="n">the</span>
+            <span class="n">entire</span> <span class="err">`</span><span class="n">width</span><span class="err">`</span> <span class="n">of</span> <span class="n">the</span> <span class="n">plot</span><span class="o">.</span> <span class="s2">&quot;paper&quot;</span> <span class="n">refers</span> <span class="n">to</span> <span class="n">the</span> <span class="n">width</span>
+            <span class="n">of</span> <span class="n">the</span> <span class="n">plotting</span> <span class="n">area</span> <span class="n">only</span><span class="o">.</span>
+        <span class="n">y</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">y</span> <span class="n">position</span> <span class="k">with</span> <span class="n">respect</span> <span class="n">to</span> <span class="err">`</span><span class="n">yref</span><span class="err">`</span> <span class="n">of</span> <span class="n">the</span> <span class="n">color</span>
+            <span class="n">bar</span> <span class="p">(</span><span class="ow">in</span> <span class="n">plot</span> <span class="n">fraction</span><span class="p">)</span><span class="o">.</span> <span class="n">When</span> <span class="err">`</span><span class="n">yref</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;paper&quot;</span><span class="p">,</span>
+            <span class="n">defaults</span> <span class="n">to</span> <span class="mf">0.5</span> <span class="n">when</span> <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;v&quot;</span> <span class="ow">and</span> <span class="mf">1.02</span> <span class="n">when</span>
+            <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;h&quot;</span><span class="o">.</span> <span class="n">When</span> <span class="err">`</span><span class="n">yref</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;container&quot;</span><span class="p">,</span>
+            <span class="n">defaults</span> <span class="n">to</span> <span class="mf">0.5</span> <span class="n">when</span> <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;v&quot;</span> <span class="ow">and</span> <span class="mi">1</span> <span class="n">when</span>
+            <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;h&quot;</span><span class="o">.</span> <span class="n">Must</span> <span class="n">be</span> <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span> <span class="k">if</span> <span class="err">`</span><span class="n">yref</span><span class="err">`</span>
+            <span class="ow">is</span> <span class="s2">&quot;container&quot;</span> <span class="ow">and</span> <span class="n">between</span> <span class="s2">&quot;-2&quot;</span> <span class="ow">and</span> <span class="mi">3</span> <span class="k">if</span> <span class="err">`</span><span class="n">yref</span><span class="err">`</span> <span class="ow">is</span>
+            <span class="s2">&quot;paper&quot;</span><span class="o">.</span>
+        <span class="n">yanchor</span>
+            <span class="n">Sets</span> <span class="n">this</span> <span class="n">color</span> <span class="n">bar</span><span class="s1">&#39;s vertical position anchor This</span>
+            <span class="n">anchor</span> <span class="n">binds</span> <span class="n">the</span> <span class="err">`</span><span class="n">y</span><span class="err">`</span> <span class="n">position</span> <span class="n">to</span> <span class="n">the</span> <span class="s2">&quot;top&quot;</span><span class="p">,</span> <span class="s2">&quot;middle&quot;</span> <span class="ow">or</span>
+            <span class="s2">&quot;bottom&quot;</span> <span class="n">of</span> <span class="n">the</span> <span class="n">color</span> <span class="n">bar</span><span class="o">.</span> <span class="n">Defaults</span> <span class="n">to</span> <span class="s2">&quot;middle&quot;</span> <span class="n">when</span>
+            <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span> <span class="s2">&quot;v&quot;</span> <span class="ow">and</span> <span class="s2">&quot;bottom&quot;</span> <span class="n">when</span> <span class="err">`</span><span class="n">orientation</span><span class="err">`</span> <span class="ow">is</span>
+            <span class="s2">&quot;h&quot;</span><span class="o">.</span>
+        <span class="n">ypad</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">padding</span> <span class="p">(</span><span class="ow">in</span> <span class="n">px</span><span class="p">)</span> <span class="n">along</span> <span class="n">the</span> <span class="n">y</span>
+            <span class="n">direction</span><span class="o">.</span>
+        <span class="n">yref</span>
+            <span class="n">Sets</span> <span class="n">the</span> <span class="n">container</span> <span class="err">`</span><span class="n">y</span><span class="err">`</span> <span class="n">refers</span> <span class="n">to</span><span class="o">.</span> <span class="s2">&quot;container&quot;</span> <span class="n">spans</span> <span class="n">the</span>
+            <span class="n">entire</span> <span class="err">`</span><span class="n">height</span><span class="err">`</span> <span class="n">of</span> <span class="n">the</span> <span class="n">plot</span><span class="o">.</span> <span class="s2">&quot;paper&quot;</span> <span class="n">refers</span> <span class="n">to</span> <span class="n">the</span>
+            <span class="n">height</span> <span class="n">of</span> <span class="n">the</span> <span class="n">plotting</span> <span class="n">area</span> <span class="n">only</span><span class="o">.</span>
+        
+<span class="n">Did</span> <span class="n">you</span> <span class="n">mean</span> <span class="s2">&quot;title&quot;</span><span class="o">?</span>
+
+<span class="n">Bad</span> <span class="nb">property</span> <span class="n">path</span><span class="p">:</span>
+<span class="n">titleside</span>
+<span class="o">^^^^^^^^^</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Der Gradient sowie ein weiteres Beispiel werden in den folgenden Videos
+präsentiert.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Gradient” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BbOUhSRh57I?si=750hDMUywwy1p2YZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Gradient” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/627f_DgQJpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir das Konzept der partiellen Ableitung eingeführt, das
+die Änderungsrate einer Funktion mehrerer Variablen in Richtung der
+Koordinatenachsen beschreibt. Durch Zusammenfassung der partiellen Ableitungen
+erhalten wir den Gradienten, der in Richtung des steilsten Anstiegs zeigt und
+senkrecht auf den Höhenlinien steht. Im nächsten Kapitel wereden wir höhere
+partielle Ableitungen behandeln.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter06"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter06_sec02.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">6.2 Stetigkeit von Funktionen mehrerer Variablen</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter06_sec04.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6.4 Höhere partielle Ableitungen und Hesse-Matrix</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partielle-ableitungen">Partielle Ableitungen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-das-partielle-ableiten">Beispiel für das partielle Ableiten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient">Gradient</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sebastian Linden
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026. Dieses Skript steht unter der CC BY-NC-SA 4.0-Lizenz.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

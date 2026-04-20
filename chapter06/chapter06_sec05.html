@@ -1,0 +1,902 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Übungen zum Selbststudium &#8212; Mathematik 2: Vertiefung</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter06/chapter06_sec05';</script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Richtungsableitungen und vektorwertige Funktionen" href="../chapter07/chapter07_sec00.html" />
+    <link rel="prev" title="6.4 Höhere partielle Ableitungen und Hesse-Matrix" href="chapter06_sec04.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo-sl.png" class="logo__image only-light" alt="Mathematik 2: Vertiefung - Home"/>
+    <img src="../_static/logo-sl.png" class="logo__image only-dark pst-js-only" alt="Mathematik 2: Vertiefung - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Vorlesungsskript Mathematik 2: Vertiefung
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen zum Selbststudium</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen zum Selbstudium</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen zum Selbststudium</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen zum Selbststudium</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen zum Selbststudium</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec02.html">6.2 Stetigkeit von Funktionen mehrerer Variablen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Übungen zum Selbststudium</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02-sl.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen zum Selbstudium</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter06/chapter06_sec05.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter06/chapter06_sec05.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Übungen zum Selbststudium</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ubungen-zum-selbststudium">
+<h1>Übungen zum Selbststudium<a class="headerlink" href="#ubungen-zum-selbststudium" title="Link to this heading">#</a></h1>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 6.1</p>
+<p>Berechnen Sie die ersten partiellen Ableitungen.</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y}\)</span> <br>
+b) <span class="math notranslate nohighlight">\(f(x,y)=e^{xy}\)</span> <br>
+c) <span class="math notranslate nohighlight">\(f(x,y)=\sin(x)\cos(y)\)</span> <br>
+d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}\)</span> <br></p>
+</div>
+<div class="miniexercise toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y} = e^{x+y}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x}=e^{x+y} \quad \text{ und } \quad \frac{\partial f}{\partial y}=e^{x+y}\]</div>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
+<p>b) <span class="math notranslate nohighlight">\(f(x,y)=e^{xy}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x}=y \cdot e^{xy} \quad \text{ und } \quad \frac{\partial f}{\partial y}=x \cdot e^{xy}\]</div>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
+<p>c) <span class="math notranslate nohighlight">\(f(x,y)=\sin(x)\cos(y)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x}=\cos(x)\cos(y) \quad \text{ und } \quad \frac{\partial f}{\partial y}=-\sin(x)\sin(y)\]</div>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
+<p>d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}\)</span></p>
+<p>Wir wenden die Kettenregel an:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f}{\partial x_1} &amp;= -\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2} \cdot 4x_1 \\
+&amp;= -\frac{4x_1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}
+\end{align*}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f}{\partial x_2} &amp;= -\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2} \cdot \frac{x_2}{\sqrt{x_2^2+x_3^2}} \\
+&amp;= -\frac{x_2}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2 \cdot \sqrt{x_2^2+x_3^2}}
+\end{align*}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f}{\partial x_3} &amp;= -\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2} \cdot \frac{x_3}{\sqrt{x_2^2+x_3^2}} \\
+&amp;= -\frac{x_3}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2 \cdot \sqrt{x_2^2+x_3^2}}
+\end{align*}\)</span></p>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 6.2</p>
+<p>Berechnen Sie die zweiten partiellen Ableitungen. Verifizieren Sie jeweils
+explizit, dass das Ergebnis unabhängig von der Reihenfolge der
+Differentiationsschritte ist (Satz von Schwarz).</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=x^3+y^3 + x^2y^2+xy+1\)</span> <br>
+b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\)</span></p>
+</div>
+<div class="miniexercise toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=x^3+y^3 + x^2y^2+xy+1\)</span></p>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f}{\partial x} &amp;= 3x^2+2xy^2+y \\
+\frac{\partial f}{\partial y} &amp;= 3y^2+2x^2y+x 
+\end{align*}\)</span></p>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial x^2} &amp;= \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right) = \frac{\partial}{\partial x}(3x^2+2xy^2+y) = 6x + 2y^2 \\
+\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right) = \frac{\partial}{\partial y}(3x^2+2xy^2+y) = 4xy + 1 \\
+\frac{\partial^2 f}{\partial y \partial x} &amp;= \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right) = \frac{\partial}{\partial x}(3y^2+2x^2y+x) = 4xy + 1 \\
+\frac{\partial^2 f}{\partial y^2} &amp;= \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right) = \frac{\partial}{\partial y}(3y^2+2x^2y+x) = 6y + 2x^2
+\end{align*}\)</span></p>
+<p><strong>Verifikation des Satzes von Schwarz:</strong>
+Da <span class="math notranslate nohighlight">\(\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} = 4xy + 1\)</span>, ist der Satz von Schwarz bestätigt.</p>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
+<p>b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\)</span></p>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f}{\partial x} &amp;= -\frac{1}{(\sqrt{x^2+y^2+z^2})^2} \cdot \frac{\partial}{\partial x}(\sqrt{x^2+y^2+z^2}) \\
+&amp;= -\frac{1}{x^2+y^2+z^2} \cdot \frac{1}{2}(x^2+y^2+z^2)^{-1/2} \cdot 2x \\
+&amp;= -\frac{1}{x^2+y^2+z^2} \cdot \frac{x}{\sqrt{x^2+y^2+z^2}} \\
+&amp;= -\frac{x}{(x^2+y^2+z^2)^{3/2}}
+\end{align*}\)</span></p>
+<p>Analog berechnen wir:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f}{\partial y} &amp;= -\frac{y}{(x^2+y^2+z^2)^{3/2}} \\
+\frac{\partial f}{\partial z} &amp;= -\frac{z}{(x^2+y^2+z^2)^{3/2}}
+\end{align*}\)</span></p>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
+<p>Für die reinen zweiten Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial x^2} &amp;= \frac{\partial}{\partial x}\left(-\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -\frac{\partial}{\partial x}\left(\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -\left[\frac{1}{(x^2+y^2+z^2)^{3/2}} + x \cdot \frac{\partial}{\partial x}\left(\frac{1}{(x^2+y^2+z^2)^{3/2}}\right)\right] \\
+&amp;= -\left[\frac{1}{(x^2+y^2+z^2)^{3/2}} + x \cdot \left(-\frac{3}{2}\right)(x^2+y^2+z^2)^{-5/2} \cdot 2x\right] \\
+&amp;= -\frac{1}{(x^2+y^2+z^2)^{3/2}} + \frac{3x^2}{(x^2+y^2+z^2)^{5/2}} \\
+&amp;= \frac{-1 \cdot (x^2+y^2+z^2) + 3x^2}{(x^2+y^2+z^2)^{5/2}} \\
+&amp;= \frac{-x^2-y^2-z^2 + 3x^2}{(x^2+y^2+z^2)^{5/2}} \\
+&amp;= \frac{2x^2-y^2-z^2}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\)</span></p>
+<p>Durch analoges Vorgehen erhalten wir:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial y^2} &amp;= \frac{2y^2-x^2-z^2}{(x^2+y^2+z^2)^{5/2}} \\
+\frac{\partial^2 f}{\partial z^2} &amp;= \frac{2z^2-x^2-y^2}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\)</span></p>
+<p>Für die gemischten Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial}{\partial x}\left(-\frac{y}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -\frac{\partial}{\partial x}\left(\frac{y}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -y \cdot \frac{\partial}{\partial x}\left(\frac{1}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -y \cdot \left(-\frac{3}{2}\right)(x^2+y^2+z^2)^{-5/2} \cdot 2x \\
+&amp;= \frac{3xy}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\)</span></p>
+<p>Und für die umgekehrte Reihenfolge:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial y \partial x} &amp;= \frac{\partial}{\partial y}\left(-\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -\frac{\partial}{\partial y}\left(\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -x \cdot \frac{\partial}{\partial y}\left(\frac{1}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -x \cdot \left(-\frac{3}{2}\right)(x^2+y^2+z^2)^{-5/2} \cdot 2y \\
+&amp;= \frac{3xy}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\)</span></p>
+<p>Die übrigen gemischten Ableitungen ergeben:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial x \partial z} = \frac{\partial^2 f}{\partial z \partial x} &amp;= \frac{3xz}{(x^2+y^2+z^2)^{5/2}} \\
+\frac{\partial^2 f}{\partial y \partial z} = \frac{\partial^2 f}{\partial z \partial y} &amp;= \frac{3yz}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\)</span></p>
+<p><strong>Verifikation des Satzes von Schwarz:</strong>
+Wir können beobachten, dass:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial^2 f}{\partial y \partial x} = \frac{3xy}{(x^2+y^2+z^2)^{5/2}} \\
+\frac{\partial^2 f}{\partial x \partial z} &amp;= \frac{\partial^2 f}{\partial z \partial x} = \frac{3xz}{(x^2+y^2+z^2)^{5/2}} \\
+\frac{\partial^2 f}{\partial y \partial z} &amp;= \frac{\partial^2 f}{\partial z \partial y} = \frac{3yz}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\)</span></p>
+<p>Damit ist der Satz von Schwarz für alle gemischten Ableitungen bestätigt, da die partiellen Ableitungen zweiter Ordnung unabhängig von der Reihenfolge der Differentiation sind.</p>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 6.3</p>
+<p>Berechnen Sie die dritten partiellen Ableitungen. Nutzen Sie aus, dass das
+Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist
+(warum?):</p>
+<div class="math notranslate nohighlight">
+\[f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3.\]</div>
+<p>Hinweis: wie viele partielle Ableitungen 3. Ordnung gibt es bei drei Variablen?
+Wie viele muss man explizit ausrechnen?</p>
+</div>
+<div class="miniexercise toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Der Satz von Schwarz besagt, dass bei stetigen gemischten partiellen Ableitungen
+die Reihenfolge der Differentiation keine Rolle spielt. Unsere Funktion
+<span class="math notranslate nohighlight">\(f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3\)</span> ist beliebig oft stetig differenzierbar, daher
+gilt der Satz für alle Ableitungen.</p>
+<p>Bei drei Variablen <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span> gibt es theoretisch <span class="math notranslate nohighlight">\(3^3 = 27\)</span> mögliche
+Kombinationen für die dritten Ableitungen. Aufgrund des Satzes von Schwarz sind
+jedoch viele dieser Kombinationen gleichwertig. Es genau 10 Möglichkeiten:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\((3,0,0)\)</span>: dreimal nach <span class="math notranslate nohighlight">\(x\)</span> ableiten</p></li>
+<li><p><span class="math notranslate nohighlight">\((2,1,0)\)</span>: zweimal nach <span class="math notranslate nohighlight">\(x\)</span>, einmal nach <span class="math notranslate nohighlight">\(y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((2,0,1)\)</span>: zweimal nach <span class="math notranslate nohighlight">\(x\)</span>, einmal nach <span class="math notranslate nohighlight">\(z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1,2,0)\)</span>: einmal nach <span class="math notranslate nohighlight">\(x\)</span>, zweimal nach <span class="math notranslate nohighlight">\(y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1,1,1)\)</span>: je einmal nach <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1,0,2)\)</span>: einmal nach <span class="math notranslate nohighlight">\(x\)</span>, zweimal nach <span class="math notranslate nohighlight">\(z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((0,3,0)\)</span>: dreimal nach <span class="math notranslate nohighlight">\(y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((0,2,1)\)</span>: zweimal nach <span class="math notranslate nohighlight">\(y\)</span>, einmal nach <span class="math notranslate nohighlight">\(z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((0,1,2)\)</span>: einmal nach <span class="math notranslate nohighlight">\(y\)</span>, zweimal nach <span class="math notranslate nohighlight">\(z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((0,0,3)\)</span>: dreimal nach <span class="math notranslate nohighlight">\(z\)</span></p></li>
+</ol>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f}{\partial x} &amp;= 2xy^2z^2 + 3x^2 \\
+\frac{\partial f}{\partial y} &amp;= 2x^2yz^2 + 3y^2 \\
+\frac{\partial f}{\partial z} &amp;= 2x^2y^2z + 3z^2 \\
+\end{align*}\)</span></p>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial x^2} &amp;= 2y^2z^2 + 6x \\
+\frac{\partial^2 f}{\partial x \partial y} &amp;= 4xyz^2 \\
+\frac{\partial^2 f}{\partial x \partial z} &amp;= 4xy^2z \\
+\frac{\partial^2 f}{\partial y^2} &amp;= 2x^2z^2 + 6y \\
+\frac{\partial^2 f}{\partial y \partial z} &amp;= 4x^2yz \\
+\frac{\partial^2 f}{\partial z^2} &amp;= 2x^2y^2 + 6z \\
+\end{align*}\)</span></p>
+<p><strong>Schritt 3:</strong> Berechnung der 10 unterschiedlichen dritten partiellen Ableitungen:</p>
+<ol class="arabic simple">
+<li><p>Dreimal nach <span class="math notranslate nohighlight">\(x\)</span> ableiten:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial x^3} &amp;= \frac{\partial}{\partial x}\left(\frac{\partial^2 f}{\partial x^2}\right) = \frac{\partial}{\partial x}(2y^2z^2 + 6x) = 6
+\end{align*}\)</span></p>
+<ol class="arabic simple" start="2">
+<li><p>Zweimal nach <span class="math notranslate nohighlight">\(x\)</span>, einmal nach <span class="math notranslate nohighlight">\(y\)</span>:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial y \partial x^2} &amp;= \frac{\partial}{\partial y}\left(\frac{\partial^2 f}{\partial x^2}\right) = \frac{\partial}{\partial y}(2y^2z^2 + 6x) = 4yz^2
+\end{align*}\)</span></p>
+<ol class="arabic simple" start="3">
+<li><p>Zweimal nach <span class="math notranslate nohighlight">\(x\)</span>, einmal nach <span class="math notranslate nohighlight">\(z\)</span>:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial z \partial x^2} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial x^2}\right) = \frac{\partial}{\partial z}(2y^2z^2 + 6x) = 4y^2z
+\end{align*}\)</span></p>
+<ol class="arabic simple" start="4">
+<li><p>Einmal nach <span class="math notranslate nohighlight">\(x\)</span>, zweimal nach <span class="math notranslate nohighlight">\(y\)</span>:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial y^2 \partial x} &amp;= \frac{\partial}{\partial y}\left(\frac{\partial^2 f}{\partial x \partial y}\right) = \frac{\partial}{\partial y}(4xyz^2) = 4xz^2
+\end{align*}\)</span></p>
+<ol class="arabic simple" start="5">
+<li><p>Je einmal nach <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span>:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial z \partial y \partial x} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial x \partial y}\right) = \frac{\partial}{\partial z}(4xyz^2) = 8xyz
+\end{align*}\)</span></p>
+<ol class="arabic simple" start="6">
+<li><p>Einmal nach <span class="math notranslate nohighlight">\(x\)</span>, zweimal nach <span class="math notranslate nohighlight">\(z\)</span>:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial z^2 \partial x} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial x \partial z}\right) = \frac{\partial}{\partial z}(4xy^2z) = 4xy^2
+\end{align*}\)</span></p>
+<ol class="arabic simple" start="7">
+<li><p>Dreimal nach <span class="math notranslate nohighlight">\(y\)</span> ableiten:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial y^3} &amp;= \frac{\partial}{\partial y}\left(\frac{\partial^2 f}{\partial y^2}\right) = \frac{\partial}{\partial y}(2x^2z^2 + 6y) = 6
+\end{align*}\)</span></p>
+<ol class="arabic simple" start="8">
+<li><p>Zweimal nach <span class="math notranslate nohighlight">\(y\)</span>, einmal nach <span class="math notranslate nohighlight">\(z\)</span>:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial z \partial y^2} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial y^2}\right) = \frac{\partial}{\partial z}(2x^2z^2 + 6y) = 4x^2z
+\end{align*}\)</span></p>
+<ol class="arabic simple" start="9">
+<li><p>Einmal nach <span class="math notranslate nohighlight">\(y\)</span>, zweimal nach <span class="math notranslate nohighlight">\(z\)</span>:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial z^2 \partial y} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial y \partial z}\right) = \frac{\partial}{\partial z}(4x^2yz) = 4x^2y
+\end{align*}\)</span></p>
+<ol class="arabic simple" start="10">
+<li><p>Dreimal nach <span class="math notranslate nohighlight">\(z\)</span> ableiten:
+<span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial z^3} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial z^2}\right) = \frac{\partial}{\partial z}(2x^2y^2 + 6z) = 6
+\end{align*}\)</span></p></li>
+</ol>
+<p><strong>Zusammenfassung der 10 verschiedenen Werte:</strong></p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^3 f}{\partial x^3} &amp;= 6 \\
+\frac{\partial^3 f}{\partial y \partial x^2} &amp;= 4yz^2 \\
+\frac{\partial^3 f}{\partial z \partial x^2} &amp;= 4y^2z \\
+\frac{\partial^3 f}{\partial y^2 \partial x} &amp;= 4xz^2 \\
+\frac{\partial^3 f}{\partial z \partial y \partial x} &amp;= 8xyz \\
+\frac{\partial^3 f}{\partial z^2 \partial x} &amp;= 4xy^2 \\
+\frac{\partial^3 f}{\partial y^3} &amp;= 6 \\
+\frac{\partial^3 f}{\partial z \partial y^2} &amp;= 4x^2z \\
+\frac{\partial^3 f}{\partial z^2 \partial y} &amp;= 4x^2y \\
+\frac{\partial^3 f}{\partial z^3} &amp;= 6
+\end{align*}\)</span></p>
+<p>Gemäß dem Satz von Schwarz haben wir damit alle 27 möglichen partiellen
+Ableitungen dritter Ordnung berechnet, die auf diese 10 verschiedenen Werte
+zurückgeführt werden können.</p>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 6.4</p>
+<p>Berechnen Sie die Hesse-Matrix für die folgenden Funktionen:</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y) = x^2y + xy^2 - 3x^2 + 2y^2\)</span> <br>
+b) <span class="math notranslate nohighlight">\(f(x,y,z) = x^2 + y^2 + z^2 - 2xy - 2xz + 3yz\)</span> <br>
+c) <span class="math notranslate nohighlight">\(f(x,y) = \sin(xy) + x^2 - y^2\)</span> <br></p>
+</div>
+<div class="miniexercise toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y) = x^2y + xy^2 - 3x^2 + 2y^2\)</span></p>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f}{\partial x} &amp;= 2xy + y^2 - 6x \\
+\frac{\partial f}{\partial y} &amp;= x^2 + 2xy + 4y
+\end{align*}\)</span></p>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial x^2} &amp;= 2y - 6 \\
+\frac{\partial^2 f}{\partial x \partial y} &amp;= 2x + 2y \\
+\frac{\partial^2 f}{\partial y \partial x} &amp;= 2x + 2y \\
+\frac{\partial^2 f}{\partial y^2} &amp;= 2x + 4
+\end{align*}\)</span></p>
+<p><strong>Schritt 3:</strong> Aufstellung der Hesse-Matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_f(x,y) = 
+\begin{pmatrix}
+2y - 6 &amp; 2x + 2y \\
+2x + 2y &amp; 2x + 4
+\end{pmatrix}\end{split}\]</div>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
+<p>b) <span class="math notranslate nohighlight">\(f(x,y,z) = x^2 + y^2 + z^2 - 2xy - 2xz + 3yz\)</span></p>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f}{\partial x} &amp;= 2x - 2y - 2z \\
+\frac{\partial f}{\partial y} &amp;= 2y - 2x + 3z \\
+\frac{\partial f}{\partial z} &amp;= 2z - 2x + 3y
+\end{align*}\)</span></p>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial x^2} &amp;= 2 \\
+\frac{\partial^2 f}{\partial x \partial y} &amp;= -2 \\
+\frac{\partial^2 f}{\partial x \partial z} &amp;= -2 \\
+\frac{\partial^2 f}{\partial y \partial x} &amp;= -2 \\
+\frac{\partial^2 f}{\partial y^2} &amp;= 2 \\
+\frac{\partial^2 f}{\partial y \partial z} &amp;= 3 \\
+\frac{\partial^2 f}{\partial z \partial x} &amp;= -2 \\
+\frac{\partial^2 f}{\partial z \partial y} &amp;= 3 \\
+\frac{\partial^2 f}{\partial z^2} &amp;= 2
+\end{align*}\)</span></p>
+<p><strong>Schritt 3:</strong> Aufstellung der Hesse-Matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_f(x,y,z) = 
+\begin{pmatrix}
+2 &amp; -2 &amp; -2 \\
+-2 &amp; 2 &amp; 3 \\
+-2 &amp; 3 &amp; 2
+\end{pmatrix}\end{split}\]</div>
+<p>Beachten Sie, dass diese Hesse-Matrix konstant ist, d.h. sie hängt nicht von den Werten von <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span> ab.</p>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
+<p>c) <span class="math notranslate nohighlight">\(f(x,y) = \sin(xy) + x^2 - y^2\)</span></p>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f}{\partial x} &amp;= y\cos(xy) + 2x \\
+\frac{\partial f}{\partial y} &amp;= x\cos(xy) - 2y
+\end{align*}\)</span></p>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial x^2} &amp;= \frac{\partial}{\partial x}(y\cos(xy) + 2x) \\
+&amp;= \frac{\partial}{\partial x}(y\cos(xy)) + \frac{\partial}{\partial x}(2x) \\
+&amp;= y \cdot \frac{\partial}{\partial x}(\cos(xy)) + 2 \\
+&amp;= y \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial x}(xy) + 2 \\
+&amp;= y \cdot (-\sin(xy)) \cdot y + 2 \\
+&amp;= -y^2\sin(xy) + 2
+\end{align*}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial}{\partial y}(y\cos(xy) + 2x) \\
+&amp;= \frac{\partial}{\partial y}(y\cos(xy)) + \frac{\partial}{\partial y}(2x) \\
+&amp;= \cos(xy) + y \cdot \frac{\partial}{\partial y}(\cos(xy)) + 0 \\
+&amp;= \cos(xy) + y \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial y}(xy) \\
+&amp;= \cos(xy) + y \cdot (-\sin(xy)) \cdot x \\
+&amp;= \cos(xy) - xy\sin(xy)
+\end{align*}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial y \partial x} &amp;= \frac{\partial}{\partial x}(x\cos(xy) - 2y) \\
+&amp;= \frac{\partial}{\partial x}(x\cos(xy)) + \frac{\partial}{\partial x}(-2y) \\
+&amp;= \cos(xy) + x \cdot \frac{\partial}{\partial x}(\cos(xy)) + 0 \\
+&amp;= \cos(xy) + x \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial x}(xy) \\
+&amp;= \cos(xy) + x \cdot (-\sin(xy)) \cdot y \\
+&amp;= \cos(xy) - xy\sin(xy)
+\end{align*}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f}{\partial y^2} &amp;= \frac{\partial}{\partial y}(x\cos(xy) - 2y) \\
+&amp;= \frac{\partial}{\partial y}(x\cos(xy)) + \frac{\partial}{\partial y}(-2y) \\
+&amp;= x \cdot \frac{\partial}{\partial y}(\cos(xy)) - 2 \\
+&amp;= x \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial y}(xy) - 2 \\
+&amp;= x \cdot (-\sin(xy)) \cdot x - 2 \\
+&amp;= -x^2\sin(xy) - 2
+\end{align*}\)</span></p>
+<p><strong>Schritt 3:</strong> Aufstellung der Hesse-Matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_f(x,y) = 
+\begin{pmatrix}
+-y^2\sin(xy) + 2 &amp; \cos(xy) - xy\sin(xy) \\
+\cos(xy) - xy\sin(xy) &amp; -x^2\sin(xy) - 2
+\end{pmatrix}\end{split}\]</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter06"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter06_sec04.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">6.4 Höhere partielle Ableitungen und Hesse-Matrix</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chapter07/chapter07_sec00.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">7. Richtungsableitungen und vektorwertige Funktionen</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sebastian Linden
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026. Dieses Skript steht unter der CC BY-NC-SA 4.0-Lizenz.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
