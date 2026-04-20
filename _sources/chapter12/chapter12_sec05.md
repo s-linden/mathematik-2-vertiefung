@@ -2,7 +2,7 @@
 
 Die folgenden Übungsaufgaben wurden teilweise mit dem Aufgabengenerator MATEX
 erzeugt:
-> <a href="https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=eXZyZm14SldjcWRFc092RVZ5dkF6Zz09" target="_blank" rel="noopener noreferrer">Lineare nichthomogene DGL mit konstanten Koeffizienten</a>
+> <a href="https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=eXZyZm14SldjcWRFc092RVZ5dkF6Zz09" target="_blank" rel="noopener noreferrer">Aufgaben Lineare nichthomogene DGL mit konstanten Koeffizienten</a>
 
 Dort können Sie sich auch selbst weitere Aufgaben mit Lösung erzeugen.
 Wählen Sie dazu Stufe 1b.
