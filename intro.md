@@ -2,7 +2,7 @@
 
 Sebastian Linden
 
-Dies ist das Vorlesungsskript zur Veranstaltung "Mathematik 2: Vertiefung" für Studierende der Mechatronik.
+Dies ist das Vorlesungsskript zur Veranstaltung „Mathematik 2: Vertiefung“ für Studierende der Mechatronik.
 Jedes Kapitel entspricht einer Vorlesung von drei SWS mit einer Übung von zwei SWS. Die Übungen beziehen sich auf den Lernstoff des kompletten Kapitels. Probieren Sie erst, die Aufgabe zu lösen, bevor Sie sich die Lösung bzw. den Lösungsweg zur Selbstkontrolle anzeigen lassen.  
 
 ## Inhaltsverzeichnis
