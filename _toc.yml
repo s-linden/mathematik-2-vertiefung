@@ -36,8 +36,6 @@ parts:
     - file: chapter04/chapter04_sec03.md
     - file: chapter04/chapter04_sec04.md
     - file: chapter04/chapter04_sec05.md
-- caption: Höhere Differentialrechnung
-  chapters:
   - file: chapter05/chapter05_sec00.md
     sections:
     - file: chapter05/chapter05_sec01.md
@@ -45,6 +43,8 @@ parts:
     - file: chapter05/chapter05_sec03.md
     - file: chapter05/chapter05_sec04.md
     - file: chapter05/chapter05_sec05.md
+- caption: Höhere Differentialrechnung
+  chapters:
   - file: chapter06/chapter06_sec00.md
     sections:
     - file: chapter06/chapter06_sec01.md
