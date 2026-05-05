@@ -116,7 +116,7 @@ Untersuchen Sie gegebenenfalls die Konvergenz im Randbereich und geben Sie den K
 
 ````{admonition} Lösung
 :class: miniexercise, toggle
-Konvergenzradius $r=\frac{1}{8}$ und Konvergenzbereich: $[\frac{15}{8}; \frac{17}{8})$, d.h. $\frac{15}{8} \leq x < \frac{17}{8}$
+Konvergenzradius $r=\frac{1}{8}$ und Konvergenzbereich: $[\frac{15}{8}; \frac{17}{8}[$, d.h. $\frac{15}{8} \leq x < \frac{17}{8}$
 ```{dropdown} Lösungsweg
 Tipp bzw. Quelle der Aufgabe:  [YouTube MathemaTrick -- Konvergenzradius bestimmen](https://www.youtube.com/watch?v=gn8jCoSJb24) 
 
@@ -132,29 +132,31 @@ Eingesetzt in die Wurzel-Formel ist dies
 
 $$r = \lim_{n\rightarrow \infty} \frac{1}{\sqrt[n]{\left|a_n\right|}} = \lim_{n\to \infty} \frac{\sqrt[n]{n}}{8} = \lim_{n\to\infty}\frac{n^{\frac{1}{n}}}{8} = \frac{1}{8}.$$
 
-Die Potenzreihe konvergiert absolut im Intervall $(\frac{15}{8}; \frac{17}{8})$. Das Konvergenzverhalten an den Randpunkten muss jedoch gesondert untersucht werden. 
+Die Potenzreihe konvergiert absolut im offenen Intervall $]\frac{15}{8}; \frac{17}{8}[$. Das Konvergenzverhalten an den Randpunkten muss jedoch gesondert untersucht werden. 
 
 Durch das Einsetzen einer der Randpunkte in die Potenzreihe reduziert sich diese auf eine Zahlenreihe. Die Konvergenzfrage lässt sich dann mit einem passenden Konvergenz- oder Divergenzkriterium für Reihen angehen. 
 
 Setzt man den linken Randpunkt $x=\frac{15}{8}$ ein, so erhält man: 
-\begin{align*}
+$\begin{align*}
 \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{15}{8}-2\right)^n 
 &= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(-\frac{1}{8}\right)^n \\
 &= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot \frac{(-1)^n}{8^n} \\
 &= \sum_{n=1}^{\infty} \frac{(-1)^n}{n}. 
-\end{align*}
+\end{align*}$
+
 Diese Reihe konvergiert (gegen $-\ln(2)$), der linke Randpunkt gehört zum Konvergenzbereich.
 
 Setzt man den rechten Randpunkt $x=\frac{17}{8}$ ein, so erhält man: 
-\begin{align*}
+$\begin{align*}
 \sum_{n=1}^\infty \frac{8^n}{n}\cdot\left(\frac{17}{8}-2\right)^n 
 &= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{1}{8}\right)^n \\
 &= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\frac{1^n}{8^n} \\
 & = \sum_{n=1}^{\infty} \frac{1}{n}.
-\end{align*}
+\end{align*}$
+
 Diese Reihe divergiert, der rechte Randpunkt gehört *nicht* zum Konvergenzbereich.
 
-Antwort: Konvergenzradius $r=\frac{1}{8}$ und Konvergenzbereich: $[\frac{15}{8}; \frac{17}{8})$, d.h. $\frac{15}{8} \leq x < \frac{17}{8}$ 
+Antwort: Konvergenzradius $r=\frac{1}{8}$ und Konvergenzbereich: $[\frac{15}{8}; \frac{17}{8}[$, d.h. $\frac{15}{8} \leq x < \frac{17}{8}$ 
 ```
 ````
 

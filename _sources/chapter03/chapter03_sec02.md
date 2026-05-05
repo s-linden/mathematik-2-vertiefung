@@ -145,12 +145,12 @@ $$s_n = \sum_{k=1}^{n} \left(-\frac{1}{4}\right) \cdot 4^{-k-2} \cdot 2^{k+4}.$$
 
 Wir wenden das Wurzel-Kriterium an:
 
-\begin{align*}
+$\begin{align*}
 L & = \lim_{k\rightarrow \infty}\sqrt[k]{\left|a_k\right|} = \\
 &  = \lim_{k\rightarrow \infty}\left(\frac{1}{4} \cdot 4^{-k-2} 2^{k+4}\right)^{\left(\frac{1}{k} \right)} = \\
 & = \lim_{k\rightarrow \infty} \left(4^{-k - 3} 2^{k + 4}\right)^{\left(\frac{1}{k}\right)} = \\
 & = \frac{1}{2} .
- \end{align*}
+ \end{align*}$
  Wegen $L = \frac{1}{2} <1$ ist die Reihe (absolut) konvergent.
 
 ```{dropdown} Video "Wurzel- und Quotientenkriterium" von Prof. Hoever
