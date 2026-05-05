@@ -66,10 +66,10 @@ die Potenz bilden, also $(x-x_0)^k$ verwenden.
 :class: note
 Eine **Potenzreihe** ist eine Reihe vom Typ
 
-\begin{align*}
+$\begin{align*}
 p(x) &= a_0 + a_1\cdot(x-x_0) + a_2\cdot(x-x_0)^2 + a_3\cdot(x-x_0)^3 + \ldots = \\
      &= \sum_{k=0}^{\infty} a_k \cdot (x-x_0)^k.
-\end{align*}
+\end{align*}$
 
 Die reellen Zahlen $a_0, a_1, a_2, \ldots$ nennt man **Koeffizienten** der
 Potenzreihe. Der Punkt $x_0$ wird **Entwicklungspunkt** genannt.

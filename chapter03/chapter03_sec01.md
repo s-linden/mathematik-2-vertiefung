@@ -33,12 +33,12 @@ die Folge $(a_k)$ also: $\frac{1}{2}$, $\frac{1}{4}$, $\frac{1}{8}$,
 $\frac{1}{16}$, $\frac{1}{32}$, usw. Daraus bilden wir eine neue Folge, die wir
 $(s_n)$ bezeichnen, indem wir Summen nach dem folgenden Schema bilden:
 
-\begin{align*} s_1 &= a_1 = \frac{1}{2}\\
+$\begin{align*} s_1 &= a_1 = \frac{1}{2}\\
 s_2 &= a_1 + a_2 =  \frac{1}{2} + \frac{1}{4} = \frac{3}{4}\\
 s_3 &= a_1 + a_2 + a_3 = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} = \frac{7}{8}\\
 \vdots\\
 s_n &= a_1 + a_2 + \ldots + a_n =  \frac{1}{2} + \frac{1}{4} + \dots +
-\left(\frac{1}{2}\right)^{n} \end{align*}
+\left(\frac{1}{2}\right)^{n} \end{align*}$
 
 Jedes Folgenglied $(s_n)$ enthält Summen. Jede dieser Summen wird
 **Partialsumme** genannt. Die Folge aus Partialsummen wird **Reihe** genannt.
@@ -110,23 +110,23 @@ $$\frac{a_{k+1}}{a_k} = q.$$
 Das bedeutet aber auch, dass alle Folgenglieder $a_k$ auf das erste Folgenglied
 $a_1$ zurückgeführt werden können:
 
-\begin{align*} a_1 &= a_1 \\
+$\begin{align*} a_1 &= a_1 \\
 a_2 &= a_1 \cdot q \\
 a_3 &= a_2 \cdot q = \left( a_1 \cdot q \right) \cdot q = a_1 \cdot q^2 \\
 a_4 &= a_3 \cdot q = \left( a_1 \cdot q^2 \right) \cdot q = a_1 \cdot q^3 \\
 \vdots \\
-a_{k} &= a_{k-1} \cdot q = a_1 \cdot q^{k-1} \\ \end{align*}
+a_{k} &= a_{k-1} \cdot q = a_1 \cdot q^{k-1} \\ \end{align*}$
 
 Damit haben wir folgende Partialsummen:
 
-\begin{align*} s_1 &= a_1 \\
+$\begin{align*} s_1 &= a_1 \\
 s_2 &= a_1 + a_2 = a_1 + a_1 \cdot q = a_1 \cdot \big(1 + q\big) \\
 s_3 &= a_1 + a_2 + a_3 = a_1 + a_1 \cdot q + a_1 \cdot q^2 = a_1 \cdot \big(1 +
 q + q^2\big) \\
 \vdots \\
 s_n &= a_1 + a_2 + \dots + a_n = a_1 + a_1 \cdot q + \ldots + a_1 \cdot q^{n-1}
 = a_1 \cdot \big(1 + q + \ldots q^{n-1}\big) \\
-\end{align*}
+\end{align*}$
 
 ```{admonition} Was ist ... die geometrische Reihe?
 :class: note
