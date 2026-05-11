@@ -210,9 +210,6 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Übungen zum Selbststudium</a></li>
 </ul>
 </details></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
@@ -221,6 +218,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen zum Selbststudium</a></li>
 </ul>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit von Funktionen mehrerer Variablen</a></li>
@@ -601,12 +601,12 @@ T_{3}(x)=  1
 <div class="math notranslate nohighlight">
 \[f(1) = \sqrt{2}, \quad f'(1)=\frac{\sqrt{2}}{4}, \quad f''(1)=-\frac{\sqrt{2}}{16}, \quad f^{(3)}(1)=\frac{3\sqrt{2}}{64}.\]</div>
 <p class="sd-card-text">Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=1\)</span> ist</p>
-<p class="sd-card-text">$\begin{equation*}
-T_{3}(x)=  \sqrt{2}
-+\frac{\sqrt{2}}{4}\cdot(x-1)^{1}
--\frac{\sqrt{2}}{32}\cdot(x-1)^{2}
-+\frac{\sqrt{2}}{128}\cdot(x-1)^{3}\ .
-\end{equation*}</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{equation*} 
+    T_{3}(x)=  \sqrt{2}
+    +\frac{\sqrt{2}}{4}\cdot(x-1)^{1}
+    -\frac{\sqrt{2}}{32}\cdot(x-1)^{2}
+    +\frac{\sqrt{2}}{128}\cdot(x-1)^{3}\ .
+\end{equation*}\)</span></p>
 </div>
 </details></div>
 <div class="miniexercise admonition">
@@ -621,7 +621,7 @@ T_{3}(x)=  \sqrt{2}
 <p>Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
 <p><span class="math notranslate nohighlight">\(\begin{equation*}
     T_{3}(x) = 2x - x^{2} +\frac{2}{3}x^{3}.
- \end{equation*}\)</span></p>
+\end{equation*}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -721,8 +721,8 @@ f^{(3)}(x) &amp;= -\frac{4(3x^2+1)}{(x^2-1)^3}
          +\frac{f^\prime(x_0)}{1!}(x-x_0)^{1}
          +\frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^{2}
          +\frac{f^{(3)}(x_0)}{3!}(x-x_0)^{3}.
- \end{equation*}\)</span>
-Es gilt für <span class="math notranslate nohighlight">\(x_0=0\)</span>:</p>
+ \end{equation*}\)</span></p>
+<p class="sd-card-text">Es gilt für <span class="math notranslate nohighlight">\(x_0=0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[f(0) = 0, \quad f'(0)=0, \quad f''(0)=2, \quad f^{(3)}(0)=0.\]</div>
 <p class="sd-card-text">Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
@@ -733,7 +733,7 @@ T_{3}(x)=  0</p>
 <li><p class="sd-card-text">\frac{2}{2} \cdot(x-0)^{2}</p></li>
 <li><p class="sd-card-text">\frac{0}{6} \cdot(x-0)^{3}
 = x^2.
-\end{equation*} $</p></li>
+\end{equation*}$</p></li>
 </ul>
 </div>
 </details></div>

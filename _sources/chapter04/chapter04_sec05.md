@@ -142,7 +142,7 @@ Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=1$ ist
     +\frac{\sqrt{2}}{4}\cdot(x-1)^{1}
     -\frac{\sqrt{2}}{32}\cdot(x-1)^{2}
     +\frac{\sqrt{2}}{128}\cdot(x-1)^{3}\ .
- \end{equation*} 
+\end{equation*}$
 ```
 ````
 
@@ -161,7 +161,7 @@ Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist
 
 $\begin{equation*}
     T_{3}(x) = 2x - x^{2} +\frac{2}{3}x^{3}.
- \end{equation*}$
+\end{equation*}$
  
 ```{dropdown} Lösungsweg
 Die ersten drei Ableitungen von $f(x) = \ln((1+x)^2)$ lauten: 
@@ -282,6 +282,7 @@ $\begin{equation*}
          +\frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^{2}
          +\frac{f^{(3)}(x_0)}{3!}(x-x_0)^{3}.
  \end{equation*}$
+ 
 Es gilt für $x_0=0$:
 
 $$f(0) = 0, \quad f'(0)=0, \quad f''(0)=2, \quad f^{(3)}(0)=0.$$
@@ -294,7 +295,7 @@ $$f(0) = 0, \quad f'(0)=0, \quad f''(0)=2, \quad f^{(3)}(0)=0.$$
  + \frac{2}{2} \cdot(x-0)^{2}
  + \frac{0}{6} \cdot(x-0)^{3}
  = x^2.
- \end{equation*} $
+ \end{equation*}$
 ```
 ````
 

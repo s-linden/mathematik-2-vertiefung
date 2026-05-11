@@ -210,9 +210,6 @@
 <li class="toctree-l2"><a class="reference internal" href="chapter04_sec05.html">Übungen zum Selbststudium</a></li>
 </ul>
 </details></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
@@ -221,6 +218,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen zum Selbststudium</a></li>
 </ul>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit von Funktionen mehrerer Variablen</a></li>
@@ -525,10 +525,10 @@ Taylorpolynom.</p>
 Funktion <span class="math notranslate nohighlight">\(f\)</span> n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann
 wird ein Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> gewählt. Das Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> zu <span class="math notranslate nohighlight">\(f\)</span> vom
 Grad <span class="math notranslate nohighlight">\(n\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> ist dann:</p>
-<p>\begin{align*}
-T_n(x) &amp;=f(x_0) + \frac{f’(x_0)}{1!}(x-x_0)^1 + \frac{f’’(x_0)}{2!}(x-x_0)^2 +\ldots\
-&amp;=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+T_n(x) &amp;=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 +\ldots\\
+       &amp;=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
+\end{align*}\)</span></p>
 <p>Dabei steht <span class="math notranslate nohighlight">\(k!\)</span> für die Fakultät der Zahl <span class="math notranslate nohighlight">\(k\)</span>.</p>
 </div>
 <p>Hier gibt es ein Video, das die Fakultät <span class="math notranslate nohighlight">\(k!\)</span> erklärt.</p>
@@ -555,27 +555,30 @@ ein Taylorpolynom Grad 3 am Entwicklungspunkt <span class="math notranslate nohi
 <p>Schritt 1: Wir halten fest, der Grad ist 3 (<span class="math notranslate nohighlight">\(n=3\)</span>), d.h. wir brauchen die
 ersten drei Ableitungen.</p>
 <p>Schritt 2: Wir bilden die ersten drei Ableitungen:</p>
-<p>\begin{align*}
-f’(x)  &amp;= \cos(x) \
-f’’(x) &amp;= -\sin(x) \
-f^{(3)}(x) &amp;= -\cos(x) \end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+f'(x)  &amp;= \cos(x) \\
+f''(x) &amp;= -\sin(x) \\
+f^{(3)}(x) &amp;= -\cos(x) 
+\end{align*}\)</span></p>
 <p>Schritt 3: Wir rechnen die Koeffizienten des Taylorpolynoms aus, indem wir <span class="math notranslate nohighlight">\(x_0
 = 0\)</span> in die Funktion und die ersten drei Ableitungen einsetzen:</p>
-<p>\begin{align*}
-f(0) &amp;= \sin(0) = 0 \
-f’(0) &amp;= \cos(0) = 1 \
-f’’(0) &amp;= - \sin(0) = 0 \
-f^{(3)}(0) &amp;= -\cos(0) = -1 \end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+f(0) &amp;= \sin(0) = 0 \\
+f'(0) &amp;= \cos(0) = 1 \\
+f''(0) &amp;= - \sin(0) = 0 \\
+f^{(3)}(0) &amp;= -\cos(0) = -1 
+\end{align*}\)</span></p>
 <p>Schritt 4: Die Fakultäten bis 3 werden ausgerechnet:</p>
 <div class="math notranslate nohighlight">
 \[0!=1, \quad 1!=1, \quad 2!=2, \quad 3!=6.\]</div>
 <p>Schritt 5: Wir setzen alles in die Formel für das Taylorpolynom ein:
-\begin{align*} T_3(x) &amp;= f(x_0) + f’(x_0)\cdot (x-x_0) + \frac{f’’(x_0)}{2}\cdot
-(x-x_0)^2 + \frac{f^{(3)}(x_0)}{6} \cdot (x-x_0)^3 = \
-&amp;= \sin(0) + 1\cdot (x-0) + \frac{0}{2}\cdot (x-0)^2 + \frac{-1}{6}\cdot (x-0)^3 = \
-&amp;= x - \frac{1}{6}x^3.
-\end{align*}</p>
-<p>Am besten das folgende Video gucken :-)</p>
+<span class="math notranslate nohighlight">\(\begin{align*} 
+T_3(x) &amp;= f(x_0) + f'(x_0)\cdot (x-x_0) + \frac{f''(x_0)}{2}\cdot
+(x-x_0)^2 + \frac{f^{(3)}(x_0)}{6} \cdot (x-x_0)^3 = \\
+    &amp;= \sin(0) + 1\cdot (x-0) + \frac{0}{2}\cdot (x-0)^2 + \frac{-1}{6}\cdot (x-0)^3 = \\
+    &amp;= x - \frac{1}{6}x^3.
+\end{align*}\)</span></p>
+<p>Am besten das folgende Video gucken.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Taylorpolynom berechnen” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
