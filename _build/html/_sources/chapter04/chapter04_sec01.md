@@ -33,10 +33,10 @@ Funktion $f$ n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann
 wird ein Entwicklungspunkt $x_0$ gewählt. Das Taylorpolynom $T_n$ zu $f$ vom
 Grad $n$ am Entwicklungspunkt $x_0$ ist dann:
 
-\begin{align*}
+$\begin{align*}
 T_n(x) &=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 +\ldots\\
        &=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
-\end{align*}
+\end{align*}$
 
 Dabei steht $k!$ für die Fakultät der Zahl $k$.
 ```
@@ -68,32 +68,35 @@ ersten drei Ableitungen.
 
 Schritt 2: Wir bilden die ersten drei Ableitungen:
 
-\begin{align*}
+$\begin{align*}
 f'(x)  &= \cos(x) \\
 f''(x) &= -\sin(x) \\
-f^{(3)}(x) &= -\cos(x) \end{align*}
+f^{(3)}(x) &= -\cos(x) 
+\end{align*}$
 
 Schritt 3: Wir rechnen die Koeffizienten des Taylorpolynoms aus, indem wir $x_0
 = 0$ in die Funktion und die ersten drei Ableitungen einsetzen:
 
-\begin{align*}
+$\begin{align*}
 f(0) &= \sin(0) = 0 \\
 f'(0) &= \cos(0) = 1 \\
 f''(0) &= - \sin(0) = 0 \\
-f^{(3)}(0) &= -\cos(0) = -1 \end{align*}
+f^{(3)}(0) &= -\cos(0) = -1 
+\end{align*}$
 
 Schritt 4: Die Fakultäten bis 3 werden ausgerechnet:
 
 $$0!=1, \quad 1!=1, \quad 2!=2, \quad 3!=6.$$
 
 Schritt 5: Wir setzen alles in die Formel für das Taylorpolynom ein:
-\begin{align*} T_3(x) &= f(x_0) + f'(x_0)\cdot (x-x_0) + \frac{f''(x_0)}{2}\cdot
+$\begin{align*} 
+T_3(x) &= f(x_0) + f'(x_0)\cdot (x-x_0) + \frac{f''(x_0)}{2}\cdot
 (x-x_0)^2 + \frac{f^{(3)}(x_0)}{6} \cdot (x-x_0)^3 = \\
     &= \sin(0) + 1\cdot (x-0) + \frac{0}{2}\cdot (x-0)^2 + \frac{-1}{6}\cdot (x-0)^3 = \\
     &= x - \frac{1}{6}x^3.
-\end{align*}
+\end{align*}$
 
-Am besten das folgende Video gucken :-)
+Am besten das folgende Video gucken.
 
 ```{dropdown} Video zu "Taylorpolynom berechnen" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o95cOqnLekw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
