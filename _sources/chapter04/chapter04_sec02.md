@@ -71,11 +71,11 @@ nicht, ob $R_n(x)$ negativ oder positiv ist. Daher nehmen wir einfach mal den
 Betrag von $R_n(x)$, da es ja auch nur um eine grobe Abschätzung des Fehlers
 geht.
 
-\begin{align*}
+$\begin{align*}
 \left|R_n(x) \right| &= \left| f(x) - T_n(x) \right| = \\
     &= \left| \frac{f^{(n+1)}(z)}{(n+1)!}\cdot(x-x_0)^{n+1} \right| \leq\\
     &\leq \frac{M}{(n+1)!} \cdot |x-x_0|^{n+1}.
-\end{align*}
+\end{align*}$
 
 Abschließend muss noch ein Maximum von $|x - x_0|$ bestimmt werden. Wir
 nennen diese Zahl $d$ (wie Distanz). Dann kann der Fehler, der Betrag des

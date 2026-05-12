@@ -210,9 +210,6 @@
 <li class="toctree-l2"><a class="reference internal" href="chapter04_sec05.html">Übungen zum Selbststudium</a></li>
 </ul>
 </details></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
@@ -221,6 +218,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen zum Selbststudium</a></li>
 </ul>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit von Funktionen mehrerer Variablen</a></li>
@@ -555,11 +555,11 @@ wissen, ob <span class="math notranslate nohighlight">\(T_n\)</span> die Funktio
 nicht, ob <span class="math notranslate nohighlight">\(R_n(x)\)</span> negativ oder positiv ist. Daher nehmen wir einfach mal den
 Betrag von <span class="math notranslate nohighlight">\(R_n(x)\)</span>, da es ja auch nur um eine grobe Abschätzung des Fehlers
 geht.</p>
-<p>\begin{align*}
-\left|R_n(x) \right| &amp;= \left| f(x) - T_n(x) \right| = \
-&amp;= \left| \frac{f^{(n+1)}(z)}{(n+1)!}\cdot(x-x_0)^{n+1} \right| \leq\
-&amp;\leq \frac{M}{(n+1)!} \cdot |x-x_0|^{n+1}.
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\left|R_n(x) \right| &amp;= \left| f(x) - T_n(x) \right| = \\
+    &amp;= \left| \frac{f^{(n+1)}(z)}{(n+1)!}\cdot(x-x_0)^{n+1} \right| \leq\\
+    &amp;\leq \frac{M}{(n+1)!} \cdot |x-x_0|^{n+1}.
+\end{align*}\)</span></p>
 <p>Abschließend muss noch ein Maximum von <span class="math notranslate nohighlight">\(|x - x_0|\)</span> bestimmt werden. Wir
 nennen diese Zahl <span class="math notranslate nohighlight">\(d\)</span> (wie Distanz). Dann kann der Fehler, der Betrag des
 Restglieds des Taylorpolynoms, abgeschätzt werden als</p>
