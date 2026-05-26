@@ -303,7 +303,7 @@ fig.add_trace(
         ),
         colorbar=dict(
             title='f(x,y)',
-            titleside='right'
+            #titleside='right'
         )
     )
 )
@@ -439,10 +439,13 @@ legend_annotations = [
 # Füge die Legende-Anmerkungen hinzu
 for annotation in legend_annotations:
     fig.add_annotation(annotation)
-
-# Zeige die Figur an
-fig.show()
+    
+# Erstelle die Figur als interaktives html
+fig.write_html("plots/gradient_visualisierung.html")
 ```
+
+<iframe src="plots/gradient_visualisierung.html" width="100%" height="650px" frameborder="0"></iframe>
+
 
 Der Gradient sowie ein weiteres Beispiel werden in den folgenden Videos
 präsentiert.
@@ -461,5 +464,5 @@ In diesem Kapitel haben wir das Konzept der partiellen Ableitung eingeführt, da
 die Änderungsrate einer Funktion mehrerer Variablen in Richtung der
 Koordinatenachsen beschreibt. Durch Zusammenfassung der partiellen Ableitungen
 erhalten wir den Gradienten, der in Richtung des steilsten Anstiegs zeigt und
-senkrecht auf den Höhenlinien steht. Im nächsten Kapitel wereden wir höhere
+senkrecht auf den Höhenlinien steht. Im nächsten Kapitel werden wir höhere
 partielle Ableitungen behandeln.

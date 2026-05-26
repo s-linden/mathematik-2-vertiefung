@@ -9,9 +9,8 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.14.7
 mystnb:
-  execution:
-    enable: true
-    timeout: 60
+  execution_mode: force
+  execution_timeout: 60
 ---
 
 # 7.2 Vektorwertige Funktionen
