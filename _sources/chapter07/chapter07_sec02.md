@@ -8,6 +8,9 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.14.7
+mystnb:
+  execution_mode: force
+  execution_timeout: 60
 ---
 
 # 7.2 Vektorwertige Funktionen
@@ -37,7 +40,7 @@ Eine vektorwertige Funktion ist eine Funktion, die Vektoren als Wertemenge bzw.
 Funktionswerte hat. Jedem Punkt $\vec{x}\in\mathbb{R}^m$ wird eindeutig ein
 Vektor $\mathbb{R}^n$ zugeordnet, in mathematischer Notation
 
-$$f:\mathbb{R}^m \rightarrow \mathbb{R}^n.$$ 
+$$f:\mathbb{R}^m \rightarrow \mathbb{R}^n.$$
 
 Übrigens, in der Physik wird eine vektorwertige Funktion auch oft **Vektorfeld**
 genannt.
@@ -90,11 +93,15 @@ Vektoren beträgt.
 
 Zoomen Sie in die Grafik hinein und drehen Sie sie auch.
 
+<iframe src="plots/vektorwertige_funktion.html" width="100%" height="500px" frameborder="0"></iframe>
+
+Im Folgenden werden auch noch die drei skalarwertigen Komponentenfunktionen
+einzeln dargestellt.
+
 ```{code-cell}
 :tags: [remove-input]
 import numpy as np
 import plotly.graph_objects as go
-from plotly.offline import plot
 
 def vektorwertige_funktion(x, y):
     """Berechnet die vektorwertige Funktion f(x,y) = (x² - y, xy, x + y²)"""
@@ -229,6 +236,9 @@ fig.update_layout(
         x=0.95
     )
 )
+
+# Speichert die Figur als interaktives HTML
+fig.write_html("plots/vektorwertige_funktion.html")
 ```
 
 Im Folgenden werden auch noch die drei skalarwertigen Komponentenfunktionen
@@ -339,28 +349,24 @@ def erstelle_drei_komponentenfiguren(bereich=[-3, 3], aufloesung=50):
 # Ausführung in Jupyter Notebook
 # Erstellt drei separate Figuren für die Komponentenfunktionen
 fig1, fig2, fig3 = erstelle_drei_komponentenfiguren()
+
+# Speichert die Figuren als interaktives HTML
+fig1.write_html("plots/komponente_1.html")
+fig2.write_html("plots/komponente_2.html")
+fig3.write_html("plots/komponente_3.html")
 ```
 
 **1\. Komponentenfunktion:** $f_1(x,y) = x^2 - y$
 
-```{code-cell}
-:tags: [remove-input]
-fig1.show()
-```
+<iframe src="plots/komponente_1.html" width="100%" height="500px" frameborder="0"></iframe>
 
 **2\. Komponentenfunktion:** $f_2(x,y) = xy$
 
-```{code-cell}
-:tags: [remove-input]
-fig2.show()
-```
+<iframe src="plots/komponente_2.html" width="100%" height="500px" frameborder="0"></iframe>
 
 **3\. Komponentenfunktion:** $f_3(x,y) = x + y^2$
 
-```{code-cell}
-:tags: [remove-input]
-fig3.show()
-```
+<iframe src="plots/komponente_3.html" width="100%" height="500px" frameborder="0"></iframe>
 
 ## Eigenschaften vektorwertiger Funktionen
 
