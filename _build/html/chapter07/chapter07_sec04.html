@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -581,25 +581,25 @@ y &amp; x \\
 2x &amp; -2y \\
 \end{pmatrix}\end{split}\]</div>
 <p>Dann ist die Jacobi-Matrix der verketteten Funktion</p>
-<p>\begin{align*}
-\mathbf{J}<em>{f\circ g}(r,\varphi) &amp;= \mathbf{J}</em>{f}(g(r,\varphi)) \cdot \mathbf{J}_{g}(r, \varphi) = \
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\mathbf{J}_{f\circ g}(r,\varphi) &amp;= \mathbf{J}_{f}(g(r,\varphi)) \cdot \mathbf{J}_{g}(r, \varphi) = \\
 &amp;=
 \begin{pmatrix}
-2r\cdot\sin(\varphi) &amp; 2r\cdot \cos(\varphi) \
-r\cdot\cos(\varphi) &amp; r\cdot\sin(\varphi) \
-2r\cdot\sin(\varphi) &amp; -2r\cdot\cos(\varphi) \
+2r\cdot\sin(\varphi) &amp; 2r\cdot \cos(\varphi) \\
+r\cdot\cos(\varphi) &amp; r\cdot\sin(\varphi) \\
+2r\cdot\sin(\varphi) &amp; -2r\cdot\cos(\varphi) \\
 \end{pmatrix} \cdot
 \begin{pmatrix}
-\sin(\varphi) &amp; r\cos(\varphi) \
+\sin(\varphi) &amp; r\cos(\varphi) \\
 \cos(\varphi) &amp; -r\cdot\sin(\varphi)
-\end{pmatrix} = \
+\end{pmatrix} = \\
 &amp;=
 \begin{pmatrix}
-2r &amp; 0 \
-2r\sin(\varphi)\cos(\varphi) &amp; r^2\left(\cos^2(\varphi)-\sin^2(\varphi) \right)\
-2r\left(\sin^2(\varphi)-\cos^2(\varphi)\right) &amp; 4r^2\sin(\varphi)\cos(\varphi) \
+2r &amp; 0 \\
+2r\sin(\varphi)\cos(\varphi) &amp; r^2\left(\cos^2(\varphi)-\sin^2(\varphi) \right)\\
+2r\left(\sin^2(\varphi)-\cos^2(\varphi)\right) &amp; 4r^2\sin(\varphi)\cos(\varphi) \\
 \end{pmatrix}
-\end{align*}</p>
+\end{align*}\)</span></p>
 <p>Das gleiche Ergebnis erhalten wir, wenn wir direkt die Jacobi-Matrix der
 verketteten Funktion berechnen. Manchmal ist es einfacher, die Jacobi-Matrizen
 der inneren und äußeren Funktion auszurechnen und das Produkt zu bilden, und
