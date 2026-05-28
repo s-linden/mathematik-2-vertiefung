@@ -639,29 +639,29 @@ auszuführen und danach den Gradienten auszurechnen. Im folgenden Beispiel werde
 beide Varianten am <strong>Beispiel der Produktregel</strong> vorgeführt.</p>
 <p>Betrachten wir die Funktionen <span class="math notranslate nohighlight">\(f(x,y) = x^2 + y^2\)</span> und <span class="math notranslate nohighlight">\(g(x,y) = xy\)</span>.</p>
 <p>Die Gradienten dieser Funktionen sind:</p>
-<p>\begin{align*}
-\nabla f(x,y) &amp;= (2x, 2y)\
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\nabla f(x,y) &amp;= (2x, 2y)\\
 \nabla g(x,y) &amp;= (y, x).
-\end{align*}</p>
+\end{align*}\)</span></p>
 <p>Für das Produkt <span class="math notranslate nohighlight">\(h(x,y) = f(x,y) \cdot g(x,y) = (x^2 + y^2) \cdot xy\)</span> erhalten
 wir nach der Produktregel:</p>
-<p>\begin{align*}
-\nabla h(x,y) &amp;= g(x,y) \cdot \nabla f(x,y) + f(x,y) \cdot \nabla g(x,y)\
-&amp;= xy \cdot (2x, 2y) + (x^2 + y^2) \cdot (y, x)\
-&amp;= (2x^2y, 2xy^2) + ((x^2 + y^2)y, (x^2 + y^2)x)\
-&amp;= (2x^2y + (x^2 + y^2)y, 2xy^2 + (x^2 + y^2)x)\
-&amp;= (2x^2y + x^2y + y^3, 2xy^2 + x^3 + xy^2)\
-&amp;= (x^2y(2 + 1) + y^3, xy^2(2 + 1) + x^3)\
-&amp;= (3x^2y + y^3, 3xy^2 + x^3).\
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\nabla h(x,y) &amp;= g(x,y) \cdot \nabla f(x,y) + f(x,y) \cdot \nabla g(x,y)\\
+&amp;= xy \cdot (2x, 2y) + (x^2 + y^2) \cdot (y, x)\\
+&amp;= (2x^2y, 2xy^2) + ((x^2 + y^2)y, (x^2 + y^2)x)\\
+&amp;= (2x^2y + (x^2 + y^2)y, 2xy^2 + (x^2 + y^2)x)\\
+&amp;= (2x^2y + x^2y + y^3, 2xy^2 + x^3 + xy^2)\\
+&amp;= (x^2y(2 + 1) + y^3, xy^2(2 + 1) + x^3)\\
+&amp;= (3x^2y + y^3, 3xy^2 + x^3).\\
+\end{align*}\)</span></p>
 <p>Zur Überprüfung können wir <span class="math notranslate nohighlight">\(h(x,y)\)</span> direkt ausmultiplizieren</p>
 <div class="math notranslate nohighlight">
 \[h(x,y) = (x^2 + y^2) \cdot xy = x^3y + xy^3\]</div>
 <p>und dann partiell differenzieren</p>
-<p>\begin{align*}
-&amp;\frac{\partial h}{\partial x} = 3x^2y + y^3, \
-&amp;\frac{\partial h}{\partial y} = x^3 + 3xy^2. \
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+&amp;\frac{\partial h}{\partial x} = 3x^2y + y^3, \\
+&amp;\frac{\partial h}{\partial y} = x^3 + 3xy^2. \\
+\end{align*}\)</span></p>
 <p>Dies ergibt den Gradienten <span class="math notranslate nohighlight">\(\nabla h(x,y) = (3x^2y + y^3, x^3 + 3xy^2)\)</span>, was mit
 dem ersten Ergebnis übereinstimmt.</p>
 <p>In den folgenden Videos können Sie sich die Rechenregeln für Gradienten ansehen.</p>
