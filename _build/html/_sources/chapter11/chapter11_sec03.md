@@ -102,10 +102,10 @@ e^{\tilde{C}}.$$
 Die rechte Seite ist positiv. Wenn wir die Betragsstriche weglassen, erhalten
 wir die beiden Lösungen
 
-\begin{align*}
+$\begin{align*}
 y_1(x) &= +e^{\tilde{C}} \cdot e^{\frac{5}{2} x^2}, \\
 y_2(x) &= -e^{\tilde{C}} \cdot e^{\frac{5}{2} x^2}.
-\end{align*}
+\end{align*}$
 
 Gleichzeitig ist auch $y_3(x)=0$ eine Lösung der Differentialgleichung. Daher
 müssten wir eigentlich drei Lösungen der Differentialgleichung notieren. Wenn

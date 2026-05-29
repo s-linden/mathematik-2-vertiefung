@@ -543,19 +543,19 @@ den Punkten <span class="math notranslate nohighlight">\((-3,4)\)</span> und <sp
 <div class="math notranslate nohighlight">
 \[x_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} x \, dy \right) \, dx\]</div>
 <p>verwendet. Zuerst berechnen wir das innere Integral <span class="math notranslate nohighlight">\(I(x)\)</span>, indem wir nach <span class="math notranslate nohighlight">\(y\)</span> integrieren:</p>
-<p>\begin{align*}
-I(x)&amp;= \int_{y=f_u(x)}^{y=f_o(x)} x , dy = \
-&amp;= \int_{y=x^2-5}^{y=-x+1} x , dy = \
-&amp;= \big[ xy \big]_{y=x^2-5}^{y=-x+1} = \
-&amp;= x\cdot(-x+1) - x\cdot(x^2-5) = \
-&amp;= -x^3-x^2+6x.
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+I(x)&amp;= \int_{y=f_u(x)}^{y=f_o(x)} x \, dy = \\
+    &amp;= \int_{y=x^2-5}^{y=-x+1} x \, dy = \\
+    &amp;= \big[ xy \big]_{y=x^2-5}^{y=-x+1} = \\
+    &amp;= x\cdot(-x+1) - x\cdot(x^2-5) = \\
+    &amp;= -x^3-x^2+6x.
+\end{align*}\)</span></p>
 <p>Dann wird das innere Integral in das äußere Integral eingesetzt und nach <span class="math notranslate nohighlight">\(x\)</span>
 integriert:</p>
-<p>\begin{align*}
-\int_{x=-3}^{x=2} -x^3-x^2+6x , dx &amp;= \left[-\frac{1}{4}x^4-\frac{1}{3}x^3+3x^2\right]_{x=-3}^{x=2} = \
-&amp;= -\frac{125}{12} \approx -10.417.\
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\int_{x=-3}^{x=2} -x^3-x^2+6x \, dx &amp;= \left[-\frac{1}{4}x^4-\frac{1}{3}x^3+3x^2\right]_{x=-3}^{x=2} = \\
+&amp;= -\frac{125}{12} \approx -10.417.\\
+\end{align*}\)</span></p>
 <p>Nun kann alles in die Formel eingesetzt werden:</p>
 <div class="math notranslate nohighlight">
 \[x_S = \frac{1}{\frac{125}{6}} \cdot \left(-\frac{125}{12}\right) = -\frac{1}{2}.\]</div>
@@ -564,18 +564,18 @@ integriert:</p>
 <div class="math notranslate nohighlight">
 \[y_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} y \, dy \right) \, dx\]</div>
 <p>verwendet. Zunächst berechnen wir wieder einmal nur das innere Integral durch Integration nach <span class="math notranslate nohighlight">\(y\)</span>:</p>
-<p>\begin{align*}
-I(x) &amp;= \int_{y=x^2-5}^{-x+1} y , dy = \
-&amp;= \big[\frac{1}{2}y^2 \big]{y=x^2-5}^{-x+1} = \
-&amp;= \frac{1}{2}\left(-x+1\right)^2 - \frac{1}{2}\left( x^2-5\right)^2 = \
-&amp;= -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12.
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+I(x) &amp;= \int_{y=x^2-5}^{-x+1} y \, dy = \\
+    &amp;= \big[\frac{1}{2}y^2 \big]{y=x^2-5}^{-x+1} = \\
+    &amp;= \frac{1}{2}\left(-x+1\right)^2 - \frac{1}{2}\left( x^2-5\right)^2 = \\
+    &amp;= -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12.
+\end{align*}\)</span></p>
 <p>Eingesetzt in das äußere Integral erhalten wir</p>
-<p>\begin{align*}
-\int_{x=-3}^{x=2} -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12 , dx
-&amp;= \left[-\frac{1}{10}x^5+\frac{11}{6}x^3-\frac{1}{2}x^2-12x \right]_{x=-3}^{x=2} = \
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\int_{x=-3}^{x=2} -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12 \, dx
+&amp;= \left[-\frac{1}{10}x^5+\frac{11}{6}x^3-\frac{1}{2}x^2-12x \right]_{x=-3}^{x=2} = \\
 &amp;= -\frac{125}{6} \approx -20.8333.
-\end{align*}</p>
+\end{align*}\)</span></p>
 <p>Nun noch alles in die ursprüngliche Formel einsetzen und wir erhalten für den Schwerpunkt <span class="math notranslate nohighlight">\(y_S\)</span> in y-Richtung:</p>
 <div class="math notranslate nohighlight">
 \[y_S = \frac{1}{\frac{125}{6}} \cdot \left( -\frac{125}{6} \right) = -1.\]</div>

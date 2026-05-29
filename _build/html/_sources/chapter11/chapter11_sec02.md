@@ -66,10 +66,10 @@ durch die Punkte $(0,0)$ und $(\pi,1)$ gehen soll. Dann würde die spezielle
 Lösung mit $C_1=\frac{1}{\pi}$ und $C_2=0$ sowohl die DGL erfüllen als auch die
 Zusatzbedingungen, denn es gilt
 
-\begin{align*}
+$\begin{align*}
 y(0) &= \sin(0) + \frac{1}{\pi}\cdot 0 + 0 = 0,\\
 y(\pi) &= \sin(\pi) + \frac{1}{\pi} \cdot \pi + 0 = 1.
-\end{align*}
+\end{align*}$
 
 Sicherheitshalber rechnen wir noch die 2. Ableitung der Funktion
 $y(x)=\sin(x)+\frac{1}{\pi}x$ aus, aber das ist tatsächlich $y''(x)=-\sin(x)$,
@@ -194,20 +194,18 @@ als zusätzliche Bedingung. Als erstes bestimmen wir die allgemeine Lösung des
 Randwertproblems. Dazu integrieren wir zweimal unbestimmt und erhalten zwei
 Integrationskonstanten:
 
-\begin{align*} \int y''(x)\, dx = -\frac{q}{2EI} \int lx - x^2 \, dx \quad
-&\Rightarrow \quad y'(x) = - \frac{q}{2EI}\left(\frac{1}{2}lx^2 - \frac{1}{3}x^3
-+ C_1\right) \\ \int y'(x) \, dx = - \frac{q}{2EI} \int \frac{1}{2}lx^2 -
-\frac{1}{3}x^3 + C_1 \, dx \quad &\Rightarrow \quad y(x) = - \frac{q}{2EI}
-\left(\frac{1}{6}lx^3 -\frac{1}{12} x^4 + C_1x + C_2\right)  
-\end{align*}
+$\begin{align*} 
+\int y''(x)\, dx = -\frac{q}{2EI} \int lx - x^2 \, dx  \quad                                                 &\Rightarrow \quad y'(x) = - \frac{q}{2EI}\left(\frac{1}{2}lx^2 - \frac{1}{3}x^3 + C_1\right) \\
+\int y'(x) \, dx = - \frac{q}{2EI} \int \frac{1}{2}lx^2 - \frac{1}{3}x^3 + C_1 \, dx \quad  &\Rightarrow \quad y(x) = - \frac{q}{2EI}\left(\frac{1}{6}lx^3 -\frac{1}{12} x^4 + C_1x + C_2\right) 
+\end{align*}$
 
 Um jetzt aus der allgemeinen Lösung mit den zwei Integrationskonstanten die
 spezielle Lösung zu berechnen, die das Randwertproblem löst, setzen wir die
 beiden Randwerte in die allgemeine Lösung ein:
 
-\begin{align*} y(0) &= -\frac{q}{2EI} C_2, \\
+$\begin{align*} y(0) &= -\frac{q}{2EI} C_2, \\
 y(l) &= -\frac{q}{2EI} \left(\frac{1}{6}l^4  - \frac{1}{12} l^4 + C_1\cdot l +
-C_2\right). \end{align*}
+C_2\right). \end{align*}$
 
 Da die Durchbiegung an der linken und rechten Stütze jeweils 0 ist, setzen wir
 $y(0)=y(l)=0$. Wir können sofort auf beiden Seiten durch den Term

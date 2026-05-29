@@ -66,21 +66,21 @@ $$x_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} x \, dy \
 
 verwendet. Zuerst berechnen wir das innere Integral $I(x)$, indem wir nach $y$ integrieren:
 
-\begin{align*}
+$\begin{align*}
 I(x)&= \int_{y=f_u(x)}^{y=f_o(x)} x \, dy = \\
     &= \int_{y=x^2-5}^{y=-x+1} x \, dy = \\
     &= \big[ xy \big]_{y=x^2-5}^{y=-x+1} = \\
     &= x\cdot(-x+1) - x\cdot(x^2-5) = \\
     &= -x^3-x^2+6x.
-\end{align*}
+\end{align*}$
 
 Dann wird das innere Integral in das äußere Integral eingesetzt und nach $x$
 integriert:
 
-\begin{align*}
+$\begin{align*}
 \int_{x=-3}^{x=2} -x^3-x^2+6x \, dx &= \left[-\frac{1}{4}x^4-\frac{1}{3}x^3+3x^2\right]_{x=-3}^{x=2} = \\
 &= -\frac{125}{12} \approx -10.417.\\
-\end{align*}
+\end{align*}$
 
 Nun kann alles in die Formel eingesetzt werden:
 
@@ -94,20 +94,20 @@ $$y_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} y \, dy \
 
 verwendet. Zunächst berechnen wir wieder einmal nur das innere Integral durch Integration nach $y$:
 
-\begin{align*}
+$\begin{align*}
 I(x) &= \int_{y=x^2-5}^{-x+1} y \, dy = \\
     &= \big[\frac{1}{2}y^2 \big]{y=x^2-5}^{-x+1} = \\
     &= \frac{1}{2}\left(-x+1\right)^2 - \frac{1}{2}\left( x^2-5\right)^2 = \\
     &= -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12.
-\end{align*}
+\end{align*}$
 
 Eingesetzt in das äußere Integral erhalten wir
 
-\begin{align*}
+$\begin{align*}
 \int_{x=-3}^{x=2} -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12 \, dx
 &= \left[-\frac{1}{10}x^5+\frac{11}{6}x^3-\frac{1}{2}x^2-12x \right]_{x=-3}^{x=2} = \\
 &= -\frac{125}{6} \approx -20.8333.
-\end{align*}
+\end{align*}$
 
 Nun noch alles in die ursprüngliche Formel einsetzen und wir erhalten für den Schwerpunkt $y_S$ in y-Richtung:
 

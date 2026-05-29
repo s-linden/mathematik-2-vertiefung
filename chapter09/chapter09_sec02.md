@@ -68,10 +68,10 @@ sind $0$ und $1$.
 Das Rechteck wird oben durch die Konstante 2 berandet und unten durch die
 Konstante 1. Also sind die obere und die untere Funktion
 
-\begin{align*}
+$\begin{align*}
 f_o(x) &= 2 \\
 f_u(x) &= 1 \\
-\end{align*}
+\end{align*}$
 
 ```{figure} pics/part10_plot_example01.svg
 ---
@@ -90,12 +90,12 @@ $$\iint_{A}f(x,y)\, dA = \int_{x=0}^{x=1} \left( \int_{y=1}^{y=2} xy \, dy
 
 Das innere Integral $I(x)$ wird berechnet, indem nach $y$ integriert wird:
 
-\begin{align*}
+$\begin{align*}
 I(x) &= \int_{y=1}^{y=2} xy \, dy = \\
      &= \left[ x \cdot \frac{1}{2}y^2 \right]_{y=1}^{y=2} = \\
      &= x\cdot \frac{1}{2}2^2 - x\cdot \frac{1}{2}1^2 = \\
      &= \frac{3}{2}x.\\
-\end{align*}
+\end{align*}$
 
 **Schritt 3: äußere Integration (nach x)**
 
@@ -168,23 +168,23 @@ x^2\cdot(y+1) \; dy\right)dx.$$
 
 Das innere Integral $I(x)$ wird berechnet, indem nach $y$ integriert wird:
 
-\begin{align*}
+$\begin{align*}
 I(x) &= \int_{y=x^2-5}^{y=-x+1} x^2\cdot(y+1) \, dy = \\
      &= \left[ x^2 \cdot \left(\frac{1}{2}y^2 +y\right)\right]_{y=x^2-5}^{y=-x+1} = \\
      &= x^2 \left(\frac{1}{2}(-x+1)^2+(-x+1) - \frac{1}{2}(x^2-5)^2-(x^2-5) \right) = \\
      &= -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2.
-\end{align*}
+\end{align*}$
 
 **Schritt 3: äußere Integration (nach x)**
 
 Das innere Integral $I(x) = -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2$ wird nun
 in das äußere Integral eingesetzt und nach $x$ integriert:
 
-\begin{align*}
+$\begin{align*}
 \int_{x=-3}^{x=2} I(x)\, dx &= \int_{x=-3}^{x=2} -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2 =\\
 &= \left[-\frac{1}{14}x^7 + \frac{9}{10}x^5 - \frac{1}{2}x^4 - 2x^3\right]_{x=-3}^{x=2} = \\
 &= \frac{625}{14} \approx 44.643
-\end{align*}
+\end{align*}$
 
 Damit gilt insgesamt
 

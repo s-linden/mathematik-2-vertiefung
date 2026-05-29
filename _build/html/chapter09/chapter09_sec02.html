@@ -549,10 +549,10 @@ sind <span class="math notranslate nohighlight">\(0\)</span> und <span class="ma
 <p><strong>Schritt 1: obere und untere Funktion finden</strong></p>
 <p>Das Rechteck wird oben durch die Konstante 2 berandet und unten durch die
 Konstante 1. Also sind die obere und die untere Funktion</p>
-<p>\begin{align*}
-f_o(x) &amp;= 2 \
-f_u(x) &amp;= 1 \
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+f_o(x) &amp;= 2 \\
+f_u(x) &amp;= 1 \\
+\end{align*}\)</span></p>
 <figure class="align-default" id="part10-plot-example01">
 <a class="reference internal image-reference" href="../_images/part10_plot_example01.svg"><img alt="../_images/part10_plot_example01.svg" src="../_images/part10_plot_example01.svg" style="width: 75%;" />
 </a>
@@ -566,12 +566,12 @@ f_u(x) &amp;= 1 \
 \right) \, dx.\]</div>
 <p><strong>Schritt 2: innere Integration (nach y)</strong></p>
 <p>Das innere Integral <span class="math notranslate nohighlight">\(I(x)\)</span> wird berechnet, indem nach <span class="math notranslate nohighlight">\(y\)</span> integriert wird:</p>
-<p>\begin{align*}
-I(x) &amp;= \int_{y=1}^{y=2} xy , dy = \
-&amp;= \left[ x \cdot \frac{1}{2}y^2 \right]_{y=1}^{y=2} = \
-&amp;= x\cdot \frac{1}{2}2^2 - x\cdot \frac{1}{2}1^2 = \
-&amp;= \frac{3}{2}x.\
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+I(x) &amp;= \int_{y=1}^{y=2} xy \, dy = \\
+     &amp;= \left[ x \cdot \frac{1}{2}y^2 \right]_{y=1}^{y=2} = \\
+     &amp;= x\cdot \frac{1}{2}2^2 - x\cdot \frac{1}{2}1^2 = \\
+     &amp;= \frac{3}{2}x.\\
+\end{align*}\)</span></p>
 <p><strong>Schritt 3: äußere Integration (nach x)</strong></p>
 <p>Das innere Integral <span class="math notranslate nohighlight">\(I(x) = \frac{3}{2}x\)</span> wird nun in das äußere Integral
 eingesetzt und nach <span class="math notranslate nohighlight">\(x\)</span> integriert:</p>
@@ -633,20 +633,20 @@ sind die beiden Stellen <span class="math notranslate nohighlight">\(x_1 = -3\)<
 x^2\cdot(y+1) \; dy\right)dx.\]</div>
 <p><strong>Schritt 2: innere Integration (nach y)</strong></p>
 <p>Das innere Integral <span class="math notranslate nohighlight">\(I(x)\)</span> wird berechnet, indem nach <span class="math notranslate nohighlight">\(y\)</span> integriert wird:</p>
-<p>\begin{align*}
-I(x) &amp;= \int_{y=x^2-5}^{y=-x+1} x^2\cdot(y+1) , dy = \
-&amp;= \left[ x^2 \cdot \left(\frac{1}{2}y^2 +y\right)\right]_{y=x^2-5}^{y=-x+1} = \
-&amp;= x^2 \left(\frac{1}{2}(-x+1)^2+(-x+1) - \frac{1}{2}(x^2-5)^2-(x^2-5) \right) = \
-&amp;= -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2.
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+I(x) &amp;= \int_{y=x^2-5}^{y=-x+1} x^2\cdot(y+1) \, dy = \\
+     &amp;= \left[ x^2 \cdot \left(\frac{1}{2}y^2 +y\right)\right]_{y=x^2-5}^{y=-x+1} = \\
+     &amp;= x^2 \left(\frac{1}{2}(-x+1)^2+(-x+1) - \frac{1}{2}(x^2-5)^2-(x^2-5) \right) = \\
+     &amp;= -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2.
+\end{align*}\)</span></p>
 <p><strong>Schritt 3: äußere Integration (nach x)</strong></p>
 <p>Das innere Integral <span class="math notranslate nohighlight">\(I(x) = -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2\)</span> wird nun
 in das äußere Integral eingesetzt und nach <span class="math notranslate nohighlight">\(x\)</span> integriert:</p>
-<p>\begin{align*}
-\int_{x=-3}^{x=2} I(x), dx &amp;= \int_{x=-3}^{x=2} -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2 =\
-&amp;= \left[-\frac{1}{14}x^7 + \frac{9}{10}x^5 - \frac{1}{2}x^4 - 2x^3\right]_{x=-3}^{x=2} = \
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\int_{x=-3}^{x=2} I(x)\, dx &amp;= \int_{x=-3}^{x=2} -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2 =\\
+&amp;= \left[-\frac{1}{14}x^7 + \frac{9}{10}x^5 - \frac{1}{2}x^4 - 2x^3\right]_{x=-3}^{x=2} = \\
 &amp;= \frac{625}{14} \approx 44.643
-\end{align*}</p>
+\end{align*}\)</span></p>
 <p>Damit gilt insgesamt</p>
 <div class="math notranslate nohighlight">
 \[\iint_{A}f(x,y)\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}

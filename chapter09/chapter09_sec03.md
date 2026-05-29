@@ -49,21 +49,21 @@ berechnen.
 
 Zuerst wird das innere Integral $I(x)$ berechnet, indem nach $y$ integriert wird:
 
-\begin{align*}
+$\begin{align*}
 I(x) &= \int_{y=x^2-5}^{y=-x+1} 1 \, dy = \\
      &= \left[ y \right]_{y=x^2-5}^{y=-x+1} = \\
      &= (-x+1) -(x^2-5) = \\
      &= -x^2-x+6.
-\end{align*}
+\end{align*}$
 
 Das innere Integral $I(x) = -x^2-x+6$ wird nun in das äußere Integral eingesetzt
 und nach $x$ integriert:
 
-\begin{align*}
+$\begin{align*}
 \int_{x=-3}^{x=2} I(x)\, dx &= \int_{x=-3}^{x=2}  -x^2-x+6\, dx =\\
 &= \left[-\frac{1}{3}x^3-\frac{1}{2}x^2+6x \right]_{x=-3}^{x=2} = \\
 &= \frac{125}{6} \approx 20.8333.
-\end{align*}
+\end{align*}$
 
 Damit gilt insgesamt
 
