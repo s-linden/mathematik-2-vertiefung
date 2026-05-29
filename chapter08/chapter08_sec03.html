@@ -521,10 +521,10 @@ f(x_0,y_0)}{\partial x \partial y}\right)^2 &gt; 0.\]</div>
 <ol class="arabic simple" start="3">
 <li><p>Zuletzt entscheidet dann das Vorzeichen von dem Term <span class="math notranslate nohighlight">\(\frac{\partial^2 f(x_0,y_0)}{\partial x \partial x}\)</span> darüber, ob ein Minimum oder ein Maximum vorliegt:</p></li>
 </ol>
-<p>\begin{align*}
-\frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} &lt; 0 &amp; \qquad \Rightarrow \text{relatives Maximum} \
-\frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} &gt; 0 &amp; \qquad \Rightarrow \text{relatives Minimum} \
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} &lt; 0 &amp; \qquad \Rightarrow \text{relatives Maximum} \\
+\frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} &gt; 0 &amp; \qquad \Rightarrow \text{relatives Minimum} \\
+\end{align*}\)</span></p>
 </div>
 </section>
 <section id="extremwerte-bei-eindimensionalen-funktionen">
@@ -614,11 +614,11 @@ vorliegt, muss noch berechnet werden, ob ein Maximum (Hochpunkt) oder ein
 Minimum (Tiefpunkt) vorliegt. Dazu muss das Vorzeichen der reinen 2. partiellen
 Ableitung nach <span class="math notranslate nohighlight">\(x\)</span> überprüft werden, also das Vorzeichen von <span class="math notranslate nohighlight">\(\frac{\partial^2
 f(x_0,y_0)}{\partial x\partial x}\)</span>. Es gilt:</p>
-<p>\begin{align*} \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &lt; 0 &amp;
-\qquad \Rightarrow \text{Maximum (Hochpunkt)} \
+<p><span class="math notranslate nohighlight">\(\begin{align*} \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &lt; 0 &amp;
+\qquad \Rightarrow \text{Maximum (Hochpunkt)} \\
 \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &gt; 0 &amp; \qquad
-\Rightarrow \text{Minimum (Tiefpunkt)} \
-\end{align*}</p>
+\Rightarrow \text{Minimum (Tiefpunkt)} \\
+\end{align*}\)</span></p>
 <p>Das folgende Video zeigt erneut die hinreichende Bedingung etwas allgemeiner als
 unsere obigen Betrachtungen.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -678,20 +678,20 @@ folgendermaßen vorgehen:</p>
 <div class="math notranslate nohighlight">
 \[f(x,y) = \frac{1}{1+x^2+y^2}.\]</div>
 <p>Als erstes berechnen wir die partiellen Ableitungen nach <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span>:</p>
-<p>\begin{align*}
-\frac{\partial f(x,y)}{\partial x} &amp;= \frac{-2x}{(1 + x^2 + y^2)^2} \
-\frac{\partial f(x,y)}{\partial y} &amp;= \frac{-2y}{(1 + x^2 + y^2)^2} \
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial f(x,y)}{\partial x} &amp;= \frac{-2x}{(1 + x^2 + y^2)^2} \\
+\frac{\partial f(x,y)}{\partial y} &amp;= \frac{-2y}{(1 + x^2 + y^2)^2} \\
+\end{align*}\)</span></p>
 <p>Der Gradient der Funktion <span class="math notranslate nohighlight">\(f\)</span> lautet also</p>
 <div class="math notranslate nohighlight">
 \[\nabla f(x,y) = \left(\frac{-2x}{(1 + x^2 + y^2)^2}, \frac{-2y}{(1 + x^2 +
 y^2)^2} \right).\]</div>
 <p>Jetzt werden der Gradient bzw. die partiellen Ableitungen Null gesetzt und wir
 erhalten die beiden folgenden Gleichungen:</p>
-<p>\begin{align*}
-\frac{-2x}{(1 + x^2 + y^2)^2} &amp;= 0 \
-\frac{-2y}{(1 + x^2 + y^2)^2} &amp;= 0 \
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{-2x}{(1 + x^2 + y^2)^2} &amp;= 0 \\
+\frac{-2y}{(1 + x^2 + y^2)^2} &amp;= 0 \\
+\end{align*}\)</span></p>
 <p>Wir multiplizieren bei jeder Gleichung mit dem Nenner <span class="math notranslate nohighlight">\((1 + x^2 + y^2)^2\)</span> und
 erhalten direkt die Nullstelle der 1. Gleichung <span class="math notranslate nohighlight">\(x = 0\)</span> und die Nullstelle der
 2. Gleichung <span class="math notranslate nohighlight">\(y = 0\)</span>. Damit kommt nur ein einziger Kandidat als Extremstelle
@@ -700,12 +700,12 @@ infrage nämlich</p>
 \[(x_0, y_0) = (0,0).\]</div>
 <p>Nun wird die Hesse-Matrix berechnet. Dazu werden die 2. partiellen Ableitungen
 gebildet:</p>
-<p>\begin{align*}
-\frac{\partial^2 f(x,y)}{\partial x \partial x} &amp;= \frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^3} \
-\frac{\partial^2 f(x,y)}{\partial y \partial x} &amp;= \frac{8xy}{(1 + x^2 + y^2)^3} \
-\frac{\partial^2 f(x,y)}{\partial x \partial y} &amp;= \frac{8xy}{(1 + x^2 + y^2)^3} \
-\frac{\partial^2 f(x,y)}{\partial y \partial y} &amp;= -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \
-\end{align*}</p>
+<p><span class="math notranslate nohighlight">\(\begin{align*}
+\frac{\partial^2 f(x,y)}{\partial x \partial x} &amp;= \frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^3} \\
+\frac{\partial^2 f(x,y)}{\partial y \partial x} &amp;= \frac{8xy}{(1 + x^2 + y^2)^3} \\
+\frac{\partial^2 f(x,y)}{\partial x \partial y} &amp;= \frac{8xy}{(1 + x^2 + y^2)^3} \\
+\frac{\partial^2 f(x,y)}{\partial y \partial y} &amp;= -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \\
+\end{align*}\)</span></p>
 <p>Damit lautet die Hesse-Matrix:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}H_{f}(x,y) =
