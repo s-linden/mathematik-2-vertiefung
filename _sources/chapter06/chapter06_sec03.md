@@ -136,7 +136,12 @@ fig = go.Figure()
 fig.add_trace(go.Surface(z=Z, x=x, y=y, colorscale='viridis'))
 fig.update_layout(title='f(x,y)=x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3',
 xaxis_title='x-Achse', yaxis_title='y-Achse')
+
+# Erstelle die Figur als interaktives html
+fig.write_html("plots/beispielfunktion_gradient.html")
+
 ```
+<iframe src="plots/beispielfunktion_gradient.html" width="100%" height="650px" frameborder="0"></iframe>
 
 Als erstes bilden wir die 1. partielle Ableitung nach $x$. Wir bewegen uns also
 entlang der x-Achse und betrachten $y$ nicht als eine Variable, sondern als eine
@@ -272,6 +277,7 @@ norm[norm == 0] = 1  # Vermeide Division durch Null
 DX_norm = DX / norm * scale_factor
 DY_norm = DY / norm * scale_factor
 
+
 # Dünne die Gitterpunkte aus, um die Darstellung übersichtlicher zu gestalten
 skip = 2
 X_sparse = X[::skip, ::skip]
@@ -342,10 +348,10 @@ for i in range(X_sparse.shape[0]):
         #
         # Erstelle den Pfeil
         annotations.append(dict(
-            x=x_pos,
-            y=y_pos,
-            ax=x_pos + dx,
-            ay=y_pos + dy,
+            x=x_pos + dx,
+            y=y_pos + dy,
+            ax=x_pos,
+            ay=y_pos,
             xref="x",
             yref="y",
             axref="x",
@@ -442,6 +448,7 @@ for annotation in legend_annotations:
     
 # Erstelle die Figur als interaktives html
 fig.write_html("plots/gradient_visualisierung.html")
+
 ```
 
 <iframe src="plots/gradient_visualisierung.html" width="100%" height="650px" frameborder="0"></iframe>
