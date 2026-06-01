@@ -269,7 +269,7 @@ fig.update_layout(
 
 # Zeige den Plot an
 # Speichere die Grafik als HTML-Datei
-fig.write_html("plots/countour.html")
+fig.write_html("plots/contour.html")
 ```
 
 <iframe src="plots/contour.html" width="100%" height="500px" frameborder="0"></iframe>
