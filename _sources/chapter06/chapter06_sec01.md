@@ -165,7 +165,12 @@ fig = go.Figure()
 fig.add_trace(go.Surface(z=z, x=x, y=y, colorscale='viridis'))
 fig.update_layout(title='Paraboloid f(x,y) = x² + y²', 
 xaxis_title='x-Achse', yaxis_title='y-Achse')
+
+# Speichere die Grafik als HTML-Datei
+fig.write_html("plots/paraboloid.html")
 ```
+
+<iframe src="plots/paraboloid.html" width="100%" height="500px" frameborder="0"></iframe>
 
 Zusätzlich zur Höhe wurde die Paraboloid-Fläche gemäß der Funktionswerte
 $f(x,y)$ eingefärbt. Die Farbskala rechts gibt an, welche Farbe welchem
@@ -263,8 +268,11 @@ fig.update_layout(
 )
 
 # Zeige den Plot an
-fig.show()
+# Speichere die Grafik als HTML-Datei
+fig.write_html("plots/countour.html")
 ```
+
+<iframe src="plots/contour.html" width="100%" height="500px" frameborder="0"></iframe>
 
 Die kreisförmigen Höhenlinien in dieser Darstellung zeigen, dass die Funktion
 $f(x,y) = x^2 + y^2$ für alle Punkte $(x,y)$ mit gleichem Abstand vom Ursprung
