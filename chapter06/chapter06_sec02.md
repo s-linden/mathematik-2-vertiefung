@@ -198,8 +198,13 @@ fig.update_layout(
     margin=dict(l=65, r=50, b=65, t=90)
 )
 
-# Zeige die Figur an
-fig.show()
+# Erstelle die Figur als interaktives html
+fig.write_html("plots/unstetigkeit.html")
+
+```
+
+<iframe src="plots/unstetigkeit.html" width="100%" height="650px" frameborder="0"></iframe>
+
 ```
 
 Bei Funktionen mehrerer Variablen gilt wie bei Funktionen einer Variablen: Jede
