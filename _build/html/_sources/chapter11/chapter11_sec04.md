@@ -38,10 +38,10 @@ $$(y - x) + (y+x)\cdot y' = 0$$
 
 ist von 1. Ordnung und lässt sich mit
 
-\begin{align*}
+$\begin{align*}
 p(x, y) &= y - x\\
 q(x, y) &= y + x
-\end{align*}
+\end{align*}$
 
 in der oben beschriebenen Form schreiben. Als nächstes wird überprüft, ob die
 Exaktheitsbedingung erfüllt ist.

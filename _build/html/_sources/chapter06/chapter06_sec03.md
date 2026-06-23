@@ -257,8 +257,8 @@ def df_dy(x, y):
     return 3*y**2 + 4*y + 1
 
 # Erstelle die Gitter für die Visualisierung
-x = np.linspace(-2, 2, 40)
-y = np.linspace(-2, 2, 40)
+x = np.linspace(-2, 2, 41)
+y = np.linspace(-2, 2, 41)
 X, Y = np.meshgrid(x, y)
 Z = f(X, Y)
 
