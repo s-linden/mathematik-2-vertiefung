@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -515,8 +516,8 @@ Kapitel werden wir dann die Anwendungen des Volumenintegrals kennenlernen.</p>
 dreidimensional ist. Es wird also eine Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}^3\to\mathbb{R}\)</span>
 über ein Volumen integriert. Die mathematische Notation für das Volumenintegral
 ist</p>
-<div class="math notranslate nohighlight">
-\[\iiint_{V} f(x,y,z) \, dV.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec03-1">
+<span class="eqno">(10.12)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec03-1" title="Link to this equation">#</a></span>\[\iiint_{V} f(x,y,z) \, dV.\]</div>
 <p>Konkret wird das Volumenintegral berechnet, indem ein Koordinatensystem eingeführt wird, das Integrationsgebiet <span class="math notranslate nohighlight">\(V\)</span> durch Randfunktionen beschrieben wird und das Volumenelement <span class="math notranslate nohighlight">\(dV\)</span> durch Linienelemente ausgedrückt wird. Im nächsten Abschnitt schauen wir uns das für kartesische Koordinaten an.</p>
 </section>
 <section id="berechnung-durch-dreifachintegral">
@@ -526,7 +527,7 @@ ist</p>
 <a class="reference internal image-reference" href="../_images/part11_skizze_dreifachintegral.svg"><img alt="../_images/part11_skizze_dreifachintegral.svg" src="../_images/part11_skizze_dreifachintegral.svg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Skizze: Integrationsgebiet des Volumenintegrals</span><a class="headerlink" href="#part11-skizze-dreifachintegral" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 10.4: </span><span class="caption-text">Skizze: Integrationsgebiet des Volumenintegrals</span><a class="headerlink" href="#part11-skizze-dreifachintegral" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="integrationsgebiet-durch-funktionen-beschreiben">
@@ -549,8 +550,8 @@ beschrieben:</p>
 <p>Die x-Werte wiederum, die in die beiden Grenzfunktionen eingesetzt werden
 dürfen, stammen aus dem Intervall <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
 <p>Das Volumenintegral kann jetzt durch drei Integrationen berechnet werden:</p>
-<div class="math notranslate nohighlight">
-\[\iiint_{V}f(x,y,z)\, dV =
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec03-2">
+<span class="eqno">(10.13)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec03-2" title="Link to this equation">#</a></span>\[\iiint_{V}f(x,y,z)\, dV =
 \int_{x=a}^{x=b} \left(
     \int_{y=g_{u}(x)}^{y=g_{o}(x)} \left(
         \int_{z = F_{u}(x,y)}^{z = F_{o}(x,y)} f(x,y,z)\, dz \right) \, dy
@@ -560,17 +561,17 @@ dürfen, stammen aus dem Intervall <span class="math notranslate nohighlight">\(
 <h3>Drei einzelne Integrationen durchführen<a class="headerlink" href="#drei-einzelne-integrationen-durchfuhren" title="Link to this heading">#</a></h3>
 <p>Jetzt werden die drei Integrale einzeln berechnet. Zunächst wird das innere
 Integral</p>
-<div class="math notranslate nohighlight">
-\[M(x,y) = \int_{z = F_{u}(x,y)}^{z = F_{o}(x,y)} f(x,y,z)\, dz\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec03-3">
+<span class="eqno">(10.14)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec03-3" title="Link to this equation">#</a></span>\[M(x,y) = \int_{z = F_{u}(x,y)}^{z = F_{o}(x,y)} f(x,y,z)\, dz\]</div>
 <p>durch Integration nach <span class="math notranslate nohighlight">\(z\)</span> ausgrechnet. Das Ergebnis dieser Integration ist eine
 Funktion, die noch von <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> abhängt. Wir nennen diese <span class="math notranslate nohighlight">\(M(x,y)\)</span>. Sie wird
 in das mittlere Integral eingesetzt und dann wird nach <span class="math notranslate nohighlight">\(y\)</span> integriert.</p>
-<div class="math notranslate nohighlight">
-\[I(x) =  \int_{y=g_{u}(x)}^{y=g_{o}(x)} M(x,y) \, dy.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec03-4">
+<span class="eqno">(10.15)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec03-4" title="Link to this equation">#</a></span>\[I(x) =  \int_{y=g_{u}(x)}^{y=g_{o}(x)} M(x,y) \, dy.\]</div>
 <p>Das Ergebnis ist eine Funktion, die nur noch von <span class="math notranslate nohighlight">\(x\)</span> abhängt und diw wir <span class="math notranslate nohighlight">\(I\)</span>
 nennen. Dann wird auch noch das äußere Integral berechnet,</p>
-<div class="math notranslate nohighlight">
-\[V = \int_{x=a}^{x=b} I(X) \, dx,\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec03-5">
+<span class="eqno">(10.16)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec03-5" title="Link to this equation">#</a></span>\[V = \int_{x=a}^{x=b} I(X) \, dx,\]</div>
 <p>so dass am Ende das Ergebnis eine Zahl ist.</p>
 <p>In dem folgenden Video wird der Unterschied Doppelintegral zu Dreifachintegral
 erklärt.</p>

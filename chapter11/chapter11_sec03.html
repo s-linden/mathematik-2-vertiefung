@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -517,26 +518,26 @@ links) lässt sich als ein Produkt von zwei Funktionen so umformen, dass eine
 Funktion nur von der Variablen <span class="math notranslate nohighlight">\(x\)</span> abhängt und die andere Funktion nur von
 Terme mit <span class="math notranslate nohighlight">\(y\)</span> enthält, also</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[y' = f(x)\cdot g(y).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-1">
+<span class="eqno">(11.41)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-1" title="Link to this equation">#</a></span>\[y' = f(x)\cdot g(y).\]</div>
 </section>
 <section id="beispiel-fur-eine-separable-differentialgleichung">
 <h2>Beispiel für eine separable Differentialgleichung<a class="headerlink" href="#beispiel-fur-eine-separable-differentialgleichung" title="Link to this heading">#</a></h2>
 <p>Die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[y'= 5\, y \, x\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-2">
+<span class="eqno">(11.42)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-2" title="Link to this equation">#</a></span>\[y'= 5\, y \, x\]</div>
 <p>ist eine separable Differentialgleichung. Sie ist von 1. Ordnung. Außerdem kann
 die rechte Seite in ein Produkt umgeschrieben werden, bei dem ein Faktor eine
 Funktion von <span class="math notranslate nohighlight">\(x\)</span> ist, nämlich <span class="math notranslate nohighlight">\(f(x) = 5x\)</span>, und der andere Faktor nur von <span class="math notranslate nohighlight">\(y\)</span>
 selbst abhängt, nämlich <span class="math notranslate nohighlight">\(g(y)=y\)</span>, also</p>
-<div class="math notranslate nohighlight">
-\[y' = 5x \cdot y.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-3">
+<span class="eqno">(11.43)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-3" title="Link to this equation">#</a></span>\[y' = 5x \cdot y.\]</div>
 </section>
 <section id="wie-werden-separable-differentialgleichungen-gelost">
 <h2>Wie werden separable Differentialgleichungen gelöst?<a class="headerlink" href="#wie-werden-separable-differentialgleichungen-gelost" title="Link to this heading">#</a></h2>
 <p>Eine separable Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[y' = f(x)\cdot g(y)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-4">
+<span class="eqno">(11.44)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-4" title="Link to this equation">#</a></span>\[y' = f(x)\cdot g(y)\]</div>
 <p>lässt sich schrittweise wie folgt lösen:</p>
 <ol class="arabic simple">
 <li><p>Ersetzen Sie <span class="math notranslate nohighlight">\(y'\)</span> durch den Differentialquotienen <span class="math notranslate nohighlight">\(\frac{dy}{dx}\)</span>.</p></li>
@@ -550,55 +551,56 @@ Stammfunktion.</p></li>
 <section id="beispiel-fur-die-losung-einer-separablen-differentialgleichung">
 <h2>Beispiel für die Lösung einer separablen Differentialgleichung<a class="headerlink" href="#beispiel-fur-die-losung-einer-separablen-differentialgleichung" title="Link to this heading">#</a></h2>
 <p>Wir betrachten erneut die separable Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[y' = 5x \cdot y.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-5">
+<span class="eqno">(11.45)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-5" title="Link to this equation">#</a></span>\[y' = 5x \cdot y.\]</div>
 <p><strong>Schritt 1:</strong> Zuerst ersetzen wir die 1. Ableitung durch den Differentialoperator</p>
-<div class="math notranslate nohighlight">
-\[\frac{dy}{dx} = 5x \cdot y.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-6">
+<span class="eqno">(11.46)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-6" title="Link to this equation">#</a></span>\[\frac{dy}{dx} = 5x \cdot y.\]</div>
 <p><strong>Schritt 2:</strong> Als nächstes trennen wir die Variablen:</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{y} \, dy = 5x \, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-7">
+<span class="eqno">(11.47)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-7" title="Link to this equation">#</a></span>\[\frac{1}{y} \, dy = 5x \, dx.\]</div>
 <p><strong>Schritt 3:</strong> Dann integrieren wir die linke Seite nach <span class="math notranslate nohighlight">\(dy\)</span> und die rechte Seite nach <span class="math notranslate nohighlight">\(dx\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-8">
+<span class="eqno">(11.48)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-8" title="Link to this equation">#</a></span>\[
 \int \frac{1}{y} \, dy = \int 5x \, dx \quad
 \Rightarrow  \ln |y| + C_1 = \frac{5}{2} x^2 + C_2
 \]</div>
 <p><strong>Schritt 4:</strong> Wir lösen nach <span class="math notranslate nohighlight">\(y\)</span> auf. Zuerst sortieren wir die
 Integrationskonstante <span class="math notranslate nohighlight">\(C_1\)</span> nach rechts und nennen die dadurch entstandene
 Differen <span class="math notranslate nohighlight">\(C_2 - C_1\)</span> einfach nur <span class="math notranslate nohighlight">\(\tilde{C}\)</span></p>
-<div class="math notranslate nohighlight">
-\[\Rightarrow  \ln |y| = \frac{5}{2} x^2 + \tilde{C}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-9">
+<span class="eqno">(11.49)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-9" title="Link to this equation">#</a></span>\[\Rightarrow  \ln |y| = \frac{5}{2} x^2 + \tilde{C}.\]</div>
 <p>Nun verwenden wir den Trick, die linke und rechte Seite als Exponenten für die
 Exponentialfunktion zu nutzen:</p>
-<div class="math notranslate nohighlight">
-\[\Rightarrow e^{\ln(|y|)} = e^{\frac{5}{2} x^2 + \tilde{C}}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-10">
+<span class="eqno">(11.50)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-10" title="Link to this equation">#</a></span>\[\Rightarrow e^{\ln(|y|)} = e^{\frac{5}{2} x^2 + \tilde{C}}.\]</div>
 <p>Da die Exponentialfunktion die Umkehrfunktion der Logarithmusfunktion ist, gilt
 nämlich <span class="math notranslate nohighlight">\(e^{\ln(|y|)} = y\)</span> und wir sind durch diesen Trick den Logarithmus
 losgeworden:</p>
-<div class="math notranslate nohighlight">
-\[\Rightarrow |y(x)| = e^{\frac{5}{2} x^2 + \tilde{C}}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-11">
+<span class="eqno">(11.51)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-11" title="Link to this equation">#</a></span>\[\Rightarrow |y(x)| = e^{\frac{5}{2} x^2 + \tilde{C}}.\]</div>
 <p>Um eine spezielle Lösung zu erhalten, muss aufgrund von Zusatzinformationen die
 Integrationskonstante <span class="math notranslate nohighlight">\(\tilde{C}\)</span> bestimmt werden. Etwas leichter kann die
 Konstante bestimmt werden, wenn sie nicht im Exponent steht. Wir schreiben daher
 die allgemeine Lösung noch etwas um:</p>
-<div class="math notranslate nohighlight">
-\[|y(x)| = e^{\frac{5}{2} x^2 + \tilde{C}} = e^{\frac{5}{2} x^2} \cdot
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-12">
+<span class="eqno">(11.52)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-12" title="Link to this equation">#</a></span>\[|y(x)| = e^{\frac{5}{2} x^2 + \tilde{C}} = e^{\frac{5}{2} x^2} \cdot
 e^{\tilde{C}}.\]</div>
 <p>Die rechte Seite ist positiv. Wenn wir die Betragsstriche weglassen, erhalten
 wir die beiden Lösungen</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-13">
+<span class="eqno">(11.53)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-13" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 y_1(x) &amp;= +e^{\tilde{C}} \cdot e^{\frac{5}{2} x^2}, \\
 y_2(x) &amp;= -e^{\tilde{C}} \cdot e^{\frac{5}{2} x^2}.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Gleichzeitig ist auch <span class="math notranslate nohighlight">\(y_3(x)=0\)</span> eine Lösung der Differentialgleichung. Daher
 müssten wir eigentlich drei Lösungen der Differentialgleichung notieren. Wenn
 wir aber eine neue Konstante <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> einführen, die sozusagen
 <span class="math notranslate nohighlight">\(+e^{\tilde{C}}\)</span> und <span class="math notranslate nohighlight">\(-e^{\tilde{C}}\)</span> sowie die Null ersetzt, dann können wir
 auch vereinfacht als allgemeine Lösung der Differentialgleichung <span class="math notranslate nohighlight">\(y' = 5x \cdot
 y\)</span> die Lösung</p>
-<div class="math notranslate nohighlight">
-\[y(x) = C e^{\frac{5}{2}x^2} \quad \text{ mit } C\in\mathbb{R}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec03-14">
+<span class="eqno">(11.54)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec03-14" title="Link to this equation">#</a></span>\[y(x) = C e^{\frac{5}{2}x^2} \quad \text{ mit } C\in\mathbb{R}\]</div>
 <p>notieren.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">

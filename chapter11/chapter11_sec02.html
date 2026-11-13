@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -521,8 +522,8 @@ Differentialgleichung</strong>.</p>
 <p>Im vorherigen Kapitel haben wir bereits festgestellt, dass es auch unendlich
 viele Lösungen einer Differentialgleichung geben kann. Beispielsweise lösen alle
 Funktionen</p>
-<div class="math notranslate nohighlight">
-\[y(x)=\sin(x)+C_1 x + C_2\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-1">
+<span class="eqno">(11.23)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-1" title="Link to this equation">#</a></span>\[y(x)=\sin(x)+C_1 x + C_2\]</div>
 <p>die Differentialgleichung <span class="math notranslate nohighlight">\(y''(x) = -\sin(x).\)</span> Die beiden Integrationskonstanten
 <span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> entstehen dadurch, dass die höchste auftretende Ableitung die
 zweite Ableitung ist. Die DGL hat Ordnung 2 und wir müssen zweimal ingtegrieren,
@@ -544,8 +545,8 @@ die <strong>allgemeine Lösung</strong> der Differentialgleichung.</p>
 <p>Aus der allgemeinen Lösung wählen wir eine sogenannte <strong>spezielle Lösung</strong> aus,
 indem wir die Integrationskonstanten festlegen. In dem obigen Beispiel bekommen
 wir durch die Wahl von <span class="math notranslate nohighlight">\(C_1=2\)</span> und <span class="math notranslate nohighlight">\(C_2 = 3\)</span> die spezielle Lösung</p>
-<div class="math notranslate nohighlight">
-\[y(x)=\sin(x)+2x+3\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-2">
+<span class="eqno">(11.24)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-2" title="Link to this equation">#</a></span>\[y(x)=\sin(x)+2x+3\]</div>
 <p>der DGL <span class="math notranslate nohighlight">\(y''(x)=-\sin(x)\)</span>.</p>
 <p>Normalerweise raten wir nicht einfach Integrationskonstanten, sondern legen
 diese durch zusätzliche Informationen, also weitere Zusatzbedingungen fest.</p>
@@ -553,10 +554,11 @@ diese durch zusätzliche Informationen, also weitere Zusatzbedingungen fest.</p>
 durch die Punkte <span class="math notranslate nohighlight">\((0,0)\)</span> und <span class="math notranslate nohighlight">\((\pi,1)\)</span> gehen soll. Dann würde die spezielle
 Lösung mit <span class="math notranslate nohighlight">\(C_1=\frac{1}{\pi}\)</span> und <span class="math notranslate nohighlight">\(C_2=0\)</span> sowohl die DGL erfüllen als auch die
 Zusatzbedingungen, denn es gilt</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-3">
+<span class="eqno">(11.25)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-3" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 y(0) &amp;= \sin(0) + \frac{1}{\pi}\cdot 0 + 0 = 0,\\
 y(\pi) &amp;= \sin(\pi) + \frac{1}{\pi} \cdot \pi + 0 = 1.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Sicherheitshalber rechnen wir noch die 2. Ableitung der Funktion
 <span class="math notranslate nohighlight">\(y(x)=\sin(x)+\frac{1}{\pi}x\)</span> aus, aber das ist tatsächlich <span class="math notranslate nohighlight">\(y''(x)=-\sin(x)\)</span>,
 so dass die DGL auch erfüllt ist.</p>
@@ -576,21 +578,21 @@ g = - 9.81 \text{m}/\text{s}^2\)</span>.</p>
 Geschwindigkeit-Zeit-Funktion <span class="math notranslate nohighlight">\(v(t)\)</span> ist, die wiederum die 1. Ableitung der
 Weg-Zeit-Funktion <span class="math notranslate nohighlight">\(s(t)\)</span> ist. Damit ist die Beschleunigung die 2. Ableitung der
 Weg-Zeit-Funktion <span class="math notranslate nohighlight">\(s(t)\)</span>. Es gilt die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[\ddot{s}(t) = -g.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-4">
+<span class="eqno">(11.26)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-4" title="Link to this equation">#</a></span>\[\ddot{s}(t) = -g.\]</div>
 <p>Bemerkung: Da die Weg-Zeit-Funktion eine zeitliche Größe ist, benutzen wir hier
 die Schreibweise mit der unabhängigen Variable <span class="math notranslate nohighlight">\(t\)</span> und den zwei Punkten, um die
 2. Ableitung nach <span class="math notranslate nohighlight">\(t\)</span> zu formulieren. Mehr dazu finden Sie im Abschnitt
 <a class="reference internal" href="chapter11_sec01.html#sec-11-01-b"><span class="std std-ref">Es gibt viele Schreibweisen für DGL</span></a>.</p>
 <p>Wir integrieren die Differentialgleichung zunächst unbestimmt, um die
 Geschwindigkeit-Zeit-Funktion <span class="math notranslate nohighlight">\(v(t)=\dot{s}(t)\)</span> zu erhalten:</p>
-<div class="math notranslate nohighlight">
-\[ \int \ddot{s}(t)\, dt = \int -g \, dt \quad  \Rightarrow \quad
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-5">
+<span class="eqno">(11.27)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-5" title="Link to this equation">#</a></span>\[ \int \ddot{s}(t)\, dt = \int -g \, dt \quad  \Rightarrow \quad
 v(t)=\dot{s}(t) = -gt + C_1.\]</div>
 <p>Dann integrieren wir ein zweites Mal unbestimmt, um die Weg-Zeit-Funktion <span class="math notranslate nohighlight">\(s(t)\)</span>
 zu bekommen:</p>
-<div class="math notranslate nohighlight">
-\[\int \dot{s}(t) \, dt = \int -gt + C_1 \, dt \quad \Rightarrow \quad s(t) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-6">
+<span class="eqno">(11.28)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-6" title="Link to this equation">#</a></span>\[\int \dot{s}(t) \, dt = \int -gt + C_1 \, dt \quad \Rightarrow \quad s(t) =
 -\frac{1}{2}gt^2 + C_1 t + C_2. \]</div>
 <p>Wie zu erwarten war, entstehen durch die zweimalige Integration zwei
 Integrationskonstanten. Wir brauchen Zusatzbedingungen, um aus der allgemeinen
@@ -603,21 +605,21 @@ freien Falls können wir die Höhe messen, aus der der Körper fällt. Wir
 bezeichnen die Anfangshöhe mit <span class="math notranslate nohighlight">\(s_0\)</span>. Es muss nicht sein, dass der Körper aus
 der Ruhe beginnt zu fallen. Die Anfangsgeschwindigkeit zum Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span>
 bezeichnen wir mit <span class="math notranslate nohighlight">\(v_0\)</span>. Es gilt also</p>
-<div class="math notranslate nohighlight">
-\[s(0)=s_0 \quad \text{ und } \quad v(0)=v_0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-7">
+<span class="eqno">(11.29)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-7" title="Link to this equation">#</a></span>\[s(0)=s_0 \quad \text{ und } \quad v(0)=v_0.\]</div>
 <p>Wenn wir nun die allgemeine Lösung <span class="math notranslate nohighlight">\(s(t) = -\frac{1}{2}gt^2 + C_1 t + C_2\)</span> zum
 Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span> betrachten, so gilt</p>
-<div class="math notranslate nohighlight">
-\[s(0)=-\frac{1}{2}g\cdot0^2 + C_1\cdot 0 + C_2 = C_2.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-8">
+<span class="eqno">(11.30)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-8" title="Link to this equation">#</a></span>\[s(0)=-\frac{1}{2}g\cdot0^2 + C_1\cdot 0 + C_2 = C_2.\]</div>
 <p>Daraus können wir sofort ablesen, dass die Integrationskonstante <span class="math notranslate nohighlight">\(C_2\)</span> der
 Anfangshöhe <span class="math notranslate nohighlight">\(s_0\)</span> entsprechen muss.</p>
 <p>Als nächstes betrachten wir die 1. Ableitung der allgemeinen Lösung zum
 Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span>, also die Geschwindigkeit-Zeit-Funktion <span class="math notranslate nohighlight">\(v(t)\)</span></p>
-<div class="math notranslate nohighlight">
-\[\dot{s}(0)=-g\cdot 0 + C_1 = C_1.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-9">
+<span class="eqno">(11.31)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-9" title="Link to this equation">#</a></span>\[\dot{s}(0)=-g\cdot 0 + C_1 = C_1.\]</div>
 <p>Damit erhalten wir die spezielle Lösung</p>
-<div class="math notranslate nohighlight">
-\[s(t)=\frac{1}{2}gt^2 + v_0 t + s_0\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-10">
+<span class="eqno">(11.32)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-10" title="Link to this equation">#</a></span>\[s(t)=\frac{1}{2}gt^2 + v_0 t + s_0\]</div>
 <p>passend zu den Anfangsbedingungen <span class="math notranslate nohighlight">\(s(0)=s_0\)</span> und <span class="math notranslate nohighlight">\(v(0)=v_0\)</span>.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … ein Anfangswertproblem?</p>
@@ -640,46 +642,48 @@ gestellt werden, dann sprechen wir von einem Randwertproblem.</p>
 der Technischen Mechanik. Ein Balken wird auf zwei Stützen gelagert und
 gleichmäßig belastet. Für die Biegelinie <span class="math notranslate nohighlight">\(y(x)\)</span>, die die Auslenkung des Balkens
 an jeder Position <span class="math notranslate nohighlight">\(x\)</span> beschreibt, gilt die folgende Differentialgleichung:</p>
-<div class="math notranslate nohighlight">
-\[y'' = -\frac{M_b}{EI}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-11">
+<span class="eqno">(11.33)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-11" title="Link to this equation">#</a></span>\[y'' = -\frac{M_b}{EI}.\]</div>
 <p>Die physikalischen Größen sind dabei das Biegemoment <span class="math notranslate nohighlight">\(M_b\)</span>, der
 Elastizitätsmodul <span class="math notranslate nohighlight">\(E\)</span> und das Flächenmoment <span class="math notranslate nohighlight">\(I\)</span> des Balkenquerschnitts. Wirkt
 eine konstante Streckenlast <span class="math notranslate nohighlight">\(q\)</span> auf den Balken, so ist das Biegemoment</p>
-<div class="math notranslate nohighlight">
-\[M_b(x) = \frac{1}{2}q(lx-x^2).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-12">
+<span class="eqno">(11.34)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-12" title="Link to this equation">#</a></span>\[M_b(x) = \frac{1}{2}q(lx-x^2).\]</div>
 <p>abhängig von der Position <span class="math notranslate nohighlight">\(x\)</span> und die Differentialgleichung lautet</p>
-<div class="math notranslate nohighlight">
-\[y'' = - \frac{q}{2EI}(lx-x^2).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-13">
+<span class="eqno">(11.35)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-13" title="Link to this equation">#</a></span>\[y'' = - \frac{q}{2EI}(lx-x^2).\]</div>
 <p>Dabei sind wir davon ausgegangen, dass die linke Stütze die Position <span class="math notranslate nohighlight">\(x=0\)</span> und
 die rechte Stütze die Position <span class="math notranslate nohighlight">\(x=l\)</span> hat. An beiden Randpunkten ist die
 Auslenkung 0, also haben wir die zusätzlichen Randwerte</p>
-<div class="math notranslate nohighlight">
-\[y(0)=0 \quad \text{und} \quad y(l)=0\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-14">
+<span class="eqno">(11.36)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-14" title="Link to this equation">#</a></span>\[y(0)=0 \quad \text{und} \quad y(l)=0\]</div>
 <p>als zusätzliche Bedingung. Als erstes bestimmen wir die allgemeine Lösung des
 Randwertproblems. Dazu integrieren wir zweimal unbestimmt und erhalten zwei
 Integrationskonstanten:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*} 
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-15">
+<span class="eqno">(11.37)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-15" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned} 
 \int y''(x)\, dx = -\frac{q}{2EI} \int lx - x^2 \, dx  \quad                                                 &amp;\Rightarrow \quad y'(x) = - \frac{q}{2EI}\left(\frac{1}{2}lx^2 - \frac{1}{3}x^3 + C_1\right) \\
 \int y'(x) \, dx = - \frac{q}{2EI} \int \frac{1}{2}lx^2 - \frac{1}{3}x^3 + C_1 \, dx \quad  &amp;\Rightarrow \quad y(x) = - \frac{q}{2EI}\left(\frac{1}{6}lx^3 -\frac{1}{12} x^4 + C_1x + C_2\right) 
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Um jetzt aus der allgemeinen Lösung mit den zwei Integrationskonstanten die
 spezielle Lösung zu berechnen, die das Randwertproblem löst, setzen wir die
 beiden Randwerte in die allgemeine Lösung ein:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*} y(0) &amp;= -\frac{q}{2EI} C_2, \\
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-16">
+<span class="eqno">(11.38)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-16" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned} y(0) &amp;= -\frac{q}{2EI} C_2, \\
 y(l) &amp;= -\frac{q}{2EI} \left(\frac{1}{6}l^4  - \frac{1}{12} l^4 + C_1\cdot l +
-C_2\right). \end{align*}\)</span></p>
+C_2\right). \end{aligned}\end{split}\]</div>
 <p>Da die Durchbiegung an der linken und rechten Stütze jeweils 0 ist, setzen wir
 <span class="math notranslate nohighlight">\(y(0)=y(l)=0\)</span>. Wir können sofort auf beiden Seiten durch den Term
 <span class="math notranslate nohighlight">\(-\frac{q}{2EI}\)</span> teilen, da dieser aus physikalischen Gründen selbst ungleich 0
 sein muss. Damit erhalten wir sofort <span class="math notranslate nohighlight">\(y(0)=C_2=0\)</span>. Das setzen wir in die zweite
 Gleichung ein und erhalten</p>
-<div class="math notranslate nohighlight">
-\[y(l)=\frac{1}{6}l^4  - \frac{1}{12} l^4 + C_1\cdot l=0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-17">
+<span class="eqno">(11.39)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-17" title="Link to this equation">#</a></span>\[y(l)=\frac{1}{6}l^4  - \frac{1}{12} l^4 + C_1\cdot l=0.\]</div>
 <p>Durch <span class="math notranslate nohighlight">\(l\)</span> geteilt und nach <span class="math notranslate nohighlight">\(C_1\)</span> aufgelöst erhalten wir <span class="math notranslate nohighlight">\(C_1 =
 -\frac{1}{12}l^3\)</span>. Damit lautet die spezielle Lösung der Differentialgleichung
 für die Biegelinie</p>
-<div class="math notranslate nohighlight">
-\[y(x)=\frac{q}{24 EI}\left(x^4 -2lx^3 + l^3x\right).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec02-18">
+<span class="eqno">(11.40)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec02-18" title="Link to this equation">#</a></span>\[y(x)=\frac{q}{24 EI}\left(x^4 -2lx^3 + l^3x\right).\]</div>
 <div class="seealso admonition">
 <p class="admonition-title">GeoGebra</p>
 <p><a class="reference external" href="https://www.geogebra.org/calculator/xuzuerpf?embed">https://www.geogebra.org/calculator/xuzuerpf?embed</a>”</p>

@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -517,8 +518,8 @@ nennen wir Lösung der Gleichung. Damit ist gemeint, dass man die gefundene
 reelle Zahl, also die Lösung, in die Gleichung einsetzt und überprüft, ob linke
 und rechte Seite übereinstimmen.</p>
 <p>Beispielsweise wird die Gleichung</p>
-<div class="math notranslate nohighlight">
-\[ x^2 - x - 6 = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-1">
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-1" title="Link to this equation">#</a></span>\[ x^2 - x - 6 = 0\]</div>
 <p>von zwei reellen Zahlen erfüllt, nämlich <span class="math notranslate nohighlight">\(x_1 = -2\)</span> und <span class="math notranslate nohighlight">\(x_2=3\)</span>. Wir können
 beide Zahlen in die Gleichung einsetzen und erhalten <span class="math notranslate nohighlight">\(x_1^2 -x_1 - 6 = 4 + 2 - 6
 = 0\)</span> und <span class="math notranslate nohighlight">\(x_2^2 - x_2 - 6 = 9 -3 - 6 = 0\)</span>. Damit sind beide Zahlen eine Lösung
@@ -530,22 +531,22 @@ mathematisches Thema. Auch ist nicht von vornherein klar, ob die Gleichung
 eine Funktion! Und oft spielen Ableitungen dabei eine wichtige Rolle. Ein
 simples mathematisches Beispiel für eine Gleichung mit einer Funktion und einer
 Ableitung ist die folgende Gleichung:</p>
-<div class="math notranslate nohighlight">
-\[f''(x) = -f(x).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-2">
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-2" title="Link to this equation">#</a></span>\[f''(x) = -f(x).\]</div>
 <p>Gesucht wird also eine Funktion, die zweimal abgeleitet die Funktion selbst
 wieder ergibt, nur mit umgekehrten Vorzeichen. Eine Funktion, die diese
 Gleichung löst, ist die Sinus-Funktion. Probieren wir es aus und bilden erst
 einmal die Ableitungen:</p>
-<div class="math notranslate nohighlight">
-\[f(x) = \sin(x) \quad \Rightarrow f'(x) = \cos(x) \quad \Rightarrow f''(x) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-3">
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-3" title="Link to this equation">#</a></span>\[f(x) = \sin(x) \quad \Rightarrow f'(x) = \cos(x) \quad \Rightarrow f''(x) =
 -\sin(x).\]</div>
 <p>Eingesetzt in die Gleichung erhalten wir also <span class="math notranslate nohighlight">\(-\sin(x) = -\sin(x)\)</span>. Damit
 erfüllt die Sinus-Funktion die Gleichung <span class="math notranslate nohighlight">\(f''(x) = -f(x).\)</span></p>
 <div class="miniexercise admonition">
 <p class="admonition-title">Mini-Übung</p>
 <p>Welche der folgenden Funktionen ist erfüllt die Gleichung</p>
-<div class="math notranslate nohighlight">
-\[f''(x) = - f(x)?\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-4">
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-4" title="Link to this equation">#</a></span>\[f''(x) = - f(x)?\]</div>
 <p>a) <span class="math notranslate nohighlight">\(f(x) = \cos(x)\)</span> <br>
 b) <span class="math notranslate nohighlight">\(f(x) = e^x\)</span> <br>
 c) <span class="math notranslate nohighlight">\(f(x) = \sin(x) + 3\cos(x)\)</span> <br></p>
@@ -556,12 +557,13 @@ c) <span class="math notranslate nohighlight">\(f(x) = \sin(x) + 3\cos(x)\)</spa
 eingesetzt: <span class="math notranslate nohighlight">\(-\cos(x) = -\cos(x)\)</span> erfüllt die Gleichung</p>
 <p>b) ableiten: <span class="math notranslate nohighlight">\(f(x)=e^x \quad \Rightarrow f'(x)=e^x \quad \Rightarrow f''(x)=e^x\)</span> <br>
 eingesetzt: <span class="math notranslate nohighlight">\(e^x \neq -e^x\)</span> erfüllt die Gleichung nicht</p>
-<p>c) ableiten:
-\begin{align*}
-f(x) &amp;=\sin(x)+3\cos(x) \
-\Rightarrow \quad f’’(x)&amp;=\cos(x)-3\sin(x) \
-\Rightarrow \quad f’’(x)&amp;=-\sin(x)-3\cos(x)
-\end{align*}</p>
+<p>c) ableiten:</p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-5">
+<span class="eqno">(11.5)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-5" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
+f(x) &amp;=\sin(x)+3\cos(x) \\
+\Rightarrow \quad f''(x)&amp;=\cos(x)-3\sin(x) \\
+\Rightarrow \quad f''(x)&amp;=-\sin(x)-3\cos(x)
+\end{aligned}\end{split}\]</div>
 <p>eingesetzt: <span class="math notranslate nohighlight">\(-\sin(x)-3\cos(x) = -\left(\sin(x)+3\cos(x)\right)\)</span> erfüllt die Gleichung</p>
 </div>
 <p>Wir übernehmen die Begriffe für Gleichungen reeller Zahlen nun für diese neue
@@ -583,32 +585,32 @@ werden auch bei Differentialgleichungen unterschiedliche Schreibweisen benutzt.
 Meistens werden die Bezeichnungen aus dem Anwendungskontext übernommen.</p>
 <p>Zunächst einmal können die Bezeichnungen für die Variablen der gesuchten
 Funktion variieren. In dem obigen Beispiel</p>
-<div class="math notranslate nohighlight">
-\[f''(x)=-f(x)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-6">
+<span class="eqno">(11.6)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-6" title="Link to this equation">#</a></span>\[f''(x)=-f(x)\]</div>
 <p>wurde als Variablenname <span class="math notranslate nohighlight">\(x\)</span> benutzt. Die Variablen der gesuchten Funktion werden
 als <strong>unabhängige Variablen</strong> bezeichnet. Die gesuchte Funktion wird auch als
 <strong>abhängige Variable</strong> bezeichnet, obwohl es sich um eine Funktion handelt.
 Sollte es sich jedoch um eine Funktion in Abhängigkeit einer zeitlichen Größe
 handeln, würde die DGL wohl eher als</p>
-<div class="math notranslate nohighlight">
-\[f''(t)=-f(t)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-7">
+<span class="eqno">(11.7)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-7" title="Link to this equation">#</a></span>\[f''(t)=-f(t)\]</div>
 <p>formuliert werden. Bei zeitlichen Ableitungen wird in den
 Ingenieurwissenschaften auch eher ein Punkt über den Funktionsnamen gesetzt, um
 anzudeuten, dass eine zeitliche Größe betrachtet wird, also</p>
-<div class="math notranslate nohighlight">
-\[\ddot{f}(t)=-f(t).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-8">
+<span class="eqno">(11.8)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-8" title="Link to this equation">#</a></span>\[\ddot{f}(t)=-f(t).\]</div>
 <p>Auch würde wohl auch eher die gesuchte Funktion mit <span class="math notranslate nohighlight">\(x\)</span> bezeichnet werden, also</p>
-<div class="math notranslate nohighlight">
-\[\ddot{x}(t)=-x(t).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-9">
+<span class="eqno">(11.9)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-9" title="Link to this equation">#</a></span>\[\ddot{x}(t)=-x(t).\]</div>
 <p>Oft finden wir auch die Schreibweise mit dem Differentialoperator und der
 Bezeichnung <span class="math notranslate nohighlight">\(y\)</span> für die gesuchte Funktion, also</p>
-<div class="math notranslate nohighlight">
-\[\frac{d^2y}{dt^2}=-y(t).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-10">
+<span class="eqno">(11.10)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-10" title="Link to this equation">#</a></span>\[\frac{d^2y}{dt^2}=-y(t).\]</div>
 <p>Und da die unabhängige Variable nicht so wichtig ist, weil es bei
 Differentialgleichungen um die unbekannte Funktion geht, wird sie manchmal
 weggelassen, also</p>
-<div class="math notranslate nohighlight">
-\[y''=-y.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-11">
+<span class="eqno">(11.11)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-11" title="Link to this equation">#</a></span>\[y''=-y.\]</div>
 <p>Alle Schreibweisen – so unterschiedlich sie auch wirken mögen – drücken dieselbe
 Frage aus: welche Funktion muss zweimal abgeleitet werden, damit sie das
 Negative von sich selbst ist?</p>
@@ -617,25 +619,25 @@ Negative von sich selbst ist?</p>
 <span id="sec-11-01-a"></span><h2>Die Ordnung entscheidet über die Anzahl der Integrationskonstanten<a class="headerlink" href="#die-ordnung-entscheidet-uber-die-anzahl-der-integrationskonstanten" title="Link to this heading">#</a></h2>
 <p>Als wir verschiedene Funktionen daraufhin überprüft haben, ob sie die
 Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[y''(x) = - y(x)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-12">
+<span class="eqno">(11.12)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-12" title="Link to this equation">#</a></span>\[y''(x) = - y(x)\]</div>
 <p>erfüllen, haben wir schon festgestellt, dass es mehrere Funktionen geben kann,
 die passen. Wir schauen uns nun ein etwas einfacheres Beispiel an:</p>
-<div class="math notranslate nohighlight">
-\[y''(x) = -\sin(x).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-13">
+<span class="eqno">(11.13)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-13" title="Link to this equation">#</a></span>\[y''(x) = -\sin(x).\]</div>
 <p>Auf der rechten Seite kommt die gesuchte Funktion <span class="math notranslate nohighlight">\(y(x)\)</span> nicht mehr vor, sondern
 sie steht nur noch als 2. Ableitung auf der linken Seite der Gleichung. Ein
 einfacher Ansatz, um die DGL zu lösen ist, auf beiden Seiten unbestimmt zu
 integrieren. Wir erhalten</p>
-<div class="math notranslate nohighlight">
-\[\int y''(x)\, dx = \int -\sin(x)\, dx \quad \Rightarrow \quad y'(x) = \cos(x)
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-14">
+<span class="eqno">(11.14)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-14" title="Link to this equation">#</a></span>\[\int y''(x)\, dx = \int -\sin(x)\, dx \quad \Rightarrow \quad y'(x) = \cos(x)
 + C_1.\]</div>
 <p>Die Integrationskonstante, die eigentlich auch auf der linken Seite entstanden
 wäre, haben wir dabei schon auf die rechte Seite gebracht. Nun haben wir eine
 DGL mit der 1. Ableitung der gesuchten Funktion. Wir integrieren einfach noch
 einmal unbestimmt auf beiden Seiten und bekommen</p>
-<div class="math notranslate nohighlight">
-\[\int y'(x)\, dx = \int \cos(x) + C_1 \, dx \quad \Rightarrow \quad y(x) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-15">
+<span class="eqno">(11.15)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-15" title="Link to this equation">#</a></span>\[\int y'(x)\, dx = \int \cos(x) + C_1 \, dx \quad \Rightarrow \quad y(x) =
 \sin(x) + C_1 x + C_2.\]</div>
 <p>Die gefundene Funktion <span class="math notranslate nohighlight">\(y(x)=\sin(x)+C_1 x + C_2\)</span> ist nicht nur <em>eine</em> Funktion,
 sondern eine ganze Schar von Funktionen. Es können zwei verschiedene Parameter
@@ -645,8 +647,8 @@ es unendlich viele Lösungen der Differentialgleichung.</p>
 <div class="miniexercise admonition">
 <p class="admonition-title">Mini-Übung</p>
 <p>Überprüfen Sie, ob die folgenden drei Variationen von <span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> tatsächlich die DGL</p>
-<div class="math notranslate nohighlight">
-\[y''(x)=-\sin(x)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-16">
+<span class="eqno">(11.16)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-16" title="Link to this equation">#</a></span>\[y''(x)=-\sin(x)\]</div>
 <p>erfüllen.</p>
 <p>a) <span class="math notranslate nohighlight">\(C_1 = 1\)</span> und <span class="math notranslate nohighlight">\(C_2 = 0\)</span>, also <span class="math notranslate nohighlight">\(y_1(x) = \sin(x) + x\)</span> <br>
 b) <span class="math notranslate nohighlight">\(C_1 = 0\)</span> und <span class="math notranslate nohighlight">\(C_2 = 1\)</span>, also <span class="math notranslate nohighlight">\(y_2(x) = \sin(x) + 1\)</span> <br>
@@ -657,23 +659,26 @@ c) <span class="math notranslate nohighlight">\(C_1 = -2\)</span> und <span clas
 <p>Um zu überprüfen, ob die gegebenen Variationen die DGL <span class="math notranslate nohighlight">\(y''(x) = -\sin(x)\)</span>
 erfüllen, müssen wir die zweite Ableitung jeder Funktion berechnen und
 überprüfen, ob sie gleich <span class="math notranslate nohighlight">\(-\sin(x)\)</span> ist.</p>
-<p>a) <span class="math notranslate nohighlight">\(y_1(x) = \sin(x) + x\)</span>
-\begin{align*}
-\Rightarrow \quad y_1’(x)  &amp;= \cos(x) + 1 \
-\Rightarrow \quad y_1’’(x) &amp;= -\sin(x)
-\end{align*}</p>
+<p>a) <span class="math notranslate nohighlight">\(y_1(x) = \sin(x) + x\)</span></p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-17">
+<span class="eqno">(11.17)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-17" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
+\Rightarrow \quad y_1'(x)  &amp;= \cos(x) + 1 \\
+\Rightarrow \quad y_1''(x) &amp;= -\sin(x)
+\end{aligned}\end{split}\]</div>
 <p>Da <span class="math notranslate nohighlight">\(y_1''(x) = -\sin(x)\)</span> gilt, erfüllt <span class="math notranslate nohighlight">\(y_1\)</span> die DGL.</p>
-<p>b) <span class="math notranslate nohighlight">\(y_2(x) = \sin(x) + 1\)</span>
-\begin{align*}
-\Rightarrow \quad y_2’(x) &amp;= \cos(x) \
-\Rightarrow \quad y_2’’(x) &amp;= -\sin(x)
-\end{align*}</p>
+<p>b) <span class="math notranslate nohighlight">\(y_2(x) = \sin(x) + 1\)</span></p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-18">
+<span class="eqno">(11.18)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-18" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
+\Rightarrow \quad y_2'(x) &amp;= \cos(x) \\
+\Rightarrow \quad y_2''(x) &amp;= -\sin(x)
+\end{aligned}\end{split}\]</div>
 <p>Da <span class="math notranslate nohighlight">\(y_2''(x) = -\sin(x)\)</span> gilt, erfüllt <span class="math notranslate nohighlight">\(y_2\)</span> ebenfalls die DGL.</p>
-<p>c) <span class="math notranslate nohighlight">\(y_3(x) = \sin(x) - 2x + 3\)</span>
-\begin{align*}
-\Rightarrow \quad y_3’(x)  &amp;= \cos(x) - 2 \
-\Rightarrow \quad y_3’’(x) &amp;= -\sin(x)
-\end{align*}</p>
+<p>c) <span class="math notranslate nohighlight">\(y_3(x) = \sin(x) - 2x + 3\)</span></p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-19">
+<span class="eqno">(11.19)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-19" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
+\Rightarrow \quad y_3'(x)  &amp;= \cos(x) - 2 \\
+\Rightarrow \quad y_3''(x) &amp;= -\sin(x)
+\end{aligned}\end{split}\]</div>
 <p>Da <span class="math notranslate nohighlight">\(y_3''(x) = -\sin(x)\)</span> gilt, erfüllt auch <span class="math notranslate nohighlight">\(y_3\)</span> die DGL.</p>
 <p>Alle drei Funktionen erfüllen die Differentialgleichung <span class="math notranslate nohighlight">\(y''(x) = -\sin(x)\)</span> und
 sind daher Lösungen der Differentialgleichung.</p>
@@ -716,8 +721,8 @@ Differentialgleichungen Ableitungen nach mehreren unabhängigen Variablen vor, s
 nennen wir diese Gleichung <strong>partielle Differentialgleichung</strong>. Hier sehen Sie
 ein Beispiel für eine partielle DGL, in der Ableitungen nach dem Ort <span class="math notranslate nohighlight">\(x\)</span> und der
 Zeit <span class="math notranslate nohighlight">\(t\)</span> vorkommen:</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial u(x,t)}{\partial t} - a^2 \frac{\partial^2 u(x,t)}{\partial
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-20">
+<span class="eqno">(11.20)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-20" title="Link to this equation">#</a></span>\[\frac{\partial u(x,t)}{\partial t} - a^2 \frac{\partial^2 u(x,t)}{\partial
 x^2} = 0.\]</div>
 <div class="note admonition">
 <p class="admonition-title">Was ist … eine gewöhnliche Differentialgleichung?</p>
@@ -732,13 +737,13 @@ höchste Ableitung auf der linken Seite stand und alle anderen Terme auf der
 rechten Seite der Gleichung. Das muss aber nicht so sein. Eine
 Differentialgleichung, die nach der höchsten Ableitung aufgelöst ist, nennen wir
 <strong>explizite Differentialgleichung</strong>. Ein Beispiel für eine explizite DGL ist</p>
-<div class="math notranslate nohighlight">
-\[y'' = -3y' + 2y.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-21">
+<span class="eqno">(11.21)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-21" title="Link to this equation">#</a></span>\[y'' = -3y' + 2y.\]</div>
 <p>Ist hingegen die DGL <em>nicht</em> nach der höchsten Ableitung aufgelöst, so
 bezeichnen wir diese als <strong>implizite Differentialgleichung</strong>. Wir können das
 Beispiel umformen zu</p>
-<div class="math notranslate nohighlight">
-\[y'' + 3y' -  2y = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter11-chapter11-sec01-22">
+<span class="eqno">(11.22)<a class="headerlink" href="#equation-auto-chapter11-chapter11-sec01-22" title="Link to this equation">#</a></span>\[y'' + 3y' -  2y = 0.\]</div>
 <p>Es war einfach, die explizite Differentialgleichung in eine implizite
 Differentialgleichung umzuformen. Leider lässt sich nicht jede implizite
 Differentialgleichung in eine explizite DGL umformen.</p>

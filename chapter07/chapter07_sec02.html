@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -518,15 +519,15 @@ Funktionswerte einer Funktion Vektoren sind, so nennen wir die Funktion
 <p>Eine vektorwertige Funktion ist eine Funktion, die Vektoren als Wertemenge bzw.
 Funktionswerte hat. Jedem Punkt <span class="math notranslate nohighlight">\(\vec{x}\in\mathbb{R}^m\)</span> wird eindeutig ein
 Vektor <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> zugeordnet, in mathematischer Notation</p>
-<div class="math notranslate nohighlight">
-\[f:\mathbb{R}^m \rightarrow \mathbb{R}^n.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec02-1">
+<span class="eqno">(7.17)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec02-1" title="Link to this equation">#</a></span>\[f:\mathbb{R}^m \rightarrow \mathbb{R}^n.\]</div>
 <p>Übrigens, in der Physik wird eine vektorwertige Funktion auch oft <strong>Vektorfeld</strong>
 genannt.</p>
 </div>
 <p>Eine vektorwertige Funktion <span class="math notranslate nohighlight">\(\vec{f}: \mathbb{R}^m \rightarrow \mathbb{R}^n\)</span>
 kann durch ihre Komponentenfunktionen dargestellt werden:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(\vec{x}) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec02-2">
+<span class="eqno">(7.18)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec02-2" title="Link to this equation">#</a></span>\[\begin{split}f(\vec{x}) =
 \begin{pmatrix} f_1(\vec{x}) \\ f_2(\vec{x}) \\ \vdots \\ f_n(\vec{x}) \end{pmatrix}.\end{split}\]</div>
 <p>Jede Komponentenfunktion <span class="math notranslate nohighlight">\(f_i: \mathbb{R}^m \rightarrow \mathbb{R}\)</span> ist dabei
 eine skalarwertige Funktion.</p>
@@ -542,8 +543,8 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 <p>Betrachten wir eine konkrete vektorwertige Funktion <span class="math notranslate nohighlight">\(f: \mathbb{R}^2
 \rightarrow \mathbb{R}^3\)</span>, die jedem Punkt <span class="math notranslate nohighlight">\((x,y)\)</span> in der Ebene einen
 dreidimensionalen Vektor zuordnet:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} x^2 - y \\ xy \\ x + y^2 \end{pmatrix}.\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec02-3">
+<span class="eqno">(7.19)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec02-3" title="Link to this equation">#</a></span>\[\begin{split}f(x,y) = \begin{pmatrix} x^2 - y \\ xy \\ x + y^2 \end{pmatrix}.\end{split}\]</div>
 <p>Diese Funktion hat drei Komponentenfunktionen:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f_1(x,y) = x^2 - y\)</span></p></li>
@@ -551,8 +552,8 @@ dreidimensionalen Vektor zuordnet:</p>
 <li><p><span class="math notranslate nohighlight">\(f_3(x,y) = x + y^2\)</span></p></li>
 </ul>
 <p>Für den konkreten Punkt <span class="math notranslate nohighlight">\((x,y) = (2,3)\)</span> erhalten wir:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(2,3) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec02-4">
+<span class="eqno">(7.20)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec02-4" title="Link to this equation">#</a></span>\[\begin{split}f(2,3) =
 \begin{pmatrix} 2^2 - 3 \\ 2 \cdot 3 \\ 2 + 3^2 \end{pmatrix} =
 \begin{pmatrix} 1 \\ 6 \\ 11 \end{pmatrix}.\end{split}\]</div>
 <p>Geometrisch interpretiert ordnet diese Funktion jedem Punkt der <span class="math notranslate nohighlight">\(xy\)</span>-Ebene einen Vektor im dreidimensionalen Raum zu.</p>
@@ -565,7 +566,11 @@ sind durch kleine Kugeln gekennzeichnet. Die Richtung der Vektoren wird durch
 Striche dargestellt, wobei die Länge der Striche nur 20 % der Länge der
 Vektoren beträgt.</p>
 <p>Zoomen Sie in die Grafik hinein und drehen Sie sie auch.</p>
-<iframe src="plots/vektorwertige_funktion.html" width="100%" height="500px" frameborder="0"></iframe>
+<figure class="interaktive-abbildung align-default" id="vektorwertige-funktion">
+<div class="interaktiv"><iframe src="plots/vektorwertige_funktion.html" width="100%" height="500" frameborder="0" scrolling="no" title="Interaktive Darstellung der vektorwertigen Funktion"></iframe></div><figcaption>
+<p><span class="caption-number">Abb. 7.1: </span><span class="caption-text">Interaktive Darstellung der vektorwertigen Funktion</span><a class="headerlink" href="#vektorwertige-funktion" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Im Folgenden werden auch noch die drei skalarwertigen Komponentenfunktionen
 einzeln dargestellt.</p>
 <div class="cell tag_remove-input docutils container">
@@ -575,11 +580,23 @@ einzeln dargestellt.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <p><strong>1. Komponentenfunktion:</strong> <span class="math notranslate nohighlight">\(f_1(x,y) = x^2 - y\)</span></p>
-<iframe src="plots/komponente_1.html" width="100%" height="500px" frameborder="0"></iframe>
+<figure class="interaktive-abbildung align-default" id="komponente-1">
+<div class="interaktiv"><iframe src="plots/komponente_1.html" width="100%" height="500" frameborder="0" scrolling="no" title="1. Komponentenfunktion f_1(x,y) = x^2 - y"></iframe></div><figcaption>
+<p><span class="caption-number">Abb. 7.2: </span><span class="caption-text">Erste Komponentenfunktion <span class="math notranslate nohighlight">\(f_1(x,y) = x^2 - y\)</span></span><a class="headerlink" href="#komponente-1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>2. Komponentenfunktion:</strong> <span class="math notranslate nohighlight">\(f_2(x,y) = xy\)</span></p>
-<iframe src="plots/komponente_2.html" width="100%" height="500px" frameborder="0"></iframe>
+<figure class="interaktive-abbildung align-default" id="komponente-2">
+<div class="interaktiv"><iframe src="plots/komponente_2.html" width="100%" height="500" frameborder="0" scrolling="no" title="2. Komponentenfunktion f_2(x,y) = xy"></iframe></div><figcaption>
+<p><span class="caption-number">Abb. 7.3: </span><span class="caption-text">Zweite Komponentenfunktion <span class="math notranslate nohighlight">\(f_2(x,y) = xy\)</span></span><a class="headerlink" href="#komponente-2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>3. Komponentenfunktion:</strong> <span class="math notranslate nohighlight">\(f_3(x,y) = x + y^2\)</span></p>
-<iframe src="plots/komponente_3.html" width="100%" height="500px" frameborder="0"></iframe>
+<figure class="interaktive-abbildung align-default" id="komponente-3">
+<div class="interaktiv"><iframe src="plots/komponente_3.html" width="100%" height="500" frameborder="0" scrolling="no" title="3. Komponentenfunktion f_3(x,y) = x + y^2"></iframe></div><figcaption>
+<p><span class="caption-number">Abb. 7.4: </span><span class="caption-text">Dritte Komponentenfunktion <span class="math notranslate nohighlight">\(f_3(x,y) = x + y^2\)</span></span><a class="headerlink" href="#komponente-3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="eigenschaften-vektorwertiger-funktionen">
 <h2>Eigenschaften vektorwertiger Funktionen<a class="headerlink" href="#eigenschaften-vektorwertiger-funktionen" title="Link to this heading">#</a></h2>

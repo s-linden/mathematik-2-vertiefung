@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -502,8 +503,8 @@ in kartesischen Koordinaten.</p>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <p>Sie können ein <strong>Doppelintegral in kartesischen Koordinaten</strong> berechnen, indem Sie zuerst die <strong>innere Integration</strong> und dann die <strong>äußere Integration</strong> durchführen:</p>
-<div class="math notranslate nohighlight">
-\[\iint_{A}f(x,y)\, dA = \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} f(x,y)\, dy\right)dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-1">
+<span class="eqno">(9.8)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-1" title="Link to this equation">#</a></span>\[\iint_{A}f(x,y)\, dA = \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} f(x,y)\, dy\right)dx.\]</div>
 </div>
 </section>
 <section id="doppelintegral-in-kartesischen-koordinaten-berechnen">
@@ -523,8 +524,8 @@ Funktionen zur Beschreibung des Randes.</p>
 <p>Wir nennen die obere Funktion <span class="math notranslate nohighlight">\(f_o(x)\)</span> und die untere Funktion <span class="math notranslate nohighlight">\(f_u(x)\)</span>. Nun
 können wir das Doppelintegral <span class="math notranslate nohighlight">\(\iint_{A}f(x,y)\, dA\)</span> durch zwei Integrale
 ersetzen:</p>
-<div class="math notranslate nohighlight">
-\[\iint_{A}f(x,y)\, dA = \int_{x=a}^{x=b} \int_{y=f_u(x)}^{y=f_o(x)} f(x,y)\, dy
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-2">
+<span class="eqno">(9.9)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-2" title="Link to this equation">#</a></span>\[\iint_{A}f(x,y)\, dA = \int_{x=a}^{x=b} \int_{y=f_u(x)}^{y=f_o(x)} f(x,y)\, dy
 \, dx.\]</div>
 <p><strong>Schritt 2: innere Integration (nach y)</strong></p>
 <p>Zuerst behandeln wir die Variable <span class="math notranslate nohighlight">\(x\)</span> als eine Konstante. Dann wird die Funktion
@@ -549,39 +550,41 @@ sind <span class="math notranslate nohighlight">\(0\)</span> und <span class="ma
 <p><strong>Schritt 1: obere und untere Funktion finden</strong></p>
 <p>Das Rechteck wird oben durch die Konstante 2 berandet und unten durch die
 Konstante 1. Also sind die obere und die untere Funktion</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-3">
+<span class="eqno">(9.10)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-3" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 f_o(x) &amp;= 2 \\
 f_u(x) &amp;= 1 \\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <figure class="align-default" id="part10-plot-example01">
 <a class="reference internal image-reference" href="../_images/part10_plot_example01.svg"><img alt="../_images/part10_plot_example01.svg" src="../_images/part10_plot_example01.svg" style="width: 75%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Draufsicht auf das Integrationsgebiet <span class="math notranslate nohighlight">\(A =  [0, 1] \times [1, 2]\)</span></span><a class="headerlink" href="#part10-plot-example01" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 9.4: </span><span class="caption-text">Draufsicht auf das Integrationsgebiet <span class="math notranslate nohighlight">\(A =  [0, 1] \times [1, 2]\)</span></span><a class="headerlink" href="#part10-plot-example01" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Das Doppelintegral lautet also:</p>
-<div class="math notranslate nohighlight">
-\[\iint_{A}f(x,y)\, dA = \int_{x=0}^{x=1} \left( \int_{y=1}^{y=2} xy \, dy
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-4">
+<span class="eqno">(9.11)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-4" title="Link to this equation">#</a></span>\[\iint_{A}f(x,y)\, dA = \int_{x=0}^{x=1} \left( \int_{y=1}^{y=2} xy \, dy
 \right) \, dx.\]</div>
 <p><strong>Schritt 2: innere Integration (nach y)</strong></p>
 <p>Das innere Integral <span class="math notranslate nohighlight">\(I(x)\)</span> wird berechnet, indem nach <span class="math notranslate nohighlight">\(y\)</span> integriert wird:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-5">
+<span class="eqno">(9.12)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-5" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 I(x) &amp;= \int_{y=1}^{y=2} xy \, dy = \\
      &amp;= \left[ x \cdot \frac{1}{2}y^2 \right]_{y=1}^{y=2} = \\
      &amp;= x\cdot \frac{1}{2}2^2 - x\cdot \frac{1}{2}1^2 = \\
      &amp;= \frac{3}{2}x.\\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p><strong>Schritt 3: äußere Integration (nach x)</strong></p>
 <p>Das innere Integral <span class="math notranslate nohighlight">\(I(x) = \frac{3}{2}x\)</span> wird nun in das äußere Integral
 eingesetzt und nach <span class="math notranslate nohighlight">\(x\)</span> integriert:</p>
-<div class="math notranslate nohighlight">
-\[\int_{x=0}^{x=1} \frac{3}{2}x \, dx = \left[ \frac{3}{4}x^2\right] =
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-6">
+<span class="eqno">(9.13)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-6" title="Link to this equation">#</a></span>\[\int_{x=0}^{x=1} \frac{3}{2}x \, dx = \left[ \frac{3}{4}x^2\right] =
 \frac{3}{4}.\]</div>
 <p>Damit lautet das Doppelintegral von <span class="math notranslate nohighlight">\(f\)</span> über <span class="math notranslate nohighlight">\(A\)</span> mit <span class="math notranslate nohighlight">\(f(x,y)=xy\)</span> und <span class="math notranslate nohighlight">\(A= [0, 1]
 \times [1, 2]\)</span></p>
-<div class="math notranslate nohighlight">
-\[\iint_{A}f(x,y) \, dA = \frac{3}{4}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-7">
+<span class="eqno">(9.14)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-7" title="Link to this equation">#</a></span>\[\iint_{A}f(x,y) \, dA = \frac{3}{4}.\]</div>
 <p>In den folgenden beiden Videos finden Sie zwei weitere Beispiele für
 Doppelintegrale auf einem Rechteckgebiet.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -609,47 +612,49 @@ Parabel <span class="math notranslate nohighlight">\(y=x^2-5\)</span> begrenzt w
 <p><strong>Schritt 1: obere und untere Funktion finden</strong></p>
 <p>Als erstes wird eine Skizze der beiden Funktionen <span class="math notranslate nohighlight">\(y=-x+1\)</span> und <span class="math notranslate nohighlight">\(y=x^2-5\)</span>
 angefertigt. Die Skizze zeigt, dass die obere Funktion</p>
-<div class="math notranslate nohighlight">
-\[f_o(x) = -x + 1\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-8">
+<span class="eqno">(9.15)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-8" title="Link to this equation">#</a></span>\[f_o(x) = -x + 1\]</div>
 <p>ist und die untere Funktion</p>
-<div class="math notranslate nohighlight">
-\[f_u(x) = x^2 - 5\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-9">
+<span class="eqno">(9.16)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-9" title="Link to this equation">#</a></span>\[f_u(x) = x^2 - 5\]</div>
 <p>ist. Allerdings muss noch das Intervall auf der x-Achse gefunden werden. Dazu
 wird der Lösungsansatz</p>
-<div class="math notranslate nohighlight">
-\[f_o(x) = f_u(x)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-10">
+<span class="eqno">(9.17)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-10" title="Link to this equation">#</a></span>\[f_o(x) = f_u(x)\]</div>
 <p>angesetzt und die entstehende Gleichung <span class="math notranslate nohighlight">\(-x + 1 = x^2 -5\)</span> gelöst. Das Ergebnis
 sind die beiden Stellen <span class="math notranslate nohighlight">\(x_1 = -3\)</span> und <span class="math notranslate nohighlight">\(x_2 = 2\)</span>.</p>
 <figure class="align-default" id="part10-plot-example02">
 <a class="reference internal image-reference" href="../_images/part10_plot_example02.svg"><img alt="../_images/part10_plot_example02.svg" src="../_images/part10_plot_example02.svg" style="width: 75%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Draufsicht auf das Integrationsgebiet <span class="math notranslate nohighlight">\(A\)</span>, das durch die Gerade <span class="math notranslate nohighlight">\(f_o(x)=-x+1\)</span> und die Parabel <span class="math notranslate nohighlight">\(f_u(x)=x^2-5\)</span> umrandet wird.</span><a class="headerlink" href="#part10-plot-example02" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 9.5: </span><span class="caption-text">Draufsicht auf das Integrationsgebiet <span class="math notranslate nohighlight">\(A\)</span>, das durch die Gerade <span class="math notranslate nohighlight">\(f_o(x)=-x+1\)</span> und die Parabel <span class="math notranslate nohighlight">\(f_u(x)=x^2-5\)</span> umrandet wird</span><a class="headerlink" href="#part10-plot-example02" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Damit kann das Doppelintegral in zwei Integrale umgeschrieben werden:</p>
-<div class="math notranslate nohighlight">
-\[\iint_{A}f(x,y)\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-11">
+<span class="eqno">(9.18)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-11" title="Link to this equation">#</a></span>\[\iint_{A}f(x,y)\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
 x^2\cdot(y+1) \; dy\right)dx.\]</div>
 <p><strong>Schritt 2: innere Integration (nach y)</strong></p>
 <p>Das innere Integral <span class="math notranslate nohighlight">\(I(x)\)</span> wird berechnet, indem nach <span class="math notranslate nohighlight">\(y\)</span> integriert wird:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-12">
+<span class="eqno">(9.19)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-12" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 I(x) &amp;= \int_{y=x^2-5}^{y=-x+1} x^2\cdot(y+1) \, dy = \\
      &amp;= \left[ x^2 \cdot \left(\frac{1}{2}y^2 +y\right)\right]_{y=x^2-5}^{y=-x+1} = \\
      &amp;= x^2 \left(\frac{1}{2}(-x+1)^2+(-x+1) - \frac{1}{2}(x^2-5)^2-(x^2-5) \right) = \\
      &amp;= -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p><strong>Schritt 3: äußere Integration (nach x)</strong></p>
 <p>Das innere Integral <span class="math notranslate nohighlight">\(I(x) = -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2\)</span> wird nun
 in das äußere Integral eingesetzt und nach <span class="math notranslate nohighlight">\(x\)</span> integriert:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-13">
+<span class="eqno">(9.20)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-13" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \int_{x=-3}^{x=2} I(x)\, dx &amp;= \int_{x=-3}^{x=2} -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2 =\\
 &amp;= \left[-\frac{1}{14}x^7 + \frac{9}{10}x^5 - \frac{1}{2}x^4 - 2x^3\right]_{x=-3}^{x=2} = \\
 &amp;= \frac{625}{14} \approx 44.643
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Damit gilt insgesamt</p>
-<div class="math notranslate nohighlight">
-\[\iint_{A}f(x,y)\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec02-14">
+<span class="eqno">(9.21)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec02-14" title="Link to this equation">#</a></span>\[\iint_{A}f(x,y)\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
 x^2\cdot(y+1) \; dy\right)dx = \frac{625}{14} \approx 44.643.\]</div>
 <p>Das folgende Video zeigt ein weiteres Beispiel.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">

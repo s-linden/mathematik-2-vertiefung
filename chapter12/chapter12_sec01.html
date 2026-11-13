@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -522,20 +523,20 @@ oder anderen nichtlinearen Funktionen.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … eine lineare DGL 1. Ordnung?</p>
 <p>Formal können wir eine lineare Differentialgleichung 1. Ordnung in der Form</p>
-<div class="math notranslate nohighlight">
-\[a_1(x)y' + a_0(x)y = r(x)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec01-1">
+<span class="eqno">(12.1)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec01-1" title="Link to this equation">#</a></span>\[a_1(x)y' + a_0(x)y = r(x)\]</div>
 <p>darstellen. Die rechte Seite <span class="math notranslate nohighlight">\(r(x)\)</span> wird <strong>Störfunktion</strong> genannt.</p>
 </div>
 <p><strong>Beispiel 1:</strong> Die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[3x \cdot y' - \sin(x)\cdot y = x^2\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec01-2">
+<span class="eqno">(12.2)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec01-2" title="Link to this equation">#</a></span>\[3x \cdot y' - \sin(x)\cdot y = x^2\]</div>
 <p>ist eine lineare Differentialgleichung 1. Ordnung. Zwar treten in dieser
 Differentialgleichung nichtlineare Terme auf (<span class="math notranslate nohighlight">\(\sin(x)\)</span> und <span class="math notranslate nohighlight">\(x^2\)</span>), doch
 beziehen sich diese ausschließlich auf die Variable <span class="math notranslate nohighlight">\(x\)</span> und nicht auf die
 gesuchte Funktion <span class="math notranslate nohighlight">\(y\)</span> oder ihre Ableitung <span class="math notranslate nohighlight">\(y'\)</span>.</p>
 <p><strong>Beispiel 2:</strong> Die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[3x \cdot y' - x\cdot \sin(y) = x^2\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec01-3">
+<span class="eqno">(12.3)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec01-3" title="Link to this equation">#</a></span>\[3x \cdot y' - x\cdot \sin(y) = x^2\]</div>
 <p>ist hingegen keine lineare Differentialgleichung, sondern eine nichtlineare
 Differentialgleichung 1. Ordnung, da die gesuchte Funktion <span class="math notranslate nohighlight">\(y\)</span> innerhalb der
 nichtlinearen Sinus-Funktion <span class="math notranslate nohighlight">\(\sin(y)\)</span> auftritt.</p>
@@ -554,13 +555,13 @@ Störfunktion gleich der Nullfunktion ist. Ansonsten wird sie <strong>inhomogen<
 genannt.</p>
 </div>
 <p><strong>Beispiel 1:</strong> Die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[3x \cdot y' - \sin(x)\cdot y = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec01-4">
+<span class="eqno">(12.4)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec01-4" title="Link to this equation">#</a></span>\[3x \cdot y' - \sin(x)\cdot y = 0\]</div>
 <p>ist eine homogene lineare Differentialgleichung 1. Ordnung. Die rechte Seite,
 also die Störfunktion, ist überall Null.</p>
 <p><strong>Beispiel 2:</strong> Die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[3x \cdot y' - \sin(x)\cdot y = x^2\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec01-5">
+<span class="eqno">(12.5)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec01-5" title="Link to this equation">#</a></span>\[3x \cdot y' - \sin(x)\cdot y = x^2\]</div>
 <p>ist hingegen eine inhomogene lineare Differentialgleichung 1. Ordnung. Die
 rechte Seite, also die Störfunktion <span class="math notranslate nohighlight">\(r(x)=x^2\)</span>, ist nicht die Nullfunktion.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">

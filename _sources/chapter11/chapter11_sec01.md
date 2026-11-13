@@ -73,11 +73,12 @@ b) ableiten: $f(x)=e^x \quad \Rightarrow f'(x)=e^x \quad \Rightarrow f''(x)=e^x$
 eingesetzt: $e^x \neq -e^x$ erfüllt die Gleichung nicht
 
 c) ableiten:
-\begin{align*}
+
+$$\begin{aligned}
 f(x) &=\sin(x)+3\cos(x) \\
 \Rightarrow \quad f''(x)&=\cos(x)-3\sin(x) \\
 \Rightarrow \quad f''(x)&=-\sin(x)-3\cos(x)
-\end{align*}
+\end{aligned}$$
 
 eingesetzt: $-\sin(x)-3\cos(x) = -\left(\sin(x)+3\cos(x)\right)$ erfüllt die Gleichung
 ```
@@ -194,26 +195,29 @@ erfüllen, müssen wir die zweite Ableitung jeder Funktion berechnen und
 überprüfen, ob sie gleich $-\sin(x)$ ist.
 
 a) $y_1(x) = \sin(x) + x$
-\begin{align*}
+
+$$\begin{aligned}
 \Rightarrow \quad y_1'(x)  &= \cos(x) + 1 \\
 \Rightarrow \quad y_1''(x) &= -\sin(x)
-\end{align*}
+\end{aligned}$$
 
 Da $y_1''(x) = -\sin(x)$ gilt, erfüllt $y_1$ die DGL.
 
 b) $y_2(x) = \sin(x) + 1$
-\begin{align*}
+
+$$\begin{aligned}
 \Rightarrow \quad y_2'(x) &= \cos(x) \\
 \Rightarrow \quad y_2''(x) &= -\sin(x)
-\end{align*}
+\end{aligned}$$
 
 Da $y_2''(x) = -\sin(x)$ gilt, erfüllt $y_2$ ebenfalls die DGL.
 
 c) $y_3(x) = \sin(x) - 2x + 3$
-\begin{align*}
+
+$$\begin{aligned}
 \Rightarrow \quad y_3'(x)  &= \cos(x) - 2 \\
 \Rightarrow \quad y_3''(x) &= -\sin(x)
-\end{align*}
+\end{aligned}$$
 
 Da $y_3''(x) = -\sin(x)$ gilt, erfüllt auch $y_3$ die DGL.
 

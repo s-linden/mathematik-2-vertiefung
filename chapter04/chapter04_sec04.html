@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -519,15 +520,15 @@
 Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> haben. Um sie zu addieren oder zu subtrahieren, müssen
 lediglich die Koeffizienten addiert bzw. subtrahiert werden.</p>
 <p>Lauten die beiden Potenzreihen</p>
-<div class="math notranslate nohighlight">
-\[\sum_{k=0}^{\infty}a_k (x-x_0)^k \text{ und } \sum_{k=0}^{\infty} b_k
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-1">
+<span class="eqno">(4.25)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-1" title="Link to this equation">#</a></span>\[\sum_{k=0}^{\infty}a_k (x-x_0)^k \text{ und } \sum_{k=0}^{\infty} b_k
 (x-x_0)^k,\]</div>
 <p>dann ist die Summe</p>
-<div class="math notranslate nohighlight">
-\[\sum_{k=0}^{\infty} (a_k + b_k)\cdot (x-x_0)^k\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-2">
+<span class="eqno">(4.26)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-2" title="Link to this equation">#</a></span>\[\sum_{k=0}^{\infty} (a_k + b_k)\cdot (x-x_0)^k\]</div>
 <p>und die Differenz</p>
-<div class="math notranslate nohighlight">
-\[\sum_{k=0}^{\infty} (a_k - b_k)\cdot (x-x_0)^k.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-3">
+<span class="eqno">(4.27)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-3" title="Link to this equation">#</a></span>\[\sum_{k=0}^{\infty} (a_k - b_k)\cdot (x-x_0)^k.\]</div>
 <p>Allerdings muss der Konvergenzradius neu überprüft werden. Wenn eine der
 Potenzreihen einen kleineren Konvergenzradius als die andere hat, dann hat die
 Summe/Differenz mindestens denselben kleineren Konvergenzradius. Möglicherweise
@@ -545,25 +546,25 @@ dabei erhalten.</p>
 <p>Um zwei Potenzreihen zu multiplizieren, verwenden wir die Cauchy-Produkt-Formel.
 Damit die Formel nicht zu unübersichtlich wird, nehmen wir den Entwicklungspunkt
 <span class="math notranslate nohighlight">\(x_0=0\)</span>, aber natürlich gilt die Formel auch für andere Entwicklungspunkte.</p>
-<div class="math notranslate nohighlight">
-\[\left(\sum_{k=0}^{\infty} a_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} b_k x^k \right)
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-4">
+<span class="eqno">(4.28)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-4" title="Link to this equation">#</a></span>\[\left(\sum_{k=0}^{\infty} a_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} b_k x^k \right)
 = \left(\sum_{k=0}^{\infty} c_k x^k \right) \]</div>
 <p>mit</p>
-<div class="math notranslate nohighlight">
-\[c_k = \sum_{l=0}^{k} a_l b_{k-l}
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-5">
+<span class="eqno">(4.29)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-5" title="Link to this equation">#</a></span>\[c_k = \sum_{l=0}^{k} a_l b_{k-l}
 = a_0 b_k + a_1 b_{k-1} + a_2 b_{k-2} + \ldots + a_k b_0.\]</div>
 <p>Der Konvergenzradius muss neu überprüft werden.</p>
 <p>Wenn die Potenzreihe <span class="math notranslate nohighlight">\(A(x)\)</span> durch die Potenzreihe <span class="math notranslate nohighlight">\(B(x)\)</span> geteilt werden soll,
 dann muss eine neue Potenzreihe <span class="math notranslate nohighlight">\(C(x)\)</span> gefunden werden, so dass</p>
-<div class="math notranslate nohighlight">
-\[A(x) = B(x) \cdot C(x)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-6">
+<span class="eqno">(4.30)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-6" title="Link to this equation">#</a></span>\[A(x) = B(x) \cdot C(x)\]</div>
 <p>gilt. Für die Multiplikation <span class="math notranslate nohighlight">\(B(x) \cdot C(x)\)</span> gilt jedoch</p>
-<div class="math notranslate nohighlight">
-\[\left(\sum_{k=0}^{\infty} b_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} c_k
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-7">
+<span class="eqno">(4.31)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-7" title="Link to this equation">#</a></span>\[\left(\sum_{k=0}^{\infty} b_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} c_k
 x^k \right) = \left(\sum_{k=0}^{\infty} d_k x^k \right) \]</div>
 <p>mit den Koeffizienten</p>
-<div class="math notranslate nohighlight">
-\[d_k = \sum_{l=0}^{k} b_l c_{k-l} = b_0 c_k + b_1 c_{k-1} + b_2 c_{k-2} +
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-8">
+<span class="eqno">(4.32)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-8" title="Link to this equation">#</a></span>\[d_k = \sum_{l=0}^{k} b_l c_{k-l} = b_0 c_k + b_1 c_{k-1} + b_2 c_{k-2} +
 \ldots + b_k c_0.\]</div>
 <p>Damit das Produkt <span class="math notranslate nohighlight">\(B(x) \cdot C(x)\)</span> gleich der Potenzreihe <span class="math notranslate nohighlight">\(A(x)\)</span> ist, muss
 jeder Koeffizient <span class="math notranslate nohighlight">\(d_k\)</span> mit <span class="math notranslate nohighlight">\(a_k\)</span> übereinstimmen. Wir vergleichen also die
@@ -596,26 +597,26 @@ dann die Division durchzuführen und daraus den Grenzwert direkt zu bilden. Am
 einfachsten ist es, ein Beispiel zu betrachten.</p>
 <p>Berechnen Sie den Grenzwert der Funktion <span class="math notranslate nohighlight">\(f(x) = \sin(x)/x\)</span>, wenn <span class="math notranslate nohighlight">\(x\)</span> gegen 0
 geht, also</p>
-<div class="math notranslate nohighlight">
-\[\lim_{x \to 0}\frac{\sin(x)}{x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-9">
+<span class="eqno">(4.33)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-9" title="Link to this equation">#</a></span>\[\lim_{x \to 0}\frac{\sin(x)}{x}.\]</div>
 <p><span class="math notranslate nohighlight">\(x=0\)</span> darf in die Funktion nicht eingesetzt werden, da ansonsten durch 0 geteilt
 werden würde. Die Potenzreihe der Sinusfunktion lautet:</p>
-<div class="math notranslate nohighlight">
-\[\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-10">
+<span class="eqno">(4.34)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-10" title="Link to this equation">#</a></span>\[\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots\]</div>
 <p>und damit ist</p>
-<div class="math notranslate nohighlight">
-\[\frac{\sin(x)}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!}+\ldots.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-11">
+<span class="eqno">(4.35)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-11" title="Link to this equation">#</a></span>\[\frac{\sin(x)}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!}+\ldots.\]</div>
 <p>Für jeden einzelnen Term können wir jetzt aber den Grenzwert berechnen, also</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-12">
+<span class="eqno">(4.36)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-12" title="Link to this equation">#</a></span>\[
 \lim_{x\to 0} \left(1 \right) = 1, \;
 \lim_{x\to 0} \left(\frac{x^2}{3!} \right) = 0, \;
 \lim_{x\to 0} \left(\frac{x^4}{5!} \right) = 0, \ldots \]</div>
 <p>Nur der erste Term hat den Grenzwert 1, alle nachfolgenden Grenzwerte sind 0. Da
 alle Grenzwerte endlich sind, dürfen wir die Grenzwerte addieren bzw. subtrahieren
 und erhalten so den gesuchten Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[\lim_{x \to 0}\frac{\sin(x)}{x} = 1.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec04-13">
+<span class="eqno">(4.37)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec04-13" title="Link to this equation">#</a></span>\[\lim_{x \to 0}\frac{\sin(x)}{x} = 1.\]</div>
 </section>
 <section id="zusammenfassung-und-ausblick">
 <h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>

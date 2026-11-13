@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -516,11 +517,12 @@ Differentialgleichungen</strong>. Wir betrachten in dieser Vorlesung nur Systeme
 zwei Differentialgleichungen, bei denen beide Differentialgleichungen homogen,
 linear und von 1. Ordnung sind. Zusätzlich fordern wir, dass die Koeffizienten
 konstant sind.</p>
-<p>Ein System von Differentialgleichungen
-<span class="math notranslate nohighlight">\(\begin{align*}
+<p>Ein System von Differentialgleichungen</p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-1">
+<span class="eqno">(12.29)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-1" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 y_1' &amp;= a_{11}y_1 + a_{12}y_2 \\
 y_2' &amp;= a_{21}y_1 + a_{22}y_2
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>heißt homogenes System von Differentialgleichungen 1. Ordnung mit konstanten
 Koeffizienten.</p>
 <p>Es werden also zwei Funktionen <span class="math notranslate nohighlight">\(y_1\)</span> und <span class="math notranslate nohighlight">\(y_2\)</span> gesucht, die jeweils in der
@@ -535,16 +537,16 @@ Differentialgleichungen 1. Ordnung insgesamt die Ordnung 2.</p>
 Lösung einzelner Differentialgleichungen mit der Lösung von linearen
 Gleichungssystemen. Da wir uns auf konstante Koeffizienten beschränken, können
 wir die Koeffizienten in eine Matrix schreiben.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}A =
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-2">
+<span class="eqno">(12.30)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-2" title="Link to this equation">#</a></span>\[\begin{split}A =
 \begin{pmatrix}
 a_{11} &amp; a_{12} \\
 a_{21} &amp; a_{22}
 \end{pmatrix}.\end{split}\]</div>
 <p>Dadurch können wir das System von Differentialgleichungen als
 Matrix-Vektor-Multiplikation darstellen:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{pmatrix}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-3">
+<span class="eqno">(12.31)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-3" title="Link to this equation">#</a></span>\[\begin{split}\begin{pmatrix}
 a_{11} &amp; a_{12} \\
 a_{21} &amp; a_{22} \end{pmatrix} \cdot
 \begin{pmatrix} y_1 \\ y_2 \end{pmatrix} =
@@ -552,31 +554,33 @@ a_{21} &amp; a_{22} \end{pmatrix} \cdot
 <p>Bei den homogenen lineare Differentialgleichungen zeigte sich, dass diese durch
 eine Exponentialfunktion gelöst werden können. Als Lösungsansatz wählen wir
 daher</p>
-<div class="math notranslate nohighlight">
-\[y_1 = C_1 \, e^{\lambda x} \quad \text{ und }
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-4">
+<span class="eqno">(12.32)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-4" title="Link to this equation">#</a></span>\[y_1 = C_1 \, e^{\lambda x} \quad \text{ und }
 \quad y_2 = C_2 \, e^{\lambda x}.\]</div>
 <p>Dabei haben wir drei unbekannte Konstanten, nämlich <span class="math notranslate nohighlight">\(C_1\)</span>, <span class="math notranslate nohighlight">\(C_2\)</span> und <span class="math notranslate nohighlight">\(\lambda\)</span>.
 Die beiden Konstanten <span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> werden unsere Integrationskonstanten
 werden. Da wir ein System 2. Ordnung haben, brauchen wir zwei
 Integrationskonstanten. Aber <span class="math notranslate nohighlight">\(\lambda\)</span> muss noch bestimmt werden. Wir machen
 weiter und bilden die erste Ableitung der beiden Ansatzfunktionen</p>
-<div class="math notranslate nohighlight">
-\[y_1'= C_1 \, \lambda e^{\lambda x} \quad \text{ und }
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-5">
+<span class="eqno">(12.33)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-5" title="Link to this equation">#</a></span>\[y_1'= C_1 \, \lambda e^{\lambda x} \quad \text{ und }
 \quad y_2' = C_2 \, \lambda e^{\lambda x}.\]</div>
 <p>Setzen wir nun beide Ansatzfunktionen in das System von Differentialgleichungen
 ein, so erhalten wir</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-6">
+<span class="eqno">(12.34)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-6" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 C_1 \, \lambda e^{\lambda x} &amp;= a_{11} C_1 \, e^{\lambda x} + a_{12} C_2 \, e^{\lambda x} \\
 C_2 \, \lambda e^{\lambda x} &amp;= a_{21} C_1 \, e^{\lambda x} + a_{22} C_2 \, e^{\lambda x}
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Wir teilen durch <span class="math notranslate nohighlight">\(e^{\lambda x}\)</span> und erhalten</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-7">
+<span class="eqno">(12.35)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-7" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 C_1 \, \lambda  &amp;= a_{11} C_1 + a_{12} C_2 \\
 C_2 \, \lambda  &amp;= a_{21} C_1 + a_{22} C_2
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Bringen wir die Terme <span class="math notranslate nohighlight">\(C_1 \, \lambda\)</span> und <span class="math notranslate nohighlight">\(C_2 \, \lambda\)</span> jeweils auf die rechte Seite und schreiben das Gleichungssystem in Matrixform, so erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-8">
+<span class="eqno">(12.36)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-8" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{pmatrix}
 a_{11} - \lambda &amp; a_{21} \\
 a_{21} &amp; a_{22} - \lambda
@@ -589,15 +593,15 @@ kommen nur <span class="math notranslate nohighlight">\(C_1 = C_2 = 0\)</span> a
 Funktionen als Lösung, die nicht die Nullfunktion sind, wenn die Determinante
 dieses Gleichungssystems Null ist.</p>
 <p>Wir setzen also</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\det \begin{pmatrix}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-9">
+<span class="eqno">(12.37)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-9" title="Link to this equation">#</a></span>\[\begin{split}\det \begin{pmatrix}
 a_{11} - \lambda &amp; a_{12} \\
 a_{21} &amp; a_{22} - \lambda
 \end{pmatrix} \overset{!}{=} 0\end{split}\]</div>
 <p>an und bestimmen <span class="math notranslate nohighlight">\(\lambda\)</span> so, dass die Determinante Null ist. Diese Gleichung
 wird übrigens <strong>charakteristische Gleichung</strong> genannt und wird folgendermaßen notiert:</p>
-<div class="math notranslate nohighlight">
-\[(a_{11}-\lambda) \cdot (a_{22}-\lambda) - a_{21} \, a_{12} = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-10">
+<span class="eqno">(12.38)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-10" title="Link to this equation">#</a></span>\[(a_{11}-\lambda) \cdot (a_{22}-\lambda) - a_{21} \, a_{12} = 0.\]</div>
 <p>Es gibt drei mögliche Lösungen, die sogenannten Eigenwerte der
 charakteristischen Gleichung:</p>
 <ul class="simple">
@@ -612,49 +616,50 @@ charakteristischen Gleichung:</p>
 <li><p>Lösungsfunktion: <span class="math notranslate nohighlight">\(y_1(x)=C_1\cdot e^{\lambda_1 x} + C_2\cdot e^{\lambda_2 x}\)</span></p></li>
 <li><p>Lösungsfunktion: erhalten wir, indem wir die <span class="math notranslate nohighlight">\(y_1\)</span> in die 1. DGL einsetzen und dann nach <span class="math notranslate nohighlight">\(y_2\)</span> auflösen:</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-11">
+<span class="eqno">(12.39)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-11" title="Link to this equation">#</a></span>\[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
 <p><strong>2. Fall: 1 Nullstelle</strong></p>
 <p>Es gilt also <span class="math notranslate nohighlight">\(\lambda_1 = \lambda_2 = \alpha\)</span> reell.</p>
 <ol class="arabic simple">
 <li><p>Lösungsfunktion: <span class="math notranslate nohighlight">\(y_1(x)=(C_1+C_2 x) \cdot e^{\alpha x} \)</span></p></li>
 <li><p>Lösungsfunktion:</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-12">
+<span class="eqno">(12.40)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-12" title="Link to this equation">#</a></span>\[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
 <p><strong>3. Fall: 0 Nullstellen</strong></p>
 <p>Es gilt also <span class="math notranslate nohighlight">\(\lambda_1 \neq \lambda_2\)</span> komplex, die komplexen Nullstellen können geschrieben werden als <span class="math notranslate nohighlight">\(\lambda_{1/2}=\alpha \pm \omega i\)</span>.</p>
 <ol class="arabic simple">
 <li><p>Lösungsfunktion: <span class="math notranslate nohighlight">\(y_1(x)=e^{\alpha x}\left(C_1\sin(\omega x) + C_2 \cos(\omega x)\right) \)</span></p></li>
 <li><p>Lösungsfunktion:</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-13">
+<span class="eqno">(12.41)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-13" title="Link to this equation">#</a></span>\[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
 </section>
 <section id="beispiel-zur-losung-eines-systems-2-ordnung">
 <h2>Beispiel zur Lösung eines Systems 2. Ordnung<a class="headerlink" href="#beispiel-zur-losung-eines-systems-2-ordnung" title="Link to this heading">#</a></h2>
 <p>Wir betrachten das homogene System 2. Ordnung</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-14">
+<span class="eqno">(12.42)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-14" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 y_1' &amp;= -8y_1 - 2y_2 \\
 y_2' &amp;= 15y_1 + 5y_2
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>mit der Koeffizientenmatrix</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}A = \begin{pmatrix} -8 &amp; -2 \\ 15 &amp; 5 \end{pmatrix}.\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-15">
+<span class="eqno">(12.43)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-15" title="Link to this equation">#</a></span>\[\begin{split}A = \begin{pmatrix} -8 &amp; -2 \\ 15 &amp; 5 \end{pmatrix}.\end{split}\]</div>
 <p>Die Nullstellen der charakteristischen Gleichung</p>
-<div class="math notranslate nohighlight">
-\[\det (A-\lambda I) = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-16">
+<span class="eqno">(12.44)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-16" title="Link to this equation">#</a></span>\[\det (A-\lambda I) = 0\]</div>
 <p>sind <span class="math notranslate nohighlight">\(\lambda_1 = -5\)</span> und <span class="math notranslate nohighlight">\(\lambda_2 = 2\)</span>.</p>
 <p>Damit ist die erste Lösungsfunktion</p>
-<div class="math notranslate nohighlight">
-\[y_1(x) = C_1 \, e^{-5x} + C_2 \, e^{2x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-17">
+<span class="eqno">(12.45)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-17" title="Link to this equation">#</a></span>\[y_1(x) = C_1 \, e^{-5x} + C_2 \, e^{2x}.\]</div>
 <p>Wir berechnen schon einmal die erste Ableitung davon, da wir <span class="math notranslate nohighlight">\(y_1'\)</span> für die
 Berechnung von <span class="math notranslate nohighlight">\(y_2\)</span> brauchen:</p>
-<div class="math notranslate nohighlight">
-\[y_1'(x) = -5 C_1 e^{-5x} + 2 C_2 e^{2x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-18">
+<span class="eqno">(12.46)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-18" title="Link to this equation">#</a></span>\[y_1'(x) = -5 C_1 e^{-5x} + 2 C_2 e^{2x}.\]</div>
 <p>Die zweite Lösungsfunktion ist damit</p>
-<div class="math notranslate nohighlight">
-\[y_2(x) = \frac{1}{-2} (y_1' - (-8)\cdot y_1) = (\frac{5}{2}C_1+8) e^{-5x} +
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec04-19">
+<span class="eqno">(12.47)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec04-19" title="Link to this equation">#</a></span>\[y_2(x) = \frac{1}{-2} (y_1' - (-8)\cdot y_1) = (\frac{5}{2}C_1+8) e^{-5x} +
 (8-C_2) e^{2x}.\]</div>
 </section>
 </section>

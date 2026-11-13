@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -488,468 +489,474 @@ Wählen Sie dazu Stufe 1b.</p>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.1</p>
 <p>Lösen Sie das Anfangswertproblem</p>
-<div class="math notranslate nohighlight">
-\[y'= -5y\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-1">
+<span class="eqno">(12.48)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-1" title="Link to this equation">#</a></span>\[y'= -5y\]</div>
 <p>für <span class="math notranslate nohighlight">\(y(0)=5\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>Allgemeine Lösung:</p>
-<div class="math notranslate nohighlight">
-\[y(x)=C\, e^{-5x}, \quad C\in\mathbb{R}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-2">
+<span class="eqno">(12.49)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-2" title="Link to this equation">#</a></span>\[y(x)=C\, e^{-5x}, \quad C\in\mathbb{R}\]</div>
 <p>Spezielle Lösung für <span class="math notranslate nohighlight">\(y(0)=5\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[y(x) = 5 \, e^{-5x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-3">
+<span class="eqno">(12.50)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-3" title="Link to this equation">#</a></span>\[y(x) = 5 \, e^{-5x}.\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Die DGL ist eine lineare DGL mit <span class="math notranslate nohighlight">\(a_1(x)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(x)=5\)</span>. Daher lautet die allgemeine Lösung</p>
-<div class="math notranslate nohighlight">
-\[y(x)=C \, e^{-\int \frac{a_0(x)}{a_1(x)}\, dx} 
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-4">
+<span class="eqno">(12.51)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-4" title="Link to this equation">#</a></span>\[y(x)=C \, e^{-\int \frac{a_0(x)}{a_1(x)}\, dx} 
 = C \, e^{-\int 5 \, dx} = C \, e^{-5x}. \]</div>
 <p class="sd-card-text">Für die spezielle Lösung soll</p>
-<div class="math notranslate nohighlight">
-\[y(0)= C \, e^{-5x} \overset{!}{=} 5\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-5">
+<span class="eqno">(12.52)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-5" title="Link to this equation">#</a></span>\[y(0)= C \, e^{-5x} \overset{!}{=} 5\]</div>
 <p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=5\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
-<div class="math notranslate nohighlight">
-\[y(x) = 5 \, e^{-5x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-6">
+<span class="eqno">(12.53)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-6" title="Link to this equation">#</a></span>\[y(x) = 5 \, e^{-5x}.\]</div>
 <p class="sd-card-text">Hinweis: Direkt integrieren hätte auch funktioniert.</p>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.2</p>
 <p>Lösen Sie das Anfangswertproblem</p>
-<div class="math notranslate nohighlight">
-\[\dot{x} + 5x = -5t\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-7">
+<span class="eqno">(12.54)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-7" title="Link to this equation">#</a></span>\[\dot{x} + 5x = -5t\]</div>
 <p>für <span class="math notranslate nohighlight">\(x(0)=5\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>Allgemeine Lösung:</p>
-<div class="math notranslate nohighlight">
-\[x(t) = -t + \frac{1}{5} + C\cdot e^{-5t}, \quad C\in\mathbb{R}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-8">
+<span class="eqno">(12.55)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-8" title="Link to this equation">#</a></span>\[x(t) = -t + \frac{1}{5} + C\cdot e^{-5t}, \quad C\in\mathbb{R}\]</div>
 <p>Spezielle Lösung für <span class="math notranslate nohighlight">\(x(0)=5\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[x(t) = -t + \frac{1}{5} + \frac{24}{5} e^{-5t}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-9">
+<span class="eqno">(12.56)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-9" title="Link to this equation">#</a></span>\[x(t) = -t + \frac{1}{5} + \frac{24}{5} e^{-5t}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Die DGL ist eine lineare inhomogene DGL mit <span class="math notranslate nohighlight">\(a_1(t)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(t)=5\)</span>. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[\dot{x} + 5x = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-10">
+<span class="eqno">(12.57)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-10" title="Link to this equation">#</a></span>\[\dot{x} + 5x = 0.\]</div>
 <p class="sd-card-text">Das ist die Differentialgleichung aus Aufgabe 12.1 und die allgemeine homogene Lösung lautet</p>
-<div class="math notranslate nohighlight">
-\[x_h(t) = C \cdot e^{-5t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-11">
+<span class="eqno">(12.58)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-11" title="Link to this equation">#</a></span>\[x_h(t) = C \cdot e^{-5t}.\]</div>
 <p class="sd-card-text">Wir variieren die Konstante und nehmen den Lösungsansatz</p>
-<div class="math notranslate nohighlight">
-\[x(t) = C(t) \cdot e^{-5t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-12">
+<span class="eqno">(12.59)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-12" title="Link to this equation">#</a></span>\[x(t) = C(t) \cdot e^{-5t}.\]</div>
 <p class="sd-card-text">Die erste Ableitung ist</p>
-<div class="math notranslate nohighlight">
-\[\dot{x}(t) = \dot{C}(t) e^{-5t} - 5 C(t) \cdot e^{-5t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-13">
+<span class="eqno">(12.60)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-13" title="Link to this equation">#</a></span>\[\dot{x}(t) = \dot{C}(t) e^{-5t} - 5 C(t) \cdot e^{-5t}.\]</div>
 <p class="sd-card-text">Jetzt werden die Lösungsansatzfunktion <span class="math notranslate nohighlight">\(x\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(\dot{x}\)</span> in die inhomogene DGL eingesetzt:</p>
-<div class="math notranslate nohighlight">
-\[\dot{C}(t) e^{-5t} - 5C(t) e^{-5t} + 5 C(t) e^{-5t} = -5t.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-14">
+<span class="eqno">(12.61)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-14" title="Link to this equation">#</a></span>\[\dot{C}(t) e^{-5t} - 5C(t) e^{-5t} + 5 C(t) e^{-5t} = -5t.\]</div>
 <p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
-<div class="math notranslate nohighlight">
-\[\dot{C}(t) = -5t e^{5t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-15">
+<span class="eqno">(12.62)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-15" title="Link to this equation">#</a></span>\[\dot{C}(t) = -5t e^{5t}.\]</div>
 <p class="sd-card-text">Wir integrieren partiell nach <span class="math notranslate nohighlight">\(t\)</span> und erhalten</p>
-<div class="math notranslate nohighlight">
-\[C(t) = -t e^{5t} + \frac{1}{5} e^{5t} + C.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-16">
+<span class="eqno">(12.63)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-16" title="Link to this equation">#</a></span>\[C(t) = -t e^{5t} + \frac{1}{5} e^{5t} + C.\]</div>
 <p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[x(t) = -t + \frac{1}{5} + C\cdot e^{-5t}, \quad C\in\mathbb{R}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-17">
+<span class="eqno">(12.64)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-17" title="Link to this equation">#</a></span>\[x(t) = -t + \frac{1}{5} + C\cdot e^{-5t}, \quad C\in\mathbb{R}\]</div>
 <p class="sd-card-text">Für die spezielle Lösung soll</p>
-<div class="math notranslate nohighlight">
-\[x(0)= -0 + \frac{1}{5} + C \cdot e^{-5\cdot 0} \overset{!}{=} 5\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-18">
+<span class="eqno">(12.65)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-18" title="Link to this equation">#</a></span>\[x(0)= -0 + \frac{1}{5} + C \cdot e^{-5\cdot 0} \overset{!}{=} 5\]</div>
 <p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=\frac{24}{5}\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
-<div class="math notranslate nohighlight">
-\[x(t) = -t + \frac{1}{5} + \frac{24}{5} e^{-5t}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-19">
+<span class="eqno">(12.66)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-19" title="Link to this equation">#</a></span>\[x(t) = -t + \frac{1}{5} + \frac{24}{5} e^{-5t}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.3</p>
 <p>Lösen Sie das Anfangswertproblem</p>
-<div class="math notranslate nohighlight">
-\[y'-5y = \sin(-5x)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-20">
+<span class="eqno">(12.67)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-20" title="Link to this equation">#</a></span>\[y'-5y = \sin(-5x)\]</div>
 <p>für <span class="math notranslate nohighlight">\(y(0)=-1\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>Allgemeine Lösung:</p>
-<div class="math notranslate nohighlight">
-\[y(x) = \frac{1}{10} \left(\sin(5x) + \cos(x)\right) + C\cdot e^{5x}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-21">
+<span class="eqno">(12.68)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-21" title="Link to this equation">#</a></span>\[y(x) = \frac{1}{10} \left(\sin(5x) + \cos(x)\right) + C\cdot e^{5x}\]</div>
 <p>Spezielle Lösung zum Anfangswert <span class="math notranslate nohighlight">\(y(0)=-1\)</span></p>
-<div class="math notranslate nohighlight">
-\[y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) - \frac{11}{10}\cdot e^{5x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-22">
+<span class="eqno">(12.69)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-22" title="Link to this equation">#</a></span>\[y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) - \frac{11}{10}\cdot e^{5x}.\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Die DGL ist eine lineare inhomogene DGL mit <span class="math notranslate nohighlight">\(a_1(x)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(x)=-5\)</span>. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[y' - 5y = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-23">
+<span class="eqno">(12.70)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-23" title="Link to this equation">#</a></span>\[y' - 5y = 0.\]</div>
 <p class="sd-card-text">Die allgemeine Lösung der homogenen DGL lautet</p>
-<div class="math notranslate nohighlight">
-\[y_h(x) = C \cdot e^{5x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-24">
+<span class="eqno">(12.71)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-24" title="Link to this equation">#</a></span>\[y_h(x) = C \cdot e^{5x}.\]</div>
 <p class="sd-card-text">Wir variieren die Konstante und nehmen den Lösungsansatz</p>
-<div class="math notranslate nohighlight">
-\[y(x) = C(x) \cdot e^{5x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-25">
+<span class="eqno">(12.72)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-25" title="Link to this equation">#</a></span>\[y(x) = C(x) \cdot e^{5x}.\]</div>
 <p class="sd-card-text">Die erste Ableitung ist</p>
-<div class="math notranslate nohighlight">
-\[y'(x) = C'(x) \cdot e^{5x} + C(x) \cdot 5e^{5x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-26">
+<span class="eqno">(12.73)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-26" title="Link to this equation">#</a></span>\[y'(x) = C'(x) \cdot e^{5x} + C(x) \cdot 5e^{5x}.\]</div>
 <p class="sd-card-text">Jetzt werden die Lösungsansatzfunktion <span class="math notranslate nohighlight">\(y\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(y'\)</span> in die inhomogene DGL eingesetzt:</p>
-<div class="math notranslate nohighlight">
-\[C'(x) \cdot e^{5x} + C(x) \cdot 5e^{5x} - 5 \cdot C(x) \cdot e^{5x} = \sin(-5x).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-27">
+<span class="eqno">(12.74)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-27" title="Link to this equation">#</a></span>\[C'(x) \cdot e^{5x} + C(x) \cdot 5e^{5x} - 5 \cdot C(x) \cdot e^{5x} = \sin(-5x).\]</div>
 <p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
-<div class="math notranslate nohighlight">
-\[C'(x) = \sin(-5x) \cdot e^{-5x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-28">
+<span class="eqno">(12.75)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-28" title="Link to this equation">#</a></span>\[C'(x) = \sin(-5x) \cdot e^{-5x}.\]</div>
 <p class="sd-card-text">Wir integrieren partiell nach <span class="math notranslate nohighlight">\(x\)</span> und erhalten</p>
-<div class="math notranslate nohighlight">
-\[C(x) = \frac{1}{10} e^{-5x}\cdot \left( \sin(5x) + \cos(5x)\right) + C.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-29">
+<span class="eqno">(12.76)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-29" title="Link to this equation">#</a></span>\[C(x) = \frac{1}{10} e^{-5x}\cdot \left( \sin(5x) + \cos(5x)\right) + C.\]</div>
 <p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) + C\cdot e^{5x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-30">
+<span class="eqno">(12.77)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-30" title="Link to this equation">#</a></span>\[y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) + C\cdot e^{5x}.\]</div>
 <p class="sd-card-text">Für die spezielle Lösung soll</p>
-<div class="math notranslate nohighlight">
-\[y(0) = \frac{1}{10} \cdot \left( \sin(0) + \cos(0)\right) + C\cdot e^{0} \overset{!}{=} -1\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-31">
+<span class="eqno">(12.78)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-31" title="Link to this equation">#</a></span>\[y(0) = \frac{1}{10} \cdot \left( \sin(0) + \cos(0)\right) + C\cdot e^{0} \overset{!}{=} -1\]</div>
 <p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=-\frac{11}{10}\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
-<div class="math notranslate nohighlight">
-\[y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) - \frac{11}{10}\cdot e^{5x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-32">
+<span class="eqno">(12.79)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-32" title="Link to this equation">#</a></span>\[y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) - \frac{11}{10}\cdot e^{5x}.\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.4</p>
 <p>Lösen Sie das Anfangswertproblem</p>
-<div class="math notranslate nohighlight">
-\[2\dot{x} - 4x =e^{-t}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-33">
+<span class="eqno">(12.80)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-33" title="Link to this equation">#</a></span>\[2\dot{x} - 4x =e^{-t}\]</div>
 <p>für <span class="math notranslate nohighlight">\(x(0)=0\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>Allgemeine Lösung</p>
-<div class="math notranslate nohighlight">
-\[x(t) = -\frac{1}{6} e^{-t} + C\cdot e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-34">
+<span class="eqno">(12.81)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-34" title="Link to this equation">#</a></span>\[x(t) = -\frac{1}{6} e^{-t} + C\cdot e^{2t}.\]</div>
 <p>Spezielle Lösung für <span class="math notranslate nohighlight">\(x(0)=0\)</span></p>
-<div class="math notranslate nohighlight">
-\[x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-35">
+<span class="eqno">(12.82)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-35" title="Link to this equation">#</a></span>\[x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Die DGL ist eine lineare inhomogene DGL mit <span class="math notranslate nohighlight">\(a_1(t)=2\)</span> und <span class="math notranslate nohighlight">\(a_0(t)=-4\)</span>. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[2\dot{x} - 4x = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-36">
+<span class="eqno">(12.83)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-36" title="Link to this equation">#</a></span>\[2\dot{x} - 4x = 0.\]</div>
 <p class="sd-card-text">Die allgemeine Lösung der homogenen DGL lautet</p>
-<div class="math notranslate nohighlight">
-\[x_h(t) = C\cdot e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-37">
+<span class="eqno">(12.84)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-37" title="Link to this equation">#</a></span>\[x_h(t) = C\cdot e^{2t}.\]</div>
 <p class="sd-card-text">Wir variieren die Konstante und nehmen den Lösungsansatz</p>
-<div class="math notranslate nohighlight">
-\[x(t) = C(t)\cdot e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-38">
+<span class="eqno">(12.85)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-38" title="Link to this equation">#</a></span>\[x(t) = C(t)\cdot e^{2t}.\]</div>
 <p class="sd-card-text">Die erste Ableitung ist</p>
-<div class="math notranslate nohighlight">
-\[\dot(x)(t) = \dot{C}(t) e^{2t} + 2 C(t) e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-39">
+<span class="eqno">(12.86)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-39" title="Link to this equation">#</a></span>\[\dot(x)(t) = \dot{C}(t) e^{2t} + 2 C(t) e^{2t}.\]</div>
 <p class="sd-card-text">Jetzt werden die Lösungsansatzfunktion <span class="math notranslate nohighlight">\(x\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(\dot{x}\)</span> in die inhomogene DGL eingesetzt:</p>
-<div class="math notranslate nohighlight">
-\[2\cdot\dot{C}(t) e^{2t} + 4 C(t) e^{2t} - 4 C(t) e^{2t} = e^{-t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-40">
+<span class="eqno">(12.87)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-40" title="Link to this equation">#</a></span>\[2\cdot\dot{C}(t) e^{2t} + 4 C(t) e^{2t} - 4 C(t) e^{2t} = e^{-t}.\]</div>
 <p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
-<div class="math notranslate nohighlight">
-\[\dot{C}(t) = \frac{1}{2} e^{-3t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-41">
+<span class="eqno">(12.88)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-41" title="Link to this equation">#</a></span>\[\dot{C}(t) = \frac{1}{2} e^{-3t}.\]</div>
 <p class="sd-card-text">Wir integrieren partiell nach <span class="math notranslate nohighlight">\(t\)</span> und erhalten</p>
-<div class="math notranslate nohighlight">
-\[C(t) = -\frac{1}{6} e^{-3t} + C.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-42">
+<span class="eqno">(12.89)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-42" title="Link to this equation">#</a></span>\[C(t) = -\frac{1}{6} e^{-3t} + C.\]</div>
 <p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[x(t) = \left(-\frac{1}{6}e^{-3t} + C \right) \cdot e^{2t} = -\frac{1}{6} e^{-t} + C\cdot e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-43">
+<span class="eqno">(12.90)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-43" title="Link to this equation">#</a></span>\[x(t) = \left(-\frac{1}{6}e^{-3t} + C \right) \cdot e^{2t} = -\frac{1}{6} e^{-t} + C\cdot e^{2t}.\]</div>
 <p class="sd-card-text">Für die spezielle Lösung soll</p>
-<div class="math notranslate nohighlight">
-\[x(0) = -\frac{1}{6} e^{0} + C\cdot e^{0} \overset{!}{=} 0\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-44">
+<span class="eqno">(12.91)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-44" title="Link to this equation">#</a></span>\[x(0) = -\frac{1}{6} e^{0} + C\cdot e^{0} \overset{!}{=} 0\]</div>
 <p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=\frac{1}{6}\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
-<div class="math notranslate nohighlight">
-\[x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-45">
+<span class="eqno">(12.92)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-45" title="Link to this equation">#</a></span>\[x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.5</p>
 <p>Lösen Sie das Anfangswertproblem</p>
-<div class="math notranslate nohighlight">
-\[y'-3y = x^2+2x+1\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-46">
+<span class="eqno">(12.93)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-46" title="Link to this equation">#</a></span>\[y'-3y = x^2+2x+1\]</div>
 <p>für <span class="math notranslate nohighlight">\(y(0)=3\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>Allgemeine Lösung:</p>
-<div class="math notranslate nohighlight">
-\[y(x) = -\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} + C\cdot e^{3x} , \quad C\in\mathbb{R}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-47">
+<span class="eqno">(12.94)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-47" title="Link to this equation">#</a></span>\[y(x) = -\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} + C\cdot e^{3x} , \quad C\in\mathbb{R}\]</div>
 <p>Spezielle Lösung für <span class="math notranslate nohighlight">\(y(0)=3\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[y(x) = -\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} + \frac{98}{27} e^{3x}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-48">
+<span class="eqno">(12.95)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-48" title="Link to this equation">#</a></span>\[y(x) = -\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} + \frac{98}{27} e^{3x}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Die DGL ist eine lineare inhomogene DGL mit <span class="math notranslate nohighlight">\(a_1(x)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(x)=-3\)</span>. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[y' - 3y = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-49">
+<span class="eqno">(12.96)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-49" title="Link to this equation">#</a></span>\[y' - 3y = 0.\]</div>
 <p class="sd-card-text">Die allgemeine Lösung der homogenen DGL lautet</p>
-<div class="math notranslate nohighlight">
-\[y_h(x) = C \cdot e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-50">
+<span class="eqno">(12.97)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-50" title="Link to this equation">#</a></span>\[y_h(x) = C \cdot e^{3x}.\]</div>
 <p class="sd-card-text">Wir variieren die Konstante und nehmen den Lösungsansatz</p>
-<div class="math notranslate nohighlight">
-\[y(x) = C(x) \cdot e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-51">
+<span class="eqno">(12.98)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-51" title="Link to this equation">#</a></span>\[y(x) = C(x) \cdot e^{3x}.\]</div>
 <p class="sd-card-text">Die erste Ableitung ist</p>
-<div class="math notranslate nohighlight">
-\[y'(x) = C'(x) \cdot e^{3x} + C(x) \cdot 3 e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-52">
+<span class="eqno">(12.99)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-52" title="Link to this equation">#</a></span>\[y'(x) = C'(x) \cdot e^{3x} + C(x) \cdot 3 e^{3x}.\]</div>
 <p class="sd-card-text">Jetzt werden die Lösungsansatzfunktion <span class="math notranslate nohighlight">\(y\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(y'\)</span> in die inhomogene DGL eingesetzt:</p>
-<div class="math notranslate nohighlight">
-\[C'(x) \cdot e^{3x} + C(x) \cdot 3e^{3x} - 3 \cdot C(x) \cdot e^{3x} = x^2 + 2x + 1.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-53">
+<span class="eqno">(12.100)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-53" title="Link to this equation">#</a></span>\[C'(x) \cdot e^{3x} + C(x) \cdot 3e^{3x} - 3 \cdot C(x) \cdot e^{3x} = x^2 + 2x + 1.\]</div>
 <p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
-<div class="math notranslate nohighlight">
-\[C'(x) = \left(x^2 + 2x +1\right) \cdot e^{-3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-54">
+<span class="eqno">(12.101)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-54" title="Link to this equation">#</a></span>\[C'(x) = \left(x^2 + 2x +1\right) \cdot e^{-3x}.\]</div>
 <p class="sd-card-text">Wir integrieren partiell nach <span class="math notranslate nohighlight">\(x\)</span> und erhalten</p>
-<div class="math notranslate nohighlight">
-\[C(x) = (-\frac{1}{3}x^2-\frac{8}{9}x - \frac{17}{27}) \cdot e^{-3x} + C.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-55">
+<span class="eqno">(12.102)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-55" title="Link to this equation">#</a></span>\[C(x) = (-\frac{1}{3}x^2-\frac{8}{9}x - \frac{17}{27}) \cdot e^{-3x} + C.\]</div>
 <p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[y(x) = \left(-\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} \right) + C\cdot e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-56">
+<span class="eqno">(12.103)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-56" title="Link to this equation">#</a></span>\[y(x) = \left(-\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} \right) + C\cdot e^{3x}.\]</div>
 <p class="sd-card-text">Für die spezielle Lösung soll</p>
-<div class="math notranslate nohighlight">
-\[y(0) = \left(-\frac{1}{3}\cdot 0^2 - \frac{8}{9}\cdot 0 - \frac{17}{27} \right) + C\cdot e^{0} \overset{!}{=} 3\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-57">
+<span class="eqno">(12.104)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-57" title="Link to this equation">#</a></span>\[y(0) = \left(-\frac{1}{3}\cdot 0^2 - \frac{8}{9}\cdot 0 - \frac{17}{27} \right) + C\cdot e^{0} \overset{!}{=} 3\]</div>
 <p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=\frac{98}{27}\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
-<div class="math notranslate nohighlight">
-\[y(x) = \left(-\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} \right) + \frac{98}{27}\cdot e^{3x}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-58">
+<span class="eqno">(12.105)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-58" title="Link to this equation">#</a></span>\[y(x) = \left(-\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} \right) + \frac{98}{27}\cdot e^{3x}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.6</p>
 <p>Lösen Sie das Anfangswertproblem</p>
-<div class="math notranslate nohighlight">
-\[\dot{x} + 4x = \sin(-2t)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-59">
+<span class="eqno">(12.106)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-59" title="Link to this equation">#</a></span>\[\dot{x} + 4x = \sin(-2t)\]</div>
 <p>für <span class="math notranslate nohighlight">\(x(0)=-1\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>Allgemeine Lösung:</p>
-<div class="math notranslate nohighlight">
-\[x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) + C\cdot e^{-4t}, \quad C\in\mathbb{R}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-60">
+<span class="eqno">(12.107)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-60" title="Link to this equation">#</a></span>\[x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) + C\cdot e^{-4t}, \quad C\in\mathbb{R}\]</div>
 <p>Spezielle Lösung für <span class="math notranslate nohighlight">\(x(0)=-1\)</span></p>
-<div class="math notranslate nohighlight">
-\[x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) - \frac{11}{10}\cdot e^{-4t}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-61">
+<span class="eqno">(12.108)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-61" title="Link to this equation">#</a></span>\[x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) - \frac{11}{10}\cdot e^{-4t}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Die DGL ist eine lineare inhomogene DGL mit <span class="math notranslate nohighlight">\(a_1(t)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(t)=4\)</span>. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[\dot{x} + 4x = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-62">
+<span class="eqno">(12.109)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-62" title="Link to this equation">#</a></span>\[\dot{x} + 4x = 0.\]</div>
 <p class="sd-card-text">Die allgemeine Lösung der homogenen DGL lautet</p>
-<div class="math notranslate nohighlight">
-\[x_h(t) = C\cdot e^{-4t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-63">
+<span class="eqno">(12.110)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-63" title="Link to this equation">#</a></span>\[x_h(t) = C\cdot e^{-4t}.\]</div>
 <p class="sd-card-text">Wir variieren die Konstante und nehmen den Lösungsansatz</p>
-<div class="math notranslate nohighlight">
-\[x(t) = C(t)\cdot e^{-4t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-64">
+<span class="eqno">(12.111)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-64" title="Link to this equation">#</a></span>\[x(t) = C(t)\cdot e^{-4t}.\]</div>
 <p class="sd-card-text">Die erste Ableitung ist</p>
-<div class="math notranslate nohighlight">
-\[\dot{x}(t) = \dot{C}(t) e^{-4t} - 4 C(t) e^{-4t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-65">
+<span class="eqno">(12.112)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-65" title="Link to this equation">#</a></span>\[\dot{x}(t) = \dot{C}(t) e^{-4t} - 4 C(t) e^{-4t}.\]</div>
 <p class="sd-card-text">Jetzt werden die Lösungsansatzfunktion <span class="math notranslate nohighlight">\(x\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(\dot{x}\)</span> in die inhomogene DGL eingesetzt:</p>
-<div class="math notranslate nohighlight">
-\[\dot{C}(t) e^{-4t} - 4 C(t) e^{-4t} + 4 C(t) e^{-4t} = \sin(-2t).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-66">
+<span class="eqno">(12.113)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-66" title="Link to this equation">#</a></span>\[\dot{C}(t) e^{-4t} - 4 C(t) e^{-4t} + 4 C(t) e^{-4t} = \sin(-2t).\]</div>
 <p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
-<div class="math notranslate nohighlight">
-\[\dot{C}(t) = \sin(-2t)\cdot e^{4t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-67">
+<span class="eqno">(12.114)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-67" title="Link to this equation">#</a></span>\[\dot{C}(t) = \sin(-2t)\cdot e^{4t}.\]</div>
 <p class="sd-card-text">Wir integrieren partiell nach <span class="math notranslate nohighlight">\(t\)</span> und erhalten</p>
-<div class="math notranslate nohighlight">
-\[C(t) = \frac{1}{10}e^{4t}\left(\cos(2t) - 2\sin(2t)\right) + C.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-68">
+<span class="eqno">(12.115)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-68" title="Link to this equation">#</a></span>\[C(t) = \frac{1}{10}e^{4t}\left(\cos(2t) - 2\sin(2t)\right) + C.\]</div>
 <p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) + C\cdot e^{-4t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-69">
+<span class="eqno">(12.116)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-69" title="Link to this equation">#</a></span>\[x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) + C\cdot e^{-4t}.\]</div>
 <p class="sd-card-text">Für die spezielle Lösung soll</p>
-<div class="math notranslate nohighlight">
-\[x(0) = \frac{1}{10} \left(\cos(0) - 2\sin(0)\right) + C\cdot e^{0} \overset{!}{=} -1\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-70">
+<span class="eqno">(12.117)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-70" title="Link to this equation">#</a></span>\[x(0) = \frac{1}{10} \left(\cos(0) - 2\sin(0)\right) + C\cdot e^{0} \overset{!}{=} -1\]</div>
 <p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=-\frac{11}{10}\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
-<div class="math notranslate nohighlight">
-\[x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) - \frac{11}{10}\cdot e^{-4t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-71">
+<span class="eqno">(12.118)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-71" title="Link to this equation">#</a></span>\[x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) - \frac{11}{10}\cdot e^{-4t}.\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.7</p>
 <p>Lösen Sie das Anfangswertproblem</p>
-<div class="math notranslate nohighlight">
-\[y'-3y = -e^{2x}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-72">
+<span class="eqno">(12.119)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-72" title="Link to this equation">#</a></span>\[y'-3y = -e^{2x}\]</div>
 <p>für <span class="math notranslate nohighlight">\(y(0)=1\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>Allgemeine Lösung:</p>
-<div class="math notranslate nohighlight">
-\[y(x)= C\, e^{3x} + e^{2x}, \quad C\in\mathbb{R}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-73">
+<span class="eqno">(12.120)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-73" title="Link to this equation">#</a></span>\[y(x)= C\, e^{3x} + e^{2x}, \quad C\in\mathbb{R}\]</div>
 <p>Spezielle Lösung für <span class="math notranslate nohighlight">\(y(0)=1\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[y(x)= e^{2x}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-74">
+<span class="eqno">(12.121)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-74" title="Link to this equation">#</a></span>\[y(x)= e^{2x}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Die DGL ist eine lineare inhomogene DGL mit <span class="math notranslate nohighlight">\(a_1(x)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(x)=-3\)</span>. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[y' - 3y = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-75">
+<span class="eqno">(12.122)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-75" title="Link to this equation">#</a></span>\[y' - 3y = 0.\]</div>
 <p class="sd-card-text">Die allgemeine Lösung der homogenen DGL lautet</p>
-<div class="math notranslate nohighlight">
-\[y_h(x) = C \cdot e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-76">
+<span class="eqno">(12.123)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-76" title="Link to this equation">#</a></span>\[y_h(x) = C \cdot e^{3x}.\]</div>
 <p class="sd-card-text">Wir variieren die Konstante und nehmen den Lösungsansatz</p>
-<div class="math notranslate nohighlight">
-\[y(x) = C(x) \cdot e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-77">
+<span class="eqno">(12.124)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-77" title="Link to this equation">#</a></span>\[y(x) = C(x) \cdot e^{3x}.\]</div>
 <p class="sd-card-text">Die erste Ableitung ist</p>
-<div class="math notranslate nohighlight">
-\[y'(x) = C'(x) \cdot e^{3x} + C(x) \cdot 3e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-78">
+<span class="eqno">(12.125)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-78" title="Link to this equation">#</a></span>\[y'(x) = C'(x) \cdot e^{3x} + C(x) \cdot 3e^{3x}.\]</div>
 <p class="sd-card-text">Jetzt werden die Lösungsansatzfunktion <span class="math notranslate nohighlight">\(y\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(y'\)</span> in die inhomogene DGL eingesetzt:</p>
-<div class="math notranslate nohighlight">
-\[C'(x) \cdot e^{3x} + C(x) \cdot 3e^{3x} - 3 \cdot C(x) \cdot e^{3x} = -e^{2x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-79">
+<span class="eqno">(12.126)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-79" title="Link to this equation">#</a></span>\[C'(x) \cdot e^{3x} + C(x) \cdot 3e^{3x} - 3 \cdot C(x) \cdot e^{3x} = -e^{2x}.\]</div>
 <p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
-<div class="math notranslate nohighlight">
-\[C'(x) = -e^{2x} \cdot e^{-3x} = -e^{-x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-80">
+<span class="eqno">(12.127)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-80" title="Link to this equation">#</a></span>\[C'(x) = -e^{2x} \cdot e^{-3x} = -e^{-x}.\]</div>
 <p class="sd-card-text">Wir integrieren nach <span class="math notranslate nohighlight">\(x\)</span> und erhalten</p>
-<div class="math notranslate nohighlight">
-\[C(x) = e^{-x} + C.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-81">
+<span class="eqno">(12.128)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-81" title="Link to this equation">#</a></span>\[C(x) = e^{-x} + C.\]</div>
 <p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[y(x) = e^{2x} + C\cdot e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-82">
+<span class="eqno">(12.129)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-82" title="Link to this equation">#</a></span>\[y(x) = e^{2x} + C\cdot e^{3x}.\]</div>
 <p class="sd-card-text">Für die spezielle Lösung soll</p>
-<div class="math notranslate nohighlight">
-\[y(0) = e^{0} + C\cdot e^{0} \overset{!}{=} 1\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-83">
+<span class="eqno">(12.130)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-83" title="Link to this equation">#</a></span>\[y(0) = e^{0} + C\cdot e^{0} \overset{!}{=} 1\]</div>
 <p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=0\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
-<div class="math notranslate nohighlight">
-\[y(x) = e^{2x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-84">
+<span class="eqno">(12.131)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-84" title="Link to this equation">#</a></span>\[y(x) = e^{2x}.\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.8</p>
 <p>Lösen Sie das Anfangswertproblem</p>
-<div class="math notranslate nohighlight">
-\[\dot{x} - 2x = (3t+1) \, e^{-3t}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-85">
+<span class="eqno">(12.132)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-85" title="Link to this equation">#</a></span>\[\dot{x} - 2x = (3t+1) \, e^{-3t}\]</div>
 <p>für <span class="math notranslate nohighlight">\(x(0)=-5\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>Allgemeine Lösung:</p>
-<div class="math notranslate nohighlight">
-\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + C\cdot e^{2t}, \quad C\in\mathbb{R}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-86">
+<span class="eqno">(12.133)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-86" title="Link to this equation">#</a></span>\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + C\cdot e^{2t}, \quad C\in\mathbb{R}\]</div>
 <p>Spezielle Lösung für <span class="math notranslate nohighlight">\(x(0)=-5\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) - \frac{117}{25}\cdot e^{2t}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-87">
+<span class="eqno">(12.134)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-87" title="Link to this equation">#</a></span>\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) - \frac{117}{25}\cdot e^{2t}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Die DGL ist eine lineare inhomogene DGL mit <span class="math notranslate nohighlight">\(a_1(t)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(t)=-2\)</span>. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[\dot{x} - 2x = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-88">
+<span class="eqno">(12.135)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-88" title="Link to this equation">#</a></span>\[\dot{x} - 2x = 0.\]</div>
 <p class="sd-card-text">Die allgemeine Lösung der homogenen DGL lautet</p>
-<div class="math notranslate nohighlight">
-\[x_h(t) = C\cdot e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-89">
+<span class="eqno">(12.136)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-89" title="Link to this equation">#</a></span>\[x_h(t) = C\cdot e^{2t}.\]</div>
 <p class="sd-card-text">Wir variieren die Konstante und nehmen den Lösungsansatz</p>
-<div class="math notranslate nohighlight">
-\[x(t) = C(t)\cdot e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-90">
+<span class="eqno">(12.137)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-90" title="Link to this equation">#</a></span>\[x(t) = C(t)\cdot e^{2t}.\]</div>
 <p class="sd-card-text">Die erste Ableitung ist</p>
-<div class="math notranslate nohighlight">
-\[\dot{x}(t) = \dot{C}(t) e^{2t} + 2 C(t) e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-91">
+<span class="eqno">(12.138)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-91" title="Link to this equation">#</a></span>\[\dot{x}(t) = \dot{C}(t) e^{2t} + 2 C(t) e^{2t}.\]</div>
 <p class="sd-card-text">Jetzt werden die Lösungsansatzfunktion <span class="math notranslate nohighlight">\(x\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(\dot{x}\)</span> in die inhomogene DGL eingesetzt:</p>
-<div class="math notranslate nohighlight">
-\[\dot{C}(t) e^{2t} + 2 C(t) e^{2t} - 2 C(t) e^{2t} = (3t+1)\cdot e^{-3t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-92">
+<span class="eqno">(12.139)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-92" title="Link to this equation">#</a></span>\[\dot{C}(t) e^{2t} + 2 C(t) e^{2t} - 2 C(t) e^{2t} = (3t+1)\cdot e^{-3t}.\]</div>
 <p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
-<div class="math notranslate nohighlight">
-\[\dot{C}(t) = (3t+1) e^{-5t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-93">
+<span class="eqno">(12.140)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-93" title="Link to this equation">#</a></span>\[\dot{C}(t) = (3t+1) e^{-5t}.\]</div>
 <p class="sd-card-text">Wir integrieren nach <span class="math notranslate nohighlight">\(t\)</span> und erhalten</p>
-<div class="math notranslate nohighlight">
-\[C(t) = -\frac{1}{25}e^{-5t}\cdot (15t+8) + C.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-94">
+<span class="eqno">(12.141)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-94" title="Link to this equation">#</a></span>\[C(t) = -\frac{1}{25}e^{-5t}\cdot (15t+8) + C.\]</div>
 <p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
-<div class="math notranslate nohighlight">
-\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + C\cdot e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-95">
+<span class="eqno">(12.142)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-95" title="Link to this equation">#</a></span>\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + C\cdot e^{2t}.\]</div>
 <p class="sd-card-text">Für die spezielle Lösung soll</p>
-<div class="math notranslate nohighlight">
-\[x(0) = -\frac{1}{25}e^{0}\cdot (15\cdot 0+8) + C\cdot e^{0} \overset{!}{=} -5\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-96">
+<span class="eqno">(12.143)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-96" title="Link to this equation">#</a></span>\[x(0) = -\frac{1}{25}e^{0}\cdot (15\cdot 0+8) + C\cdot e^{0} \overset{!}{=} -5\]</div>
 <p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=-\frac{117}{25}\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
-<div class="math notranslate nohighlight">
-\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) - \frac{117}{25}\cdot e^{2t}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-97">
+<span class="eqno">(12.144)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-97" title="Link to this equation">#</a></span>\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) - \frac{117}{25}\cdot e^{2t}.\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.9</p>
 <p>Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-98">
+<span class="eqno">(12.145)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-98" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 y_1' &amp;= y_1 + y_2 &amp;\\
 y_2' &amp;= 4 y_1 - 2y_2 &amp; 
-\end{align*} \)</span></p>
+\end{aligned}\end{split}\]</div>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-99">
+<span class="eqno">(12.146)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-99" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 y_1(x) &amp;= \mathrm{C}_1 e^{-3x} + \mathrm{C}_2 e^{2x} \\
 y_2(x) &amp;= -4 \mathrm{C}_1 e^{-3x}  + \mathrm{C}_2 e^{2x}
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Das System von Differentialgleichungen lautet in Matrix-Vektor-Schreibweise</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{pmatrix} y_1'\\ y_2'\end{pmatrix} = 
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-100">
+<span class="eqno">(12.147)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-100" title="Link to this equation">#</a></span>\[\begin{split}\begin{pmatrix} y_1'\\ y_2'\end{pmatrix} = 
 \begin{pmatrix} 1 &amp; 1 \\ 4 &amp; -2 \end{pmatrix} \cdot 
 \begin{pmatrix} y_1 \\ y_2 \end{pmatrix}.\end{split}\]</div>
 <p class="sd-card-text">Das charakteristische Polynom ist</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-101">
+<span class="eqno">(12.148)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-101" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \det (A-\lambda E) &amp;= \det \begin{pmatrix} 1 - \lambda &amp; 1 \\ 4 &amp; -2-\lambda \end{pmatrix} = \\
 &amp;= (1-\lambda)(-2-\lambda)-4 = \\
 &amp;= \lambda^2 + \lambda - 6 =\\
 &amp;= (\lambda+3)(\lambda-2)
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Aus der charakteristischen Gleichung</p>
-<div class="math notranslate nohighlight">
-\[\det (A-\lambda E) \overset{!}{=} 0 \Rightarrow (\lambda+3)(\lambda-2) = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-102">
+<span class="eqno">(12.149)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-102" title="Link to this equation">#</a></span>\[\det (A-\lambda E) \overset{!}{=} 0 \Rightarrow (\lambda+3)(\lambda-2) = 0\]</div>
 <p class="sd-card-text">folgen die Eigenwerte <span class="math notranslate nohighlight">\(\lambda_1 = -3\)</span> und <span class="math notranslate nohighlight">\(\lambda_2 = 2\)</span>. Beide Eigenwerte sind reell und verschieden. Also ist die erste Lösungsfunktion</p>
-<div class="math notranslate nohighlight">
-\[y_1(x) = \mathrm{C}_1 e^{-3x} + \mathrm{C}_2 e^{2x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-103">
+<span class="eqno">(12.150)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-103" title="Link to this equation">#</a></span>\[y_1(x) = \mathrm{C}_1 e^{-3x} + \mathrm{C}_2 e^{2x}.\]</div>
 <p class="sd-card-text">Deren erste Ableitung ist</p>
-<div class="math notranslate nohighlight">
-\[y_1'(x)= -3\mathrm{C}_1 e^{-3x} + 2 \mathrm{C}_2 e^{2x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-104">
+<span class="eqno">(12.151)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-104" title="Link to this equation">#</a></span>\[y_1'(x)= -3\mathrm{C}_1 e^{-3x} + 2 \mathrm{C}_2 e^{2x}.\]</div>
 <p class="sd-card-text">Beides wird in die erste Differentialgleichung <span class="math notranslate nohighlight">\(y_1' = y_1 + y_2\)</span> eingesetzt und durch Umformen erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[y_2(x) = -4\mathrm{C}_1 e^{-3x} + \mathrm{C}_2 e^{2x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-105">
+<span class="eqno">(12.152)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-105" title="Link to this equation">#</a></span>\[y_2(x) = -4\mathrm{C}_1 e^{-3x} + \mathrm{C}_2 e^{2x}.\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.10</p>
 <p>Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-106">
+<span class="eqno">(12.153)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-106" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 y_1' &amp;= y_1  +y_2&amp;\\
 y_2' &amp;= 4y_1 +y_2 &amp;
-\end{align*} \)</span></p>
+\end{aligned}\end{split}\]</div>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-107">
+<span class="eqno">(12.154)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-107" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 y_1(x) &amp;= \mathrm{C}_1 e^{-x} + \mathrm{C}_2 e^{3x} \\
 y_2(x) &amp;= -2\mathrm{C}_1 e^{-x} + 2 \mathrm{C}_2 e^{3x}
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Das System von Differentialgleichungen lautet in Matrix-Vektor-Schreibweise</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{pmatrix} y_1'\\ y_2'\end{pmatrix} = 
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-108">
+<span class="eqno">(12.155)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-108" title="Link to this equation">#</a></span>\[\begin{split}\begin{pmatrix} y_1'\\ y_2'\end{pmatrix} = 
 \begin{pmatrix} 1 &amp; 1 \\ 4 &amp; 1 \end{pmatrix} \cdot 
 \begin{pmatrix} y_1 \\ y_2 \end{pmatrix}.\end{split}\]</div>
 <p class="sd-card-text">Das charakteristische Polynom ist</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-109">
+<span class="eqno">(12.156)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-109" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \det (A-\lambda E) &amp;= \det \begin{pmatrix} 1 - \lambda &amp; 1 \\ 4 &amp; 1-\lambda \end{pmatrix} = \\
 &amp;= (1-\lambda)^2 -4 = \\
 &amp;= \lambda^2 -2\lambda - 3 =\\
 &amp;= (\lambda-3)(\lambda+1)
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Aus der charakteristischen Gleichung</p>
-<div class="math notranslate nohighlight">
-\[\det (A-\lambda E) \overset{!}{=} 0 \Rightarrow (\lambda-3)(\lambda+1) = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-110">
+<span class="eqno">(12.157)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-110" title="Link to this equation">#</a></span>\[\det (A-\lambda E) \overset{!}{=} 0 \Rightarrow (\lambda-3)(\lambda+1) = 0\]</div>
 <p class="sd-card-text">folgen die Eigenwerte <span class="math notranslate nohighlight">\(\lambda_1 = -1\)</span> und <span class="math notranslate nohighlight">\(\lambda_2 = 3\)</span>. Beide Eigenwerte sind reell und verschieden. Also ist die erste Lösungsfunktion</p>
-<div class="math notranslate nohighlight">
-\[y_1(x) = \mathrm{C}_1 e^{-x} + \mathrm{C}_2 e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-111">
+<span class="eqno">(12.158)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-111" title="Link to this equation">#</a></span>\[y_1(x) = \mathrm{C}_1 e^{-x} + \mathrm{C}_2 e^{3x}.\]</div>
 <p class="sd-card-text">Deren erste Ableitung ist</p>
-<div class="math notranslate nohighlight">
-\[y_1'(x)= -\mathrm{C}_1 e^{-x} + 3 \mathrm{C}_2 e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-112">
+<span class="eqno">(12.159)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-112" title="Link to this equation">#</a></span>\[y_1'(x)= -\mathrm{C}_1 e^{-x} + 3 \mathrm{C}_2 e^{3x}.\]</div>
 <p class="sd-card-text">Beides wird in die erste Differentialgleichung <span class="math notranslate nohighlight">\(y_1(x) = y_1  +y_2\)</span> eingesetzt und durch Umformen erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[y_2(x) = -2\mathrm{C}_1 e^{-x} + 2\mathrm{C}_2 e^{3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec05-113">
+<span class="eqno">(12.160)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec05-113" title="Link to this equation">#</a></span>\[y_2(x) = -2\mathrm{C}_1 e^{-x} + 2\mathrm{C}_2 e^{3x}.\]</div>
 </div>
 </details></div>
 </section>

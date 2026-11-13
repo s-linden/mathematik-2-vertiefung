@@ -19,12 +19,12 @@ Wurzelkriterium:
 
 Zu bestimmen ist der Grenzwert (falls dieser existiert)  
 
-$\begin{align*} 
+$$\begin{aligned} 
 L & = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
     = \lim_{n\rightarrow \infty}{\left(\frac{4\cdot 3^{n+3}}{5^n}\right)}^{1/n}\\ 
 & = \lim_{n\rightarrow \infty}\frac{3\cdot {108}^{1/n}}{5}
     = \frac{3}{5}. 
-\end{align*} $
+\end{aligned}$$
 
 Wegen $L<1$ ist die Reihe (absolut) konvergent. 
  
@@ -32,12 +32,12 @@ Quotientenkriterium:
 
 Zu bestimmen ist der Grenzwert (falls dieser existiert) 
 
-$\begin{align*} 
+$$\begin{aligned} 
 L & = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
     =\lim_{n\rightarrow \infty}3^{n+4}\,\frac{1}{3^{n+3}}\,\frac{1}{5^{n+1}}\,5^n\\ 
 & = \lim_{n\rightarrow \infty}\frac{3}{5}
     =\frac{3}{5}. 
-\end{align*} $
+\end{aligned}$$
 
 Wegen $L<1$ ist die Reihe (absolut) konvergent.  
 ```
@@ -61,24 +61,24 @@ Wir definieren $a_n := 4\frac{6^n}{{11}^{n+4}}$.
 Wurzelkriterium: 
 Zu bestimmen ist der Grenzwert (falls dieser existiert)  
 
-$\begin{align*} 
+$$\begin{aligned} 
 L & = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
     = \lim_{n\rightarrow \infty}{\left(4\frac{6^n}{{11}^{n+4}}\right)}^{1/n}\\ 
 & = \lim_{n\rightarrow \infty}\frac{6\,{\left(\frac{4}{14641}\right)}^{1/n}}{11}
     = \frac{6}{11}. 
-\end{align*} $
+\end{aligned}$$
 
 Wegen $L<1$ ist die Reihe (absolut) konvergent. 
  
 Quotientenkriterium: 
 Zu bestimmen ist der Grenzwert (falls dieser existiert) 
 
-$\begin{align*} 
+$$\begin{aligned} 
 L & = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
     =\lim_{n\rightarrow \infty}\frac{6^{n+1}\,{11}^{n+4}\,\frac{1}{{11}^{n+5}}}{6^n}\\ 
 & = \lim_{n\rightarrow \infty}\frac{6}{11}
     =\frac{6}{11}. 
-\end{align*} $
+\end{aligned}$$
 
 Wegen $L<1$ ist die Reihe (absolut) konvergent.  
 ```
@@ -137,22 +137,24 @@ Die Potenzreihe konvergiert absolut im offenen Intervall $]\frac{15}{8}; \frac{1
 Durch das Einsetzen einer der Randpunkte in die Potenzreihe reduziert sich diese auf eine Zahlenreihe. Die Konvergenzfrage lässt sich dann mit einem passenden Konvergenz- oder Divergenzkriterium für Reihen angehen. 
 
 Setzt man den linken Randpunkt $x=\frac{15}{8}$ ein, so erhält man: 
-$\begin{align*}
+
+$$\begin{aligned}
 \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{15}{8}-2\right)^n 
 &= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(-\frac{1}{8}\right)^n \\
 &= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot \frac{(-1)^n}{8^n} \\
 &= \sum_{n=1}^{\infty} \frac{(-1)^n}{n}. 
-\end{align*}$
+\end{aligned}$$
 
 Diese Reihe konvergiert (gegen $-\ln(2)$), der linke Randpunkt gehört zum Konvergenzbereich.
 
 Setzt man den rechten Randpunkt $x=\frac{17}{8}$ ein, so erhält man: 
-$\begin{align*}
+
+$$\begin{aligned}
 \sum_{n=1}^\infty \frac{8^n}{n}\cdot\left(\frac{17}{8}-2\right)^n 
 &= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{1}{8}\right)^n \\
 &= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\frac{1^n}{8^n} \\
 & = \sum_{n=1}^{\infty} \frac{1}{n}.
-\end{align*}$
+\end{aligned}$$
 
 Diese Reihe divergiert, der rechte Randpunkt gehört *nicht* zum Konvergenzbereich.
 

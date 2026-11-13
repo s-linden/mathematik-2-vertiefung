@@ -76,13 +76,13 @@ $$L = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx$$
 
 die Substitutionsregel benutzt werden muss. Wir setzen $z = 1 + \frac{9}{4}x$. Dann gilt
 
-\begin{align*}
+$$\begin{aligned}
 L & = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx = \\
   & = \int \sqrt{z} \cdot \frac{4}{9} \, dz  =
     \frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \\
   & = \frac{8}{27} \left[\left(1+\frac{9}{4}x\right)^{\frac{3}{2}}\right]_{1}^{4} = \\
   & \approx 7.6337.
-\end{align*}
+\end{aligned}$$
 
 In dem folgenden Video wird ein zweites Beispiel vorgeführt.
 
@@ -116,11 +116,11 @@ Zwischenstopps gibt. Am einfachsten ist es, wenn wir immer den gleichen Abstand
 auf der x-Achse für die Zwischenstopps wählen, nämlich $\Delta x =
 \frac{b-a}{N}$. Dann sind es $N$ Luftlinienstücke, die aufsummiert werden.
 
-\begin{align*}
+$$\begin{aligned}
 L \approx L_1 + L_2 + \dots + L_N &= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} +
 \sqrt{(\Delta x)^2 + (\Delta y_2)^2} + \ldots + \sqrt{(\Delta x)^2 + (\Delta y_N)^2}\\
 & = \sum_{i=1}^{N} \sqrt{(\Delta x)^2 + (\Delta y_i)^2}.
-\end{align*}
+\end{aligned}$$
 
 Jetzt wird ein Trick angewendet. Der Term $(\Delta x)^2$ wird ausgeklammert:
 

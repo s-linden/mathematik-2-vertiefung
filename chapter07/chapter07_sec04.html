@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -509,26 +510,26 @@ angehen.</p>
 Eine Funktion wird auf das Ergebnis einer anderen Funktion angewendet. Im Falle
 eindimensionaler Funktionen könnten wir zum Beispiel zwei Funktionen <span class="math notranslate nohighlight">\(g(x)=x^2\)</span>
 und <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> betrachten und sie verkettet als</p>
-<div class="math notranslate nohighlight">
-\[(f\circ g)(x) = f(g(x)) = \sin(x^2)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec04-1">
+<span class="eqno">(7.25)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec04-1" title="Link to this equation">#</a></span>\[(f\circ g)(x) = f(g(x)) = \sin(x^2)\]</div>
 <p>ausdrücken. Das bedeutet, dass wir zuerst die Funktion <span class="math notranslate nohighlight">\(g\)</span> auf <span class="math notranslate nohighlight">\(x\)</span> und dann die
 Funktion <span class="math notranslate nohighlight">\(f\)</span> auf das Ergebnis <span class="math notranslate nohighlight">\(g(x)\)</span> anwenden.</p>
 <p>Bei mehrdimensionalen Funktionen ist das Konzept ähnlich, aber es wird etwas
 komplexer, da wir jetzt mehrere Eingaben haben. Angenommen, wir haben eine
 Funktion</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}g(r, \varphi) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec04-2">
+<span class="eqno">(7.26)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec04-2" title="Link to this equation">#</a></span>\[\begin{split}g(r, \varphi) =
 \begin{pmatrix}
 r\cdot \sin(\varphi) \\
 r\cdot \cos(\varphi)
 \end{pmatrix}\end{split}\]</div>
 <p>und eine Funktion</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x\cdot y \\ x^2 - y^2 \end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec04-3">
+<span class="eqno">(7.27)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec04-3" title="Link to this equation">#</a></span>\[\begin{split}f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x\cdot y \\ x^2 - y^2 \end{pmatrix}\end{split}\]</div>
 <p>und wir wollen sie verkettet darstellen. In diesem Fall würde die Verkettung so
 aussehen:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}(f\circ g)(r, \varphi) = \begin{pmatrix} \left(r\cdot \sin(\varphi)\right)^2 +
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec04-4">
+<span class="eqno">(7.28)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec04-4" title="Link to this equation">#</a></span>\[\begin{split}(f\circ g)(r, \varphi) = \begin{pmatrix} \left(r\cdot \sin(\varphi)\right)^2 +
 \left(r\cdot \cos(\varphi)\right)^2 \\ \left(r\cdot \sin(\varphi)\right)\cdot
 \left(r\cdot \cos(\varphi)\right) \\
 \left(r\cdot \sin(\varphi)\right)^2 - \left(r\cdot \cos(\varphi)\right)^2
@@ -546,8 +547,8 @@ und <span class="math notranslate nohighlight">\(y = r\cdot \cos(\varphi)\)</spa
 <h2>Mehrdimensionale Kettenregel<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>Zur Erinnerung, die eindimensionale Kettenregel lautet wie folgt: Die Ableitung
 der verketten Funktion <span class="math notranslate nohighlight">\(f(g(x))\)</span> ist äußere Ableitung mal innere Ableitung, d.h.</p>
-<div class="math notranslate nohighlight">
-\[f(g(x))' = f'(g(x))\cdot g'(x).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec04-5">
+<span class="eqno">(7.29)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec04-5" title="Link to this equation">#</a></span>\[f(g(x))' = f'(g(x))\cdot g'(x).\]</div>
 <p>In mehreren Dimensionen wird diese Regel durch die Verwendung von
 Jacobi-Matrizen erweitert. Die Jacobi-Matrix ist eine Matrix, die alle ersten
 partiellen Ableitungen einer mehrdimensionalen Funktion enthält.</p>
@@ -555,8 +556,8 @@ partiellen Ableitungen einer mehrdimensionalen Funktion enthält.</p>
 <span class="math notranslate nohighlight">\(g\)</span> haben, die miteinander verkettet zu <span class="math notranslate nohighlight">\(f\circ g\)</span> werden, dann ist die
 Jacobi-Matrix der verketteten Funktion   gleich dem Produkt der Jacobi-Matrix
 von <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(g\)</span> und der Jacobi-Matrix von <span class="math notranslate nohighlight">\(g\)</span> nach <span class="math notranslate nohighlight">\(\vec{x}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{J}_{f\circ g}(\vec{x}) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec04-6">
+<span class="eqno">(7.30)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec04-6" title="Link to this equation">#</a></span>\[\mathbf{J}_{f\circ g}(\vec{x}) =
 \mathbf{J}_{f}(g(\vec{x})) \cdot \mathbf{J}_g(\vec{x}).\]</div>
 <p>Dabei ist <span class="math notranslate nohighlight">\(\mathbf{J}_{f}\)</span> die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> ausgewertet an der Stelle
 <span class="math notranslate nohighlight">\(g(\vec{x})\)</span> und <span class="math notranslate nohighlight">\(\mathbf{J}_{g}\)</span> die Jacobi-Matrix von <span class="math notranslate nohighlight">\(g\)</span> ausgewertet an der
@@ -566,22 +567,23 @@ berechnen, selbst wenn diese Funktion aus mehreren ineinander verschachtelten
 Funktionen besteht, die jeweils von mehreren Variablen abhängen.</p>
 <p>Wir betrachten erneut das obige Beispiel und bilden zuerst die beiden
 Jacobi-Matrizen:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{J}_{g}(r, \varphi) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec04-7">
+<span class="eqno">(7.31)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec04-7" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{J}_{g}(r, \varphi) =
 \begin{pmatrix}
 \sin(\varphi) &amp; r\cdot\cos(\varphi)\\
 \cos(\varphi) &amp; -r\cdot\sin(\varphi)
 \end{pmatrix}\end{split}\]</div>
 <p>und</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{J}_{f}(x,y) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec04-8">
+<span class="eqno">(7.32)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec04-8" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{J}_{f}(x,y) =
 \begin{pmatrix}
 2x &amp; 2y \\
 y &amp; x \\
 2x &amp; -2y \\
 \end{pmatrix}\end{split}\]</div>
 <p>Dann ist die Jacobi-Matrix der verketteten Funktion</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec04-9">
+<span class="eqno">(7.33)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec04-9" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \mathbf{J}_{f\circ g}(r,\varphi) &amp;= \mathbf{J}_{f}(g(r,\varphi)) \cdot \mathbf{J}_{g}(r, \varphi) = \\
 &amp;=
 \begin{pmatrix}
@@ -599,7 +601,7 @@ r\cdot\cos(\varphi) &amp; r\cdot\sin(\varphi) \\
 2r\sin(\varphi)\cos(\varphi) &amp; r^2\left(\cos^2(\varphi)-\sin^2(\varphi) \right)\\
 2r\left(\sin^2(\varphi)-\cos^2(\varphi)\right) &amp; 4r^2\sin(\varphi)\cos(\varphi) \\
 \end{pmatrix}
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Das gleiche Ergebnis erhalten wir, wenn wir direkt die Jacobi-Matrix der
 verketteten Funktion berechnen. Manchmal ist es einfacher, die Jacobi-Matrizen
 der inneren und äußeren Funktion auszurechnen und das Produkt zu bilden, und

@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -500,20 +501,20 @@
 <ul class="simple">
 <li><p>Sie können mit einem Dreifachintegral das Volumen <span class="math notranslate nohighlight">\(V\)</span> eines Körpers berechnen</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[V=\iiint_{V}1\,dV.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec04-1">
+<span class="eqno">(10.17)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec04-1" title="Link to this equation">#</a></span>\[V=\iiint_{V}1\,dV.\]</div>
 <ul class="simple">
 <li><p>Sie können mit drei Dreifachintegralen den Schwerpunkt <span class="math notranslate nohighlight">\(S(x_S,y_S,z_S)\)</span> eines Körpers berechnen:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[x_S = \frac{1}{V}\iiint_{V}x\, dV, \qquad y_S = \frac{1}{V}\iiint_{V}y\, dV \qquad \text{und} \quad z_S = \frac{1}{V}\iiint_{V}z\, dV.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec04-2">
+<span class="eqno">(10.18)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec04-2" title="Link to this equation">#</a></span>\[x_S = \frac{1}{V}\iiint_{V}x\, dV, \qquad y_S = \frac{1}{V}\iiint_{V}y\, dV \qquad \text{und} \quad z_S = \frac{1}{V}\iiint_{V}z\, dV.\]</div>
 </div>
 </section>
 <section id="volumen-berechnen">
 <h2>Volumen berechnen<a class="headerlink" href="#volumen-berechnen" title="Link to this heading">#</a></h2>
 <p>Die Berechnung des Volumens eines dreidimensionalen Körpers ist eine der direktesten Anwendungen des Volumenintegrals. Hierbei ist die Funktion, die integriert wird, einfach die Konstante 1. Das Volumen <span class="math notranslate nohighlight">\(V\)</span> eines Körpers ist dann das Integral über den gesamten Körper, d.h.,</p>
-<div class="math notranslate nohighlight">
-\[V = \iiint_{V} 1 \, dV.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec04-3">
+<span class="eqno">(10.19)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec04-3" title="Link to this equation">#</a></span>\[V = \iiint_{V} 1 \, dV.\]</div>
 </section>
 <section id="berechnung-von-masse">
 <h2>Berechnung von Masse<a class="headerlink" href="#berechnung-von-masse" title="Link to this heading">#</a></h2>
@@ -522,19 +523,20 @@ wichtige Anwendung von Volumenintegralen. Wenn wir die Dichte <span class="math 
 des Körpers an jedem Punkt kennen, können wir die Masse <span class="math notranslate nohighlight">\(M\)</span> des Körpers
 berechnen, indem wir die Dichte über das gesamte Volumen des Körpers
 integrieren:</p>
-<div class="math notranslate nohighlight">
-\[M = \iiint_{V} \rho(x, y, z) \, dV.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec04-4">
+<span class="eqno">(10.20)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec04-4" title="Link to this equation">#</a></span>\[M = \iiint_{V} \rho(x, y, z) \, dV.\]</div>
 </section>
 <section id="berechnung-des-schwerpunktes">
 <h2>Berechnung des Schwerpunktes<a class="headerlink" href="#berechnung-des-schwerpunktes" title="Link to this heading">#</a></h2>
 <p>Die Berechnung des Schwerpunktes <span class="math notranslate nohighlight">\(S(x_S, y_S, z_S)\)</span> eines dreidimensionalen
 Körpers erfolgt analog zur Berechnung des Schwerpunktes von Flächen, indem das
 Volumenintegral jeweils über die Funktionen <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span> berechnet wird. Dabei wird vorausgesetzt, dass wir einen homogenen Körper betrachten, dessen Dichte konstant ist.</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec04-5">
+<span class="eqno">(10.21)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec04-5" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 x_s &amp;= \frac{1}{V} \iiint_{V} x \, dV, \\
 y_s &amp;= \frac{1}{V} \iiint_{V} y \, dV, \\
 z_s &amp;= \frac{1}{V} \iiint_{V} z \, dV. \\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Das folgende Video geht auf die Bedeutung und Anwendung der Doppel- und
 Dreifachintegrale ein.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">

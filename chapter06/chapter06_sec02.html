@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -479,6 +480,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wiederholung-stetigkeit-von-funktionen-einer-variablen">Wiederholung: Stetigkeit von Funktionen einer Variablen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Stetigkeit von Funktionen mehrerer Variablen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anschauliche-interpretation-der-stetigkeit">Anschauliche Interpretation der Stetigkeit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -520,8 +522,8 @@ definieren.</p></li>
 <p>Bevor wir die Stetigkeit für Funktionen mehrerer Variablen betrachten, erinnern
 wir uns kurz an die Definition für Funktionen einer Variablen. Eine Funktion <span class="math notranslate nohighlight">\(f:
 \mathbb{R} \rightarrow \mathbb{R}\)</span> ist stetig an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span>, wenn gilt:</p>
-<div class="math notranslate nohighlight">
-\[\lim_{x \to x_0} f(x) = f(x_0)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter06-chapter06-sec02-1">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-auto-chapter06-chapter06-sec02-1" title="Link to this equation">#</a></span>\[\lim_{x \to x_0} f(x) = f(x_0)\]</div>
 <p>Das bedeutet anschaulich:</p>
 <ol class="arabic simple">
 <li><p>Der Grenzwert <span class="math notranslate nohighlight">\(\lim_{x \to x_0} f(x)\)</span> existiert.</p></li>
@@ -542,8 +544,8 @@ Funktionswerte beliebig nahe an <span class="math notranslate nohighlight">\(f(x
 <p>Bei Funktionen mehrerer Variablen müssen wir das Konzept der Stetigkeit
 erweitern. Wir fassen die unabhängigen Variablen <span class="math notranslate nohighlight">\((x_1, x_2, \ldots, x_n)\)</span>  in
 Vektorschreibweise zusammen als</p>
-<div class="math notranslate nohighlight">
-\[\vec{x} = (x_1, x_2, \ldots, x_n).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter06-chapter06-sec02-2">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-auto-chapter06-chapter06-sec02-2" title="Link to this equation">#</a></span>\[\vec{x} = (x_1, x_2, \ldots, x_n).\]</div>
 <p>Für eine Funktion <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> mit den unabhängigen
 Variablen <span class="math notranslate nohighlight">\(\vec{x} = (x_1, x_2, \ldots, x_n)\)</span> definieren wir Stetigkeit wie
 folgt.</p>
@@ -551,13 +553,13 @@ folgt.</p>
 <p class="admonition-title">Definition: Stetigkeit einer Funktion mehrerer Variablen</p>
 <p>Eine Funktion <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> ist stetig an der Stelle
 <span class="math notranslate nohighlight">\(\vec{x_0} = (x_{01}, x_{02}, \ldots, x_{0n})\)</span>, wenn gilt:</p>
-<div class="math notranslate nohighlight">
-\[\lim_{\vec{x} \to \vec{x_0}} f(\vec{x}) = f(\vec{x_0})\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter06-chapter06-sec02-3">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-auto-chapter06-chapter06-sec02-3" title="Link to this equation">#</a></span>\[\lim_{\vec{x} \to \vec{x_0}} f(\vec{x}) = f(\vec{x_0})\]</div>
 <p>In der <span class="math notranslate nohighlight">\(\varepsilon\)</span>-<span class="math notranslate nohighlight">\(\delta\)</span>-Form: Für jedes <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> existiert ein
 <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>, sodass für alle <span class="math notranslate nohighlight">\(\vec{x}\)</span> mit <span class="math notranslate nohighlight">\(\|\vec{x} - \vec{x_0}\| &lt; \delta\)</span>
 gilt:</p>
-<div class="math notranslate nohighlight">
-\[|f(\vec{x}) - f(\vec{x_0})| &lt; \varepsilon.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter06-chapter06-sec02-4">
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-auto-chapter06-chapter06-sec02-4" title="Link to this equation">#</a></span>\[|f(\vec{x}) - f(\vec{x_0})| &lt; \varepsilon.\]</div>
 <p>Dabei bezeichnet <span class="math notranslate nohighlight">\(\|\vec{x} - \vec{x_0}\|\)</span> den euklidischen Abstand im
 <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
 </div>
@@ -566,8 +568,8 @@ darin, dass wir jetzt den Abstand von Punkten im mehrdimensionalen Raum
 betrachten. Die euklidische Norm <span class="math notranslate nohighlight">\(\|\vec{x} - \vec{x_0}\|\)</span> gibt den Abstand
 zwischen den Punkten <span class="math notranslate nohighlight">\(\vec{x}\)</span> und <span class="math notranslate nohighlight">\(\vec{x_0}\)</span> im <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> an und wird
 definiert als:</p>
-<div class="math notranslate nohighlight">
-\[\|\vec{x} - \vec{x_0}\| = \sqrt{(x_1 - x_{01})^2 + (x_2 - x_{02})^2 + \ldots +
+<div class="math notranslate nohighlight" id="equation-auto-chapter06-chapter06-sec02-5">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-auto-chapter06-chapter06-sec02-5" title="Link to this equation">#</a></span>\[\|\vec{x} - \vec{x_0}\| = \sqrt{(x_1 - x_{01})^2 + (x_2 - x_{02})^2 + \ldots +
 (x_n - x_{0n})^2}.\]</div>
 <p>Das folgende Video erklärt die Stetigkeit von mehrdimensionalen Funktionen.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -589,8 +591,8 @@ Umgebung des Punktes <span class="math notranslate nohighlight">\((x_0, y_0)\)</
 <p>In der grafischen Darstellung als Fläche im dreidimensionalen Raum bedeutet
 dies, dass die Fläche keine “Löcher” oder “Sprünge” aufweist.</p>
 <p>Betrachten wir die Funktion</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter06-chapter06-sec02-6">
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-auto-chapter06-chapter06-sec02-6" title="Link to this equation">#</a></span>\[\begin{split}f(x,y) =
 \begin{cases}
 \frac{xy}{x^2 + y^2}, &amp; \text{falls } (x,y) \neq (0,0) \\
 0, &amp; \text{falls } (x,y) = (0,0)
@@ -610,28 +612,28 @@ eindeutiger Grenzwert für <span class="math notranslate nohighlight">\((x,y) \t
 Stelle <span class="math notranslate nohighlight">\((0,0)\)</span> nicht stetig.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
-<iframe src="plots/unstetigkeit.html" width="100%" height="650px" frameborder="0"></iframe>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="n">Bei</span> <span class="n">Funktionen</span> <span class="n">mehrerer</span> <span class="n">Variablen</span> <span class="n">gilt</span> <span class="n">wie</span> <span class="n">bei</span> <span class="n">Funktionen</span> <span class="n">einer</span> <span class="n">Variablen</span><span class="p">:</span> <span class="n">Jede</span>
-<span class="n">differenzierbare</span> <span class="n">Funktion</span> <span class="n">ist</span> <span class="n">auch</span> <span class="n">stetig</span><span class="o">.</span> <span class="n">Umgekehrt</span> <span class="n">ist</span> <span class="n">jedoch</span> <span class="n">eine</span> <span class="n">stetige</span>
-<span class="n">Funktion</span> <span class="n">nicht</span> <span class="n">notwendigerweise</span> <span class="n">differenzierbar</span><span class="o">.</span>
-
-<span class="n">Im</span> <span class="n">nächsten</span> <span class="n">Kapitel</span> <span class="n">werden</span> <span class="n">wir</span> <span class="n">uns</span> <span class="n">mit</span> <span class="n">der</span> <span class="n">Differenzierbarkeit</span> <span class="n">von</span> <span class="n">Funktionen</span>
-<span class="n">mehrerer</span> <span class="n">Variablen</span> <span class="n">befassen</span><span class="o">.</span> <span class="n">Die</span> <span class="n">Stetigkeit</span> <span class="n">ist</span> <span class="n">hierfür</span> <span class="n">eine</span> <span class="n">notwendige</span>
-<span class="n">Voraussetzung</span><span class="o">.</span>
-
-<span class="c1">## Zusammenfassung und Ausblick</span>
-
-<span class="n">In</span> <span class="n">diesem</span> <span class="n">Kapitel</span> <span class="n">haben</span> <span class="n">wir</span> <span class="n">das</span> <span class="n">Konzept</span> <span class="n">der</span> <span class="n">Stetigkeit</span> <span class="n">für</span> <span class="n">Funktionen</span> <span class="n">mehrerer</span>
-<span class="n">Variablen</span> <span class="n">eingeführt</span><span class="o">.</span> <span class="n">Eine</span> <span class="n">Funktion</span> <span class="n">ist</span> <span class="n">stetig</span> <span class="n">an</span> <span class="n">einer</span> <span class="n">Stelle</span><span class="p">,</span> <span class="n">wenn</span> <span class="n">der</span>
-<span class="n">Grenzwert</span> <span class="n">der</span> <span class="n">Funktion</span> <span class="n">für</span> <span class="n">alle</span> <span class="n">Annäherungswege</span> <span class="n">an</span> <span class="n">diese</span> <span class="n">Stelle</span> <span class="n">existiert</span> <span class="n">und</span>
-<span class="n">mit</span> <span class="n">dem</span> <span class="n">Funktionswert</span> <span class="n">an</span> <span class="n">dieser</span> <span class="n">Stelle</span> <span class="n">übereinstimmt</span><span class="o">.</span> <span class="n">Im</span> <span class="n">nächsten</span> <span class="n">Kapitel</span> <span class="n">werden</span>
-<span class="n">wir</span> <span class="n">auf</span> <span class="n">dem</span> <span class="n">Konzept</span> <span class="n">der</span> <span class="n">Stetigkeit</span> <span class="n">aufbauen</span> <span class="n">und</span> <span class="n">die</span> <span class="n">Differenzierbarkeit</span> <span class="n">von</span>
-<span class="n">Funktionen</span> <span class="n">mehrerer</span> <span class="n">Variablen</span> <span class="n">untersuchen</span><span class="p">,</span> <span class="n">die</span> <span class="n">für</span> <span class="n">die</span> <span class="n">Berechnung</span> <span class="n">von</span>
-<span class="n">Änderungsraten</span> <span class="n">und</span> <span class="n">die</span> <span class="n">Optimierung</span> <span class="n">technischer</span> <span class="n">Systeme</span> <span class="n">von</span> <span class="n">zentraler</span> <span class="n">Bedeutung</span>
-<span class="n">ist</span><span class="o">.</span>
-</pre></div>
-</div>
+<figure class="interaktive-abbildung align-default" id="unstetigkeit">
+<div class="interaktiv"><iframe src="plots/unstetigkeit.html" width="100%" height="650" frameborder="0" scrolling="no" title="Interaktive Darstellung einer unstetigen Funktion zweier Variablen"></iframe></div><figcaption>
+<p><span class="caption-number">Abb. 6.5: </span><span class="caption-text">Interaktive Darstellung einer unstetigen Funktion zweier Variablen</span><a class="headerlink" href="#unstetigkeit" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Bei Funktionen mehrerer Variablen gilt wie bei Funktionen einer Variablen: Jede
+differenzierbare Funktion ist auch stetig. Umgekehrt ist jedoch eine stetige
+Funktion nicht notwendigerweise differenzierbar.</p>
+<p>Im nächsten Kapitel werden wir uns mit der Differenzierbarkeit von Funktionen
+mehrerer Variablen befassen. Die Stetigkeit ist hierfür eine notwendige
+Voraussetzung.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir das Konzept der Stetigkeit für Funktionen mehrerer
+Variablen eingeführt. Eine Funktion ist stetig an einer Stelle, wenn der
+Grenzwert der Funktion für alle Annäherungswege an diese Stelle existiert und
+mit dem Funktionswert an dieser Stelle übereinstimmt. Im nächsten Kapitel werden
+wir auf dem Konzept der Stetigkeit aufbauen und die Differenzierbarkeit von
+Funktionen mehrerer Variablen untersuchen, die für die Berechnung von
+Änderungsraten und die Optimierung technischer Systeme von zentraler Bedeutung
+ist.</p>
 </section>
 </section>
 
@@ -705,6 +707,7 @@ Stelle <span class="math notranslate nohighlight">\((0,0)\)</span> nicht stetig.
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wiederholung-stetigkeit-von-funktionen-einer-variablen">Wiederholung: Stetigkeit von Funktionen einer Variablen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Stetigkeit von Funktionen mehrerer Variablen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anschauliche-interpretation-der-stetigkeit">Anschauliche Interpretation der Stetigkeit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

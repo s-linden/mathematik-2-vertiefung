@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -504,27 +505,27 @@ berechnen.</p>
 <h2>Was ist das Differential?<a class="headerlink" href="#was-ist-das-differential" title="Link to this heading">#</a></h2>
 <p>Bei eindimensionalen Funktionen gilt näherungsweise das 1.
 Taylorpolynom im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[f(x) \approx f(x_0) + f'(x_0)\cdot (x-x_0).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec02-1">
+<span class="eqno">(8.7)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec02-1" title="Link to this equation">#</a></span>\[f(x) \approx f(x_0) + f'(x_0)\cdot (x-x_0).\]</div>
 <p>Wenn wir jetzt wissen wollen, um wieviel sich der Funktionswert <span class="math notranslate nohighlight">\(f(x_0)\)</span> ändert,
 wenn wir <span class="math notranslate nohighlight">\(x_0\)</span> um <span class="math notranslate nohighlight">\(\Delta x\)</span> auf <span class="math notranslate nohighlight">\(x_0 + \Delta x\)</span> erhöhen, können wir diese
 Approximation nutzen.</p>
-<div class="math notranslate nohighlight">
-\[f(x_0 +\Delta x) \approx f(x_0) + f'(x_0) \cdot \left( (x_0+\Delta x) -
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec02-2">
+<span class="eqno">(8.8)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec02-2" title="Link to this equation">#</a></span>\[f(x_0 +\Delta x) \approx f(x_0) + f'(x_0) \cdot \left( (x_0+\Delta x) -
 x_0\right).\]</div>
 <p>Die Änderung von <span class="math notranslate nohighlight">\(f(x_0)\)</span> auf <span class="math notranslate nohighlight">\(f(x_0 + \Delta x)\)</span> ist die Differenz, also</p>
-<div class="math notranslate nohighlight">
-\[f(x_0 +\Delta x) - f(x_0) = f(x_0) + f'(x_0) \cdot \left( (x_0+\Delta x) -
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec02-3">
+<span class="eqno">(8.9)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec02-3" title="Link to this equation">#</a></span>\[f(x_0 +\Delta x) - f(x_0) = f(x_0) + f'(x_0) \cdot \left( (x_0+\Delta x) -
 x_0\right) - f(x_0).\]</div>
 <p>Damit bleibt nur noch übrig:</p>
-<div class="math notranslate nohighlight">
-\[f(x_0 +\Delta x) - f(x_0) = f'(x_0) \cdot  \Delta x.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec02-4">
+<span class="eqno">(8.10)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec02-4" title="Link to this equation">#</a></span>\[f(x_0 +\Delta x) - f(x_0) = f'(x_0) \cdot  \Delta x.\]</div>
 <p>Dieser Ausdruck wird Differential genannt.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … das Differential?</p>
 <p>Ist eine Funktion <span class="math notranslate nohighlight">\(f\)</span> differenzierbar, so wird der Term</p>
-<div class="math notranslate nohighlight">
-\[f'(x)\cdot \Delta x\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec02-5">
+<span class="eqno">(8.11)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec02-5" title="Link to this equation">#</a></span>\[f'(x)\cdot \Delta x\]</div>
 <p>Differential genannt. Das Differential beschreibt den linearen Anteil der
 Änderung der Funktion <span class="math notranslate nohighlight">\(f\)</span>.</p>
 </div>
@@ -539,8 +540,8 @@ genannt.</p>
 <p class="admonition-title">Was ist … das totale Differential?</p>
 <p>Existiert zu einer Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}^n\to\mathbb{R}\)</span> die Tangentenfunktion,
 so wird</p>
-<div class="math notranslate nohighlight">
-\[\sum_{i=1}^n \frac{\partial f(\vec{x})}{\partial x_i} \cdot \Delta x_i\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec02-6">
+<span class="eqno">(8.12)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec02-6" title="Link to this equation">#</a></span>\[\sum_{i=1}^n \frac{\partial f(\vec{x})}{\partial x_i} \cdot \Delta x_i\]</div>
 <p>totales Differential genannt. Es beschreibt den linearen Anteil wie sich die
 Funktionswerte <span class="math notranslate nohighlight">\(f(\vec{x})\)</span> ändern, wenn sich die Variablen <span class="math notranslate nohighlight">\(x_1, x_2, \ldots,
 x_n\)</span> entlang der Koordinatenachsen um <span class="math notranslate nohighlight">\(\Delta x_1, \Delta x_2, \ldots, \Delta

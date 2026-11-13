@@ -79,10 +79,10 @@ Wir starten mit einer gegebenen Funktion $f$, die die Periode $T$ und die
 Frequenz $\omega = \frac{2\pi}{T}$ hat. Die Fourierkoeffizienten werden dann
 berechnet als
 
-$\begin{align*}
+$$\begin{aligned}
 a_k &= \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \cos(k \, \omega \, t) \, dt, \quad k = 0, 1, 2, \ldots \\
 b_k &= \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \sin(k \, \omega \, t) \, dt, \quad k = 1, 2, \ldots \\
-\end{align*}$
+\end{aligned}$$
 ```
 
 ## Fourierreihe

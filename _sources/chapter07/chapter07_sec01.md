@@ -158,15 +158,15 @@ Betrachten wir die Funktionen $f(x,y) = x^2 + y^2$ und $g(x,y) = xy$.
 
 Die Gradienten dieser Funktionen sind:
 
-$\begin{align*}
+$$\begin{aligned}
 \nabla f(x,y) &= (2x, 2y)\\
 \nabla g(x,y) &= (y, x).
-\end{align*}$
+\end{aligned}$$
 
 Für das Produkt $h(x,y) = f(x,y) \cdot g(x,y) = (x^2 + y^2) \cdot xy$ erhalten
 wir nach der Produktregel:
 
-$\begin{align*}
+$$\begin{aligned}
 \nabla h(x,y) &= g(x,y) \cdot \nabla f(x,y) + f(x,y) \cdot \nabla g(x,y)\\
 &= xy \cdot (2x, 2y) + (x^2 + y^2) \cdot (y, x)\\
 &= (2x^2y, 2xy^2) + ((x^2 + y^2)y, (x^2 + y^2)x)\\
@@ -174,7 +174,7 @@ $\begin{align*}
 &= (2x^2y + x^2y + y^3, 2xy^2 + x^3 + xy^2)\\
 &= (x^2y(2 + 1) + y^3, xy^2(2 + 1) + x^3)\\
 &= (3x^2y + y^3, 3xy^2 + x^3).\\
-\end{align*}$
+\end{aligned}$$
 
 Zur Überprüfung können wir $h(x,y)$ direkt ausmultiplizieren
 
@@ -182,10 +182,10 @@ $$h(x,y) = (x^2 + y^2) \cdot xy = x^3y + xy^3$$
 
 und dann partiell differenzieren
 
-$\begin{align*}
+$$\begin{aligned}
 &\frac{\partial h}{\partial x} = 3x^2y + y^3, \\
 &\frac{\partial h}{\partial y} = x^3 + 3xy^2. \\
-\end{align*}$
+\end{aligned}$$
 
 Dies ergibt den Gradienten $\nabla h(x,y) = (3x^2y + y^3, x^3 + 3xy^2)$, was mit
 dem ersten Ergebnis übereinstimmt.

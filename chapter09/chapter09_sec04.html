@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -498,8 +499,8 @@ homogenen Platte zu berechnen.</p>
 <div class="goals admonition">
 <p class="admonition-title">Lernziel</p>
 <p>Sie können mit dem Doppelintegral den Schwerpunkt <span class="math notranslate nohighlight">\((x_S, y_S)\)</span> einer homogenen ebenen Fläche mit den Formeln</p>
-<div class="math notranslate nohighlight">
-\[x_S = \frac{1}{A}\iint_{A} x \, dA \quad \text{ und } \quad y_S = \frac{1}{A} \iint_{A} y\, dA\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-1">
+<span class="eqno">(9.29)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-1" title="Link to this equation">#</a></span>\[x_S = \frac{1}{A}\iint_{A} x \, dA \quad \text{ und } \quad y_S = \frac{1}{A} \iint_{A} y\, dA\]</div>
 <p>berechnen.</p>
 </div>
 </section>
@@ -507,84 +508,88 @@ homogenen Platte zu berechnen.</p>
 <h2>Schwerpunktberechnung<a class="headerlink" href="#schwerpunktberechnung" title="Link to this heading">#</a></h2>
 <p>Für den Schwerpunkt einer ebenen homogenen Fläche gilt für die x-Koordinate die
 folgende Formel</p>
-<div class="math notranslate nohighlight">
-\[x_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} x \, dy \right) \, dx\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-2">
+<span class="eqno">(9.30)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-2" title="Link to this equation">#</a></span>\[x_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} x \, dy \right) \, dx\]</div>
 <p>und für die y-Koordinate des Schwerpunkts die Formel</p>
-<div class="math notranslate nohighlight">
-\[y_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} y \, dy \right) \, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-3">
+<span class="eqno">(9.31)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-3" title="Link to this equation">#</a></span>\[y_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} y \, dy \right) \, dx.\]</div>
 </section>
 <section id="beispiel-schwerpunktberechnung">
 <h2>Beispiel Schwerpunktberechnung<a class="headerlink" href="#beispiel-schwerpunktberechnung" title="Link to this heading">#</a></h2>
 <p>Wir bleiben bei dem Beispiel der vorhergehenden Kapitel mit den beiden Funktionen</p>
-<div class="math notranslate nohighlight">
-\[f_o(x) = -x + 1\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-4">
+<span class="eqno">(9.32)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-4" title="Link to this equation">#</a></span>\[f_o(x) = -x + 1\]</div>
 <p>und</p>
-<div class="math notranslate nohighlight">
-\[f_u(x) = x^2 - 5.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-5">
+<span class="eqno">(9.33)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-5" title="Link to this equation">#</a></span>\[f_u(x) = x^2 - 5.\]</div>
 <p>Aus dem letzten Kapitel wissen wir bereits, dass sich die beiden Funktionen in
 den Punkten <span class="math notranslate nohighlight">\((-3,4)\)</span> und <span class="math notranslate nohighlight">\((2,-1)\)</span> schneiden.</p>
 <figure class="align-default" id="part10-plot-example04">
 <a class="reference internal image-reference" href="../_images/part10_plot_example02.svg"><img alt="../_images/part10_plot_example02.svg" src="../_images/part10_plot_example02.svg" style="width: 75%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Gesucht ist der Schwerpunkt der schraffierten Fläche <span class="math notranslate nohighlight">\(A\)</span>, die durch die Gerade <span class="math notranslate nohighlight">\(f_o(x)=-x+1\)</span> und die Parabel <span class="math notranslate nohighlight">\(f_u(x)=x^2-5\)</span> umrandet wird.</span><a class="headerlink" href="#part10-plot-example04" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 9.7: </span><span class="caption-text">Gesucht ist der Schwerpunkt der schraffierten Fläche <span class="math notranslate nohighlight">\(A\)</span>, die durch die Gerade <span class="math notranslate nohighlight">\(f_o(x)=-x+1\)</span> und die Parabel <span class="math notranslate nohighlight">\(f_u(x)=x^2-5\)</span> umrandet wird</span><a class="headerlink" href="#part10-plot-example04" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Gesucht ist diesmal der Schwerpunkt dieser ebenen homogenen Fläche.</p>
 <p><strong>1. Schritt: Berechnung Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span></strong></p>
 <p>Zuerst wird der Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> mit dem Doppelintegral</p>
-<div class="math notranslate nohighlight">
-\[A= \iint_{A}1\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-6">
+<span class="eqno">(9.34)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-6" title="Link to this equation">#</a></span>\[A= \iint_{A}1\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
 1 \; dy\right)dx\]</div>
 <p>berechnet. Aus dem letzten Kapitel wissen wir bereits, dass <span class="math notranslate nohighlight">\(A = \frac{125}{6}
 \approx 20.8333\)</span>.</p>
 <p><strong>2. Schritt: Berechnung x-Schwerpunkt <span class="math notranslate nohighlight">\(x_S\)</span></strong></p>
 <p>Nun berechnen wir den Schwerpunkt der Fläche in x-Richtung. Dazu wird die Formel</p>
-<div class="math notranslate nohighlight">
-\[x_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} x \, dy \right) \, dx\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-7">
+<span class="eqno">(9.35)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-7" title="Link to this equation">#</a></span>\[x_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} x \, dy \right) \, dx\]</div>
 <p>verwendet. Zuerst berechnen wir das innere Integral <span class="math notranslate nohighlight">\(I(x)\)</span>, indem wir nach <span class="math notranslate nohighlight">\(y\)</span> integrieren:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-8">
+<span class="eqno">(9.36)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-8" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 I(x)&amp;= \int_{y=f_u(x)}^{y=f_o(x)} x \, dy = \\
     &amp;= \int_{y=x^2-5}^{y=-x+1} x \, dy = \\
     &amp;= \big[ xy \big]_{y=x^2-5}^{y=-x+1} = \\
     &amp;= x\cdot(-x+1) - x\cdot(x^2-5) = \\
     &amp;= -x^3-x^2+6x.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Dann wird das innere Integral in das äußere Integral eingesetzt und nach <span class="math notranslate nohighlight">\(x\)</span>
 integriert:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-9">
+<span class="eqno">(9.37)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-9" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \int_{x=-3}^{x=2} -x^3-x^2+6x \, dx &amp;= \left[-\frac{1}{4}x^4-\frac{1}{3}x^3+3x^2\right]_{x=-3}^{x=2} = \\
 &amp;= -\frac{125}{12} \approx -10.417.\\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Nun kann alles in die Formel eingesetzt werden:</p>
-<div class="math notranslate nohighlight">
-\[x_S = \frac{1}{\frac{125}{6}} \cdot \left(-\frac{125}{12}\right) = -\frac{1}{2}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-10">
+<span class="eqno">(9.38)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-10" title="Link to this equation">#</a></span>\[x_S = \frac{1}{\frac{125}{6}} \cdot \left(-\frac{125}{12}\right) = -\frac{1}{2}.\]</div>
 <p><strong>3. Schritt: Berechnung y-Schwerpunkt <span class="math notranslate nohighlight">\(y_S\)</span></strong></p>
 <p>Als letztes wird der Schwerpunkt der Fläche in y-Richtung berechnet. Dazu wird die Formel</p>
-<div class="math notranslate nohighlight">
-\[y_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} y \, dy \right) \, dx\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-11">
+<span class="eqno">(9.39)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-11" title="Link to this equation">#</a></span>\[y_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} y \, dy \right) \, dx\]</div>
 <p>verwendet. Zunächst berechnen wir wieder einmal nur das innere Integral durch Integration nach <span class="math notranslate nohighlight">\(y\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-12">
+<span class="eqno">(9.40)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-12" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 I(x) &amp;= \int_{y=x^2-5}^{-x+1} y \, dy = \\
     &amp;= \big[\frac{1}{2}y^2 \big]{y=x^2-5}^{-x+1} = \\
     &amp;= \frac{1}{2}\left(-x+1\right)^2 - \frac{1}{2}\left( x^2-5\right)^2 = \\
     &amp;= -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Eingesetzt in das äußere Integral erhalten wir</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-13">
+<span class="eqno">(9.41)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-13" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \int_{x=-3}^{x=2} -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12 \, dx
 &amp;= \left[-\frac{1}{10}x^5+\frac{11}{6}x^3-\frac{1}{2}x^2-12x \right]_{x=-3}^{x=2} = \\
 &amp;= -\frac{125}{6} \approx -20.8333.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Nun noch alles in die ursprüngliche Formel einsetzen und wir erhalten für den Schwerpunkt <span class="math notranslate nohighlight">\(y_S\)</span> in y-Richtung:</p>
-<div class="math notranslate nohighlight">
-\[y_S = \frac{1}{\frac{125}{6}} \cdot \left( -\frac{125}{6} \right) = -1.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec04-14">
+<span class="eqno">(9.42)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec04-14" title="Link to this equation">#</a></span>\[y_S = \frac{1}{\frac{125}{6}} \cdot \left( -\frac{125}{6} \right) = -1.\]</div>
 <p>Damit ist der Schwerpunkt der Fläche <span class="math notranslate nohighlight">\((-0.5, -1)\)</span>.</p>
 <figure class="align-default" id="part10-plot-example05">
 <a class="reference internal image-reference" href="../_images/part10_plot_example03.svg"><img alt="../_images/part10_plot_example03.svg" src="../_images/part10_plot_example03.svg" style="width: 75%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Schwerpunkt der schraffierten Fläche <span class="math notranslate nohighlight">\(A\)</span>, die durch die Gerade <span class="math notranslate nohighlight">\(f_o(x)=-x+1\)</span> und die Parabel <span class="math notranslate nohighlight">\(f_u(x)=x^2-5\)</span> umrandet wird.</span><a class="headerlink" href="#part10-plot-example05" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 9.8: </span><span class="caption-text">Schwerpunkt der schraffierten Fläche <span class="math notranslate nohighlight">\(A\)</span>, die durch die Gerade <span class="math notranslate nohighlight">\(f_o(x)=-x+1\)</span> und die Parabel <span class="math notranslate nohighlight">\(f_u(x)=x^2-5\)</span> umrandet wird</span><a class="headerlink" href="#part10-plot-example05" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

@@ -37,7 +37,7 @@ Funktionen in den Punkten $(-3,4)$ und $(2,-1)$ schneiden.
 width: 75%
 name: part10_plot_example03
 ---
-Gesucht ist der schraffierte Flächeninhalt $A$, der durch die Gerade $f_o(x)=-x+1$ und die Parabel $f_u(x)=x^2-5$ umrandet wird.
+Gesucht ist der schraffierte Flächeninhalt $A$, der durch die Gerade $f_o(x)=-x+1$ und die Parabel $f_u(x)=x^2-5$ umrandet wird
 ```
 
 Der Flächeninhalt $A$ lässt sich mit dem Doppelintegral
@@ -49,21 +49,21 @@ berechnen.
 
 Zuerst wird das innere Integral $I(x)$ berechnet, indem nach $y$ integriert wird:
 
-$\begin{align*}
+$$\begin{aligned}
 I(x) &= \int_{y=x^2-5}^{y=-x+1} 1 \, dy = \\
      &= \left[ y \right]_{y=x^2-5}^{y=-x+1} = \\
      &= (-x+1) -(x^2-5) = \\
      &= -x^2-x+6.
-\end{align*}$
+\end{aligned}$$
 
 Das innere Integral $I(x) = -x^2-x+6$ wird nun in das äußere Integral eingesetzt
 und nach $x$ integriert:
 
-$\begin{align*}
+$$\begin{aligned}
 \int_{x=-3}^{x=2} I(x)\, dx &= \int_{x=-3}^{x=2}  -x^2-x+6\, dx =\\
 &= \left[-\frac{1}{3}x^3-\frac{1}{2}x^2+6x \right]_{x=-3}^{x=2} = \\
 &= \frac{125}{6} \approx 20.8333.
-\end{align*}$
+\end{aligned}$$
 
 Damit gilt insgesamt
 

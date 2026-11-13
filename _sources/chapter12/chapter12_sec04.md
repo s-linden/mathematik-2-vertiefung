@@ -25,10 +25,11 @@ linear und von 1. Ordnung sind. Zusätzlich fordern wir, dass die Koeffizienten
 konstant sind.
 
 Ein System von Differentialgleichungen
-$\begin{align*}
+
+$$\begin{aligned}
 y_1' &= a_{11}y_1 + a_{12}y_2 \\
 y_2' &= a_{21}y_1 + a_{22}y_2
-\end{align*}$
+\end{aligned}$$
 
 heißt homogenes System von Differentialgleichungen 1. Ordnung mit konstanten
 Koeffizienten.
@@ -80,17 +81,17 @@ $$y_1'= C_1 \, \lambda e^{\lambda x} \quad \text{ und }
 Setzen wir nun beide Ansatzfunktionen in das System von Differentialgleichungen
 ein, so erhalten wir
 
-$\begin{align*}
+$$\begin{aligned}
 C_1 \, \lambda e^{\lambda x} &= a_{11} C_1 \, e^{\lambda x} + a_{12} C_2 \, e^{\lambda x} \\
 C_2 \, \lambda e^{\lambda x} &= a_{21} C_1 \, e^{\lambda x} + a_{22} C_2 \, e^{\lambda x}
-\end{align*}$
+\end{aligned}$$
 
 Wir teilen durch $e^{\lambda x}$ und erhalten
 
-$\begin{align*}
+$$\begin{aligned}
 C_1 \, \lambda  &= a_{11} C_1 + a_{12} C_2 \\
 C_2 \, \lambda  &= a_{21} C_1 + a_{22} C_2
-\end{align*}$
+\end{aligned}$$
 
 Bringen wir die Terme $C_1 \, \lambda$ und $C_2 \, \lambda$ jeweils auf die rechte Seite und schreiben das Gleichungssystem in Matrixform, so erhalten wir
 
@@ -163,10 +164,10 @@ $$y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) $$
 
 Wir betrachten das homogene System 2. Ordnung
 
-$\begin{align*}
+$$\begin{aligned}
 y_1' &= -8y_1 - 2y_2 \\
 y_2' &= 15y_1 + 5y_2
-\end{align*}$
+\end{aligned}$$
 
 mit der Koeffizientenmatrix
 

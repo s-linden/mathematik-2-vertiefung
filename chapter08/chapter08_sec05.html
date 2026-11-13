@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -482,78 +483,82 @@
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 8.1</p>
 <p>Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion</p>
-<div class="math notranslate nohighlight">
-\[f:\mathbb{R}^2 \rightarrow \mathbb{R}, \; f(x,y)=\frac{x^2+y^2}{1+x^2+y^2}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-1">
+<span class="eqno">(8.43)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-1" title="Link to this equation">#</a></span>\[f:\mathbb{R}^2 \rightarrow \mathbb{R}, \; f(x,y)=\frac{x^2+y^2}{1+x^2+y^2}\]</div>
 <p>am Punkt <span class="math notranslate nohighlight">\((1,2)\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[T_{1,f}(x,y)=\frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-2">
+<span class="eqno">(8.44)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-2" title="Link to this equation">#</a></span>\[T_{1,f}(x,y)=\frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Das Taylorpolynom vom Grad 1 einer Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> bei <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> hat die allgemeinen Form</p>
-<div class="math notranslate nohighlight">
-\[T_{1,f}(x,y)
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-3">
+<span class="eqno">(8.45)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-3" title="Link to this equation">#</a></span>\[T_{1,f}(x,y)
  = f(x_0,y_0)+\frac{\partial f(x_0,y_0)}{\partial x}\cdot(x-x_0)+\frac{\partial f(x_0,y_0)}{\partial y}\cdot(y-y_0).\]</div>
 <p class="sd-card-text">Der Funktionswert in Punkt <span class="math notranslate nohighlight">\((1,2)\)</span> ist <span class="math notranslate nohighlight">\(f(1,2) = \frac{5}{6}\)</span>.</p>
 <p class="sd-card-text">Die partiellen Ableitungen von <span class="math notranslate nohighlight">\(f\)</span> lauten :</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-4">
+<span class="eqno">(8.46)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-4" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial f(x,y)}{\partial x} &amp;=
 \frac{2x}{x^2+y^2+1} - \frac{2x \left(x^2+y^2\right)}{\left(x^2+y^2+1\right)^2} \\
 \qquad \Rightarrow &amp; \frac{\partial f(1,2)}{\partial x} = \frac{1}{18}\\
 \frac{\partial f(x,y)}{\partial y} &amp;=
 \frac{2y}{x^2+y^2+1}-\frac{2y\left(x^2+y^2\right)}{\left(x^2+y^2+1\right)^2} \\
 \qquad \Rightarrow &amp; \frac{\partial f(1,2)}{\partial y} = \frac{1}{9}\\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Damit erhält man das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> bei <span class="math notranslate nohighlight">\((x_0,y_0)=(1,2)\)</span> als</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*} 
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-5">
+<span class="eqno">(8.47)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-5" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned} 
 T_{1,f}(x,y)
 &amp; = f(1,2)+\frac{\partial f}{\partial x}(1,2)\cdot(x-1)+\frac{\partial f}{\partial y}(1,2)\cdot(y-2)\\
 &amp; = \frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)\ . 
-\end{align*} \)</span></p>
+\end{aligned}\end{split}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 8.2</p>
 <p>Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion</p>
-<div class="math notranslate nohighlight">
-\[f:\mathbb{R}^2 \rightarrow \mathbb{R}, \; f(x,y)=\sqrt{x^2 + y^2}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-6">
+<span class="eqno">(8.48)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-6" title="Link to this equation">#</a></span>\[f:\mathbb{R}^2 \rightarrow \mathbb{R}, \; f(x,y)=\sqrt{x^2 + y^2}\]</div>
 <p>am Punkt <span class="math notranslate nohighlight">\((1,0)\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[T_{1,f}(x,y) = x\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-7">
+<span class="eqno">(8.49)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-7" title="Link to this equation">#</a></span>\[T_{1,f}(x,y) = x\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Das Taylorpolynom vom Grad 1 einer Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> bei <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> hat die allgemeinen Form</p>
-<div class="math notranslate nohighlight">
-\[T_{1,f}(x,y)
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-8">
+<span class="eqno">(8.50)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-8" title="Link to this equation">#</a></span>\[T_{1,f}(x,y)
  = f(x_0,y_0)+\frac{\partial f(x_0,y_0)}{\partial x}\cdot(x-x_0)+\frac{\partial f(x_0,y_0)}{\partial y}\cdot(y-y_0).\]</div>
 <p class="sd-card-text">Der Funktionswert im Punkt <span class="math notranslate nohighlight">\((1,0)\)</span> ist <span class="math notranslate nohighlight">\(f(1,0) = 1\)</span>.</p>
 <p class="sd-card-text">Die partiellen Ableitungen von <span class="math notranslate nohighlight">\(f\)</span> lauten:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-9">
+<span class="eqno">(8.51)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-9" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial f(x,y)}{\partial x} &amp;= \frac{x}{\sqrt{x^2+y^2}}, \\
 \frac{\partial f(x,y)}{\partial y} &amp;= \frac{y}{\sqrt{x^2+y^2}}.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Am Entwicklungspunkt <span class="math notranslate nohighlight">\((x_0,y_0)=(1,0)\)</span> sind die partiellen Ableitungen</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-10">
+<span class="eqno">(8.52)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-10" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial f(1,0)}{\partial x} &amp;= 1, \\
 \frac{\partial f(1,0)}{\partial y} &amp;= 0.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Damit ist das Taylorpolynom  1. Grades von <span class="math notranslate nohighlight">\(f\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\((x_0,y_0)=(1,0)\)</span></p>
-<div class="math notranslate nohighlight">
-\[T_{1,f}(x,y) = 1 + 1\cdot(x-1) + 0\cdot (y-y_0) = x.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-11">
+<span class="eqno">(8.53)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-11" title="Link to this equation">#</a></span>\[T_{1,f}(x,y) = 1 + 1\cdot(x-1) + 0\cdot (y-y_0) = x.\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 8.3</p>
 <p>Bestimmen Sie alle Extremwerte der Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}^2 \rightarrow\mathbb{R}\)</span> gegeben durch</p>
-<div class="math notranslate nohighlight">
-\[f(x,y)=x^3+y^3 - x - y\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-12">
+<span class="eqno">(8.54)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-12" title="Link to this equation">#</a></span>\[f(x,y)=x^3+y^3 - x - y\]</div>
 <p>und untersuchen Sie, ob in diesen Punkten lokale Minima bzw. Maxima vorliegen.</p>
 </div>
 <div class="miniexercise toggle admonition">
@@ -568,13 +573,14 @@ T_{1,f}(x,y)
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Die ersten partiellen Ableitungen lauten:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*} 
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-13">
+<span class="eqno">(8.55)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-13" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned} 
 \frac{\partial f(x,y)}{\partial x} &amp;= 3 x^2-1, \\ 
 \frac{\partial f(x,y)}{\partial y} &amp; =3 y^2-1. \\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Um die stationären Punkte, also die möglichen Kandidaten zu finden, ist das folgende Gleichungssystem zu lösen:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-14">
+<span class="eqno">(8.56)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-14" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{cases} 
 \frac{\partial f(x,y)}{\partial x} = 3 x^2 - 1 = 0 \\ 
 \frac{\partial f(x,y)}{\partial y} = 3 y^2 - 1 = 0. 
@@ -588,16 +594,17 @@ T_{1,f}(x,y)
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\((x_{4},y_{4})=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})\)</span>,</p></li>
 </ol>
 <p class="sd-card-text">die die stationären Punkte darstellen.</p>
-<p class="sd-card-text">Um den Typ der stationären Punkte zu bestimmen, werden die zweiten partiellen Ableitungen berechnet:
-\begin{align*}
-\frac{\partial^2 f(x,y)}{\partial x \partial x} &amp;= 6x, \
-\frac{\partial^2 f(x,y)}{\partial y \partial x} &amp;= 0, \
-\frac{\partial^2 f(x,y)}{\partial y \partial y} &amp;= 6y, \
+<p class="sd-card-text">Um den Typ der stationären Punkte zu bestimmen, werden die zweiten partiellen Ableitungen berechnet:</p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-15">
+<span class="eqno">(8.57)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-15" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
+\frac{\partial^2 f(x,y)}{\partial x \partial x} &amp;= 6x, \\ 
+\frac{\partial^2 f(x,y)}{\partial y \partial x} &amp;= 0, \\
+\frac{\partial^2 f(x,y)}{\partial y \partial y} &amp;= 6y, \\ 
 \frac{\partial^2 f(x,y)}{\partial x \partial y} &amp;= 0.
-\end{align*}</p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Die Hesse-Matrix besteht aus den zweiten partiellen Ableitungen</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-16">
+<span class="eqno">(8.58)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-16" title="Link to this equation">#</a></span>\[\begin{split}
 \mathbf{H}(x,y)= 
 \left( \begin{array}{cc} 
 \frac{\partial^2 f(x,y)}{\partial x \partial x} &amp; \frac{\partial^2 f(x,y)}{\partial x \partial y} \\ 
@@ -609,39 +616,39 @@ T_{1,f}(x,y)
 \end{array} \right). 
 \end{split}\]</div>
 <p class="sd-card-text">Die Determinante der Hesse-Matrix ist</p>
-<div class="math notranslate nohighlight">
-\[\det(\mathbf{H}(x,y)) = 6x \cdot 6y - 0 \cdot 0 = 36 xy.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-17">
+<span class="eqno">(8.59)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-17" title="Link to this equation">#</a></span>\[\det(\mathbf{H}(x,y)) = 6x \cdot 6y - 0 \cdot 0 = 36 xy.\]</div>
 <p class="sd-card-text">Nun wird für jeden stationären Punkt überprüft, ob tatsächlich ein Extremum vorliegt.</p>
 <ol class="arabic simple">
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\((x_{1},y_{1})=(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})\)</span>:</p></li>
 </ol>
 <p class="sd-card-text">Die Determinante der Hesse-Matrix für diesen Punkt ist</p>
-<div class="math notranslate nohighlight">
-\[\det\left(\mathbf{H}\left(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3}\right)\right) = 
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-18">
+<span class="eqno">(8.60)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-18" title="Link to this equation">#</a></span>\[\det\left(\mathbf{H}\left(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3}\right)\right) = 
 36\cdot \left(-\frac{\sqrt{3}}{3}\right) \cdot \left(-\frac{\sqrt{3}}{3}\right) = 12 &gt; 0.\]</div>
 <p class="sd-card-text">Damit ist der Punkt <span class="math notranslate nohighlight">\((x_{1},y_{1})=(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})\)</span> ein Extremum. Da das Vorzeichen von <span class="math notranslate nohighlight">\(\frac{\partial^2 f(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})}{\partial x \partial x}\)</span> negativ ist, ist die Hesse-Matrix negativ definit und dieser Punkt ist ein Maximum (Hochpunkt).</p>
 <ol class="arabic simple" start="2">
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\((x_{2},y_{2})=(\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})\)</span></p></li>
 </ol>
 <p class="sd-card-text">Die Determinante der Hesse-Matrix für diesen Punkt ist</p>
-<div class="math notranslate nohighlight">
-\[\det\left(\mathbf{H}\left(\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3}\right)\right) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-19">
+<span class="eqno">(8.61)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-19" title="Link to this equation">#</a></span>\[\det\left(\mathbf{H}\left(\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3}\right)\right) =
 36 \cdot \frac{\sqrt{3}}{3} \cdot \left(-\frac{\sqrt{3}}{3}\right) = -12 &lt; 0.\]</div>
 <p class="sd-card-text">Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt <span class="math notranslate nohighlight">\((x_{2},y_{2})\)</span> ist kein Extremum.</p>
 <ol class="arabic simple" start="3">
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\((x_{3},y_{3})=(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})\)</span></p></li>
 </ol>
 <p class="sd-card-text">Die Determinante der Hesse-Matrix für diesen Punkt ist</p>
-<div class="math notranslate nohighlight">
-\[\det\left(\mathbf{H}\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)\right) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-20">
+<span class="eqno">(8.62)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-20" title="Link to this equation">#</a></span>\[\det\left(\mathbf{H}\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)\right) =
 36 \cdot \left(-\frac{\sqrt{3}}{3}\right) \cdot \frac{\sqrt{3}}{3} = -12 &lt; 0.\]</div>
 <p class="sd-card-text">Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt <span class="math notranslate nohighlight">\((x_{3},y_{3})\)</span> ist kein Extremum.</p>
 <ol class="arabic simple" start="4">
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\((x_{4},y_{4})=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})\)</span></p></li>
 </ol>
 <p class="sd-card-text">Die Determinante der Hesse-Matrix für diesen Punkt ist</p>
-<div class="math notranslate nohighlight">
-\[\det\left(\mathbf{H}\left(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)\right) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-21">
+<span class="eqno">(8.63)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-21" title="Link to this equation">#</a></span>\[\det\left(\mathbf{H}\left(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)\right) =
 36 \cdot \frac{\sqrt{3}}{3} \cdot \frac{\sqrt{3}}{3} = 12 &gt; 0.\]</div>
 <p class="sd-card-text">Damit ist der Punkt <span class="math notranslate nohighlight">\((x_{4},y_{4})=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})\)</span> ein Extremum. Da das Vorzeichen von <span class="math notranslate nohighlight">\(\frac{\partial^2 f(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})}{\partial x \partial x}\)</span> positiv ist, ist die Hesse-Matrix positiv definit und dieser Punkt ist ein Minimum (Tiefpunkt).</p>
 </div>
@@ -649,8 +656,8 @@ T_{1,f}(x,y)
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 8.4</p>
 <p>Bestimmen Sie alle Extremwerte der Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}^2 \rightarrow\mathbb{R}\)</span> gegeben durch</p>
-<div class="math notranslate nohighlight">
-\[f(x,y) = -x^3-\frac{3x^2}{2}+6x-2y^3-9y^2+24y+3\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-22">
+<span class="eqno">(8.64)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-22" title="Link to this equation">#</a></span>\[f(x,y) = -x^3-\frac{3x^2}{2}+6x-2y^3-9y^2+24y+3\]</div>
 <p>und untersuchen Sie, ob in diesen Punkten lokale Minima bzw. Maxima vorliegen.</p>
 </div>
 <div class="miniexercise toggle admonition">
@@ -665,13 +672,14 @@ T_{1,f}(x,y)
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Die ersten partiellen Ableitungen lauten:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*} 
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-23">
+<span class="eqno">(8.65)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-23" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned} 
 \frac{\partial f(x,y)}{\partial x} &amp;= -3 x^2 -3x + 6, \\ 
 \frac{\partial f(x,y)}{\partial y} &amp;= -6 y^2 - 18y + 24. 
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Um die stationären Punkte zu finden, ist das folgende Gleichungssystem zu lösen:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} 
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-24">
+<span class="eqno">(8.66)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-24" title="Link to this equation">#</a></span>\[\begin{split} 
 \begin{cases} 
 \frac{\partial f(x,y)}{\partial x} = -3x^2-3x+6=0 \\ 
 \frac{\partial f(x,y)}{\partial y} =-6y^2-18y+24=0. 
@@ -686,15 +694,16 @@ T_{1,f}(x,y)
 </ol>
 <p class="sd-card-text">die die stationären Punkte darstellen.</p>
 <p class="sd-card-text">Um den Typ der stationären Punkte zu bestimmen, werden die zweiten partiellen Ableitungen berechnet:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-25">
+<span class="eqno">(8.67)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-25" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial^2 f(x,y)}{\partial x \partial x} &amp;= -6x-3, \\ 
 \frac{\partial^2 f(x,y)}{\partial y \partial x} &amp;= 0, \\
 \frac{\partial^2 f(x,y)}{\partial y \partial y} &amp;= -12y-18, \\ 
 \frac{\partial^2 f(x,y)}{\partial x \partial y} &amp;= 0. 
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Die Hesse-Matrix besteht aus den zweiten Ableitungen</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-26">
+<span class="eqno">(8.68)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-26" title="Link to this equation">#</a></span>\[\begin{split}
 \mathbf{H}(x,y)= 
 \left( \begin{array}{cc} 
 \frac{\partial^2 f(x,y)}{\partial x \partial x} &amp; \frac{\partial^2 f(x,y)}{\partial x \partial y} \\ 
@@ -706,36 +715,36 @@ T_{1,f}(x,y)
 \end{array} \right). 
 \end{split}\]</div>
 <p class="sd-card-text">Die Determinante der Hesse-Matrix ist</p>
-<div class="math notranslate nohighlight">
-\[\det(\mathbf{H}(x,y)) = (-6x-3) \cdot (-12y-18) - 0 \cdot 0 = 72xy + 108x +36y + 54.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-27">
+<span class="eqno">(8.69)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-27" title="Link to this equation">#</a></span>\[\det(\mathbf{H}(x,y)) = (-6x-3) \cdot (-12y-18) - 0 \cdot 0 = 72xy + 108x +36y + 54.\]</div>
 <p class="sd-card-text">Nun wird für jeden stationären Punkt überprüft, ob tatsächlich ein Extremum vorliegt.</p>
 <ol class="arabic simple">
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\((x_{1},y_{1})=(1,1)\)</span></p></li>
 </ol>
 <p class="sd-card-text">Die Determinante der Hesse-Matrix für diesen Punkt ist</p>
-<div class="math notranslate nohighlight">
-\[\det(\mathbf{H}(1,1)) = 270 &gt; 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-28">
+<span class="eqno">(8.70)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-28" title="Link to this equation">#</a></span>\[\det(\mathbf{H}(1,1)) = 270 &gt; 0.\]</div>
 <p class="sd-card-text">Damit ist der Punkt <span class="math notranslate nohighlight">\((x_{1},y_{1})=(1,1)\)</span> ein Extremum. Da das Vorzeichen von <span class="math notranslate nohighlight">\(\frac{\partial^2 f(1,1)}{\partial x \partial x} = -9\)</span> negativ ist, ist die Hesse-Matrix negativ definit und dieser Punkt ist ein Maximum (Hochpunkt).</p>
 <ol class="arabic simple" start="2">
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\((x_{2},y_{2})=(-2,1)\)</span></p></li>
 </ol>
 <p class="sd-card-text">Die Determinante der Hesse-Matrix für diesen Punkt ist</p>
-<div class="math notranslate nohighlight">
-\[\det(\mathbf{H}(-2,1)) = -270 &lt; 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-29">
+<span class="eqno">(8.71)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-29" title="Link to this equation">#</a></span>\[\det(\mathbf{H}(-2,1)) = -270 &lt; 0.\]</div>
 <p class="sd-card-text">Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt <span class="math notranslate nohighlight">\((x_{2},y_{2})\)</span> ist kein Extremum.</p>
 <ol class="arabic simple" start="3">
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\((x_{3},y_{3})=(1,-4)\)</span></p></li>
 </ol>
 <p class="sd-card-text">Die Determinante der Hesse-Matrix für diesen Punkt ist</p>
-<div class="math notranslate nohighlight">
-\[\det(\mathbf{H}(1,-4)) = -270 &lt; 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-30">
+<span class="eqno">(8.72)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-30" title="Link to this equation">#</a></span>\[\det(\mathbf{H}(1,-4)) = -270 &lt; 0.\]</div>
 <p class="sd-card-text">Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt <span class="math notranslate nohighlight">\((x_{3},y_{3})\)</span> ist kein Extremum.</p>
 <ol class="arabic simple" start="4">
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\((x_{4},y_{4})=(-2,-4)\)</span></p></li>
 </ol>
 <p class="sd-card-text">Die Determinante der Hesse-Matrix für diesen Punkt ist</p>
-<div class="math notranslate nohighlight">
-\[\det(\mathbf{H}(-2,-4)) = 270 &gt; 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-31">
+<span class="eqno">(8.73)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-31" title="Link to this equation">#</a></span>\[\det(\mathbf{H}(-2,-4)) = 270 &gt; 0.\]</div>
 <p class="sd-card-text">Damit ist der Punkt <span class="math notranslate nohighlight">\((x_{4},y_{4})=(-2,-4)\)</span> ein Extremum. Da das Vorzeichen von <span class="math notranslate nohighlight">\(\frac{\partial^2 f(-2,-4)}{\partial x \partial x} = -6\cdot(-2)-3=9\)</span> positiv ist, ist die Hesse-Matrix positiv definit und dieser Punkt ist ein Minimum (Tiefpunkt).</p>
 </div>
 </details></div>
@@ -753,35 +762,36 @@ betragen soll.</p>
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Der Umfang <span class="math notranslate nohighlight">\(U\)</span> der Tunnel-Querschnittsfläche ist</p>
-<div class="math notranslate nohighlight">
-\[U(x,y) = x + 2y + \frac{\pi}{2} x = (1 + \frac{\pi}{2})x + 2y.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-32">
+<span class="eqno">(8.74)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-32" title="Link to this equation">#</a></span>\[U(x,y) = x + 2y + \frac{\pi}{2} x = (1 + \frac{\pi}{2})x + 2y.\]</div>
 <p class="sd-card-text">Da der Umfang minimiert werden soll, ist dies unsere Zielfunktion, die von den beiden Seitenlängen des Rechtecks <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> abhängt. Dabei haben wir <span class="math notranslate nohighlight">\(x\)</span> als Boden des Tunnels gewählt.</p>
 <p class="sd-card-text">Die Nebenbedingung ist, dass die Querschnittsfläche 50 m² beträgt. Als Gleichung formuliert gilt dann</p>
-<div class="math notranslate nohighlight">
-\[A = xy + \frac{\pi}{8}x^2 = 50.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-33">
+<span class="eqno">(8.75)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-33" title="Link to this equation">#</a></span>\[A = xy + \frac{\pi}{8}x^2 = 50.\]</div>
 <p class="sd-card-text">Wir verwenden das Eliminationsverfahren und lösen die Nebenbedingung nach <span class="math notranslate nohighlight">\(y\)</span> auf:</p>
-<div class="math notranslate nohighlight">
-\[\Rightarrow y = \frac{50 - \frac{\pi}{8}x^2}{x}, \quad x\neq 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-34">
+<span class="eqno">(8.76)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-34" title="Link to this equation">#</a></span>\[\Rightarrow y = \frac{50 - \frac{\pi}{8}x^2}{x}, \quad x\neq 0.\]</div>
 <p class="sd-card-text">In die Zielfunktion eingesetzt erhalten wir</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-35">
+<span class="eqno">(8.77)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-35" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \tilde{U}(x) &amp;= (1+\frac{\pi}{2})x + \frac{100}{x} - \frac{\pi}{4}x = \\
 &amp;= (1+\frac{\pi}{4})x + \frac{100}{x}.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Die 1. Ableitung ist</p>
-<div class="math notranslate nohighlight">
-\[\tilde{U}'(x) = (1+\frac{\pi}{2}) - \frac{100}{x^2}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-36">
+<span class="eqno">(8.78)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-36" title="Link to this equation">#</a></span>\[\tilde{U}'(x) = (1+\frac{\pi}{2}) - \frac{100}{x^2}.\]</div>
 <p class="sd-card-text">Wir setzen die 1. Ableitung gleich Null, um Kandidaten für Extrema zu bestimmen,</p>
-<div class="math notranslate nohighlight">
-\[(1+\frac{\pi}{2}) - \frac{100}{x^2} = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-37">
+<span class="eqno">(8.79)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-37" title="Link to this equation">#</a></span>\[(1+\frac{\pi}{2}) - \frac{100}{x^2} = 0\]</div>
 <p class="sd-card-text">und lösen die Gleichung. Das Ergebnis ist</p>
-<div class="math notranslate nohighlight">
-\[x_{1,2} = \pm \sqrt{\frac{100}{1+\frac{\pi}{4}}} \approx \pm 7.48.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-38">
+<span class="eqno">(8.80)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-38" title="Link to this equation">#</a></span>\[x_{1,2} = \pm \sqrt{\frac{100}{1+\frac{\pi}{4}}} \approx \pm 7.48.\]</div>
 <p class="sd-card-text">Es kommt nur die positive Nullstelle infrage, da es keine negativen Längen gibt. Von diesem Kandidaten müssen wir aber erst noch zeigen, dass es sich um ein Extremum handelt. Wir bilden die 2. Ableitung</p>
-<div class="math notranslate nohighlight">
-\[\tilde{U}''(x) = \frac{200}{x^3}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-39">
+<span class="eqno">(8.81)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-39" title="Link to this equation">#</a></span>\[\tilde{U}''(x) = \frac{200}{x^3}.\]</div>
 <p class="sd-card-text">Die mögliche Extremstelle <span class="math notranslate nohighlight">\(x_1 = 7.48\)</span> eingesetzt ergibt</p>
-<div class="math notranslate nohighlight">
-\[\tilde{U}''\left(\sqrt{\frac{100}{1+\frac{\pi}{4}}}\right) \approx 0.48.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec05-40">
+<span class="eqno">(8.82)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec05-40" title="Link to this equation">#</a></span>\[\tilde{U}''\left(\sqrt{\frac{100}{1+\frac{\pi}{4}}}\right) \approx 0.48.\]</div>
 <p class="sd-card-text">Da die 2. Ableitung ungleich Null ist, ist <span class="math notranslate nohighlight">\(x_1\)</span> tatsächlich ein Extremum. Das Vorzeichen der 2. Ableitung ist positiv, damit ist <span class="math notranslate nohighlight">\(x_1\)</span> ein Minimum (Tiefpunkt).</p>
 <p class="sd-card-text">Der Tunnel hat also minimalen Umfang bei einer Querschnittsfläche von 50 m², wenn die Seitenlänge x = 7.48 m (Boden) und die Seitenlänge y = 3.75 m gewählt werden.</p>
 </div>

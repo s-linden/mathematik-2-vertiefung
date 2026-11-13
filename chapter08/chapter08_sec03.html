@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -507,24 +508,25 @@ von zwei unabhängigen Variablen.</p>
 <ol class="arabic simple">
 <li><p>Ein Punkt <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> ist ein Kandidat für eine Extremstelle, wenn die folgende erste Bedingung erfüllt ist:</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[\frac{\partial f(x_0,y_0)}{\partial x} = 0 \quad \text{ und } \quad 
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-1">
+<span class="eqno">(8.13)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-1" title="Link to this equation">#</a></span>\[\frac{\partial f(x_0,y_0)}{\partial x} = 0 \quad \text{ und } \quad 
 \frac{\partial f(x_0,y_0)}{\partial y} = 0.\]</div>
 <ol class="arabic simple" start="2">
 <li><p>Damit der Kandidat <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> auch wirklich ein Extremwert ist, muss zusätzlich
 die Determinante der Hesse-Matrix positiv sein, also:</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[\det(H_f(x_0, y_0)) = \frac{\partial^2 f(x_0, y_0)}{\partial x\partial x}\cdot
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-2">
+<span class="eqno">(8.14)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-2" title="Link to this equation">#</a></span>\[\det(H_f(x_0, y_0)) = \frac{\partial^2 f(x_0, y_0)}{\partial x\partial x}\cdot
 \frac{\partial^2 f(x_0,y_0)}{\partial y \partial y} - \left(\frac{\partial^2
 f(x_0,y_0)}{\partial x \partial y}\right)^2 &gt; 0.\]</div>
 <ol class="arabic simple" start="3">
 <li><p>Zuletzt entscheidet dann das Vorzeichen von dem Term <span class="math notranslate nohighlight">\(\frac{\partial^2 f(x_0,y_0)}{\partial x \partial x}\)</span> darüber, ob ein Minimum oder ein Maximum vorliegt:</p></li>
 </ol>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-3">
+<span class="eqno">(8.15)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-3" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} &lt; 0 &amp; \qquad \Rightarrow \text{relatives Maximum} \\
 \frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} &gt; 0 &amp; \qquad \Rightarrow \text{relatives Minimum} \\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 </div>
 </section>
 <section id="extremwerte-bei-eindimensionalen-funktionen">
@@ -533,8 +535,8 @@ f(x_0,y_0)}{\partial x \partial y}\right)^2 &gt; 0.\]</div>
 <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span>. Um herauszufinden, welche x-Werte als Extrema
 (Maximum/Hochpunkt oder Minimum/Tiefpunkt) möglich sind, wird die 1. Ableitung
 Null gesetzt:</p>
-<div class="math notranslate nohighlight">
-\[f'(x)=0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-4">
+<span class="eqno">(8.16)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-4" title="Link to this equation">#</a></span>\[f'(x)=0.\]</div>
 <p>Diese Bedingung ist <em>notwendig</em>, damit überhaupt ein Maximum oder Minimum
 vorliegen kann. Leider reicht diese Bedingung noch nicht aus. Alle Nullstellen
 der 1. Ableitung sind <em>mögliche</em> Extrema, es könnten aber auch Sattelpunkte sein
@@ -543,7 +545,7 @@ wie in der folgenden Abbildung der Funktion <span class="math notranslate nohigh
 <a class="reference internal image-reference" href="../_images/fig09_sattelpunkt1D.svg"><img alt="../_images/fig09_sattelpunkt1D.svg" src="../_images/fig09_sattelpunkt1D.svg" style="width: 300px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Sattelpunkt</span><a class="headerlink" href="#fig09-sattelpunkt1d" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 8.1: </span><span class="caption-text">Sattelpunkt</span><a class="headerlink" href="#fig09-sattelpunkt1d" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Daher müssen wir noch zusätzliche Bedingungen überprüfen, bevor wir entscheiden
@@ -576,12 +578,12 @@ Erinnerung rufen, dass die 1. Ableitung eindimensionaler Funktionen dem
 Gradienten entspricht. Und da der Gradient der Zeilenvektor ist, der alle
 partielle Ableitungen zusammenfasst, lautet die <strong>notwendige Bedingung für einen
 Extremwert</strong> der skalarwertigen Funktion <span class="math notranslate nohighlight">\(f\)</span></p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial f(x_0, y_0)}{\partial x} = 0 \quad \text{ und }
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-5">
+<span class="eqno">(8.17)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-5" title="Link to this equation">#</a></span>\[\frac{\partial f(x_0, y_0)}{\partial x} = 0 \quad \text{ und }
 \quad \frac{\partial f(x_0,y_0)}{\partial y} = 0.\]</div>
 <p>Diese Gleichung können wir auch vektoriell schreiben:</p>
-<div class="math notranslate nohighlight">
-\[\nabla f(x_0,y_0) = \left( \frac{\partial f(x_0, y_0)}{\partial
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-6">
+<span class="eqno">(8.18)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-6" title="Link to this equation">#</a></span>\[\nabla f(x_0,y_0) = \left( \frac{\partial f(x_0, y_0)}{\partial
 x},\frac{\partial f(x_0,y_0)}{\partial y}\right) = (0,0).\]</div>
 <p>Der Gradient der Funktion muss der Nullvektor sein, so wie die 1. Ableitung Null
 sein muss.</p>
@@ -603,8 +605,8 @@ abhängt. Das ist eine Verallgemeinerung von der oben vorgestellten Bedingung.</
 Ordnung Null sind, dann reicht das noch nicht aus. Zusätzlich muss noch die
 folgende <strong>hinreichende Bedingung</strong> gelten: Die <strong>Determinante der Hesse-Matrix
 ist positiv</strong>.</p>
-<div class="math notranslate nohighlight">
-\[\det(H_f\,(x_0,y_0)) = \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x}\cdot
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-7">
+<span class="eqno">(8.19)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-7" title="Link to this equation">#</a></span>\[\det(H_f\,(x_0,y_0)) = \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x}\cdot
 \frac{\partial^2 f(x_0,y_0)}{\partial y \partial y}
 - \left(\frac{\partial^2 f(x_0,y_0)}{\partial x \partial y}\right)^2 &gt; 0.\]</div>
 <p>Ist die Determinante der Hesse-Matrix 0 oder negativ, so ist unbestimmt, ob ein
@@ -614,11 +616,12 @@ vorliegt, muss noch berechnet werden, ob ein Maximum (Hochpunkt) oder ein
 Minimum (Tiefpunkt) vorliegt. Dazu muss das Vorzeichen der reinen 2. partiellen
 Ableitung nach <span class="math notranslate nohighlight">\(x\)</span> überprüft werden, also das Vorzeichen von <span class="math notranslate nohighlight">\(\frac{\partial^2
 f(x_0,y_0)}{\partial x\partial x}\)</span>. Es gilt:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*} \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &lt; 0 &amp;
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-8">
+<span class="eqno">(8.20)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-8" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned} \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &lt; 0 &amp;
 \qquad \Rightarrow \text{Maximum (Hochpunkt)} \\
 \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &gt; 0 &amp; \qquad
 \Rightarrow \text{Minimum (Tiefpunkt)} \\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Das folgende Video zeigt erneut die hinreichende Bedingung etwas allgemeiner als
 unsere obigen Betrachtungen.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -664,8 +667,8 @@ folgendermaßen vorgehen:</p>
 <li><p>Berechnen Sie die Determinante der Hesse-Matrix für diesen Punkt und prüfen Sie, ob sie positiv ist.</p></li>
 <li><p>Wenn die Determinante positiv ist, dann berechnen Sie das Vorzeichen von</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\frac{\partial^2 f(x_0,y_0)}{\partial x\partial x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-9">
+<span class="eqno">(8.21)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-9" title="Link to this equation">#</a></span>\[\frac{\partial^2 f(x_0,y_0)}{\partial x\partial x}.\]</div>
 <ul class="simple">
 <li><p>Entscheiden Sie dann anhand des Vorzeichens, ob ein Minimum (Tiefpunkt) oder ein Maximum (Hochpunkt) vorliegt.</p></li>
 </ul>
@@ -675,67 +678,70 @@ folgendermaßen vorgehen:</p>
 <section id="ausfuhrliches-beispiel">
 <h2>Ausführliches Beispiel<a class="headerlink" href="#ausfuhrliches-beispiel" title="Link to this heading">#</a></h2>
 <p>Als Beispiel betrachten wir die Funktion</p>
-<div class="math notranslate nohighlight">
-\[f(x,y) = \frac{1}{1+x^2+y^2}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-10">
+<span class="eqno">(8.22)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-10" title="Link to this equation">#</a></span>\[f(x,y) = \frac{1}{1+x^2+y^2}.\]</div>
 <p>Als erstes berechnen wir die partiellen Ableitungen nach <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-11">
+<span class="eqno">(8.23)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-11" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial f(x,y)}{\partial x} &amp;= \frac{-2x}{(1 + x^2 + y^2)^2} \\
 \frac{\partial f(x,y)}{\partial y} &amp;= \frac{-2y}{(1 + x^2 + y^2)^2} \\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Der Gradient der Funktion <span class="math notranslate nohighlight">\(f\)</span> lautet also</p>
-<div class="math notranslate nohighlight">
-\[\nabla f(x,y) = \left(\frac{-2x}{(1 + x^2 + y^2)^2}, \frac{-2y}{(1 + x^2 +
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-12">
+<span class="eqno">(8.24)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-12" title="Link to this equation">#</a></span>\[\nabla f(x,y) = \left(\frac{-2x}{(1 + x^2 + y^2)^2}, \frac{-2y}{(1 + x^2 +
 y^2)^2} \right).\]</div>
 <p>Jetzt werden der Gradient bzw. die partiellen Ableitungen Null gesetzt und wir
 erhalten die beiden folgenden Gleichungen:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-13">
+<span class="eqno">(8.25)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-13" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{-2x}{(1 + x^2 + y^2)^2} &amp;= 0 \\
 \frac{-2y}{(1 + x^2 + y^2)^2} &amp;= 0 \\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Wir multiplizieren bei jeder Gleichung mit dem Nenner <span class="math notranslate nohighlight">\((1 + x^2 + y^2)^2\)</span> und
 erhalten direkt die Nullstelle der 1. Gleichung <span class="math notranslate nohighlight">\(x = 0\)</span> und die Nullstelle der
 2. Gleichung <span class="math notranslate nohighlight">\(y = 0\)</span>. Damit kommt nur ein einziger Kandidat als Extremstelle
 infrage nämlich</p>
-<div class="math notranslate nohighlight">
-\[(x_0, y_0) = (0,0).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-14">
+<span class="eqno">(8.26)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-14" title="Link to this equation">#</a></span>\[(x_0, y_0) = (0,0).\]</div>
 <p>Nun wird die Hesse-Matrix berechnet. Dazu werden die 2. partiellen Ableitungen
 gebildet:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-15">
+<span class="eqno">(8.27)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-15" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial^2 f(x,y)}{\partial x \partial x} &amp;= \frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^3} \\
 \frac{\partial^2 f(x,y)}{\partial y \partial x} &amp;= \frac{8xy}{(1 + x^2 + y^2)^3} \\
 \frac{\partial^2 f(x,y)}{\partial x \partial y} &amp;= \frac{8xy}{(1 + x^2 + y^2)^3} \\
 \frac{\partial^2 f(x,y)}{\partial y \partial y} &amp;= -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Damit lautet die Hesse-Matrix:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}H_{f}(x,y) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-16">
+<span class="eqno">(8.28)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-16" title="Link to this equation">#</a></span>\[\begin{split}H_{f}(x,y) =
 \begin{pmatrix}
 \frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^3} &amp; \frac{8xy}{(1 + x^2 + y^2)^3} \\
 \frac{8xy}{(1 + x^2 + y^2)^3} &amp; -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \\
 \end{pmatrix}.
 \end{split}\]</div>
 <p>Nun werden alle Kandidaten nacheinander in die Hesse-Matrix eingesetzt. Da wir aber nur einen einzigen Kandidaten haben, setzen wir jetzt den Punkt <span class="math notranslate nohighlight">\((0,0)\)</span> ein und erhalten</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}H_{f}(0,0) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-17">
+<span class="eqno">(8.29)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-17" title="Link to this equation">#</a></span>\[\begin{split}H_{f}(0,0) =
 \begin{pmatrix}
 -2 &amp; 0 \\
 0 &amp; -2 \\
 \end{pmatrix}.
 \end{split}\]</div>
 <p>Davon berechnen wir die Determinante und testen, ob sie positiv ist:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\det
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-18">
+<span class="eqno">(8.30)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-18" title="Link to this equation">#</a></span>\[\begin{split}\det
 \begin{pmatrix}
 -2 &amp; 0 \\
 0 &amp; -2 \\
 \end{pmatrix} = (-2)\cdot (-2) - (0 \cdot 0) = + 4 &gt; 0.\end{split}\]</div>
 <p>Damit ist der Punkt <span class="math notranslate nohighlight">\((0,0)\)</span> eine Extremstelle. Jetzt bleibt nur noch die
 Überprüfung, ob ein Minimum oder ein Maximum vorliegt. Das Vorzeichen von</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial^2 f(x,y)}{\partial x \partial x}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-19">
+<span class="eqno">(8.31)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-19" title="Link to this equation">#</a></span>\[\frac{\partial^2 f(x,y)}{\partial x \partial x}\]</div>
 <p>an der Stelle <span class="math notranslate nohighlight">\((0,0)\)</span> ist negativ, da</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial^2 f(0,0)}{\partial x \partial x} = -2.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec03-20">
+<span class="eqno">(8.32)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec03-20" title="Link to this equation">#</a></span>\[\frac{\partial^2 f(0,0)}{\partial x \partial x} = -2.\]</div>
 <p>Damit hat die Funktion <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\((0,0)\)</span> ein Maximum (Hochpunkt).</p>
 <p>Das folgende Video zeigt ein weiteres Beispiel.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">

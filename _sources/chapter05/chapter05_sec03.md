@@ -52,12 +52,12 @@ zweiten Intervall $[0,\pi]$ ist die Rechteckschwingung konstant $f(t) = 1$.
 Somit können wir das Integral folgendermaßen in die Summe zweier Integrale
 aufteilen.
 
-$\begin{align*}
+$$\begin{aligned}
 a_0 &= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\,dt \\
 &= \frac{1}{\pi}\int_{-\pi}^{0}-1\,dt +\frac{1}{\pi}\int_{0}^{\pi}1\,dt\\
 &= \frac{1}{\pi}\Big[-t\Big]_{-\pi}^{0} + \frac{1}{\pi}\Big[t\Big]_{0}^{\pi}\\
 &= \frac{1}{\pi}\Big(-0-(+\pi)\Big) + \frac{1}{\pi}\Big(\pi-0\Big) = 0.
-\end{align*}$
+\end{aligned}$$
 
 Nun berechnen wir die Fourierkoeffizienten $a_n$ für $n \geq 1$. Dabei benötigen
 wir zuerst die Frequenz $\omega$. Da wir als Periode $T=2\pi$ gewählt haben,
@@ -69,14 +69,14 @@ Setzen wir $T=2\pi$ und $\omega=1$ in die allgemeine Formel der
 Fourierkoeffizienten $a_n$ ein und verwenden wir wiederum die Aufteilung in die
 beiden Teilintervalle $[-\pi, 0]$ und $[0,\pi]$, dann gilt:
 
-$\begin{align*}
+$$\begin{aligned}
 a_n &= \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \cos(n \, \omega \, t) \, dt\\
 &= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t) \, \cos(n t) \, dt\\
 &= \frac{1}{\pi}\int_{-\pi}^{0} -1\, \cos(n t) \, dt +
 \frac{1}{\pi}\int_{0}^{\pi}1 \, \cos(n t) \, dt \\
 &= \frac{1}{\pi}\left[-\frac{1}{n} \sin(nt) \right]_{-\pi}^{0} +
 \frac{1}{\pi}\left[\frac{1}{n}\sin(nt)\right]_{0}^{\pi}.
-\end{align*}$
+\end{aligned}$$
 
 Die Zahl $n$ ist eine natürliche Zahl. Setzen wir $0$ oder Vielfache von $\pi$
 in die Sinusfunktion ein, ist das Ergebnis Null, also
@@ -93,7 +93,7 @@ $$b_n = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \sin(n \, \omega \, t) \, dt$$
 für $n \geq 1$. Wir verwenden erneut den Trick, das Integrationsintervall in
 zwei Intervalle aufzuteilen:
 
-$\begin{align*}
+$$\begin{aligned}
 b_n &= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\, \sin(nt)\, dt \\
 &=\frac{1}{\pi}\int_{-\pi}^{0}-1\sin(nt)\, dt +
 \frac{1}{\pi}\int_{0}^{\pi}1\sin(nt)\, dt\\
@@ -103,7 +103,7 @@ b_n &= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\, \sin(nt)\, dt \\
 \frac{1}{n\cdot\pi}\Big[\cos(nt)\Big]_{0}^{\pi} \\
 &= \frac{1}{n\cdot\pi}\Big(\cos(0) - \cos(-n\cdot\pi)\Big) -
 \frac{1}{n\cdot\pi} \Big(\cos(n\cdot\pi)-\cos(0)\Big).
-\end{align*}$
+\end{aligned}$$
 
 Die Kosinusfunktion ist eine gerade Funktion, also gilt
 
@@ -125,10 +125,10 @@ $$b_n = \begin{cases} 0, \quad & n\text{ gerade}\\
 
 Jetzt können wir die Fourierreihe bilden:
 
-$\begin{align*} f(t) &= \frac{a_0}{2} + \sum_{n=1}^{\infty} \left(a_n \cos(n
+$$\begin{aligned} f(t) &= \frac{a_0}{2} + \sum_{n=1}^{\infty} \left(a_n \cos(n
 \omega t) + b_n \sin(n \omega t) \right)\\
 &= \frac{4}{1\cdot\pi}\sin(t) + \frac{4}{3\cdot\pi}\sin(3t) +
-\frac{4}{5\cdot\pi}\sin(5t) + \ldots \end{align*}$
+\frac{4}{5\cdot\pi}\sin(5t) + \ldots \end{aligned}$$
 
 Es wäre schön, eine kompaktere Angabe für die Fourierreihe zu benutzen. Dazu
 benutzen wir den Trick, die ungeraden Zahlen als $2k-1$ darzustellen mit

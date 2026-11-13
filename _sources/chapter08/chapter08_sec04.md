@@ -110,10 +110,10 @@ $$\tilde{A}'(x) = -2 x + \frac{1}{2}.$$
 Für die Suche nach Kandidaten für Extremstellen setzen wir $\tilde{A}'(x) = 0$ und
 bestimmen die Nullstellen:
 
-$\begin{align*}
+$$\begin{aligned}
 -2x + \frac{1}{2} &= 0 \\
 \Rightarrow x &= \frac{1}{4}.\\
-\end{align*}$
+\end{aligned}$$
 
 Als nächstes überprüfen wir, ob $x = \frac{1}{4}$ wirklich ein Extremum ist,
 indem wir die 2. Ableitung bilden

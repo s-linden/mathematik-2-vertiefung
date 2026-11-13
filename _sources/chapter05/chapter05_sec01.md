@@ -71,13 +71,11 @@ dieses Intervalls sollen die Funktionswerte 0 sein (übrigens, manchmal wird auc
 ein anderer Wert als 0 genommen). Mathematisch wird das folgendermaßen
 ausgedrückt:
 
-$\begin{equation*}
-f(t) =
+$$f(t) =
 \begin{cases}
 c & \text{ für } -\frac{T}{2} \leq x \leq \frac{T}{2},\\
 0 & \text{ sonst.}
-\end{cases}
-\end{equation*}$
+\end{cases}$$
 
 Der Funktionsgraph der Rechteckfunktion sieht folgendermaßen aus:
 

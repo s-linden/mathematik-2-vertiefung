@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -485,8 +486,8 @@
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[m = \frac{1}{2-0}\int_{0}^{2}\frac{1}{2}x^2 +1 \, dx = \frac{5}{3} \approx 1.6666\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-1">
+<span class="eqno">(2.41)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-1" title="Link to this equation">#</a></span>\[m = \frac{1}{2-0}\int_{0}^{2}\frac{1}{2}x^2 +1 \, dx = \frac{5}{3} \approx 1.6666\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -499,17 +500,18 @@
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[\bar{f} = \frac{1}{2}\left(f(a)+f(b)\right) \]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-2">
+<span class="eqno">(2.42)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-2" title="Link to this equation">#</a></span>\[\bar{f} = \frac{1}{2}\left(f(a)+f(b)\right) \]</div>
 <p>Der Mittelwert der linearen Funktion <span class="math notranslate nohighlight">\(f(x)=mx+n\)</span> ist gerade das arithmetische Mittel der beiden Funktionswerte <span class="math notranslate nohighlight">\(f(a)\)</span> und <span class="math notranslate nohighlight">\(f(b)\)</span> an den Intervallgrenzen.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Der Mittelwert einer Funktion <span class="math notranslate nohighlight">\(f\)</span> im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> wird folgendermaßen berechnet:</p>
-<div class="math notranslate nohighlight">
-\[\bar{f} = \frac{1}{b-a}\int_{a}^{b} f(x) \, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-3">
+<span class="eqno">(2.43)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-3" title="Link to this equation">#</a></span>\[\bar{f} = \frac{1}{b-a}\int_{a}^{b} f(x) \, dx.\]</div>
 <p class="sd-card-text">Wir setzen die lineare Funktion <span class="math notranslate nohighlight">\(f(x)=mx+n\)</span> in die Formel ein und erhalten:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-4">
+<span class="eqno">(2.44)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-4" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \bar{f}
 &amp;= \frac{1}{b-a}\int_{a}^{b} mx+n \, dx = \\
 &amp;= \frac{1}{b-a} \left[\frac{1}{2}mx^2 + nx \right]_{a}^{b} = \\
@@ -519,21 +521,21 @@
 &amp;= \frac{1}{2} m b + \frac{1}{2} m a + \frac{1}{2}n + \frac{1}{2}n = \\
 &amp;= \frac{1}{2} (mb+n) + \frac{1}{2} (ma+n) = \\
 &amp;= \frac{1}{2} f(b) + \frac{1}{2} f(a).
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Der Mittelwert der linearen Funktion <span class="math notranslate nohighlight">\(f(x) = mx+n\)</span> ist gleich dem arithmetischen Mittel der beiden Funktionswerte <span class="math notranslate nohighlight">\(f(a)\)</span> und <span class="math notranslate nohighlight">\(f(b)\)</span>.</p>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 2.3</p>
 <p>Berechnen Sie den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>, der zwischen dem Graphen der Funktion</p>
-<div class="math notranslate nohighlight">
-\[f(x)=x^2-x\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-5">
+<span class="eqno">(2.45)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-5" title="Link to this equation">#</a></span>\[f(x)=x^2-x\]</div>
 <p>und der x-Achse eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[A = \frac{1}{6}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-6">
+<span class="eqno">(2.46)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-6" title="Link to this equation">#</a></span>\[A = \frac{1}{6}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -543,14 +545,14 @@
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 2.4</p>
 <p>Berechnen Sie den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>, der zwischen dem Graphen der Funktion</p>
-<div class="math notranslate nohighlight">
-\[f(x)=x(x-1)(x-3)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-7">
+<span class="eqno">(2.47)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-7" title="Link to this equation">#</a></span>\[f(x)=x(x-1)(x-3)\]</div>
 <p>und der x-Achse eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[A = \frac{37}{12}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-8">
+<span class="eqno">(2.48)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-8" title="Link to this equation">#</a></span>\[A = \frac{37}{12}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -561,13 +563,13 @@
 <li><p class="sd-card-text">Nullstellen: <span class="math notranslate nohighlight">\(x_1 = 0\)</span>, <span class="math notranslate nohighlight">\(x_2 = 1\)</span> und <span class="math notranslate nohighlight">\(x_3 = 3\)</span></p></li>
 <li><p class="sd-card-text">Erster Flächeninhalt:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[A_1 = \int_{0}^{1} x^3 - 4x^2 + 3x \, dx = \frac{5}{12}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-9">
+<span class="eqno">(2.49)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-9" title="Link to this equation">#</a></span>\[A_1 = \int_{0}^{1} x^3 - 4x^2 + 3x \, dx = \frac{5}{12}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">Zweiter Flächeninhalt (negativ orientiert):</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[A_2 = \int_{1}^{3} x^3 - 4x^2 + 3x \, dx = -\frac{8}{3}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-10">
+<span class="eqno">(2.50)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-10" title="Link to this equation">#</a></span>\[A_2 = \int_{1}^{3} x^3 - 4x^2 + 3x \, dx = -\frac{8}{3}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">Gesamtflächeninhalt: <span class="math notranslate nohighlight">\(A = A_1 + (-1)\cdot A_2 = \frac{37}{12}\)</span></p></li>
 </ul>
@@ -576,14 +578,14 @@
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 2.5</p>
 <p>Berechnen Sie den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>, der zwischen den beiden Graphen der Funktionen</p>
-<div class="math notranslate nohighlight">
-\[f(x)=-\frac{1}{4}x^2+16 \quad \text{ und } \quad g(x)=-3x\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-11">
+<span class="eqno">(2.51)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-11" title="Link to this equation">#</a></span>\[f(x)=-\frac{1}{4}x^2+16 \quad \text{ und } \quad g(x)=-3x\]</div>
 <p>eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[A = \frac{1000}{3}=333.33\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-12">
+<span class="eqno">(2.52)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-12" title="Link to this equation">#</a></span>\[A = \frac{1000}{3}=333.33\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -594,21 +596,21 @@
 <li><p class="sd-card-text">Schnittpunkte: <span class="math notranslate nohighlight">\(x_1 = -4\)</span> und <span class="math notranslate nohighlight">\(x_2 = 16\)</span></p></li>
 <li><p class="sd-card-text">Flächeninhalt:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[A = \int_{-4}^{16} \left(\frac{1}{4}x^2 + 16\right) - \left(-3x \right)  \, dx = \frac{1000}{3}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-13">
+<span class="eqno">(2.53)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-13" title="Link to this equation">#</a></span>\[A = \int_{-4}^{16} \left(\frac{1}{4}x^2 + 16\right) - \left(-3x \right)  \, dx = \frac{1000}{3}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 2.6</p>
 <p>Berechnen Sie den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>, der zwischen den beiden Graphen der Funktionen</p>
-<div class="math notranslate nohighlight">
-\[f(x)=-x^2+2x+\frac{1}{2} \quad \text{ und } \quad g(x)=x+2\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-14">
+<span class="eqno">(2.54)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-14" title="Link to this equation">#</a></span>\[f(x)=-x^2+2x+\frac{1}{2} \quad \text{ und } \quad g(x)=x+2\]</div>
 <p>und den parallelen Geraden <span class="math notranslate nohighlight">\(x=-2\)</span> und <span class="math notranslate nohighlight">\(x=\frac{5}{2}\)</span> eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[A = \frac{27}{2}= 13.5\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-15">
+<span class="eqno">(2.55)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-15" title="Link to this equation">#</a></span>\[A = \frac{27}{2}= 13.5\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -618,21 +620,21 @@
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(g\)</span> ist oberhalb von <span class="math notranslate nohighlight">\(f\)</span></p></li>
 <li><p class="sd-card-text">Flächeninhalt:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[A = \int_{-2}^{5/2} \left( x+2 \right) - \left(-x^2+2x+\frac{1}{2} \right)  \, dx = \frac{27}{2}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-16">
+<span class="eqno">(2.56)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-16" title="Link to this equation">#</a></span>\[A = \int_{-2}^{5/2} \left( x+2 \right) - \left(-x^2+2x+\frac{1}{2} \right)  \, dx = \frac{27}{2}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 2.7</p>
 <p>Berechnen Sie den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>, der zwischen den beiden Graphen der Funktionen</p>
-<div class="math notranslate nohighlight">
-\[f(x)=-3x^2+x-1 \quad \text{ und } \quad g(x)=4\cdot (x-\frac{1}{4})^2-\frac{5}{4}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-17">
+<span class="eqno">(2.57)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-17" title="Link to this equation">#</a></span>\[f(x)=-3x^2+x-1 \quad \text{ und } \quad g(x)=4\cdot (x-\frac{1}{4})^2-\frac{5}{4}\]</div>
 <p>eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[A = \frac{9}{98}\approx 0.091837\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-18">
+<span class="eqno">(2.58)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-18" title="Link to this equation">#</a></span>\[A = \frac{9}{98}\approx 0.091837\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -643,21 +645,21 @@
 <li><p class="sd-card-text">Schnittpunkte: <span class="math notranslate nohighlight">\(x_1 = 0\)</span> und <span class="math notranslate nohighlight">\(x_2 = \frac{3}{7}\)</span></p></li>
 <li><p class="sd-card-text">Flächeninhalt:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[A = \int_{0}^{3/7} \left(-3x^2+x-1\right) - \left(4\cdot (x-\frac{1}{4})^2-\frac{5}{4} \right)  \, dx = \frac{9}{98}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-19">
+<span class="eqno">(2.59)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-19" title="Link to this equation">#</a></span>\[A = \int_{0}^{3/7} \left(-3x^2+x-1\right) - \left(4\cdot (x-\frac{1}{4})^2-\frac{5}{4} \right)  \, dx = \frac{9}{98}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 2.8</p>
 <p>Berechnen Sie den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>, der zwischen den beiden Graphen der Funktionen</p>
-<div class="math notranslate nohighlight">
-\[f(x)=2\sin(x) \quad \text{ und } \quad g(x)=-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-20">
+<span class="eqno">(2.60)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-20" title="Link to this equation">#</a></span>\[f(x)=2\sin(x) \quad \text{ und } \quad g(x)=-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3}\]</div>
 <p>eingeschlossen ist. Fertigen Sie zuerst eine Skizze an. Benutzen Sie einen Taschenrechner.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[A = 4+2\sqrt{2} - \frac{3\pi}{2\sqrt{2}}\approx 3.49626\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-21">
+<span class="eqno">(2.61)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-21" title="Link to this equation">#</a></span>\[A = 4+2\sqrt{2} - \frac{3\pi}{2\sqrt{2}}\approx 3.49626\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -668,19 +670,19 @@
 <li><p class="sd-card-text">Schnittpunkte: <span class="math notranslate nohighlight">\(x_1 = \frac{\pi}{4}\)</span>,  <span class="math notranslate nohighlight">\(x_2 = \pi\)</span> und <span class="math notranslate nohighlight">\(x_3 = \frac{7\pi}{4}\)</span></p></li>
 <li><p class="sd-card-text">Erster Flächeninhalt:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[A_1 = \int_{\pi/4}^{\pi} \left( 2\sin(x)\right) - \left(-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3} \right)  \, dx = -\frac{3}{4\sqrt{2}}\pi + 2 + \sqrt{2}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-22">
+<span class="eqno">(2.62)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-22" title="Link to this equation">#</a></span>\[A_1 = \int_{\pi/4}^{\pi} \left( 2\sin(x)\right) - \left(-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3} \right)  \, dx = -\frac{3}{4\sqrt{2}}\pi + 2 + \sqrt{2}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">Zweiter Flächeninhalt:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[A_2 = \int_{\pi}^{\frac{7\pi}{4}} \left(-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3} \right) -
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-23">
+<span class="eqno">(2.63)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-23" title="Link to this equation">#</a></span>\[A_2 = \int_{\pi}^{\frac{7\pi}{4}} \left(-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3} \right) -
 \left(2\sin(x) \right) \, dx = -\frac{3}{4\sqrt{2}}\pi + 2 + \sqrt{2}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">Gesamter Flächeninhalt:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[A = A_1 + A_2 = \frac{1}{4}\left(-3\sqrt{2}\pi + 16 + 8\sqrt{2} \right) \approx 3.49626\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-24">
+<span class="eqno">(2.64)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-24" title="Link to this equation">#</a></span>\[A = A_1 + A_2 = \frac{1}{4}\left(-3\sqrt{2}\pi + 16 + 8\sqrt{2} \right) \approx 3.49626\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
@@ -689,8 +691,8 @@
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[L = \sqrt{2} \approx 1.4142\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-25">
+<span class="eqno">(2.65)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-25" title="Link to this equation">#</a></span>\[L = \sqrt{2} \approx 1.4142\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -698,8 +700,8 @@
 <li><p class="sd-card-text">Ableitung: <span class="math notranslate nohighlight">\(f'(x)=1\)</span></p></li>
 <li><p class="sd-card-text">Bogenlänge:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[L = \int_{0}^{1} \sqrt{1+(1)^2}\, dx = \int_{0}^{1} \sqrt{2}\, dx = \sqrt{2}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-26">
+<span class="eqno">(2.66)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-26" title="Link to this equation">#</a></span>\[L = \int_{0}^{1} \sqrt{1+(1)^2}\, dx = \int_{0}^{1} \sqrt{2}\, dx = \sqrt{2}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
@@ -708,8 +710,8 @@
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[L \approx 1.4397\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-27">
+<span class="eqno">(2.67)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-27" title="Link to this equation">#</a></span>\[L \approx 1.4397\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -717,15 +719,15 @@
 <li><p class="sd-card-text">Ableitung: <span class="math notranslate nohighlight">\(f'(x) = \frac{3}{2} x^{\frac{1}{2}}\)</span></p></li>
 <li><p class="sd-card-text">Bogenlänge:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[L = \int_{0}^{1} \sqrt{1+(\frac{3}{2} x^{\frac{1}{2}})^2}\, dx = 
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-28">
+<span class="eqno">(2.68)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-28" title="Link to this equation">#</a></span>\[L = \int_{0}^{1} \sqrt{1+(\frac{3}{2} x^{\frac{1}{2}})^2}\, dx = 
 \int_{0}^{1} \sqrt{1+\frac{9}{4} x}\, dx  \]</div>
 <ul class="simple">
 <li><p class="sd-card-text">Substitution: <span class="math notranslate nohighlight">\(z = 1 + \frac{9}{4} x\)</span>, d.h. <span class="math notranslate nohighlight">\(dx = \frac{4}{9} dz\)</span></p></li>
 <li><p class="sd-card-text">Daraus folgt:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[L = \int_{0}^{1} \sqrt{1+\frac{9}{4} x}\, dx = \left[\frac{8}{27}\left(\frac{9x}{4}+1\right)^{3/2} \right]_{0}^{1} = \frac{1}{27}(13\sqrt{13}-8) \approx 1.4397.
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-29">
+<span class="eqno">(2.69)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-29" title="Link to this equation">#</a></span>\[L = \int_{0}^{1} \sqrt{1+\frac{9}{4} x}\, dx = \left[\frac{8}{27}\left(\frac{9x}{4}+1\right)^{3/2} \right]_{0}^{1} = \frac{1}{27}(13\sqrt{13}-8) \approx 1.4397.
 \]</div>
 </div>
 </details></div>
@@ -735,8 +737,8 @@
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[V = 2\pi\cdot \frac{256}{15}\approx 107.23\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-30">
+<span class="eqno">(2.70)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-30" title="Link to this equation">#</a></span>\[V = 2\pi\cdot \frac{256}{15}\approx 107.23\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -750,8 +752,8 @@
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<div class="math notranslate nohighlight">
-\[V = \pi\left((\frac{3\pi}{2}-0+\frac{3\pi}{4})-(0-2+0)\right)\approx 28.4898\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec05-31">
+<span class="eqno">(2.71)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec05-31" title="Link to this equation">#</a></span>\[V = \pi\left((\frac{3\pi}{2}-0+\frac{3\pi}{4})-(0-2+0)\right)\approx 28.4898\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">

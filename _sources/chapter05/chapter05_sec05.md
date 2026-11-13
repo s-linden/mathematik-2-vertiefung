@@ -79,13 +79,11 @@ $$a_0=\frac{2\pi^2}{3}, a_1 = -4, a_2 = 1, b_1 = 0, b_2 = 0$$
 ```{dropdown} Lösungsweg
 Fourierkoeffizient $a_0$:
 
-$\begin{equation*}
-a_0 = \frac{1}{\pi}\int_{-\pi}^{\pi} x^2\, dx = \frac{1}{\pi}\left[\frac{1}{3}x^3\right]_{-\pi}^{\pi} = \frac{1}{3\pi}\cdot\left(\pi^3 + \pi^3\right) = \frac{2}{3}\pi^2.
-\end{equation*}$
+$$a_0 = \frac{1}{\pi}\int_{-\pi}^{\pi} x^2\, dx = \frac{1}{\pi}\left[\frac{1}{3}x^3\right]_{-\pi}^{\pi} = \frac{1}{3\pi}\cdot\left(\pi^3 + \pi^3\right) = \frac{2}{3}\pi^2.$$
 
 Fourierkoeffizient $a_1$:
 
-$\begin{align*}
+$$\begin{aligned}
 a_1 &= \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cos(x)\, dx = \\
 &= \frac{1}{\pi}\left[x^2\cdot \sin(x)\right]_{-\pi}^{\pi} - \frac{2}{\pi}\int_{-\pi}^{\pi}x\, \sin(x)\, dx = \\
 &= \frac{1}{\pi}\left[x^2\cdot\sin(x)\right]_{-\pi}^{\pi} - \frac{2}{\pi}\left([-x\cdot\cos(x)]_{-\pi}^{\pi}-\int_{-\pi}^{\pi}-\cos(x)\, dx \right) = \\
@@ -93,30 +91,28 @@ a_1 &= \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cos(x)\, dx = \\
 &= \left[\frac{1}{\pi}(x^2-2)\cdot\sin(x) + \frac{1}{\pi}\cdot 2x\cos(x)\right]_{-\pi}^{\pi} = \\
 &= \left(\frac{1}{\pi}(\pi^2-2)\cdot\sin(\pi) + \frac{1}{\pi}\cdot 2\pi\cos(\pi)\right) - \left(\frac{1}{\pi}(\pi^2-2)\cdot\sin(-\pi)-\frac{1}{\pi}\cdot 2\pi\cos(-\pi)\right) = \\
 &= -2-2 = -4
-\end{align*}$
+\end{aligned}$$
 
 Fourierkoeffizient $a_2$:
 
-$\begin{equation*}
-a_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2\cdot \cos(2x)\, dx = \frac{1}{\pi}\left[x^2\cdot \frac{1}{2}\sin(2x)\right]_{-\pi}^{\pi} - \int_{-\pi}^{\pi}2x\cdot \frac{1}{2}\sin(2x)\, dx 
-\end{equation*}$
+$$a_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2\cdot \cos(2x)\, dx = \frac{1}{\pi}\left[x^2\cdot \frac{1}{2}\sin(2x)\right]_{-\pi}^{\pi} - \int_{-\pi}^{\pi}2x\cdot \frac{1}{2}\sin(2x)\, dx$$
 
 Wir rechnen zuerst die Stammfunktion des letzten Integrals aus:
 
-$\begin{align*}
+$$\begin{aligned}
 \int 2x\cdot \frac{1}{2}\sin(2x)\, dx &=  \int x\cdot\sin(2x)\, dx = \\
 &= \left[x\cdot\frac{1}{2}(-\cos(2x))\right] - \int \frac{1}{2}(-\cos(2x))\, dx = \\
 &= -\frac{1}{2}x\cdot\cos(2x) + \frac{1}{2}\int \cos(2x)\, dx = \\
 &= -\frac{1}{2}x\cdot\cos(2x) + \frac{1}{4}\sin(2x) + C 
-\end{align*}$
+\end{aligned}$$
 
 Eingesetzt in das ursprüngliche Integral erhalten wir
 
-$\begin{align*}
+$$\begin{aligned}
 a_2 &= \frac{1}{\pi}\left[x^2\cdot \frac{1}{2}\sin(2x)\right]_{-\pi}^{\pi} + \frac{1}{2}\left[x\cdot\cos(2x)\right]_{-\pi}^{\pi} - \left[ \frac{1}{4}\sin(2x)\right]_{-\pi}^{\pi} = \\
 &= \frac{1}{4\pi}\left[(2x^2-1)\sin(2x)+2x\cos(2x)\right]_{-\pi}^{\pi} = \\
 &= 1.
-\end{align*}$
+\end{aligned}$$
 
 Fourierkoeffizient $b_1$:
 
@@ -124,12 +120,12 @@ $$b_1 = \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cdot\sin(x)\, dx = \frac{1}{\pi}\left[
 
 Zwischenrechnung:
 
-$\begin{align*}
+$$\begin{aligned}
 \int x^2\cdot \sin(x)\, dx &= \left[x^2\cdot(-\cos(x))\right] - \int 2x\cdot (-\cos(x))\, dx = \\
 &= -x^2\cos(x) + 2x\cdot\sin(x) - 2\int 1\cdot\sin(x)\, dx =\\
 &= -x^2\cos(x) + 2x\sin(x) + 2\cos(x) + C = \\
 &= 2x\sin(x) + (2-x^2)\cos(x) + C
-\end{align*}$
+\end{aligned}$$
 
 Fourierkoeffizient $b_2$:
 
@@ -137,11 +133,11 @@ $$b_2 = \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cdot\sin(2x)\, dx = \frac{1}{\pi}\left
 
 Zwischenrechnung:
 
-$\begin{align*}
+$$\begin{aligned}
 \int x^2\cdot \sin(2x)\, dx &= -\frac{1}{2}\left[x^2\cdot\cos(x)\right]+\int x\cdot\cos(2x)\, dx = \\
 &= -\frac{1}{2}x^2\cos(2x) + \frac{1}{2}\left[x\cdot\sin(2x)\right] - \frac{1}{2}\int\sin(2x)\, dx = \\
 &= -\frac{1}{2}x^2\cos(2x) + \frac{1}{2}x\sin(2x) + \frac{1}{4}\cos(2x) + C
-\end{align*}$
+\end{aligned}$$
 ```
 ````
 
@@ -180,12 +176,12 @@ Da auf dem Intervall $[-\pi,\pi)$ für die Funktion $f(t) = -f(-t)$ gilt, ist di
 
 Die Fourierkoeffizienten $b_k$ sind schwieriger zu berechnen, da wir dafür eine allgemeine Formel abhängig von $k$ brauchen. Außerdem müssen wir partielle Integration anwenden.
 
-$\begin{align*}  
+$$\begin{aligned}  
  b_k & = \frac{1}{\pi}\left(  \int_{t=-\pi }^{t=\pi }\underbrace{\left( -5\,t\right)}_{f}\underbrace{\sin\left(k\,t\right)}_{g'}\, dt  \right) \\ 
      &=  \frac{1}{\pi}\left( \left[\left( -5\,t\right)\left( -\frac{\cos\left(k\,t\right)}{k}\right)\right]_{-\pi }^{\pi }-\int_{-\pi }^{\pi }\left( -5\right)\left( -\frac{\cos\left(k\,t\right)}{k}\right) \, dt \right) \\ 
      &=  \frac{1}{\pi}\left( \frac{10\,\pi \,{\left(-1\right)}^k}{k}-\left( \left[\left( -5\right)\left( -\frac{\sin\left(k\,t\right)}{k^2}\right)\right]_{-\pi }^{\pi } \right) \right) \\ 
      &=  \frac{1}{\pi}\left( \frac{10\,\pi \,{\left(-1\right)}^k}{k}-\left( 0 \right) \right) \\ 
      &= \frac{10\,{\left(-1\right)}^k}{k}. 
-\end{align*} $
+\end{aligned}$$
 ```
 ````

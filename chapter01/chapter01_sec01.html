@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -542,8 +543,8 @@ auf, dass die Funktion <span class="math notranslate nohighlight">\(F(x)=\frac{1
 ist die Funktion <span class="math notranslate nohighlight">\(F\)</span> eine Stammfunktion von <span class="math notranslate nohighlight">\(f\)</span>. Jetzt probieren wir die
 Funktion <span class="math notranslate nohighlight">\(\tilde{F}(x)=\frac{1}{2}x^2+1\)</span> aus. Wenn wir diese Funktion ableiten,
 kommt</p>
-<div class="math notranslate nohighlight">
-\[\tilde{F}'(x) = \left( \frac{1}{2}x^2 + 1 \right)'= x + 0 = x\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter01-chapter01-sec01-1">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-auto-chapter01-chapter01-sec01-1" title="Link to this equation">#</a></span>\[\tilde{F}'(x) = \left( \frac{1}{2}x^2 + 1 \right)'= x + 0 = x\]</div>
 <p>heraus. Das ist aber auch gleich der Funktion <span class="math notranslate nohighlight">\(f\)</span>. Welches ist denn nun die
 richtige Stammfunktion?</p>
 <p>Beide Funktionen sind eine Stammfunktion. Wenn eine Funktion <span class="math notranslate nohighlight">\(f\)</span> eine
@@ -561,8 +562,8 @@ genannt.</p>
 Ableitung gleich <span class="math notranslate nohighlight">\(f\)</span> sein, also <span class="math notranslate nohighlight">\(F'(x) = f(x)\)</span> gelten. Dann basteln wir eine
 neue Funktion <span class="math notranslate nohighlight">\(\tilde{F}(x) = F(x) + c\)</span> mit <span class="math notranslate nohighlight">\(c\in\mathbb{R}\)</span>. Das muss dann aber
 auch eine Stammfunktion sein, denn</p>
-<div class="math notranslate nohighlight">
-\[\tilde{F}'(x) = \left(F(x)+c\right)' = F'(x) + 0 = f(x).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter01-chapter01-sec01-2">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-auto-chapter01-chapter01-sec01-2" title="Link to this equation">#</a></span>\[\tilde{F}'(x) = \left(F(x)+c\right)' = F'(x) + 0 = f(x).\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video: Stammfunktion und unbestimmtes Integral</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -609,8 +610,8 @@ Stammfunktion <span class="math notranslate nohighlight">\(F\)</span> zuerst <sp
 dann die Differenz gebildet. Diese Zahl heißt bestimmtes Integral von <span class="math notranslate nohighlight">\(f\)</span> im
 Intervall <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
 <p>Mathematisch wird dazu folgende Schreibweise verwendet:</p>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x)\, dx = F(b) - F(a).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter01-chapter01-sec01-3">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-auto-chapter01-chapter01-sec01-3" title="Link to this equation">#</a></span>\[\int_{a}^{b} f(x)\, dx = F(b) - F(a).\]</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -624,8 +625,8 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 <p>Als nächstes soll das bestimmte Integral der Funktion <span class="math notranslate nohighlight">\(f(x)= 5x^2\)</span> im Intervall
 <span class="math notranslate nohighlight">\([-1,3]\)</span> ausgerechnet werden. Als erstes wird eine Stammfunktion berechnet
 (geraten):</p>
-<div class="math notranslate nohighlight">
-\[F(x) = \frac{5}{3}x^3.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter01-chapter01-sec01-4">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-auto-chapter01-chapter01-sec01-4" title="Link to this equation">#</a></span>\[F(x) = \frac{5}{3}x^3.\]</div>
 <p>Danach werden <span class="math notranslate nohighlight">\(a=-1\)</span> und <span class="math notranslate nohighlight">\(b=3\)</span> in die Stammfunktion eingesetzt und die Differenz
 berechnet:</p>
 <ul class="simple">
@@ -637,12 +638,12 @@ berechnet:</p>
 <span class="math notranslate nohighlight">\([-1,3]\)</span> die Zahl <span class="math notranslate nohighlight">\(\frac{140}{3}\)</span>.</p>
 <p>Es ist etwas umständlich, so viel Text in eine Rechnung zu packen. Deshalb ist
 folgende Schreibweise üblich:</p>
-<div class="math notranslate nohighlight">
-\[\int_{-1}^{3} 5x^2 \, dx = \left[\frac{5}{3}x^3 \right]_{-1}^{3} = 45 -
+<div class="math notranslate nohighlight" id="equation-auto-chapter01-chapter01-sec01-5">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-auto-chapter01-chapter01-sec01-5" title="Link to this equation">#</a></span>\[\int_{-1}^{3} 5x^2 \, dx = \left[\frac{5}{3}x^3 \right]_{-1}^{3} = 45 -
 \left(-\frac{5}{3}\right) = \frac{140}{3}.\]</div>
 <p>Zuerst kommt die mathematische Schreibweise für das bestimme Integral mit</p>
-<div class="math notranslate nohighlight">
-\[\int_{-1}^{3}  5x^2 \, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter01-chapter01-sec01-6">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-auto-chapter01-chapter01-sec01-6" title="Link to this equation">#</a></span>\[\int_{-1}^{3}  5x^2 \, dx.\]</div>
 <p>Das geschwungene <span class="math notranslate nohighlight">\(\int\)</span> wird <strong>Integralsymbol</strong> genannt. Der Anfang des
 Intervalls, hier also -1, wird <strong>untere Integrationsgrenze</strong> genannt. Das Ende
 des Intervalls, hier also 3, wird <strong>obere Integrationsgrenze</strong> genannt. Die
@@ -680,8 +681,8 @@ x-Achse. Aber was ist eigentlich der orientierte Flächeninhalt?</p>
 <p>Wenn alle Funktionswerte <span class="math notranslate nohighlight">\(f(x)\)</span> oberhalb der x-Achse liegen, dann ist <span class="math notranslate nohighlight">\(f(x)\geq
 0\)</span> für alle <span class="math notranslate nohighlight">\(x\)</span> im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span>. Dann ist der Flächeninhalt zwischen
 <span class="math notranslate nohighlight">\(f(x)\)</span>, der x-Achse und den Geraden <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> gleich dem Integral über <span class="math notranslate nohighlight">\(f\)</span> , d.h.</p>
-<div class="math notranslate nohighlight">
-\[A = \int_{a}^{b} f(x)\, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter01-chapter01-sec01-7">
+<span class="eqno">(1.7)<a class="headerlink" href="#equation-auto-chapter01-chapter01-sec01-7" title="Link to this equation">#</a></span>\[A = \int_{a}^{b} f(x)\, dx.\]</div>
 <p>Liegen aber alle Funktionswerte <span class="math notranslate nohighlight">\(f(x)\)</span> unterhalb der x-Achse, so ist das
 Integral negativ. Aber eigentlich entspricht es auch der Fläche, nur sind
 Flächen natürlich immer positiv. Deswegen sagen wir, der Flächeninhalt ist

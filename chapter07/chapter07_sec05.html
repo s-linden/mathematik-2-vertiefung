@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -490,178 +491,194 @@
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>a)</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*} 
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-1">
+<span class="eqno">(7.34)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-1" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned} 
 f(x,y) &amp;= e^{-(x^2+y^2)} \\
 \Rightarrow \quad \nabla f(x,y) &amp;= \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>b)</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-2">
+<span class="eqno">(7.35)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-2" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 f(x,y,z) &amp;= \frac{1+x+y+z}{1+x^2+y^2+z^2}  \\
 \nabla f(x,y,z) &amp;= \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
 &amp;\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>c)</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-3">
+<span class="eqno">(7.36)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-3" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 f(x_1,x_2) &amp;= x_1^4 -5x_2^2 - 10x_1x_2 \\
 \Rightarrow \quad \nabla f(x_1,x_2) &amp;= \left( 4x_1^3-10x_2, -10(x_1+x_2) \right) 
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>d)</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-4">
+<span class="eqno">(7.37)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-4" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 f(x_1,x_2,x_3) &amp;= 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3) \\
 \Rightarrow \quad \nabla f(x_1,x_2,x_3) &amp;= \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)\right)
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">a) <span class="math notranslate nohighlight">\(f(x,y) = e^{-(x^2+y^2)}\)</span> <br>
-Wir berechnen zunächst die partiellen Ableitungen:
-\begin{align*}
-\frac{\partial f}{\partial x} &amp;= -2xe^{-x^2-y^2} \
-\frac{\partial f}{\partial y} &amp;= -2y e^{-x^2-y^2}<br />
-\end{align*}
-Damit ist der Gradient von f:</p>
-<div class="math notranslate nohighlight">
-\[\nabla f(x,y) = \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)\]</div>
+Wir berechnen zunächst die partiellen Ableitungen:</p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-5">
+<span class="eqno">(7.38)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-5" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
+\frac{\partial f}{\partial x} &amp;= -2xe^{-x^2-y^2} \\
+\frac{\partial f}{\partial y} &amp;= -2y e^{-x^2-y^2}  
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Damit ist der Gradient von f:</p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-6">
+<span class="eqno">(7.39)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-6" title="Link to this equation">#</a></span>\[\nabla f(x,y) = \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)\]</div>
 <p class="sd-card-text">b) <span class="math notranslate nohighlight">\(f(x,y,z) = \frac{1+x+y+z}{1+x^2+y^2+z^2}\)</span> <br>
 Wir berechnen zunächst die partiellen Ableitungen:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-7">
+<span class="eqno">(7.40)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-7" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial f}{\partial x} &amp;=  \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\\
 \frac{\partial f}{\partial y} &amp;=  \frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2} \\  
 \frac{\partial f}{\partial z} &amp;=  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\\  
-\end{align*}\)</span></p>
-<p class="sd-card-text">Damit ist der Gradient von f:
-\begin{multline*}\nabla f(x,y,z) = \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, …\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Damit ist der Gradient von f:</p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-8">
+<span class="eqno">(7.41)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-8" title="Link to this equation">#</a></span>\[\begin{split}\begin{gathered}\nabla f(x,y,z) = \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
 \frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
-\end{multline*}
-c) <span class="math notranslate nohighlight">\(f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2\)</span> <br>
+\end{gathered}\end{split}\]</div>
+<p class="sd-card-text">c) <span class="math notranslate nohighlight">\(f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2\)</span> <br>
 Wir berechnen zunächst die partiellen Ableitungen:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-9">
+<span class="eqno">(7.42)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-9" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial f}{\partial x_1} &amp;= 4x_1^3-10x_2 \\
 \frac{\partial f}{\partial x_2} &amp;= -10(x_1+x_2)  
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Damit ist der Gradient von f:</p>
-<div class="math notranslate nohighlight">
-\[\nabla f(x_1,x_2) = \left( 4x_1^3-10x_2, -10(x_1+x_2) \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-10">
+<span class="eqno">(7.43)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-10" title="Link to this equation">#</a></span>\[\nabla f(x_1,x_2) = \left( 4x_1^3-10x_2, -10(x_1+x_2) \right)\]</div>
 <p class="sd-card-text">d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3)\)</span> <br>
 Wir berechnen zunächst die partiellen Ableitungen:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-11">
+<span class="eqno">(7.44)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-11" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial f}{\partial x} &amp;= 4(x_1-x_2) \\
 \frac{\partial f}{\partial y} &amp;= 3x_2^2\sin(x_3)-4x_1 \\  
 \frac{\partial f}{\partial z} &amp;= x_2^3\cos(x_3) \\  
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Damit ist der Gradient von f:</p>
-<div class="math notranslate nohighlight">
-\[\nabla f(x_1,x_2,x_3) = \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)\right)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-12">
+<span class="eqno">(7.45)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-12" title="Link to this equation">#</a></span>\[\nabla f(x_1,x_2,x_3) = \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)\right)\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 7.2</p>
 <p>Berechnen Sie die Jacobi-Matrix <span class="math notranslate nohighlight">\(\mathbf{J}\)</span> zu folgenden Funktionen.</p>
 <p>a)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-13">
+<span class="eqno">(7.46)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-13" title="Link to this equation">#</a></span>\[\begin{split}f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}\end{split}\]</div>
 <p>b)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-14">
+<span class="eqno">(7.47)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-14" title="Link to this equation">#</a></span>\[\begin{split}f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}\end{split}\]</div>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>a)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix} 2x &amp; 2y \\ 2x &amp; -2y \end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-15">
+<span class="eqno">(7.48)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-15" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix} 2x &amp; 2y \\ 2x &amp; -2y \end{pmatrix}\end{split}\]</div>
 <p>b)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix}9x^2y^2 &amp; 6x^3y \\ \cos(x) &amp; 0 \end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-16">
+<span class="eqno">(7.49)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-16" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix}9x^2y^2 &amp; 6x^3y \\ \cos(x) &amp; 0 \end{pmatrix}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">a)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}\end{split}\]</div>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-17">
+<span class="eqno">(7.50)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-17" title="Link to this equation">#</a></span>\[\begin{split}f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-18">
+<span class="eqno">(7.51)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-18" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial f_1}{\partial x} &amp;= 2x\\
 \frac{\partial f_1}{\partial y} &amp;= 2y\\
 \frac{\partial f_2}{\partial x} &amp;= 2x\\
 \frac{\partial f_2}{\partial y} &amp;= -2y 
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Damit lautet die Jacobi-Matrix</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix} 2x &amp; 2y \\ 2x &amp; -2y \end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-19">
+<span class="eqno">(7.52)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-19" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix} 2x &amp; 2y \\ 2x &amp; -2y \end{pmatrix}\end{split}\]</div>
 <p class="sd-card-text">b)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}\end{split}\]</div>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-20">
+<span class="eqno">(7.53)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-20" title="Link to this equation">#</a></span>\[\begin{split}f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-21">
+<span class="eqno">(7.54)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-21" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \frac{\partial f_1}{\partial x} &amp;= 9x^2y^2\\
 \frac{\partial f_1}{\partial y} &amp;= 6x^3y\\
 \frac{\partial f_2}{\partial x} &amp;= \cos(x)\\
 \frac{\partial f_2}{\partial y} &amp;= 0 
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Damit lautet die Jacobi-Matrix</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix}9x^2y^2 &amp; 6x^3y \\ \cos(x) &amp; 0 \end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-22">
+<span class="eqno">(7.55)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-22" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix}9x^2y^2 &amp; 6x^3y \\ \cos(x) &amp; 0 \end{pmatrix}\end{split}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 7.3</p>
 <p>Bestimmen Sie die Jacobi-Matrix der verketteten Funktion <span class="math notranslate nohighlight">\(h = f \circ g\)</span> mit der mehrdimensionalen Kettenregel:</p>
 <p>a) <span class="math notranslate nohighlight">\(h:\mathbb{R}^2\mapsto\mathbb{R}\)</span> mit <span class="math notranslate nohighlight">\(h(x,y) = f(g(x,y))\)</span>, wobei</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-23">
+<span class="eqno">(7.56)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-23" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 f:\mathbb{R}^3\mapsto\mathbb{R},   \quad &amp; f(x,y,z) = x^2 y^2 z^2,\\
 g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad &amp; g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>b) <span class="math notranslate nohighlight">\(h:\mathbb{R}^3\mapsto\mathbb{R}^3\)</span> mit <span class="math notranslate nohighlight">\(h(x,y,z)=f(g(x,y,z))\)</span>, wobei</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-24">
+<span class="eqno">(7.57)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-24" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; f(x,y,z) = \begin{pmatrix} -y \\ -z \\ -x \end{pmatrix}\\
 g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x,y,z) = \begin{pmatrix} x y \\ y z \\ z x \end{pmatrix}
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>a)</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{J}_{h}(x,y) = \left(2x^3 y^4 + 2x^3y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-25">
+<span class="eqno">(7.58)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-25" title="Link to this equation">#</a></span>\[\mathbf{J}_{h}(x,y) = \left(2x^3 y^4 + 2x^3y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
 \left(4x^3 y^4, \; 4x^4 y^3 \right)\]</div>
 <p>b)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{J}_{h}(x,y,z) = \begin{pmatrix} 0 &amp; -z &amp; -y\\ -z &amp; 0 &amp; -x \\ -y &amp; -x &amp; 0 \end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-26">
+<span class="eqno">(7.59)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-26" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{J}_{h}(x,y,z) = \begin{pmatrix} 0 &amp; -z &amp; -y\\ -z &amp; 0 &amp; -x \\ -y &amp; -x &amp; 0 \end{pmatrix}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">a) <span class="math notranslate nohighlight">\(h:\mathbb{R}^2\mapsto\mathbb{R}\)</span> mit <span class="math notranslate nohighlight">\(h(x,y) = f(g(x,y))\)</span>, wobei</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-27">
+<span class="eqno">(7.60)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-27" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 f:\mathbb{R}^3\mapsto\mathbb{R},   \quad &amp; f(x,y,z) = x^2 y^2 z^2,\\
 g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad &amp; g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Wir berechnen zuerst die Jacobi-Matrizen von <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{J}_{f} = \left(2x y^2 z^2,\; 2x^2 y z^2,\; 2x^2 y^2 z\right) 
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-28">
+<span class="eqno">(7.61)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-28" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{J}_{f} = \left(2x y^2 z^2,\; 2x^2 y z^2,\; 2x^2 y^2 z\right) 
 \quad \text{ und } \quad
 \mathbf{J}_{g} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ y &amp; x\end{pmatrix}\end{split}\]</div>
 <p class="sd-card-text">Da <span class="math notranslate nohighlight">\(f\)</span> eine skalarwertige Funktion ist, stimmt die Jacobi-Matrix <span class="math notranslate nohighlight">\(\mathbf{J}_{f}\)</span> mit dem Gradienten <span class="math notranslate nohighlight">\(\nabla f\)</span> überein.</p>
 <p class="sd-card-text">Mit der mehrdimensionalen Kettenregel erhalten wir</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{multline*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-29">
+<span class="eqno">(7.62)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-29" title="Link to this equation">#</a></span>\[\begin{split}\begin{gathered}
 \mathbf{J}_{h} = \mathbf{J}_{f} \cdot \mathbf{J}_{g} =
 \left(2x y^2 z^2, \; 2x^2 y z^2,\; 2x^2 y^2 z\right) \cdot 
 \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ y &amp; x\end{pmatrix} = \\
 \left(2x y^2 z^2 + 2x^2 y^3 z, \; 2x^2 y z^2 + 2x^3 y^2 z \right) 
-\end{multline*} \)</span></p>
+\end{gathered}\end{split}\]</div>
 <p class="sd-card-text">Als nächstes ersetzen wir noch <span class="math notranslate nohighlight">\(z\)</span> durch <span class="math notranslate nohighlight">\(x y\)</span> (siehe Definition von <span class="math notranslate nohighlight">\(h\)</span>) und erhalten</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{J}_{h}(x,y) = \left(2x^3 y^4 + 2x^3 y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-30">
+<span class="eqno">(7.63)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-30" title="Link to this equation">#</a></span>\[\mathbf{J}_{h}(x,y) = \left(2x^3 y^4 + 2x^3 y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
 \left(4x^3 y^4, \; 4x^4 y^3 \right).\]</div>
 <p class="sd-card-text">b) <span class="math notranslate nohighlight">\(h:\mathbb{R}^3\mapsto\mathbb{R}^3\)</span> mit <span class="math notranslate nohighlight">\(h(x,y,z)=f(g(x,y,z))\)</span>, wobei</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-31">
+<span class="eqno">(7.64)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-31" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; f(x,y,z) = \begin{pmatrix} -y \\ -z \\ -x \end{pmatrix}\\
 g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x,y,z) = \begin{pmatrix} x y \\ y z \\ z x \end{pmatrix}
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Wir berechnen zuerst die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{J}_{f} = \begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} 
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-32">
+<span class="eqno">(7.65)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-32" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{J}_{f} = \begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} 
 \quad \text{ und } \quad
 \mathbf{J}_{g} = \begin{pmatrix} y &amp; x &amp; 0 \\ 0 &amp; z &amp; y \\ z &amp; 0 &amp; x \end{pmatrix}\end{split}\]</div>
 <p class="sd-card-text">Mit der mehrdimensionalen Kettenregel erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{J}_{h}(x,y,z) = \mathbf{J}_{f}\cdot \mathbf{J}_{g} = 
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec05-33">
+<span class="eqno">(7.66)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec05-33" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{J}_{h}(x,y,z) = \mathbf{J}_{f}\cdot \mathbf{J}_{g} = 
 \begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} \cdot \begin{pmatrix} y &amp; x &amp; 0 \\ 0 &amp; z &amp; y \\ z &amp; 0 &amp; x \end{pmatrix} =
 \begin{pmatrix} 0 &amp; -z &amp; -y \\ -z &amp; 0 &amp; -x \\ -y &amp; -x &amp; 0 \end{pmatrix}\end{split}\]</div>
 </div>

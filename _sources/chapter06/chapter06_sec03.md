@@ -141,7 +141,14 @@ xaxis_title='x-Achse', yaxis_title='y-Achse')
 fig.write_html("plots/beispielfunktion_gradient.html")
 
 ```
-<iframe src="plots/beispielfunktion_gradient.html" width="100%" height="650px" frameborder="0"></iframe>
+```{interaktive-abbildung} plots/beispielfunktion_gradient.html
+---
+height: 650
+name: beispielfunktion_gradient
+title: Interaktive Darstellung der Funktion f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3
+---
+Interaktive Darstellung der Funktion $f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3$
+```
 
 Als erstes bilden wir die 1. partielle Ableitung nach $x$. Wir bewegen uns also
 entlang der x-Achse und betrachten $y$ nicht als eine Variable, sondern als eine
@@ -451,7 +458,14 @@ fig.write_html("plots/gradient_visualisierung.html")
 
 ```
 
-<iframe src="plots/gradient_visualisierung.html" width="100%" height="650px" frameborder="0"></iframe>
+```{interaktive-abbildung} plots/gradient_visualisierung.html
+---
+height: 650
+name: gradient_visualisierung
+title: Visualisierung des Gradienten
+---
+Visualisierung des Gradienten
+```
 
 
 Der Gradient sowie ein weiteres Beispiel werden in den folgenden Videos

@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -498,8 +499,8 @@ Integrale mit Polarkoordinaten umgeschrieben und dadurch berechnet.</p>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <p>Sie können ein Doppelintegral in kartesischen Koordinaten in ein Doppelintegral in Polarkoordinaten umrechnen, d.h.</p>
-<div class="math notranslate nohighlight">
-\[\iint_{A}f(x,y)\, dA = \int_{\varphi=\alpha}^{\varphi=\beta}
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec02-1">
+<span class="eqno">(10.8)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec02-1" title="Link to this equation">#</a></span>\[\iint_{A}f(x,y)\, dA = \int_{\varphi=\alpha}^{\varphi=\beta}
 \left( \int_{r=r_\text{innen}(\varphi)}^{r=r_\text{außen}(\varphi)}f(r, \varphi) \cdot r\, dr \right) \, d\varphi.\]</div>
 <p>Die Integration erfolgt dabei in zwei Schritten, zuerst kommt die innere Integration über <span class="math notranslate nohighlight">\(r\)</span>, danach die äußere Integration über <span class="math notranslate nohighlight">\(\varphi\)</span>.</p>
 </div>
@@ -518,15 +519,15 @@ Winkel <span class="math notranslate nohighlight">\(\varphi\)</span> ein Interva
 <span class="math notranslate nohighlight">\(f_{\text{innen}}(\varphi)\)</span> beschrieben. Es gibt nur einen Unterschied. Bei
 kartesischen Koordinaten wird dann das Flächenelement <span class="math notranslate nohighlight">\(dA\)</span> zum Produkt aus den
 Linienelementen <span class="math notranslate nohighlight">\(dy\)</span> und <span class="math notranslate nohighlight">\(dx\)</span>, also</p>
-<div class="math notranslate nohighlight">
-\[dA = dy \; dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec02-2">
+<span class="eqno">(10.9)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec02-2" title="Link to this equation">#</a></span>\[dA = dy \; dx.\]</div>
 <p>Bei Polarkoordinaten jedoch muss das Flächenelement <span class="math notranslate nohighlight">\(dA\)</span> noch mit <span class="math notranslate nohighlight">\(r\)</span>
 multipliziert werden, also</p>
-<div class="math notranslate nohighlight">
-\[dA = r \, dr \, d\varphi.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec02-3">
+<span class="eqno">(10.10)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec02-3" title="Link to this equation">#</a></span>\[dA = r \, dr \, d\varphi.\]</div>
 <p>Damit erhalten wir das Doppelintegral in Polarkoordinaten als</p>
-<div class="math notranslate nohighlight">
-\[\iint_{A}f(x,y)\, dA = \int_{\varphi=\alpha}^{\varphi=\beta}
+<div class="math notranslate nohighlight" id="equation-auto-chapter10-chapter10-sec02-4">
+<span class="eqno">(10.11)<a class="headerlink" href="#equation-auto-chapter10-chapter10-sec02-4" title="Link to this equation">#</a></span>\[\iint_{A}f(x,y)\, dA = \int_{\varphi=\alpha}^{\varphi=\beta}
 \left( \int_{r=r_\text{innen}(\varphi)}^{r=r_\text{außen}(\varphi)}f(r, \varphi) \cdot r\, dr \right) \, d\varphi.\]</div>
 <p>In dem folgenden Video wird sehr ausführlich der Flächeninhalt eines Halbkreises
 sowohl mit einem Doppelintegral in kartesischen Koordinaten als auch einem

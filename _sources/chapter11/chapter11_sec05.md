@@ -266,10 +266,10 @@ $$p(x,y) = -e^{5x} \quad \text{ und } \quad q(x,y) = y.$$
 
 Dann testen wir, ob die Exaktheitsbedingung erfüllt ist:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial p}{\partial y} &= 0 \\
 \frac{\partial q}{\partial x} &= 0.
-\end{align*}$
+\end{aligned}$$
 
 Das ist der Fall. Als nächstes wird $p(x,y)=-e^{5x}$ nach $x$ integriert:
 
@@ -309,10 +309,10 @@ $$p(x,y) = -4x \quad \text{ und } \quad q(x,y) = 9y.$$
 
 Dann testen wir, ob die Exaktheitsbedingung erfüllt ist:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial p}{\partial y} &= 0 \\
 \frac{\partial q}{\partial x} &= 0.
-\end{align*}$
+\end{aligned}$$
 
 Das ist der Fall. Als nächstes wird $p(x,y)=-4x$ nach $x$ integriert:
 

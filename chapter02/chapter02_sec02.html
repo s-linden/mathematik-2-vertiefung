@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -526,14 +527,14 @@ zwischen Funktionsgraph <span class="math notranslate nohighlight">\(f(x)\)</spa
 <span class="math notranslate nohighlight">\(f(x)\)</span> alle oberhalb der x-Achse wie in dem nachfolgenden Beispiel, so ist der
 orientierte Flächeninhalt gleich dem Flächeninhalt. Damit ist die gesuchte
 Fläche <span class="math notranslate nohighlight">\(A\)</span> also</p>
-<div class="math notranslate nohighlight">
-\[A = \int_{a}^{b} f(x) \, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec02-1">
+<span class="eqno">(2.14)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec02-1" title="Link to this equation">#</a></span>\[A = \int_{a}^{b} f(x) \, dx.\]</div>
 <p>Das bestimmte Integral lässt sich am einfachsten über eine Stammfunktion <span class="math notranslate nohighlight">\(F\)</span>
 berechnen. Mit dem Hauptsatz der Differential- und Integralrechnung gilt dann
 für den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> einer Funktion <span class="math notranslate nohighlight">\(f\)</span> im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> die folgende
 Formel:</p>
-<div class="math notranslate nohighlight">
-\[A = \int_{a}^{b} f(x) \, dx = F(b)- F(a).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec02-2">
+<span class="eqno">(2.15)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec02-2" title="Link to this equation">#</a></span>\[A = \int_{a}^{b} f(x) \, dx = F(b)- F(a).\]</div>
 <p>Beispiel: In der folgenden Abbildung ist der Funktionsgraph <span class="math notranslate nohighlight">\(f(x)\)</span> der Funktion
 <span class="math notranslate nohighlight">\(f(x)=x^2+1\)</span> zu sehen. Berechnet werden soll der rot gefärbte Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>
 zwischen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse mit den Grenzen <span class="math notranslate nohighlight">\(x = -2\)</span> und <span class="math notranslate nohighlight">\(x = 3\)</span>.</p>
@@ -550,8 +551,8 @@ zwischen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Ac
 d.h. alle Funktionswerte <span class="math notranslate nohighlight">\(f(x)\)</span> sind positiv. Um nun den Flächeninhalt zwischen
 <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse mit den Grenzen <span class="math notranslate nohighlight">\(x=-2\)</span> und <span class="math notranslate nohighlight">\(x=3\)</span> zu berechnen, wird also
 folgendermaßen gerechnet:</p>
-<div class="math notranslate nohighlight">
-\[A = \int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2 + 1 \, dx =
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec02-3">
+<span class="eqno">(2.16)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec02-3" title="Link to this equation">#</a></span>\[A = \int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2 + 1 \, dx =
 \big[\frac{1}{3}x^3+x\big]_{-2}^{3}=\frac{50}{3}\approx 16.6667.\]</div>
 <p>In dem folgenden Video wird die Vorgehensweise nochmal ausführlich erklärt und
 ein weiteres Beispiel vorgerechnet.</p>
@@ -567,8 +568,8 @@ encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></ifr
 <h2>Flächeninhalt: Graph unterhalb der x-Achse<a class="headerlink" href="#flacheninhalt-graph-unterhalb-der-x-achse" title="Link to this heading">#</a></h2>
 <p>Als nächstes wird die Funktion <span class="math notranslate nohighlight">\(f\)</span> an der x-Achse gespiegelt. Die gespiegelte
 Funktion nennen wir <span class="math notranslate nohighlight">\(g\)</span>, also</p>
-<div class="math notranslate nohighlight">
-\[g(x)= -f(x) = -x^2-1.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec02-4">
+<span class="eqno">(2.17)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec02-4" title="Link to this equation">#</a></span>\[g(x)= -f(x) = -x^2-1.\]</div>
 <div id="chap03_sec02_fig02" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;"></div>
 <script type="text/javascript">
     board2 = JXG.JSXGraph.initBoard('chap03_sec02_fig02', 
@@ -579,8 +580,8 @@ Funktion nennen wir <span class="math notranslate nohighlight">\(g\)</span>, als
 </script><br>
 <p>Wenn wir jetzt naiv den Flächeninhalt wiederum als das bestimmte Integral
 berechnen, erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[\int_{-2}^{3} g(x)\, dx = \int_{-2}^{3} -x^2 - 1 \, dx =
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec02-5">
+<span class="eqno">(2.18)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec02-5" title="Link to this equation">#</a></span>\[\int_{-2}^{3} g(x)\, dx = \int_{-2}^{3} -x^2 - 1 \, dx =
 \big[-\frac{1}{3}x^3-x\big]_{-2}^{3}=-\frac{50}{3}\approx -16.6667.\]</div>
 <p>Negative Flächen gibt es nicht. Das Integral ist nicht der Flächeninhalt,
 sondern der <em>orientierte</em> Flächeninhalt des Funktionsgraphens <span class="math notranslate nohighlight">\(g(x)\)</span> mit der
@@ -593,8 +594,8 @@ anders ausgedrückt, wir spiegeln die Funktion <span class="math notranslate noh
 Funktionswerte der gespiegelten Funktion komplett oberhalb der x-Achse liegen.</p>
 <p>Die Formel zur Berechnung des Flächeninhaltes einer Funktion, die komplett
 unterhalb der x-Achse liegt, lautet:</p>
-<div class="math notranslate nohighlight">
-\[A = \textcolor{red}{-} \int_{a}^{b} f(x)\, dx = \textcolor{red}{-} \big(F(b)-F(a)\big).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec02-6">
+<span class="eqno">(2.19)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec02-6" title="Link to this equation">#</a></span>\[A = \textcolor{red}{-} \int_{a}^{b} f(x)\, dx = \textcolor{red}{-} \big(F(b)-F(a)\big).\]</div>
 <p>Weitere Erklärungen sowie ein weiteres Beispiel werden ausführlich in dem
 folgenden Video präsentiert.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -620,16 +621,16 @@ liegt wie beispielsweise bei der Funktion <span class="math notranslate nohighli
 </script><br>
 <p>Würden wir jetzt einfach das bestimmte Integral im Intervall <span class="math notranslate nohighlight">\([-2,3]\)</span> berechnen,
 so erhielten wir</p>
-<div class="math notranslate nohighlight">
-\[\int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2-1\, dx = \frac{20}{3} \approx 6.6667.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec02-7">
+<span class="eqno">(2.20)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec02-7" title="Link to this equation">#</a></span>\[\int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2-1\, dx = \frac{20}{3} \approx 6.6667.\]</div>
 <p>Das ist zuwenig! Bereits die Fläche zwischen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse im Intervall
 <span class="math notranslate nohighlight">\([1,3]\)</span> alleine hat schon den Flächeninhalt <span class="math notranslate nohighlight">\(\frac{20}{3}\approx 6.6667\)</span>. Wir
 gehen jetzt etwas sorgfältiger vor und untersuchen, wo die Funktion oberhalb und
 wo sie unterhalb der x-Achse liegt. Die obige Abbildung hilft schon für eine
 erste Einschätzung, wo <span class="math notranslate nohighlight">\(f(x)\)</span> positiv ist und in welchem Intervall <span class="math notranslate nohighlight">\(f(x)\)</span>
 negativ ist. Der Vorzeichenwechsel erfolgt bei den Nullstellen.</p>
-<div class="math notranslate nohighlight">
-\[x^2-1 = 0 \quad \Rightarrow \quad x_1 = -1 \text{ und } x_2 = +1.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec02-8">
+<span class="eqno">(2.21)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec02-8" title="Link to this equation">#</a></span>\[x^2-1 = 0 \quad \Rightarrow \quad x_1 = -1 \text{ und } x_2 = +1.\]</div>
 <p>Daher wird jetzt das Intervall <span class="math notranslate nohighlight">\([-2,3]\)</span> in drei Teilintervalle unterteilt:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(I_1 = [-2, -1]\)</span> (also von <span class="math notranslate nohighlight">\(a=-2\)</span> bis zur 1. Nullstelle)</p></li>
@@ -645,15 +646,15 @@ es negativ und im 3. Teilintervall wieder positiv:</p>
 </ul>
 <p>Da ein Integral über ein Intervall gleich der Summe der Integrale über die
 Teilintervalle ist, erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[\int_{-2}^{3} f(x) \, dx = \frac{4}{3} - \frac{4}{3} + \frac{20}{3} = \frac{20}{3}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec02-9">
+<span class="eqno">(2.22)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec02-9" title="Link to this equation">#</a></span>\[\int_{-2}^{3} f(x) \, dx = \frac{4}{3} - \frac{4}{3} + \frac{20}{3} = \frac{20}{3}.\]</div>
 <p>Die ersten beiden Integrale ergeben in Summe 0, da ist die Fläche verloren
 gegangen. Der mittlere Teil, wo das Integral einen negativ orientierten
 Flächeninhalt liefert, muss an der x-Achse gespiegelt werden bzw. der
 orientierte Flächeninhalt muss mit (-1) multipliziert werden. Der korrekte
 Flächeninhalt ist daher</p>
-<div class="math notranslate nohighlight">
-\[A = \frac{4}{3} \textcolor{red}{+} \frac{4}{3} + \frac{20}{3} = \frac{28}{3}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec02-10">
+<span class="eqno">(2.23)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec02-10" title="Link to this equation">#</a></span>\[A = \frac{4}{3} \textcolor{red}{+} \frac{4}{3} + \frac{20}{3} = \frac{28}{3}.\]</div>
 <div class="note admonition">
 <p class="admonition-title">Kochrezept zur Berechnung des Flächeninhaltes zwischen einem Funktionsgraphen und der x-Achse</p>
 <p>Ist der Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse

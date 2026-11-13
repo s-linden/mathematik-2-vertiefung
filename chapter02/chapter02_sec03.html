@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -506,8 +507,8 @@ das Integral in diesem Abschnitt dazu genutzt, Längen zu berechnen.</p>
 differenzierbaren Funktion <span class="math notranslate nohighlight">\(f\)</span> zwischen dem Startpunkt <span class="math notranslate nohighlight">\((a,f(a))\)</span> und dem
 Endpunkt <span class="math notranslate nohighlight">\((b,f(b))\)</span> mit der folgenden Formel berechnen:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-1">
+<span class="eqno">(2.24)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-1" title="Link to this equation">#</a></span>\[\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.\]</div>
 </div>
 </section>
 <section id="lange-eines-funktionsgraphens">
@@ -540,8 +541,8 @@ differenzierbar ist, gehen Sie folgendermaßen vor:</p>
 <li><p>Berechnen Sie dann das folgende Integral (oft müssen Sie dabei die
 Substitutionsregel benutzen):</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-2">
+<span class="eqno">(2.25)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-2" title="Link to this equation">#</a></span>\[\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.\]</div>
 </div>
 </section>
 <section id="beispiel-zur-berechnung-der-bogenlange">
@@ -556,24 +557,25 @@ reelle Zahlen <span class="math notranslate nohighlight">\(x\geq 0\)</span>. Wir
 beinhaltet den Term <span class="math notranslate nohighlight">\((f'(x))^{2}\)</span>, also das Quadrat der 1. Ableitung. Diesen
 Term berechnen wir vorab in einer Nebenrechnung. Zuerst wird die 1. Ableitung
 berechnet:</p>
-<div class="math notranslate nohighlight">
-\[f(x)=x^{\frac{3}{2}} + 1 \Rightarrow f'(x)= \frac{3}{2}x^{\frac{1}{2}}
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-3">
+<span class="eqno">(2.26)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-3" title="Link to this equation">#</a></span>\[f(x)=x^{\frac{3}{2}} + 1 \Rightarrow f'(x)= \frac{3}{2}x^{\frac{1}{2}}
 = \frac{3}{2}\sqrt{x}.\]</div>
 <p>Damit erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[(f'(x))^{2} = \left( \frac{3}{2}\sqrt{x} \right)^{2} = \frac{9}{4}x.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-4">
+<span class="eqno">(2.27)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-4" title="Link to this equation">#</a></span>\[(f'(x))^{2} = \left( \frac{3}{2}\sqrt{x} \right)^{2} = \frac{9}{4}x.\]</div>
 <p>Der Term <span class="math notranslate nohighlight">\(\sqrt{1+\frac{9}{4}x}\)</span> lässt sich leider nicht weiter vereinfachen, so
 dass für die Berechnung des Integrals</p>
-<div class="math notranslate nohighlight">
-\[L = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-5">
+<span class="eqno">(2.28)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-5" title="Link to this equation">#</a></span>\[L = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx\]</div>
 <p>die Substitutionsregel benutzt werden muss. Wir setzen <span class="math notranslate nohighlight">\(z = 1 + \frac{9}{4}x\)</span>. Dann gilt</p>
-<p>\begin{align*}
-L &amp; = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}, dx = \
-&amp; = \int \sqrt{z} \cdot \frac{4}{9} , dz  =
-\frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \
-&amp; = \frac{8}{27} \left[\left(1+\frac{9}{4}x\right)^{\frac{3}{2}}\right]_{1}^{4} = \
-&amp; \approx 7.6337.
-\end{align*}</p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-6">
+<span class="eqno">(2.29)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-6" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
+L &amp; = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx = \\
+  &amp; = \int \sqrt{z} \cdot \frac{4}{9} \, dz  =
+    \frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \\
+  &amp; = \frac{8}{27} \left[\left(1+\frac{9}{4}x\right)^{\frac{3}{2}}\right]_{1}^{4} = \\
+  &amp; \approx 7.6337.
+\end{aligned}\end{split}\]</div>
 <p>In dem folgenden Video wird ein zweites Beispiel vorgeführt.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -590,13 +592,13 @@ betrachten wir das folgende Beispiel: <span class="math notranslate nohighlight"
 <span class="math notranslate nohighlight">\((1,4)\)</span> liegen, Endpunkt ist <span class="math notranslate nohighlight">\((4,13)\)</span>. Die einfachste Näherung der Bogenlänge
 ist die Luftlinie, also die die direkte Strecke zwischen Start und Ziel. Das
 lässt sich mit dem Satz des Pythagoras berechnen:</p>
-<div class="math notranslate nohighlight">
-\[L \approx \sqrt{\Delta x^2 + \Delta y^2} = \sqrt{(4-1)^2 + (13-4)^2}
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-7">
+<span class="eqno">(2.30)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-7" title="Link to this equation">#</a></span>\[L \approx \sqrt{\Delta x^2 + \Delta y^2} = \sqrt{(4-1)^2 + (13-4)^2}
 = \sqrt{9+81} = \sqrt{90}=3\sqrt{10}.\]</div>
 <p>Dies ist nur eine grobe Näherung an die echte Bogenlänge. Besser wird es mit
 zwei Zwischenstopps.</p>
-<div class="math notranslate nohighlight">
-\[L \approx
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-8">
+<span class="eqno">(2.31)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-8" title="Link to this equation">#</a></span>\[L \approx
 \sqrt{(\Delta x_1)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x_2)^2 + (\Delta y_2)^2}
 + \sqrt{(\Delta x_3)^2 + (\Delta y_3)^2}.\]</div>
 <p>Zwei Zwischenstopps ergeben drei Luftlinienstücke, deren Summe eine Schätzung
@@ -604,23 +606,24 @@ für die echte Bogenlänge ist. Noch besser wird es, wenn es noch mehr
 Zwischenstopps gibt. Am einfachsten ist es, wenn wir immer den gleichen Abstand
 auf der x-Achse für die Zwischenstopps wählen, nämlich <span class="math notranslate nohighlight">\(\Delta x =
 \frac{b-a}{N}\)</span>. Dann sind es <span class="math notranslate nohighlight">\(N\)</span> Luftlinienstücke, die aufsummiert werden.</p>
-<p>\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-9">
+<span class="eqno">(2.32)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-9" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 L \approx L_1 + L_2 + \dots + L_N &amp;= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} +
-\sqrt{(\Delta x)^2 + (\Delta y_2)^2} + \ldots + \sqrt{(\Delta x)^2 + (\Delta y_N)^2}\
+\sqrt{(\Delta x)^2 + (\Delta y_2)^2} + \ldots + \sqrt{(\Delta x)^2 + (\Delta y_N)^2}\\
 &amp; = \sum_{i=1}^{N} \sqrt{(\Delta x)^2 + (\Delta y_i)^2}.
-\end{align*}</p>
+\end{aligned}\end{split}\]</div>
 <p>Jetzt wird ein Trick angewendet. Der Term <span class="math notranslate nohighlight">\((\Delta x)^2\)</span> wird ausgeklammert:</p>
-<div class="math notranslate nohighlight">
-\[L \approx \sum_{i=1}^{N} \sqrt{\Big(1+\frac{(\Delta y_i)^2}{(\Delta
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-10">
+<span class="eqno">(2.33)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-10" title="Link to this equation">#</a></span>\[L \approx \sum_{i=1}^{N} \sqrt{\Big(1+\frac{(\Delta y_i)^2}{(\Delta
 x)^2}\Big)\cdot (\Delta x)^2}.\]</div>
 <p>Somit kann die Wurzel <span class="math notranslate nohighlight">\(\sqrt{(\Delta x)^2}\)</span> vereinfacht werden und wir haben</p>
-<div class="math notranslate nohighlight">
-\[L \approx \sum_{i=1}^{N} \sqrt{\left(1+\left(\frac{\Delta y_i}{\Delta
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-11">
+<span class="eqno">(2.34)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-11" title="Link to this equation">#</a></span>\[L \approx \sum_{i=1}^{N} \sqrt{\left(1+\left(\frac{\Delta y_i}{\Delta
 x}\right)^2\right)}\cdot\Delta x.\]</div>
 <p>Das war aber nicht der eigentliche Grund, warum wir den Trick mit dem
 Ausklammern angewendet haben. Der wahre Grund ist, dass nun der Term</p>
-<div class="math notranslate nohighlight">
-\[\frac{\Delta y_i}{\Delta x}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-12">
+<span class="eqno">(2.35)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-12" title="Link to this equation">#</a></span>\[\frac{\Delta y_i}{\Delta x}\]</div>
 <p>unter der Wurzel steht (etwas präziser steht <span class="math notranslate nohighlight">\(\big(\frac{\Delta y_i}{\Delta
 x}\big)^2\)</span> unter der Wurzel). Und das ist ein Term, den wir bereits sehr gut
 kennen. Er wird Differenzenquotient genannt. Der Differenzenquotient beschreibt
@@ -630,8 +633,8 @@ der Summe wird ein Integral. Wenn die Funktion <span class="math notranslate noh
 Ableitung stetig, konvergiert der Differenzenquotient gegen den
 Differentialquotienten <span class="math notranslate nohighlight">\(\frac{dy}{dz}\)</span>, also die 1. Ableitung. Und die Differenz
 <span class="math notranslate nohighlight">\(\Delta x\)</span> wird zum Differential <span class="math notranslate nohighlight">\(dx\)</span>. Im Grenzwert ergibt sich:</p>
-<div class="math notranslate nohighlight">
-\[L = \lim_{N\to\infty} \sum_{i=1}^{N} \sqrt{1 + \left(\frac{\Delta y_i}{\Delta
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec03-13">
+<span class="eqno">(2.36)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec03-13" title="Link to this equation">#</a></span>\[L = \lim_{N\to\infty} \sum_{i=1}^{N} \sqrt{1 + \left(\frac{\Delta y_i}{\Delta
 x}\right)^2} \Delta x = \int_{a}^{b} \sqrt{1+\left(f'(x)\right)^2}\, dx.\]</div>
 <p>Und so kann man die Formel zur Berechnung der Bogenlänge begründen.</p>
 </section>

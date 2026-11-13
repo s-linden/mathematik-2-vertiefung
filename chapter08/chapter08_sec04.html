@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -523,8 +524,8 @@ gewählt werden, damit der Flächeninhalt des Rechtecks maximal ist?</p>
 <p>Als erstes übersetzen wir die Angaben in eine Funktion und eine Gleichung. Das
 Ziel ist ein maximaler Flächeninhalt. Wir bezeichnen den Flächeninhalt mit <span class="math notranslate nohighlight">\(A\)</span>.
 Er berechnet sich mit der Formel</p>
-<div class="math notranslate nohighlight">
-\[A(x,y) = x \cdot y.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec04-1">
+<span class="eqno">(8.33)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec04-1" title="Link to this equation">#</a></span>\[A(x,y) = x \cdot y.\]</div>
 <p>Die Funktion <span class="math notranslate nohighlight">\(A\)</span> wird <strong>Zielfunktion</strong> genannt. Sie hängt von zwei Variablen ab.
 Würden wir jetzt ohne weitere Einschränkungen das Maximum dieser Funktion
 suchen, so müssten wir die Seitenlängen <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> unendlich groß wählen. Ein
@@ -534,8 +535,8 @@ ja nicht gesucht.</p>
 Suche nach einem Maximum sinnvoll. Diese Nebenbedingung formulieren wir als
 Gleichung, indem wir den Umfang des Rechtecks gleich der Länge des Drahtes
 setzen:</p>
-<div class="math notranslate nohighlight">
-\[2\cdot x + 2 \cdot y = 1.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec04-2">
+<span class="eqno">(8.34)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec04-2" title="Link to this equation">#</a></span>\[2\cdot x + 2 \cdot y = 1.\]</div>
 <p>Streng genommen haben wir damit den Definitionsbereich der Funktion <span class="math notranslate nohighlight">\(A\)</span>
 eingeschränkt. Da Seitenlängen physikalisch nicht negativ sein können, muss
 gelten: <span class="math notranslate nohighlight">\(x \geq 0\)</span> und <span class="math notranslate nohighlight">\(y \geq 0\)</span>. Aus der Nebenbedingung folgt außerdem: <span class="math notranslate nohighlight">\(x =
@@ -577,34 +578,35 @@ Ränder des Definitionsgebietes.</p></li>
 <h2>Fortführung des Beispiels<a class="headerlink" href="#fortfuhrung-des-beispiels" title="Link to this heading">#</a></h2>
 <p>Schritt 1 und 2 haben wir für das Beispiel mit dem Draht schon durchgeführt.
 Also lösen wir jetzt die Gleichung <span class="math notranslate nohighlight">\(2\cdot x + 2 \cdot y = 1\)</span> nach <span class="math notranslate nohighlight">\(y\)</span> auf:</p>
-<div class="math notranslate nohighlight">
-\[y = \frac{1}{2} \left(1 - 2\cdot x\right) = -x + \frac{1}{2}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec04-3">
+<span class="eqno">(8.35)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec04-3" title="Link to this equation">#</a></span>\[y = \frac{1}{2} \left(1 - 2\cdot x\right) = -x + \frac{1}{2}\]</div>
 <p>und setzen die nach <span class="math notranslate nohighlight">\(y\)</span> aufgelöste Gleichung in die Zielfunktion ein:</p>
-<div class="math notranslate nohighlight">
-\[\tilde{A}(x) = x \cdot (-x+\frac{1}{2}).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec04-4">
+<span class="eqno">(8.36)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec04-4" title="Link to this equation">#</a></span>\[\tilde{A}(x) = x \cdot (-x+\frac{1}{2}).\]</div>
 <p>Um deutlich zu machen, dass diese neue Funktion nur noch von <span class="math notranslate nohighlight">\(x\)</span> abhängt, haben
 wir ihr einen neuen Namen gegeben, nämlich <span class="math notranslate nohighlight">\(\tilde{A}\)</span>. Jetzt vereinfachen wir
 die Funktion noch, indem wir ausmultiplizieren:</p>
-<div class="math notranslate nohighlight">
-\[\tilde{A}(x) = x \cdot (-x+\frac{1}{2}) = -x^2 + \frac{1}{2}x.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec04-5">
+<span class="eqno">(8.37)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec04-5" title="Link to this equation">#</a></span>\[\tilde{A}(x) = x \cdot (-x+\frac{1}{2}) = -x^2 + \frac{1}{2}x.\]</div>
 <p>Das Definitionsgebiet für <span class="math notranslate nohighlight">\(\tilde{A}\)</span> ist <span class="math notranslate nohighlight">\(x \in (0, \frac{1}{2})\)</span>.</p>
 <p>Als letztes folgt Schritt 6, die Bestimmung der Extremwerte. Dazu bilden wir die
 erste Ableitung</p>
-<div class="math notranslate nohighlight">
-\[\tilde{A}'(x) = -2 x + \frac{1}{2}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec04-6">
+<span class="eqno">(8.38)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec04-6" title="Link to this equation">#</a></span>\[\tilde{A}'(x) = -2 x + \frac{1}{2}.\]</div>
 <p>Für die Suche nach Kandidaten für Extremstellen setzen wir <span class="math notranslate nohighlight">\(\tilde{A}'(x) = 0\)</span> und
 bestimmen die Nullstellen:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec04-7">
+<span class="eqno">(8.39)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec04-7" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 -2x + \frac{1}{2} &amp;= 0 \\
 \Rightarrow x &amp;= \frac{1}{4}.\\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Als nächstes überprüfen wir, ob <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> wirklich ein Extremum ist,
 indem wir die 2. Ableitung bilden</p>
-<div class="math notranslate nohighlight">
-\[\tilde{A}''(x) = -2\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec04-8">
+<span class="eqno">(8.40)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec04-8" title="Link to this equation">#</a></span>\[\tilde{A}''(x) = -2\]</div>
 <p>und dann den Punkt <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> einsetzen:</p>
-<div class="math notranslate nohighlight">
-\[\tilde{A}''(\frac{1}{4}) = -2.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec04-9">
+<span class="eqno">(8.41)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec04-9" title="Link to this equation">#</a></span>\[\tilde{A}''(\frac{1}{4}) = -2.\]</div>
 <p>Da die 2. Ableitung an der Stelle <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> negativ ist, können wir
 schlussfolgern, dass <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> eine Extremstelle ist und dass es sich
 dabei um ein Maximum (Hochpunkt) handelt. Zudem liegt dieser Wert im zulässigen
@@ -612,8 +614,8 @@ Intervall <span class="math notranslate nohighlight">\((0, \frac{1}{2})\)</span>
 <p>Damit haben wir die erste Seitenlänge <span class="math notranslate nohighlight">\(x\)</span> gefunden. Jetzt fehlt noch Schritt 7,
 die Beantwortung der ursprünglichen Frage. Es war ja nach den beiden
 Seitenlängen gefragt. Aus der Nebenbedingung</p>
-<div class="math notranslate nohighlight">
-\[2\cdot x + 2 \cdot y = 1\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec04-10">
+<span class="eqno">(8.42)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec04-10" title="Link to this equation">#</a></span>\[2\cdot x + 2 \cdot y = 1\]</div>
 <p>erhalten wir aber für <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> sofort, dass <span class="math notranslate nohighlight">\(y=\frac{1}{4}\)</span> gelten
 muss.</p>
 <p>Das vom Flächeninhalt her maximale Rechteck mit einer Drahtlänge von 1 m

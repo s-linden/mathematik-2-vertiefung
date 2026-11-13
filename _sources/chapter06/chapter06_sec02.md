@@ -203,9 +203,15 @@ fig.write_html("plots/unstetigkeit.html")
 
 ```
 
-<iframe src="plots/unstetigkeit.html" width="100%" height="650px" frameborder="0"></iframe>
-
+```{interaktive-abbildung} plots/unstetigkeit.html
+---
+height: 650
+name: unstetigkeit
+title: Interaktive Darstellung einer unstetigen Funktion zweier Variablen
+---
+Interaktive Darstellung einer unstetigen Funktion zweier Variablen
 ```
+
 
 Bei Funktionen mehrerer Variablen gilt wie bei Funktionen einer Variablen: Jede
 differenzierbare Funktion ist auch stetig. Umgekehrt ist jedoch eine stetige

@@ -71,11 +71,11 @@ $$ C'(x)\, e^{-3x} = x^2 \quad \Rightarrow \quad C'(x)=x^2\cdot e^{3x}.$$
 Danach integrieren wir auf beiden Seiten unbestimmt nach $x$, indem wir zweimal
 die partielle Integrationsregel anwenden:
 
-$\begin{multline*}
+$$\begin{gathered}
 C(x)= \left[x^2\cdot\frac{1}{3}e^{3x}\right] -\int 2x \frac{1}{3}e^{3x}\, dx = \\
 = \left[x^2\cdot\frac{1}{3}e^{3x}\right] - \left[2x\cdot\frac{1}{9}e^{3x}\right] + \int 2\cdot  \frac{1}{3}e^{3x} \, dx = \\
 = \frac{1}{27}e^{3x}(9x^2 - 6x + 2) + C_1
-\end{multline*}$
+\end{gathered}$$
 
 Nachdem wir nun die Funktion $C(x)$ bestimmt haben, setzen wir diese Funktion in
 den Lösungsansatz ein und haben damit die allgemeine Lösung der inhomogenen

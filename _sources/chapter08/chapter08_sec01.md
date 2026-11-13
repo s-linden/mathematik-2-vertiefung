@@ -42,7 +42,7 @@ $$T_{1,f}(\vec{x}) = f(\vec{x}_0) + \nabla f(\vec{x}_0) \cdot
 Wenn wir jetzt eine Funktion betrachten, die nur von zwei Variablen abhängt,
 dann können wir die Tangentenfunktion auch folgendermaßen darstellen:
 
-$\begin{align*}
+$$\begin{aligned}
 T_{1,f}(x,y)
 &= f(x_0,y_0) + \nabla f(x_0,y_0) \cdot
     \begin{pmatrix} x - x_0 \\ y - y_0 \end{pmatrix} = \\
@@ -50,7 +50,7 @@ T_{1,f}(x,y)
     \frac{\partial f(x_0,y_0)}{\partial y} \right) \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \end{pmatrix} = \\
 &= f(x_0,y_0) + \frac{\partial f(x_0,y_0)}{\partial x}(x-x_0) +
     \frac{\partial f(x_0,y_0)}{\partial y}(y-y_0).
-\end{align*}$
+\end{aligned}$$
 
 Damit haben wir die Beschreibung einer Ebene. Daher wird die Tangentenfunktion
 für $n=2$ auch Tangentialebene genannt. Dieselbe Rechnung können wir auch für

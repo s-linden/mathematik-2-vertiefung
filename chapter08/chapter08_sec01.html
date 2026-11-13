@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -496,8 +497,8 @@
 einer Funktion durch eine Tangente bereits kennengelernt. Am einfachsten lässt
 sich die Tangente einer eindimensionalen Funktion berechnen, indem wir das 1.
 Taylorpolynom im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> berechnen:</p>
-<div class="math notranslate nohighlight">
-\[f(x) \approx f(x_0) + f'(x_0)\cdot (x-x_0).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec01-1">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec01-1" title="Link to this equation">#</a></span>\[f(x) \approx f(x_0) + f'(x_0)\cdot (x-x_0).\]</div>
 <p>Aus der Tangente wird für eine Funktion <span class="math notranslate nohighlight">\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)</span>
 eine <strong>Tangentialebene</strong>. Für Funktionen <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \rightarrow
 \mathbb{R}\)</span> mit <span class="math notranslate nohighlight">\(n \geq 3\)</span> wird die Verallgemeinerung der Tangente dann
@@ -510,8 +511,8 @@ eine <strong>Tangentialebene</strong>. Für Funktionen <span class="math notrans
 <li><p>Sie können die Tangentenfunktion einer Funktion <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \rightarrow
 \mathbb{R}\)</span> aufstellen und damit die Funktion <span class="math notranslate nohighlight">\(f\)</span> linearisieren:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[T_{1,f}(\vec{x}) = f(\vec{x}_0) + \nabla f(\vec{x}_0) \cdot (\vec{x}-\vec{x}_0).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec01-2">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec01-2" title="Link to this equation">#</a></span>\[T_{1,f}(\vec{x}) = f(\vec{x}_0) + \nabla f(\vec{x}_0) \cdot (\vec{x}-\vec{x}_0).\]</div>
 <ul class="simple">
 <li><p>Sie wissen, dass für <span class="math notranslate nohighlight">\(n=2\)</span> die Tangentenfunktion auch <strong>Tangentialebene</strong>
 genannt wird.</p></li>
@@ -528,13 +529,14 @@ genannt wird.</p></li>
 Funktion, also <span class="math notranslate nohighlight">\(f:\mathbb{R}^n \to \mathbb{R}\)</span>. Außerdem brauchen wir einen
 Entwicklungspunkt <span class="math notranslate nohighlight">\(\vec{x}_0\)</span>. Dann wird die folgende Funktion Tangentenfunktion
 zu <span class="math notranslate nohighlight">\(f\)</span> genannt:</p>
-<div class="math notranslate nohighlight">
-\[T_{1,f}(\vec{x}) = f(\vec{x}_0) + \nabla f(\vec{x}_0) \cdot
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec01-3">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec01-3" title="Link to this equation">#</a></span>\[T_{1,f}(\vec{x}) = f(\vec{x}_0) + \nabla f(\vec{x}_0) \cdot
 (\vec{x}-\vec{x}_0).\]</div>
 </div>
 <p>Wenn wir jetzt eine Funktion betrachten, die nur von zwei Variablen abhängt,
 dann können wir die Tangentenfunktion auch folgendermaßen darstellen:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec01-4">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec01-4" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 T_{1,f}(x,y)
 &amp;= f(x_0,y_0) + \nabla f(x_0,y_0) \cdot
     \begin{pmatrix} x - x_0 \\ y - y_0 \end{pmatrix} = \\
@@ -542,7 +544,7 @@ T_{1,f}(x,y)
     \frac{\partial f(x_0,y_0)}{\partial y} \right) \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \end{pmatrix} = \\
 &amp;= f(x_0,y_0) + \frac{\partial f(x_0,y_0)}{\partial x}(x-x_0) +
     \frac{\partial f(x_0,y_0)}{\partial y}(y-y_0).
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Damit haben wir die Beschreibung einer Ebene. Daher wird die Tangentenfunktion
 für <span class="math notranslate nohighlight">\(n=2\)</span> auch Tangentialebene genannt. Dieselbe Rechnung können wir auch für
 <span class="math notranslate nohighlight">\(n=3\)</span> oder größer durchführen. Darauf verzichten wir aber hier.</p>
@@ -558,12 +560,12 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 <h2>Beispiel zu Tangentialebene<a class="headerlink" href="#beispiel-zu-tangentialebene" title="Link to this heading">#</a></h2>
 <p>In dem folgenden Video wird ein Beispiel zur Berechnung der Tangentialebene
 vorgeführt. Dabei wird die Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}^2\to\mathbb{R}\)</span> definiert als</p>
-<div class="math notranslate nohighlight">
-\[f(x,y) = -x^2 - y^2.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec01-5">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec01-5" title="Link to this equation">#</a></span>\[f(x,y) = -x^2 - y^2.\]</div>
 <p>Als Entwicklungspunkt wird der Punkt <span class="math notranslate nohighlight">\((-1,-1)\)</span> gewählt. Das Ergebnis ist die
 Tangentialebene</p>
-<div class="math notranslate nohighlight">
-\[T_{1,f}(x,y) = 2 + 2x + 2y.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter08-chapter08-sec01-6">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-auto-chapter08-chapter08-sec01-6" title="Link to this equation">#</a></span>\[T_{1,f}(x,y) = 2 + 2x + 2y.\]</div>
 <p>Hier wird auf die detaillierte Berechnung der Tangentialebene verzichtet. Bitte
 schauen Sie sich stattdessen das Video an.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">

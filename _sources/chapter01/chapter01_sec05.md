@@ -18,10 +18,10 @@ $$\int_{-1}^{3} x\sqrt{x+1}\, dx = \frac{112}{15} \approx 7.4667.$$
 ```{dropdown} Lösungsweg
 partielle Integration: $\quad \int_{a}^{b} u(x)v'(x)\, dx = \left[u(x)v(x)\right]_{a}^{b} - \int u'(x)v(x)\, dx$ 
 
-$\begin{align*}
+$$\begin{aligned}
 u(x)=x & \quad \Rightarrow u'(x) = 1\\
  v'(x)=\sqrt{x+1} & \quad \Rightarrow v(x)=\int v'(x)\, dx = \int \sqrt{x+1}\, dx = \frac{2}{3}(x+1)^{\frac{3}{2}} 
-\end{align*}$
+\end{aligned}$$
 
 Wir setzen in die partielle Integrationsregel ein:
 
@@ -33,10 +33,10 @@ Substitution: $\quad z = x + 1 \quad \Rightarrow \frac{dz}{dx} = 1 \quad \Righta
 
 Wir substituieren:
 
-$\begin{align*}
+$$\begin{aligned}
 \int x\sqrt{x+1}\, dx &= \int (z-1)\sqrt{z}\cdot 1 \, dz = \int (z-1) z^{\frac{1}{2}}\, dz\\
 &= \int z^{\frac{3}{2}}\, dz - \int z^{\frac{1}{2}}\, dz = \frac{2}{5}z^{\frac{5}{2}} - \frac{2}{3}z^{\frac{3}{2}} + C 
-\end{align*}$
+\end{aligned}$$
 
 Rücksubstitution:
 
@@ -59,14 +59,14 @@ $$\int_{-\pi}^{0} 2x \sin(2x) \, dx = -\pi.$$
 ```{dropdown} Lösungsweg
 Hier ist die partielle Integration einmal anzuwenden und man erhält:
 
-$\begin{align*} 
+$$\begin{aligned} 
 \int_{-\pi}^{0}\underbrace{2x}_{u}\underbrace{\sin(2x)}_{v'}\, dx   
     &= \left[2x \left(-\frac{1}{2}\cos(2x)\right) \right]_{-\pi}^{0} - \int_{-\pi}^{0} 2 \left( -\frac{1}{2} \, \cos(2x) \right) \, dx \\ 
     &= \left[-x\cdot \cos(2x)\right]_{-\pi}^{0} + \int_{-\pi}^{0}\cos(2x)\, dx\\
     &= \left[-x\cos(2x)\right]_{-\pi}^{0} + \left[\frac{1}{2}\sin(2x) \right]_{-\pi}^{0}\\
     &= \left(0 - (\pi\cdot\cos(2\pi))\right) + 0 - \left( \frac{1}{2}\sin(-2\pi)\right)\\ 
     &= -\pi \ . 
-\end{align*} $
+\end{aligned}$$
  ```
  ````
 

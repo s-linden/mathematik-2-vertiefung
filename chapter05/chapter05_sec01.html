@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -530,8 +531,8 @@ oder hydraulische Systeme zu steuern.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … eine periodische Funktion?</p>
 <p>Eine Funktion heißt periodisch, wenn sich die Funktionswerte regelmäßig wiederholen. Als mathematische Formel ausgedrückt ist eine Funktion <span class="math notranslate nohighlight">\(f\)</span> periodisch mit der Periode <span class="math notranslate nohighlight">\(p\)</span>, wenn gilt:</p>
-<div class="math notranslate nohighlight">
-\[f(x+p) = f(x).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter05-chapter05-sec01-1">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-auto-chapter05-chapter05-sec01-1" title="Link to this equation">#</a></span>\[f(x+p) = f(x).\]</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -548,7 +549,7 @@ oder hydraulische Systeme zu steuern.</p>
 <a class="reference internal image-reference" href="../_images/plot_sinus.png"><img alt="../_images/plot_sinus.png" src="../_images/plot_sinus.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Sinusfunktion mit einer Periode <span class="math notranslate nohighlight">\(p = 2\pi\)</span></span><a class="headerlink" href="#chap05-plot-sinus" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 5.1: </span><span class="caption-text">Sinusfunktion mit einer Periode <span class="math notranslate nohighlight">\(p = 2\pi\)</span></span><a class="headerlink" href="#chap05-plot-sinus" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Wir werden in den nächsten Kapiteln die Sinus- und Kosinusfunktionen
@@ -570,19 +571,18 @@ Rechteckfunktion definiert als die Funktion, deren Funktionswerte im Intervall
 dieses Intervalls sollen die Funktionswerte 0 sein (übrigens, manchmal wird auch
 ein anderer Wert als 0 genommen). Mathematisch wird das folgendermaßen
 ausgedrückt:</p>
-<p><span class="math notranslate nohighlight">\(\begin{equation*}
-f(t) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter05-chapter05-sec01-2">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-auto-chapter05-chapter05-sec01-2" title="Link to this equation">#</a></span>\[\begin{split}f(t) =
 \begin{cases}
 c &amp; \text{ für } -\frac{T}{2} \leq x \leq \frac{T}{2},\\
 0 &amp; \text{ sonst.}
-\end{cases}
-\end{equation*}\)</span></p>
+\end{cases}\end{split}\]</div>
 <p>Der Funktionsgraph der Rechteckfunktion sieht folgendermaßen aus:</p>
 <figure class="align-default" id="chap05-plot-rechteck">
 <a class="reference internal image-reference" href="../_images/plot_rechteck.png"><img alt="../_images/plot_rechteck.png" src="../_images/plot_rechteck.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Beispiel einer Rechteckfunktion: Periode <span class="math notranslate nohighlight">\(T = 1\)</span> und <span class="math notranslate nohighlight">\(c = 1\)</span></span><a class="headerlink" href="#chap05-plot-rechteck" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 5.2: </span><span class="caption-text">Beispiel einer Rechteckfunktion: Periode <span class="math notranslate nohighlight">\(T = 1\)</span> und <span class="math notranslate nohighlight">\(c = 1\)</span></span><a class="headerlink" href="#chap05-plot-rechteck" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Jetzt wird die Periode von <span class="math notranslate nohighlight">\(0\)</span> bis <span class="math notranslate nohighlight">\(T\)</span> gelb markiert.</p>
@@ -590,7 +590,7 @@ c &amp; \text{ für } -\frac{T}{2} \leq x \leq \frac{T}{2},\\
 <a class="reference internal image-reference" href="../_images/plot_rechteck_period.png"><img alt="../_images/plot_rechteck_period.png" src="../_images/plot_rechteck_period.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Beispiel einer Rechteckfunktion: das Periodenintervall <span class="math notranslate nohighlight">\([0,T]\)</span> ist gelb markiert</span><a class="headerlink" href="#chap05-plot-rechteck-period" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 5.3: </span><span class="caption-text">Beispiel einer Rechteckfunktion: das Periodenintervall <span class="math notranslate nohighlight">\([0,T]\)</span> ist gelb markiert</span><a class="headerlink" href="#chap05-plot-rechteck-period" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Als letztes wird der Funktionsgraph periodisch wiederholt. Damit ist gemeint,
@@ -601,7 +601,7 @@ Abbildung zu sehen ist.</p>
 <a class="reference internal image-reference" href="../_images/plot_rechteck_periodisch.png"><img alt="../_images/plot_rechteck_periodisch.png" src="../_images/plot_rechteck_periodisch.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Beispiel einer Rechteckfunktion, die periodisch fortgesetzt wurde</span><a class="headerlink" href="#chap05-plot-rechteck-periodisch" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 5.4: </span><span class="caption-text">Beispiel einer Rechteckfunktion, die periodisch fortgesetzt wurde</span><a class="headerlink" href="#chap05-plot-rechteck-periodisch" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Diese neue Funktion ist nun eine periodische Funktion. Sie wird häufig in der
@@ -618,7 +618,7 @@ und der Abfall von <span class="math notranslate nohighlight">\(c_2\)</span> auf
 <a class="reference internal image-reference" href="../_images/plot_dreieck.png"><img alt="../_images/plot_dreieck.png" src="../_images/plot_dreieck.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Beispiel einer Dreiecksfunktion, die zwischen <span class="math notranslate nohighlight">\(0\)</span> und <span class="math notranslate nohighlight">\(1\)</span> oszilliert und die Periode <span class="math notranslate nohighlight">\(T = 2\)</span> hat</span><a class="headerlink" href="#chap05-plot-dreieck" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 5.5: </span><span class="caption-text">Beispiel einer Dreiecksfunktion, die zwischen <span class="math notranslate nohighlight">\(0\)</span> und <span class="math notranslate nohighlight">\(1\)</span> oszilliert und die Periode <span class="math notranslate nohighlight">\(T = 2\)</span> hat</span><a class="headerlink" href="#chap05-plot-dreieck" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -632,7 +632,7 @@ oszilliert zwischen <span class="math notranslate nohighlight">\(-1\)</span> und
 <a class="reference internal image-reference" href="../_images/plot_saegezahn.png"><img alt="../_images/plot_saegezahn.png" src="../_images/plot_saegezahn.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Beispiel einer Sägezahnfunktion, die zwischen <span class="math notranslate nohighlight">\(-1\)</span> und <span class="math notranslate nohighlight">\(1\)</span> oszilliert und die Periode <span class="math notranslate nohighlight">\(T = 2\)</span> hat</span><a class="headerlink" href="#chap05-plot-saegezahn" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 5.6: </span><span class="caption-text">Beispiel einer Sägezahnfunktion, die zwischen <span class="math notranslate nohighlight">\(-1\)</span> und <span class="math notranslate nohighlight">\(1\)</span> oszilliert und die Periode <span class="math notranslate nohighlight">\(T = 2\)</span> hat</span><a class="headerlink" href="#chap05-plot-saegezahn" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

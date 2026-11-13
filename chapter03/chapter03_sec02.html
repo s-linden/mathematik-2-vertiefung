@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -573,28 +574,28 @@ zuerst komplexere Techniken oder Kriterien anzuwenden.</p>
 <p class="admonition-title">Quotienten-Kriterium</p>
 <p>Das Quotienten-Kriterium besagt, dass eine Reihe <span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} a_k\)</span>
 konvergiert, wenn der Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[L = \lim_{k\to\infty} \left| \frac{a_{k+1}}{a_k} \right|\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter03-chapter03-sec02-1">
+<span class="eqno">(3.11)<a class="headerlink" href="#equation-auto-chapter03-chapter03-sec02-1" title="Link to this equation">#</a></span>\[L = \lim_{k\to\infty} \left| \frac{a_{k+1}}{a_k} \right|\]</div>
 <p>existiert und kleiner als 1 ist. Gilt <span class="math notranslate nohighlight">\(L &gt; 1\)</span>, so divergiert die Reihe. Gilt
 <span class="math notranslate nohighlight">\(L = 1\)</span>, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.</p>
 <p>Übrigens: Für <span class="math notranslate nohighlight">\(L &lt; 1\)</span> ist die Reihe sogar absolut konvergent.</p>
 </div>
 <p>Den Begriff <strong>absolute Konvergenz</strong> hatten wir bisher nicht. Absolute Konvergenz
 ist mehr als Konvergenz. Nicht nur die Reihe <span class="math notranslate nohighlight">\((s_n)\)</span> mit</p>
-<div class="math notranslate nohighlight">
-\[s_n = \sum_{k=1}^{n} a_k\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter03-chapter03-sec02-2">
+<span class="eqno">(3.12)<a class="headerlink" href="#equation-auto-chapter03-chapter03-sec02-2" title="Link to this equation">#</a></span>\[s_n = \sum_{k=1}^{n} a_k\]</div>
 <p>konvergiert, sogar die Reihe, bei der die Summanden stets positiv sind, weil der
 Betrag gebildet wird, also</p>
-<div class="math notranslate nohighlight">
-\[s_n = \sum_{k=1}^{n} \left| a_k \right|\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter03-chapter03-sec02-3">
+<span class="eqno">(3.13)<a class="headerlink" href="#equation-auto-chapter03-chapter03-sec02-3" title="Link to this equation">#</a></span>\[s_n = \sum_{k=1}^{n} \left| a_k \right|\]</div>
 <p>konvergiert. Das wird dann absolute Konvergenz genannt.</p>
 <p>Ein Beispiel für die Anwendung des Quotienten-Kriteriums ist die folgende Reihe:</p>
-<div class="math notranslate nohighlight">
-\[\sum_{k=1}^{n}\frac{2^k}{k!}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter03-chapter03-sec02-4">
+<span class="eqno">(3.14)<a class="headerlink" href="#equation-auto-chapter03-chapter03-sec02-4" title="Link to this equation">#</a></span>\[\sum_{k=1}^{n}\frac{2^k}{k!}.\]</div>
 <p>Um das Quotienten-Kriterium anzuwenden, betrachten wir den Bruch der
 aufeinanderfolgenden Glieder:</p>
-<div class="math notranslate nohighlight">
-\[\left|\frac{a_{k+1}}{a_k}\right| =
+<div class="math notranslate nohighlight" id="equation-auto-chapter03-chapter03-sec02-5">
+<span class="eqno">(3.15)<a class="headerlink" href="#equation-auto-chapter03-chapter03-sec02-5" title="Link to this equation">#</a></span>\[\left|\frac{a_{k+1}}{a_k}\right| =
 \frac{\frac{2^{k+1}}{(k+1)!}}{\frac{2^k}{k!}} =
 \frac{2^{k+1}k!}{2^k(k+1)!} = \frac{2}{k+1}.\]</div>
 <p>Da <span class="math notranslate nohighlight">\(L = \lim_{k \to \infty} \frac{2}{k+1} = 0 &lt; 1\)</span>, konvergiert die Reihe
@@ -611,24 +612,25 @@ anwenden zu müssen.</p>
 <p class="admonition-title">Wurzel-Kriterium</p>
 <p>Das Wurzel-Kriterium besagt, dass eine Reihe <span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} a_k\)</span>
 konvergiert, wenn der Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[L = \lim_{k\to\infty} \sqrt[k]{|a_k|}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter03-chapter03-sec02-6">
+<span class="eqno">(3.16)<a class="headerlink" href="#equation-auto-chapter03-chapter03-sec02-6" title="Link to this equation">#</a></span>\[L = \lim_{k\to\infty} \sqrt[k]{|a_k|}\]</div>
 <p>existiert und kleiner als 1 ist. Gilt <span class="math notranslate nohighlight">\(L &gt; 1\)</span>, so divergiert die Reihe. Gilt
 <span class="math notranslate nohighlight">\(L = 1\)</span>, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.</p>
 <p>Übrigens: Für <span class="math notranslate nohighlight">\(L &lt; 1\)</span> ist die Reihe sogar absolut konvergent, genau wie beim
 Quotienten-Kriterium.</p>
 </div>
 <p>Als Beispiel betrachten wir die Reihe <span class="math notranslate nohighlight">\((s_n)\)</span> mit</p>
-<div class="math notranslate nohighlight">
-\[s_n = \sum_{k=1}^{n} \left(-\frac{1}{4}\right) \cdot 4^{-k-2} \cdot 2^{k+4}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter03-chapter03-sec02-7">
+<span class="eqno">(3.17)<a class="headerlink" href="#equation-auto-chapter03-chapter03-sec02-7" title="Link to this equation">#</a></span>\[s_n = \sum_{k=1}^{n} \left(-\frac{1}{4}\right) \cdot 4^{-k-2} \cdot 2^{k+4}.\]</div>
 <p>Wir wenden das Wurzel-Kriterium an:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter03-chapter03-sec02-8">
+<span class="eqno">(3.18)<a class="headerlink" href="#equation-auto-chapter03-chapter03-sec02-8" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 L &amp; = \lim_{k\rightarrow \infty}\sqrt[k]{\left|a_k\right|} = \\
 &amp;  = \lim_{k\rightarrow \infty}\left(\frac{1}{4} \cdot 4^{-k-2} 2^{k+4}\right)^{\left(\frac{1}{k} \right)} = \\
 &amp; = \lim_{k\rightarrow \infty} \left(4^{-k - 3} 2^{k + 4}\right)^{\left(\frac{1}{k}\right)} = \\
 &amp; = \frac{1}{2} .
- \end{align*}\)</span>
-Wegen <span class="math notranslate nohighlight">\(L = \frac{1}{2} &lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
+ \end{aligned}\end{split}\]</div>
+<p>Wegen <span class="math notranslate nohighlight">\(L = \frac{1}{2} &lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video “Wurzel- und Quotientenkriterium” von Prof. Hoever</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">

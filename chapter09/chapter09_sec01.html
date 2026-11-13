@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -512,10 +513,8 @@ dem Flächeninhalt der Fläche <span class="math notranslate nohighlight">\(A\)<
 <a class="reference internal image-reference" href="../_images/part10_integral1D.svg"><img alt="../_images/part10_integral1D.svg" src="../_images/part10_integral1D.svg" style="width: 300px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Integral entspricht dem Flächeninhalt</span><a class="headerlink" href="#fig-part10-integral1d" title="Link to this image">#</a></p>
-<div class="legend">
-<p>(<a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=1039841">Quelle:</a> “Wikimedia”, Autor: 4C - Eigenes Werk, based on JPG version, Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>)</p>
-</div>
+<p><span class="caption-number">Abb. 9.1: </span><span class="caption-text">Integral entspricht dem Flächeninhalt <span class="quelle">(Quelle: 4C, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=1039841">Wikimedia Commons</a>;
+Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>)</span></span><a class="headerlink" href="#fig-part10-integral1d" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Dementsprechend beschreibt das Doppelintegral einer Funktion von zwei Variablen
@@ -525,7 +524,7 @@ Fläche <span class="math notranslate nohighlight">\(f(x,y)\)</span> entsteht. D
 <a class="reference internal image-reference" href="../_images/part10_sketch_doubleintegral.svg"><img alt="../_images/part10_sketch_doubleintegral.svg" src="../_images/part10_sketch_doubleintegral.svg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Integral entspricht dem Volumen</span><a class="headerlink" href="#fig-part10-sketch-doubleintegral" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 9.2: </span><span class="caption-text">Integral entspricht dem Volumen</span><a class="headerlink" href="#fig-part10-sketch-doubleintegral" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Doppelintegrale haben vielfältige Anwendungen in den Ingenieurwissenschaften.
@@ -548,34 +547,34 @@ Diese Koordinaten nennen wir <span class="math notranslate nohighlight">\((x_i,y
 <p>Wenn die Teilbereiche rechteckig sind (das müssen sie nicht sein, wir könnten
 auch beispielsweise Kreise oder andere Muster nehmen), dann kann das Volumen der
 Säule <span class="math notranslate nohighlight">\(V_i\)</span> (siehe Abbildung rote Säule) berechnet werden als</p>
-<div class="math notranslate nohighlight">
-\[V_i = f(x_i,y_i) \cdot \Delta x \cdot \Delta y.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec01-1">
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec01-1" title="Link to this equation">#</a></span>\[V_i = f(x_i,y_i) \cdot \Delta x \cdot \Delta y.\]</div>
 <figure class="align-default" id="fig-part10-sketch-volume">
 <a class="reference internal image-reference" href="../_images/part10_sketch_volume.svg"><img alt="../_images/part10_sketch_volume.svg" src="../_images/part10_sketch_volume.svg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Volumen als Summe einzelner Säulen, hier mit rechteckigem Gitter</span><a class="headerlink" href="#fig-part10-sketch-volume" title="Link to this image">#</a></p>
+<p><span class="caption-number">Abb. 9.3: </span><span class="caption-text">Volumen als Summe einzelner Säulen, hier mit rechteckigem Gitter</span><a class="headerlink" href="#fig-part10-sketch-volume" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Jetzt müssen wir noch alle Säulen aufaddieren, um eine Annäherung für das
 Volumen zwischen Boden und Deckel <span class="math notranslate nohighlight">\(f(x,y)\)</span> zu bekommen, also</p>
-<div class="math notranslate nohighlight">
-\[V\approx f(x_1,y_1) \cdot \Delta y \cdot \Delta x + f(x_2,y_2) \cdot \Delta y
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec01-2">
+<span class="eqno">(9.2)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec01-2" title="Link to this equation">#</a></span>\[V\approx f(x_1,y_1) \cdot \Delta y \cdot \Delta x + f(x_2,y_2) \cdot \Delta y
 \cdot \Delta x + \ldots f(x_N,y_N) \cdot \Delta y \cdot \Delta x.\]</div>
 <p>Dabei haben wir jetzt angenommen, dass alle Teilbereiche <span class="math notranslate nohighlight">\(B_i\)</span> die gleiche Form
 haben und als Rechtecke mit den Seitenlängen <span class="math notranslate nohighlight">\(\Delta x\)</span> und <span class="math notranslate nohighlight">\(\Delta y\)</span>
 beschrieben werden. Wir können das Summenzeichen verwenden:</p>
-<div class="math notranslate nohighlight">
-\[V\approx \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y \cdot \Delta x .\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec01-3">
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec01-3" title="Link to this equation">#</a></span>\[V\approx \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y \cdot \Delta x .\]</div>
 <p>Wenn wir nun die Teilbereiche <span class="math notranslate nohighlight">\(B_i\)</span> immer kleiner machen, so brauchen wir immer
 mehr Säulen, also <span class="math notranslate nohighlight">\(N\rightarrow\infty\)</span>. Falls der Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y  \cdot
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec01-4">
+<span class="eqno">(9.4)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec01-4" title="Link to this equation">#</a></span>\[\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y  \cdot
 \Delta x\]</div>
 <p>existiert, nennen wir ihn Integral von <span class="math notranslate nohighlight">\(f(x,y)\)</span> über <span class="math notranslate nohighlight">\(B\)</span> und schreiben das als
 sogenanntes <strong>Doppelintegral</strong></p>
-<div class="math notranslate nohighlight">
-\[V = \iint_{B} f(x,y) \, dy \, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec01-5">
+<span class="eqno">(9.5)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec01-5" title="Link to this equation">#</a></span>\[V = \iint_{B} f(x,y) \, dy \, dx.\]</div>
 <p>Bei den obigen Überlegungen sind wir davon ausgegangen, dass der Bereich <span class="math notranslate nohighlight">\(B\)</span> in
 rechteckige Teilbereiche <span class="math notranslate nohighlight">\(B_i\)</span> aufgeteilt wird. Das muss nicht so sein, wir
 hätten auch andere Aufteilungen wählen können. Daher ist die etwas allgemeiner
@@ -587,11 +586,11 @@ formulierte Definition eines Doppelintegrals wie folgt:</p>
 \mathbb{R}^2\)</span>. Die Definitionsmenge <span class="math notranslate nohighlight">\(A\)</span> wird in <span class="math notranslate nohighlight">\(N\)</span> Teilgebiete zerlegt, die
 <span class="math notranslate nohighlight">\(A_i\)</span> genannt werden. Der Flächeninhalt dieser Teilgebiete wird mit <span class="math notranslate nohighlight">\(\Delta A_i\)</span>
 bezeichnet. Wenn der Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta A_i\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec01-6">
+<span class="eqno">(9.6)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec01-6" title="Link to this equation">#</a></span>\[\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta A_i\]</div>
 <p>existiert, wird er als Doppelintegral von <span class="math notranslate nohighlight">\(f\)</span> über <span class="math notranslate nohighlight">\(A\)</span> bezeichnet und mit</p>
-<div class="math notranslate nohighlight">
-\[\iint_{A} f(x,y)\, dA\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter09-chapter09-sec01-7">
+<span class="eqno">(9.7)<a class="headerlink" href="#equation-auto-chapter09-chapter09-sec01-7" title="Link to this equation">#</a></span>\[\iint_{A} f(x,y)\, dA\]</div>
 <p>abgekürzt.</p>
 </div>
 <p>Im folgenden Video wird das Grundkonzept des Doppelintegrals erklärt. Im nachfolgenden Video wird die geometrische Interpretation des Doppelintegrals zur Berechnung eines Volumens präsentiert.</p>

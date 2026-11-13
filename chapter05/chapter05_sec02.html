@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -524,24 +525,24 @@ Beide haben die Periode <span class="math notranslate nohighlight">\(2\pi\)</spa
 Kosinusfunktion so umschreiben, dass sie nicht die feste Periode <span class="math notranslate nohighlight">\(2\pi\)</span> haben,
 sondern eine <em>beliebige Periode</em> <span class="math notranslate nohighlight">\(T\)</span>. Dies erreichen wir, indem wir das Argument
 der Funktion durch <span class="math notranslate nohighlight">\(\omega\cdot t\)</span> ersetzen, wobei</p>
-<div class="math notranslate nohighlight">
-\[\omega = \frac{2\pi}{T}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter05-chapter05-sec02-1">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-auto-chapter05-chapter05-sec02-1" title="Link to this equation">#</a></span>\[\omega = \frac{2\pi}{T}\]</div>
 <p>die sogenannte <strong>Kreisfrequenz</strong> ist. Damit erhält die Funktion
 <span class="math notranslate nohighlight">\(\sin(\omega\cdot t)\)</span> die gewünschte Periode <span class="math notranslate nohighlight">\(T\)</span>, denn für <span class="math notranslate nohighlight">\(t=T\)</span> ergibt sich
 <span class="math notranslate nohighlight">\(\omega t = 2\pi\)</span>, also ein vollständiger Umlauf. Im Spezialfall <span class="math notranslate nohighlight">\(T = 2\pi\)</span> ist
 <span class="math notranslate nohighlight">\(\omega = 1\)</span>, so dass man zur gewohnten Sinus- und Kosinusfunktion zurückkehrt.</p>
 <p>Außerdem können wir die Sinus-/Kosinusfunktionen mit doppelter, dreifacher,
 vierfacher … Frequenz miteinander kombinieren, z.B. so:</p>
-<div class="math notranslate nohighlight">
-\[f(t) = 3\cdot\cos(\omega t) -17\cdot\sin(\omega t) -2\cdot\cos(2\omega t) +
+<div class="math notranslate nohighlight" id="equation-auto-chapter05-chapter05-sec02-2">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-auto-chapter05-chapter05-sec02-2" title="Link to this equation">#</a></span>\[f(t) = 3\cdot\cos(\omega t) -17\cdot\sin(\omega t) -2\cdot\cos(2\omega t) +
 \frac{3}{8}\cdot\sin(2\omega t).\]</div>
 <p>Die Funktion <span class="math notranslate nohighlight">\(f\)</span> hat die Periode <span class="math notranslate nohighlight">\(T = 2\pi\)</span> und wird trigonometrisches Polynom
 genannt.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … ein trigonometrisches Polynom?</p>
 <p>Ein trigonometrisches Polynom ist eine Funktion, die als Linearkombination von Sinus- und Kosinusfunktionen geschrieben werden kann:</p>
-<div class="math notranslate nohighlight">
-\[f(x) = \frac{a_0}{2} + a_1 \cos(\omega t) + b_1 \sin(\omega t) + a_2\cos(2\omega t) + b_2\sin(2\omega t) + \ldots + a_n\cos(n\omega t) + b_n\sin(n\omega t).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter05-chapter05-sec02-3">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-auto-chapter05-chapter05-sec02-3" title="Link to this equation">#</a></span>\[f(x) = \frac{a_0}{2} + a_1 \cos(\omega t) + b_1 \sin(\omega t) + a_2\cos(2\omega t) + b_2\sin(2\omega t) + \ldots + a_n\cos(n\omega t) + b_n\sin(n\omega t).\]</div>
 <p>Hierbei sind <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(b_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span>, <span class="math notranslate nohighlight">\(b_2\)</span>, …, <span class="math notranslate nohighlight">\(a_n\)</span>, <span class="math notranslate nohighlight">\(b_n\)</span> Konstanten, die bestimmt werden
 müssen, um die Funktion f(x) vollständig zu beschreiben.</p>
 </div>
@@ -566,10 +567,11 @@ dann müssen wir die Fourierkoeffizienten nach der folgenden Formel berechnen.</
 <p>Wir starten mit einer gegebenen Funktion <span class="math notranslate nohighlight">\(f\)</span>, die die Periode <span class="math notranslate nohighlight">\(T\)</span> und die
 Frequenz <span class="math notranslate nohighlight">\(\omega = \frac{2\pi}{T}\)</span> hat. Die Fourierkoeffizienten werden dann
 berechnet als</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter05-chapter05-sec02-4">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-auto-chapter05-chapter05-sec02-4" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 a_k &amp;= \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \cos(k \, \omega \, t) \, dt, \quad k = 0, 1, 2, \ldots \\
 b_k &amp;= \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \sin(k \, \omega \, t) \, dt, \quad k = 1, 2, \ldots \\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 </div>
 </section>
 <section id="fourierreihe">
@@ -594,8 +596,8 @@ Fourierreihe.</p>
 <p>Die meisten Funktionen <span class="math notranslate nohighlight">\(f\)</span> mit der Periode <span class="math notranslate nohighlight">\(T\)</span> und der Kreisfrequenz <span class="math notranslate nohighlight">\(\omega\)</span>
 können als eine unendliche Summe von Sinus- und Kosinusfunktionen approximiert
 mit den Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_k\)</span> und <span class="math notranslate nohighlight">\(b_k\)</span> werden:</p>
-<div class="math notranslate nohighlight">
-\[f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} \left(a_k \cos(k \omega t) + b_k
+<div class="math notranslate nohighlight" id="equation-auto-chapter05-chapter05-sec02-5">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-auto-chapter05-chapter05-sec02-5" title="Link to this equation">#</a></span>\[f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} \left(a_k \cos(k \omega t) + b_k
 \sin(k \omega t) \right).\]</div>
 <p>Diese Funktionenreihe nennt man <strong>Fourierreihe</strong>.</p>
 </div>

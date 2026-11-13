@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -504,13 +505,13 @@ bietet dieses Kapitel eine Anleitung dazu.</p>
 <ul class="simple">
 <li><p>Sie kennen die Formel für ein <strong>Taylorpolynom der Ordnung n</strong> auswendig:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[T_n(x) =\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec01-1">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec01-1" title="Link to this equation">#</a></span>\[T_n(x) =\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.\]</div>
 <ul class="simple">
 <li><p>Sie kennen die Formel für die <strong>Taylorreihe</strong> auswendig:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec01-2">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec01-2" title="Link to this equation">#</a></span>\[T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k.\]</div>
 </div>
 </section>
 <section id="taylorpolynom">
@@ -525,10 +526,11 @@ Taylorpolynom.</p>
 Funktion <span class="math notranslate nohighlight">\(f\)</span> n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann
 wird ein Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> gewählt. Das Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> zu <span class="math notranslate nohighlight">\(f\)</span> vom
 Grad <span class="math notranslate nohighlight">\(n\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> ist dann:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec01-3">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec01-3" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 T_n(x) &amp;=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 +\ldots\\
        &amp;=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Dabei steht <span class="math notranslate nohighlight">\(k!\)</span> für die Fakultät der Zahl <span class="math notranslate nohighlight">\(k\)</span>.</p>
 </div>
 <p>Hier gibt es ein Video, das die Fakultät <span class="math notranslate nohighlight">\(k!\)</span> erklärt.</p>
@@ -555,29 +557,32 @@ ein Taylorpolynom Grad 3 am Entwicklungspunkt <span class="math notranslate nohi
 <p>Schritt 1: Wir halten fest, der Grad ist 3 (<span class="math notranslate nohighlight">\(n=3\)</span>), d.h. wir brauchen die
 ersten drei Ableitungen.</p>
 <p>Schritt 2: Wir bilden die ersten drei Ableitungen:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec01-4">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec01-4" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 f'(x)  &amp;= \cos(x) \\
 f''(x) &amp;= -\sin(x) \\
 f^{(3)}(x) &amp;= -\cos(x) 
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Schritt 3: Wir rechnen die Koeffizienten des Taylorpolynoms aus, indem wir <span class="math notranslate nohighlight">\(x_0
 = 0\)</span> in die Funktion und die ersten drei Ableitungen einsetzen:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec01-5">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec01-5" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 f(0) &amp;= \sin(0) = 0 \\
 f'(0) &amp;= \cos(0) = 1 \\
 f''(0) &amp;= - \sin(0) = 0 \\
 f^{(3)}(0) &amp;= -\cos(0) = -1 
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Schritt 4: Die Fakultäten bis 3 werden ausgerechnet:</p>
-<div class="math notranslate nohighlight">
-\[0!=1, \quad 1!=1, \quad 2!=2, \quad 3!=6.\]</div>
-<p>Schritt 5: Wir setzen alles in die Formel für das Taylorpolynom ein:
-<span class="math notranslate nohighlight">\(\begin{align*} 
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec01-6">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec01-6" title="Link to this equation">#</a></span>\[0!=1, \quad 1!=1, \quad 2!=2, \quad 3!=6.\]</div>
+<p>Schritt 5: Wir setzen alles in die Formel für das Taylorpolynom ein:</p>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec01-7">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec01-7" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned} 
 T_3(x) &amp;= f(x_0) + f'(x_0)\cdot (x-x_0) + \frac{f''(x_0)}{2}\cdot
 (x-x_0)^2 + \frac{f^{(3)}(x_0)}{6} \cdot (x-x_0)^3 = \\
     &amp;= \sin(0) + 1\cdot (x-0) + \frac{0}{2}\cdot (x-0)^2 + \frac{-1}{6}\cdot (x-0)^3 = \\
     &amp;= x - \frac{1}{6}x^3.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Am besten das folgende Video gucken.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -592,8 +597,8 @@ Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … eine Taylorreihe?</p>
 <p>Zu einer Funktion <span class="math notranslate nohighlight">\(f\)</span>, die unendlich oft differenzierbar ist, kann die folgende Potenzreihe</p>
-<div class="math notranslate nohighlight">
-\[T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec01-8">
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec01-8" title="Link to this equation">#</a></span>\[T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k\]</div>
 <p>gebildet werden. Diese Potenzreihe wird Taylorreihe zu <span class="math notranslate nohighlight">\(f\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_
 0\)</span> genannt.</p>
 </div>

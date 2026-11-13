@@ -93,7 +93,14 @@ Vektoren beträgt.
 
 Zoomen Sie in die Grafik hinein und drehen Sie sie auch.
 
-<iframe src="plots/vektorwertige_funktion.html" width="100%" height="500px" frameborder="0"></iframe>
+```{interaktive-abbildung} plots/vektorwertige_funktion.html
+---
+height: 500
+name: vektorwertige_funktion
+title: Interaktive Darstellung der vektorwertigen Funktion
+---
+Interaktive Darstellung der vektorwertigen Funktion
+```
 
 Im Folgenden werden auch noch die drei skalarwertigen Komponentenfunktionen
 einzeln dargestellt.
@@ -358,15 +365,36 @@ fig3.write_html("plots/komponente_3.html")
 
 **1\. Komponentenfunktion:** $f_1(x,y) = x^2 - y$
 
-<iframe src="plots/komponente_1.html" width="100%" height="500px" frameborder="0"></iframe>
+```{interaktive-abbildung} plots/komponente_1.html
+---
+height: 500
+name: komponente_1
+title: 1. Komponentenfunktion f_1(x,y) = x^2 - y
+---
+Erste Komponentenfunktion $f_1(x,y) = x^2 - y$
+```
 
 **2\. Komponentenfunktion:** $f_2(x,y) = xy$
 
-<iframe src="plots/komponente_2.html" width="100%" height="500px" frameborder="0"></iframe>
+```{interaktive-abbildung} plots/komponente_2.html
+---
+height: 500
+name: komponente_2
+title: 2. Komponentenfunktion f_2(x,y) = xy
+---
+Zweite Komponentenfunktion $f_2(x,y) = xy$
+```
 
 **3\. Komponentenfunktion:** $f_3(x,y) = x + y^2$
 
-<iframe src="plots/komponente_3.html" width="100%" height="500px" frameborder="0"></iframe>
+```{interaktive-abbildung} plots/komponente_3.html
+---
+height: 500
+name: komponente_3
+title: 3. Komponentenfunktion f_3(x,y) = x + y^2
+---
+Dritte Komponentenfunktion $f_3(x,y) = x + y^2$
+```
 
 ## Eigenschaften vektorwertiger Funktionen
 

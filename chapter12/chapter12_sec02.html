@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -505,56 +506,56 @@ Differentialgleichung 1. Ordnung zu lösen.</p>
 <p>Wir betrachten eine homogene lineare Differentialgleichung 1. Ordnung. Da die
 Differentialgleichung homogen sein soll, ist die Störfunktion gleich Null. Daher
 schreiben wir die Differentialgleichung in der Form</p>
-<div class="math notranslate nohighlight">
-\[a_1(x)y' + a_0(x)y = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-1">
+<span class="eqno">(12.6)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-1" title="Link to this equation">#</a></span>\[a_1(x)y' + a_0(x)y = 0.\]</div>
 <p>Gegeben sind also zwei Funktionen <span class="math notranslate nohighlight">\(a_1\)</span> und <span class="math notranslate nohighlight">\(a_0\)</span>, die nur von der Variable <span class="math notranslate nohighlight">\(x\)</span>
 abhängen. Gesucht ist die Funktion <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p>Die homogene lineare Differentialgleichung 1. Ordnung kann auch als eine
 separable Differentialgleichung betrachtet werden. Dazu lösen wir die
 Differentialgleichung nach <span class="math notranslate nohighlight">\(y'\)</span> auf und erhalten</p>
-<div class="math notranslate nohighlight">
-\[y'= -\frac{a_0(x) y}{a_1(x)} \quad
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-2">
+<span class="eqno">(12.7)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-2" title="Link to this equation">#</a></span>\[y'= -\frac{a_0(x) y}{a_1(x)} \quad
 \Rightarrow \frac{dy}{dx} = -\frac{a_0(x)}{a_1(x)} \, y.\]</div>
 <p>Wir trennen die Veränderlichen:</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{y} \, dy = -\frac{a_0(x)}{a_1(x)} \, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-3">
+<span class="eqno">(12.8)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-3" title="Link to this equation">#</a></span>\[\frac{1}{y} \, dy = -\frac{a_0(x)}{a_1(x)} \, dx.\]</div>
 <p>Unbestimmte Integration der beiden Seiten liefert</p>
-<div class="math notranslate nohighlight">
-\[\ln |y| + c_1 = - \int \frac{a_0(x)}{a_1(x)} \, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-4">
+<span class="eqno">(12.9)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-4" title="Link to this equation">#</a></span>\[\ln |y| + c_1 = - \int \frac{a_0(x)}{a_1(x)} \, dx.\]</div>
 <p>Wir bringen <span class="math notranslate nohighlight">\(c_1\)</span> auf die rechte Seite der Gleichung und lösen nach <span class="math notranslate nohighlight">\(y\)</span> auf:</p>
-<div class="math notranslate nohighlight">
-\[|y(x)| = e^{-\int \frac{a_0(x)}{a_1(x)}\, dx - c_1}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-5">
+<span class="eqno">(12.10)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-5" title="Link to this equation">#</a></span>\[|y(x)| = e^{-\int \frac{a_0(x)}{a_1(x)}\, dx - c_1}.\]</div>
 <p>Um die Betragsstriche weglassen zu dürfen, setzen wir <span class="math notranslate nohighlight">\(C = \pm e^{-c_1}\)</span>
 und erhalten als allgemeine Lösung der homogenen Differentialgleichung 1.
 Ordnung</p>
-<div class="math notranslate nohighlight">
-\[y(x) = C \, e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-6">
+<span class="eqno">(12.11)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-6" title="Link to this equation">#</a></span>\[y(x) = C \, e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}.\]</div>
 <div class="note admonition">
 <p class="admonition-title">Wie wird die homogene lineare DGL 1. Ordnung gelöst?</p>
 <p>Die allgemeine Lösung der homogenen linearen Differentialgleichung 1. Ordnung</p>
-<div class="math notranslate nohighlight">
-\[a_1(x)y' + a_0(x)y = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-7">
+<span class="eqno">(12.12)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-7" title="Link to this equation">#</a></span>\[a_1(x)y' + a_0(x)y = 0\]</div>
 <p>wird durch die Trennung der Variablen berechnet und lautet</p>
-<div class="math notranslate nohighlight">
-\[y(x) = C \, e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-8">
+<span class="eqno">(12.13)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-8" title="Link to this equation">#</a></span>\[y(x) = C \, e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}.\]</div>
 </div>
 </section>
 <section id="beispiele-zur-losung-einer-homogenen-linearen-dgl-1-ordnung">
 <h2>Beispiele zur Lösung einer homogenen linearen DGL 1. Ordnung<a class="headerlink" href="#beispiele-zur-losung-einer-homogenen-linearen-dgl-1-ordnung" title="Link to this heading">#</a></h2>
 <p><strong>Beispiel 1:</strong> Gegeben ist die homogene lineare DGL 1. Ordnung</p>
-<div class="math notranslate nohighlight">
-\[y'+3y=0,\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-9">
+<span class="eqno">(12.14)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-9" title="Link to this equation">#</a></span>\[y'+3y=0,\]</div>
 <p>also <span class="math notranslate nohighlight">\(a_1(x)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(x)=3\)</span>. Damit ist die allgemeine Lösung der
 Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[y(x)=C \cdot e^{-\int \frac{3}{1}\, dx} = C\cdot e^{-3x}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-10">
+<span class="eqno">(12.15)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-10" title="Link to this equation">#</a></span>\[y(x)=C \cdot e^{-\int \frac{3}{1}\, dx} = C\cdot e^{-3x}.\]</div>
 <p><strong>Beispiel 2:</strong> Gegeben ist die homogene lineare DGL 1. Ordnung</p>
-<div class="math notranslate nohighlight">
-\[y'+xy=0,\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-11">
+<span class="eqno">(12.16)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-11" title="Link to this equation">#</a></span>\[y'+xy=0,\]</div>
 <p>also <span class="math notranslate nohighlight">\(a_1(x)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(x)=x\)</span>. Damit ist die allgemeine Lösung der
 Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[y(x)=C \cdot e^{-\int \frac{x}{1} \, dx} = C\cdot e^{-\frac{1}{2}x^2}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter12-chapter12-sec02-12">
+<span class="eqno">(12.17)<a class="headerlink" href="#equation-auto-chapter12-chapter12-sec02-12" title="Link to this equation">#</a></span>\[y(x)=C \cdot e^{-\int \frac{x}{1} \, dx} = C\cdot e^{-\frac{1}{2}x^2}.\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “DGL 1. Ordnung | Typ 1: linear-homogen” von Lernkompass</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">

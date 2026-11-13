@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -525,16 +526,16 @@ angegeben werden. Damit ist gemeint, dass der Vektor <span class="math notransla
 <span class="math notranslate nohighlight">\(\vec{v}\)</span>. Da die Richtung die Länge 1 hat, führen wir die reelle Zahl <span class="math notranslate nohighlight">\(h\)</span> ein
 und multiplizieren sie mit der Richtung. Das kurze Stück von <span class="math notranslate nohighlight">\(\vec{x}\)</span> in
 Richtung <span class="math notranslate nohighlight">\(\vec{v}\)</span> wird also durch</p>
-<div class="math notranslate nohighlight">
-\[\vec{x} + h\cdot \vec{v}\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-1">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-1" title="Link to this equation">#</a></span>\[\vec{x} + h\cdot \vec{v}\]</div>
 <p>beschrieben und hat automatisch die Länge <span class="math notranslate nohighlight">\(h\)</span>.</p>
 <p>Nun wird der Differenzenquotient gebildet. Im Zähler steht die Differenz
 zwischen dem Funktionswert an der Stelle <span class="math notranslate nohighlight">\(\vec{x} + h\cdot \vec{v}\)</span> und dem
 Funktionswert am Punkt <span class="math notranslate nohighlight">\(\vec{x}\)</span>. Im Nenner steht der Abstand zwischen den
 beiden Punkten, was der Länge <span class="math notranslate nohighlight">\(h\)</span> entspricht. Damit lautet der
 Differenzenquotient</p>
-<div class="math notranslate nohighlight">
-\[\frac{f(\vec{x}+h\vec{v}) - f(\vec{x})}{h}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-2">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-2" title="Link to this equation">#</a></span>\[\frac{f(\vec{x}+h\vec{v}) - f(\vec{x})}{h}.\]</div>
 <p>Der Grenzwert für <span class="math notranslate nohighlight">\(h \to 0\)</span> ist die Richtungsableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> in
 Richtung <span class="math notranslate nohighlight">\(\vec{v}\)</span>. Wir verwenden für die Richtungsableitung das Symbol
 <span class="math notranslate nohighlight">\(D_{\vec{v}}f\)</span>.</p>
@@ -542,26 +543,26 @@ Richtung <span class="math notranslate nohighlight">\(\vec{v}\)</span>. Wir verw
 <p class="admonition-title">Was ist … die Richtungsableitung?</p>
 <p>Die Richtungsableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span>, die von mehreren Variablen abhängt, in
 die Richtung <span class="math notranslate nohighlight">\(v\)</span> ist der Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[D_{\vec{v}}f = \lim_{h\to 0} \frac{f(\vec{x}+h\cdot \vec{v}) - f(\vec{x})}{h}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-3">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-3" title="Link to this equation">#</a></span>\[D_{\vec{v}}f = \lim_{h\to 0} \frac{f(\vec{x}+h\cdot \vec{v}) - f(\vec{x})}{h}.\]</div>
 <p>Das gilt allerdings nur dann, wenn die Richtungsableitung überhaupt existiert.</p>
 </div>
 <p>Wenn wir als Richtung <span class="math notranslate nohighlight">\(\vec{v}\)</span> einen der Einheitsvektoren entlang der
 Koordinatenachsen wählen, erhalten wir genau die partiellen Ableitungen.
 Betrachten wir beispielsweise in einem zweidimensionalen Raum den Einheitsvektor
 in x-Richtung <span class="math notranslate nohighlight">\(\vec{e}_1 = (1,0)\)</span>, dann gilt:</p>
-<div class="math notranslate nohighlight">
-\[D_{\vec{e}_1}f(x,y) = \lim_{h\to 0} \frac{f(x+h,y) - f(x,y)}{h} =
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-4">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-4" title="Link to this equation">#</a></span>\[D_{\vec{e}_1}f(x,y) = \lim_{h\to 0} \frac{f(x+h,y) - f(x,y)}{h} =
 \frac{\partial f}{\partial x}(x,y).\]</div>
 <p>Entsprechend erhalten wir für den Einheitsvektor in y-Richtung <span class="math notranslate nohighlight">\(\vec{e}_2 =
 (0,1)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[D_{\vec{e}_2}f(x,y) = \lim_{h\to 0} \frac{f(x,y+h) - f(x,y)}{h} =
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-5">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-5" title="Link to this equation">#</a></span>\[D_{\vec{e}_2}f(x,y) = \lim_{h\to 0} \frac{f(x,y+h) - f(x,y)}{h} =
 \frac{\partial f}{\partial y}(x,y).\]</div>
 <p>Allgemein gilt im <span class="math notranslate nohighlight">\(n\)</span>-dimensionalen Raum für den <span class="math notranslate nohighlight">\(i\)</span>-ten Einheitsvektor
 <span class="math notranslate nohighlight">\(\vec{e}_i\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[D_{\vec{e}_i}f(\vec{x}) = \frac{\partial f}{\partial x_i}(\vec{x}).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-6">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-6" title="Link to this equation">#</a></span>\[D_{\vec{e}_i}f(\vec{x}) = \frac{\partial f}{\partial x_i}(\vec{x}).\]</div>
 <p>Dieser Zusammenhang verdeutlicht, dass die partiellen Ableitungen tatsächlich
 Richtungsableitungen in Richtung der Koordinatenachsen sind. Die
 Richtungsableitung erweitert dieses Konzept auf beliebige Richtungen und ist
@@ -585,8 +586,8 @@ diese Funktionen und halten fest:</p>
 <p>Wenn alle partiellen Ableitungen der Funktion <span class="math notranslate nohighlight">\(f\)</span> stetig sind, kann die
 Richtungsableitung in  Richtung <span class="math notranslate nohighlight">\(\vec{v}\)</span> auch mit dem Gradienten <span class="math notranslate nohighlight">\(\nabla f\)</span>
 berechnet werden. Dann gilt:</p>
-<div class="math notranslate nohighlight">
-\[D_{\vec{v}}f(\vec{x}) = \nabla f(\vec{x}) \cdot \vec{v}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-7">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-7" title="Link to this equation">#</a></span>\[D_{\vec{v}}f(\vec{x}) = \nabla f(\vec{x}) \cdot \vec{v}.\]</div>
 </div>
 <p>Im folgendem Video wird ausführlich ein Beispiel vorgerechnet.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -606,29 +607,29 @@ angegeben.</p>
 <ul class="simple">
 <li><p>Ist <span class="math notranslate nohighlight">\(c\)</span> eine konstante reelle Zahl, so ist der Gradient davon der Nullvektor, also</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\nabla c = 0.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-8">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-8" title="Link to this equation">#</a></span>\[\nabla c = 0.\]</div>
 <ul class="simple">
 <li><p>Es gilt die Faktorregel:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\nabla (c\cdot f(\vec{x})) = c \cdot \nabla f(\vec{x}).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-9">
+<span class="eqno">(7.9)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-9" title="Link to this equation">#</a></span>\[\nabla (c\cdot f(\vec{x})) = c \cdot \nabla f(\vec{x}).\]</div>
 <ul class="simple">
 <li><p>Es gilt die Summenregel:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\nabla \left(f(\vec{x}) + g(\vec{x})\right) = \nabla f(\vec{x}) + \nabla
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-10">
+<span class="eqno">(7.10)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-10" title="Link to this equation">#</a></span>\[\nabla \left(f(\vec{x}) + g(\vec{x})\right) = \nabla f(\vec{x}) + \nabla
 g(\vec{x}).\]</div>
 <ul>
 <li><p>Es gilt die Produktregel:</p>
-<div class="math notranslate nohighlight">
-\[\nabla \left(f(\vec{x})\cdot g(\vec{x})\right) = \nabla f(\vec{x}) \cdot
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-11">
+<span class="eqno">(7.11)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-11" title="Link to this equation">#</a></span>\[\nabla \left(f(\vec{x})\cdot g(\vec{x})\right) = \nabla f(\vec{x}) \cdot
   g(\vec{x}) + f(\vec{x})\cdot \nabla g(\vec{x}).\]</div>
 </li>
 <li><p>Und die Quotientenregel lautet:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\nabla \left(\frac{f(\vec{x})}{g(\vec{x})}\right) = \frac{\nabla
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-12">
+<span class="eqno">(7.12)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-12" title="Link to this equation">#</a></span>\[\nabla \left(\frac{f(\vec{x})}{g(\vec{x})}\right) = \frac{\nabla
 f(\vec{x})\cdot g(\vec{x}) - f(\vec{x})\cdot \nabla g(\vec{x})}{g^2(\vec{x})}.
 \]</div>
 <p>Auch eine Kettenregel gibt es, doch dafür müssen wir erst einmal vektorwertige
@@ -639,13 +640,15 @@ auszuführen und danach den Gradienten auszurechnen. Im folgenden Beispiel werde
 beide Varianten am <strong>Beispiel der Produktregel</strong> vorgeführt.</p>
 <p>Betrachten wir die Funktionen <span class="math notranslate nohighlight">\(f(x,y) = x^2 + y^2\)</span> und <span class="math notranslate nohighlight">\(g(x,y) = xy\)</span>.</p>
 <p>Die Gradienten dieser Funktionen sind:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-13">
+<span class="eqno">(7.13)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-13" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \nabla f(x,y) &amp;= (2x, 2y)\\
 \nabla g(x,y) &amp;= (y, x).
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Für das Produkt <span class="math notranslate nohighlight">\(h(x,y) = f(x,y) \cdot g(x,y) = (x^2 + y^2) \cdot xy\)</span> erhalten
 wir nach der Produktregel:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-14">
+<span class="eqno">(7.14)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-14" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \nabla h(x,y) &amp;= g(x,y) \cdot \nabla f(x,y) + f(x,y) \cdot \nabla g(x,y)\\
 &amp;= xy \cdot (2x, 2y) + (x^2 + y^2) \cdot (y, x)\\
 &amp;= (2x^2y, 2xy^2) + ((x^2 + y^2)y, (x^2 + y^2)x)\\
@@ -653,15 +656,16 @@ wir nach der Produktregel:</p>
 &amp;= (2x^2y + x^2y + y^3, 2xy^2 + x^3 + xy^2)\\
 &amp;= (x^2y(2 + 1) + y^3, xy^2(2 + 1) + x^3)\\
 &amp;= (3x^2y + y^3, 3xy^2 + x^3).\\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Zur Überprüfung können wir <span class="math notranslate nohighlight">\(h(x,y)\)</span> direkt ausmultiplizieren</p>
-<div class="math notranslate nohighlight">
-\[h(x,y) = (x^2 + y^2) \cdot xy = x^3y + xy^3\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-15">
+<span class="eqno">(7.15)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-15" title="Link to this equation">#</a></span>\[h(x,y) = (x^2 + y^2) \cdot xy = x^3y + xy^3\]</div>
 <p>und dann partiell differenzieren</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter07-chapter07-sec01-16">
+<span class="eqno">(7.16)<a class="headerlink" href="#equation-auto-chapter07-chapter07-sec01-16" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 &amp;\frac{\partial h}{\partial x} = 3x^2y + y^3, \\
 &amp;\frac{\partial h}{\partial y} = x^3 + 3xy^2. \\
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Dies ergibt den Gradienten <span class="math notranslate nohighlight">\(\nabla h(x,y) = (3x^2y + y^3, x^3 + 3xy^2)\)</span>, was mit
 dem ersten Ergebnis übereinstimmt.</p>
 <p>In den folgenden Videos können Sie sich die Rechenregeln für Gradienten ansehen.</p>

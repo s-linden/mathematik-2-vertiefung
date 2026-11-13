@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -526,15 +527,15 @@ abhängig. Wir fassen zusammen:</p>
 <p>Wir nennen die Differenz zwischen der Funktion <span class="math notranslate nohighlight">\(f\)</span> und dem dazugehörigen
 Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> vom Grad <span class="math notranslate nohighlight">\(n\)</span> das Restglied <span class="math notranslate nohighlight">\(R_n\)</span>. Als Formel ausgedrückt ist
 das Restglied</p>
-<div class="math notranslate nohighlight">
-\[R_n(x) = f(x) - T_n(x).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-1">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-1" title="Link to this equation">#</a></span>\[R_n(x) = f(x) - T_n(x).\]</div>
 </div>
 <p>Jetzt haben wir dem Fehler zwar einen neuen Namen gegeben, Restglied, aber das
 hilft uns zunächst nicht weiter. Allerdings hat ein Mathematiker namens
 <a class="reference external" href="https://de.wikipedia.org/wiki/Joseph-Louis_Lagrange">Joseph-Louis Lagrange</a>
 gezeigt, dass für das Restglied die folgende Formel gilt:</p>
-<div class="math notranslate nohighlight">
-\[R_n(x) = f(x) - T_n(x) =
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-2">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-2" title="Link to this equation">#</a></span>\[R_n(x) = f(x) - T_n(x) =
 \frac{f^{(n+1)}(\textcolor{red}{z})}{(n+1)!}\cdot(x-x_0)^{n+1},\]</div>
 <p>wobei der Punkt <span class="math notranslate nohighlight">\(z\)</span> eine Zwischenstelle ist, die irgendwo zwischen <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(x_0\)</span>
 liegt.</p>
@@ -542,29 +543,30 @@ liegt.</p>
 <span class="math notranslate nohighlight">\(z\)</span> ist ja nicht bekannt. Wir wissen nur, dass <span class="math notranslate nohighlight">\(z\)</span> irgendwo zwischen dem
 Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> liegt. Aber egal wo <span class="math notranslate nohighlight">\(z\)</span> jetzt wirklich liegt,
 wir können einfach für alle Werte <span class="math notranslate nohighlight">\(z\)</span> die <span class="math notranslate nohighlight">\((n+1)\)</span>-te Ableitung</p>
-<div class="math notranslate nohighlight">
-\[f^{(n+1)}(z)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-3">
+<span class="eqno">(4.11)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-3" title="Link to this equation">#</a></span>\[f^{(n+1)}(z)\]</div>
 <p>zeichnen. Aus der Zeichnung können wir dann das Maximum <span class="math notranslate nohighlight">\(M\)</span> von dem Betrag
 <span class="math notranslate nohighlight">\(|f^{(n+1)}(z)|\)</span> für alle Punkte zwischen <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> ablesen oder anderweitig
 berechnen. Es gilt also</p>
-<div class="math notranslate nohighlight">
-\[|f^{(n+1)}(z)| \leq M.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-4">
+<span class="eqno">(4.12)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-4" title="Link to this equation">#</a></span>\[|f^{(n+1)}(z)| \leq M.\]</div>
 <p>Und mit dieser Abschätzung kann jetzt endlich auch der Fehler abgeschätzt
 werden, wenn <span class="math notranslate nohighlight">\(T_n\)</span> anstatt der Funktion <span class="math notranslate nohighlight">\(f\)</span> verwendet werden soll. Da wir nicht
 wissen, ob <span class="math notranslate nohighlight">\(T_n\)</span> die Funktion <span class="math notranslate nohighlight">\(f\)</span> über- oder unterschätzt, wissen wir auch
 nicht, ob <span class="math notranslate nohighlight">\(R_n(x)\)</span> negativ oder positiv ist. Daher nehmen wir einfach mal den
 Betrag von <span class="math notranslate nohighlight">\(R_n(x)\)</span>, da es ja auch nur um eine grobe Abschätzung des Fehlers
 geht.</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-5">
+<span class="eqno">(4.13)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-5" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
 \left|R_n(x) \right| &amp;= \left| f(x) - T_n(x) \right| = \\
     &amp;= \left| \frac{f^{(n+1)}(z)}{(n+1)!}\cdot(x-x_0)^{n+1} \right| \leq\\
     &amp;\leq \frac{M}{(n+1)!} \cdot |x-x_0|^{n+1}.
-\end{align*}\)</span></p>
+\end{aligned}\end{split}\]</div>
 <p>Abschließend muss noch ein Maximum von <span class="math notranslate nohighlight">\(|x - x_0|\)</span> bestimmt werden. Wir
 nennen diese Zahl <span class="math notranslate nohighlight">\(d\)</span> (wie Distanz). Dann kann der Fehler, der Betrag des
 Restglieds des Taylorpolynoms, abgeschätzt werden als</p>
-<div class="math notranslate nohighlight">
-\[\left|R_n(x) \right| \leq  \frac{M}{(n+1)!}\cdot d^{n+1}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-6">
+<span class="eqno">(4.14)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-6" title="Link to this equation">#</a></span>\[\left|R_n(x) \right| \leq  \frac{M}{(n+1)!}\cdot d^{n+1}.\]</div>
 <p>Das folgende Video fasst die obigen Erklärungen zusammen.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -579,33 +581,33 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 ein Taylorpolynom Grad 3 am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span> approximiert werden. Im
 Abschnitt <a class="reference internal" href="chapter04_sec01.html#ref04-sec01-kochrezept"><span class="std std-ref">Kochrezept Taylorpolynome</span></a> haben wir ja schon
 das Taylorpolynom <span class="math notranslate nohighlight">\(T_{3}\)</span> berechnet als</p>
-<div class="math notranslate nohighlight">
-\[T_3(x) = x - \frac{1}{6}x^3.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-7">
+<span class="eqno">(4.15)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-7" title="Link to this equation">#</a></span>\[T_3(x) = x - \frac{1}{6}x^3.\]</div>
 <p>Die vierte Ableitung der Sinusfunktion ist wieder die Sinusfunktion selbst, also
 <span class="math notranslate nohighlight">\(f^{(4)}(x) = \sin(x)\)</span>.</p>
 <p>Das Restglied ist also</p>
-<div class="math notranslate nohighlight">
-\[R_3(x) = \frac{\sin(z)}{(3+1)!}\cdot x^{3+1} = \frac{\sin(z)}{24}\cdot x^4.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-8">
+<span class="eqno">(4.16)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-8" title="Link to this equation">#</a></span>\[R_3(x) = \frac{\sin(z)}{(3+1)!}\cdot x^{3+1} = \frac{\sin(z)}{24}\cdot x^4.\]</div>
 <p>für eine Zwischenstelle <span class="math notranslate nohighlight">\(z\)</span> zwischen <span class="math notranslate nohighlight">\(0\)</span> und <span class="math notranslate nohighlight">\(x\)</span>. Wir wählen einen Winkel von
 <span class="math notranslate nohighlight">\(\alpha = 5^{\circ}\)</span>, was im Bogenmaß <span class="math notranslate nohighlight">\(\frac{\pi}{36}\approx 0.0873 \text{rad}\)</span>
 entspricht und untersuchen daher die Approximation an der Stelle <span class="math notranslate nohighlight">\(x = 0.0873\)</span>.
 Wenn wir die Sinusfunktion im Intervall <span class="math notranslate nohighlight">\([0, 0.0873]\)</span> zeichnen, so können wir
 ablesen, dass das Maximum gerade bei <span class="math notranslate nohighlight">\(x = 0.0873\)</span> erreicht wird, also ist</p>
-<div class="math notranslate nohighlight">
-\[M = \sin(0.0873) \approx 0.0872.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-9">
+<span class="eqno">(4.17)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-9" title="Link to this equation">#</a></span>\[M = \sin(0.0873) \approx 0.0872.\]</div>
 <p>Der Term <span class="math notranslate nohighlight">\(x - 0\)</span> kann durch <span class="math notranslate nohighlight">\(m = 0.0873\)</span> abgeschätzt werden, durch den Punkt am
 rechten Intervallende, der am weitesten vom Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span> entfernt
 ist. Also gilt</p>
-<div class="math notranslate nohighlight">
-\[R_3(0.0873) \leq \frac{0.0872}{24}\cdot 0.0873^4 \approx 2.11 \cdot 10^{-7}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-10">
+<span class="eqno">(4.18)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-10" title="Link to this equation">#</a></span>\[R_3(0.0873) \leq \frac{0.0872}{24}\cdot 0.0873^4 \approx 2.11 \cdot 10^{-7}.\]</div>
 <p>Dieser maximale Fehler ist in den meisten Fällen so klein, dass im Intervall
 <span class="math notranslate nohighlight">\([-5^{\circ}, + 5^{\circ}]\)</span> die Sinusfunktion auch durch</p>
-<div class="math notranslate nohighlight">
-\[\sin(x) \approx T_3(x) = x - \frac{1}{6}x^3\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-11">
+<span class="eqno">(4.19)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-11" title="Link to this equation">#</a></span>\[\sin(x) \approx T_3(x) = x - \frac{1}{6}x^3\]</div>
 <p>ersetzt werdenn kann. In vielen Fällen ist es sogar legitim, die Sinusfunktion
 nur durch das Taylorpolynom ersten Grades zu approximieren, also</p>
-<div class="math notranslate nohighlight">
-\[\sin(x) \approx T_1(x) = x.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter04-chapter04-sec02-12">
+<span class="eqno">(4.20)<a class="headerlink" href="#equation-auto-chapter04-chapter04-sec02-12" title="Link to this equation">#</a></span>\[\sin(x) \approx T_1(x) = x.\]</div>
 <p>Diese Approximation nennt sich
 <a class="reference external" href="https://de.wikipedia.org/wiki/Kleinwinkeln%C3%A4herung">Kleinwinkelnäherung</a> und
 wird beispielsweise bei der Berechnung der Bewegungsgleichung des Fadenpendels

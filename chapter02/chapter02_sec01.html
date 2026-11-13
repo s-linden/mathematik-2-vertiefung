@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nummerierung.css?v=cda5e4f8" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -508,7 +509,8 @@
 <h2>Mittelwert von Zahlen<a class="headerlink" href="#mittelwert-von-zahlen" title="Link to this heading">#</a></h2>
 <p>Ein Auto fährt in der Stadt mit 50 km/h und muss leicht abbremsen. Dabei werden
 folgende Geschwindigkeiten gemessen:</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<div class="pst-scrollable-table-container"><table class="table" id="tabelle-chapter02-chapter02-sec01-1">
+<caption><span class="caption-number">Tab. 2.1 </span><span class="caption-text">​</span><a class="headerlink" href="#tabelle-chapter02-chapter02-sec01-1" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Zeit in s</p></th>
 <th class="head text-center"><p>1</p></th>
@@ -535,8 +537,8 @@ folgende Geschwindigkeiten gemessen:</p>
 Auto in diesen sechs Sekunden unterwegs war, bilden wir den Mittelwert. Dazu
 addieren wir die sechs Geschwindigkeiten und teilen durch die Anzahl der
 Geschwindigkeitsmessungen.</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{6}\big(50.0 + 48.9 + 45.7 + 41.8 + 40.0 + 45.0 \big) \approx 45.23.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-1">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-1" title="Link to this equation">#</a></span>\[\frac{1}{6}\big(50.0 + 48.9 + 45.7 + 41.8 + 40.0 + 45.0 \big) \approx 45.23.\]</div>
 <p>Die Durchschnittgeschwindigkeit betrug also 45.23 km/h. Einen guten Eindruck der
 einzelnen Messwerte im Vergleich zu ihrem Mittelwert vermittelt das folgende
 Streudiagramm. Die blauen Kreise stehen für die gemessenen Werte aus der
@@ -564,19 +566,19 @@ konstante Funktion.</p>
 bezeichnen die Anzahl der Messungen mit <span class="math notranslate nohighlight">\(N\)</span> und die einzelnen Messungen mit
 <span class="math notranslate nohighlight">\(y_1, y_2, \ldots, y_N\)</span>. Für den Mittelwert führen wir die Abkürzung <span class="math notranslate nohighlight">\(\bar{y}\)</span>
 ein. Dann wird der Mittelwert nach der Formel</p>
-<div class="math notranslate nohighlight">
-\[\bar{y} = \frac{1}{N}\big(y_1 + y_2 + \ldots + y_N \big)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-2">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-2" title="Link to this equation">#</a></span>\[\bar{y} = \frac{1}{N}\big(y_1 + y_2 + \ldots + y_N \big)\]</div>
 <p>berechnet. Um die Pünktchen in der Formel zu sparen, verwenden wir das
 Summensymbol <span class="math notranslate nohighlight">\(\Sigma\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-3">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-3" title="Link to this equation">#</a></span>\[\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.\]</div>
 <p>Zusammenfassend halten wir folgende Definition eines Mittelwertes fest.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … der Mittelwert?</p>
 <p>Der Mittelwert einer Liste von Zahlen ist die Summe der Zahlen geteilt durch
 ihre Anzahl. Berechnet wird der Mittelwert mit der Formel</p>
-<div class="math notranslate nohighlight">
-\[\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-4">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-4" title="Link to this equation">#</a></span>\[\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.\]</div>
 <p>Dabei ist <span class="math notranslate nohighlight">\(\bar{y}\)</span> die Bezeichnung für den Mittelwert, <span class="math notranslate nohighlight">\(N\)</span> die Anzahl der
 Zahlen und <span class="math notranslate nohighlight">\(y_i\)</span> sind die einzelnen Zahlen.</p>
 </div>
@@ -616,14 +618,14 @@ board.create('line', [[-.5,44.91],[7.5,44.91]],
 </script><br>
 <p>An der Berechnung des Mittelwertes ändert sich nicht, aber normalerweise ist er
 bei 11 Messungen genauer als bei sechs Messungen. Wir rechnen also</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{11}\big(50.0 + 49.7 + 48.9 + 47.5 + 45.7 + 43.7 + 41.8 + 40.4 + 40.0
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-5">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-5" title="Link to this equation">#</a></span>\[\frac{1}{11}\big(50.0 + 49.7 + 48.9 + 47.5 + 45.7 + 43.7 + 41.8 + 40.4 + 40.0
 + 41.3 + 45 \big) \approx 44.91.\]</div>
 <p>Noch genauer würde es werden, wenn wir noch mehr Messwerte hinzunehmen. Der
 Mittelwert wäre dann perfekt, wenn wir unendliche viele Messungen hätten. Dann
 wäre der Mittelwert der Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[\bar{y} = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} y_i.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-6">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-6" title="Link to this equation">#</a></span>\[\bar{y} = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} y_i.\]</div>
 <p>Das setzt aber voraus, dass wir kontinuierlich die Geschwindigkeit messen. Oder
 anders ausgedrückt, das setzt voraus, dass wir die Geschwindigkeit als eine
 Funktion darstellen können, als ein sogenanntes Zeit-Geschwindigkeitsdiagramm.
@@ -638,19 +640,19 @@ wir die Zeitpunkte, zu denen eine Messung durchgeführt wird, mit <span class="m
 usw. bis <span class="math notranslate nohighlight">\(x_N\)</span> ausdrücken. Die dazugehörigen Geschwindigkeitenmessungen bzw.
 Funktionswerte bezeichnen wir dann mit <span class="math notranslate nohighlight">\(f(x_1)\)</span>, <span class="math notranslate nohighlight">\(f(x_2)\)</span> usw. bis <span class="math notranslate nohighlight">\(f(x_N)\)</span>.
 Dann gilt für die Berechnung des Mittelwertes</p>
-<div class="math notranslate nohighlight">
-\[m = \frac{1}{N} \sum_{i=1}^{N} f(x_i).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-7">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-7" title="Link to this equation">#</a></span>\[m = \frac{1}{N} \sum_{i=1}^{N} f(x_i).\]</div>
 <p>Aber eigentlich wollen wir ja den Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[m = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} f(x_i)\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-8">
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-8" title="Link to this equation">#</a></span>\[m = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} f(x_i)\]</div>
 <p>ausrechnen. Um diesen Grenzwert auszurechnen, wenden wir jetzt zwei Tricks an.
 Wenn wir unendlich viele Messungen nehmen, um den Mittelwert auszurechnen,
 können wir eine Messung auch weglassen. Bei unendlich vielen Messungen fällt
 eine Messung nicht ins Gewicht. Wir lassen die letzte Messung weg. Dadurch
 müssen wir nur noch durch <span class="math notranslate nohighlight">\((N-1)\)</span> teilen und bis <span class="math notranslate nohighlight">\(N-1\)</span> summieren. Damit schreibt
 sich die Formel für den Mittelwert nun als</p>
-<div class="math notranslate nohighlight">
-\[m = \lim_{N\to\infty} \frac{1}{N-1} \sum_{i=1}^{N-1} f(x_i).\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-9">
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-9" title="Link to this equation">#</a></span>\[m = \lim_{N\to\infty} \frac{1}{N-1} \sum_{i=1}^{N-1} f(x_i).\]</div>
 <p>Das war der erste Trick. Nun erweitern wir die Messungen der Geschwindigkeit mit
 dem Bruch <span class="math notranslate nohighlight">\((b-a)/(b-a)\)</span>. Dabei ist <span class="math notranslate nohighlight">\(a\)</span> der Startpunkt, zu dem die Messungen
 beginnen, und <span class="math notranslate nohighlight">\(b\)</span> der Endpunkt. Durch <span class="math notranslate nohighlight">\(b-a\)</span> wird also das Intervall auf der
@@ -658,14 +660,14 @@ x-Achse beschreiben, in dem wir die Funktion <span class="math notranslate nohig
 Summe ändert sich nichts, wenn wir jeden Messwert mit dem Bruch <span class="math notranslate nohighlight">\((b-a)/(b-a)\)</span>
 multiplizieren, da wir ja nur mit 1 multiplizieren. Wir können also mit beiden
 Tricks den Mittelwert schreiben als</p>
-<div class="math notranslate nohighlight">
-\[m = \lim_{N\to\infty} \frac{1}{N-1} \sum_{i=1}^{N-1} f(x_i)\cdot \frac{b-a}{b-a}.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-10">
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-10" title="Link to this equation">#</a></span>\[m = \lim_{N\to\infty} \frac{1}{N-1} \sum_{i=1}^{N-1} f(x_i)\cdot \frac{b-a}{b-a}.\]</div>
 <p>Wenn in einer Summe jeder Term mit einer konstanten Zahl multipliziert wird,
 dürfen wir diese konstante Zahl in die Summe reinmultiplizieren oder
 ausklammern. Wir klammern jetzt die Zahl <span class="math notranslate nohighlight">\(1/(b-a)\)</span> aus und multiplizieren
 stattdessen die Zahl <span class="math notranslate nohighlight">\(1/(N-1)\)</span> in die Summe.</p>
-<div class="math notranslate nohighlight">
-\[m = \frac{1}{b-a} \lim_{N\to\infty} \sum_{i=1}^{N-1} f(x_i)\cdot
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-11">
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-11" title="Link to this equation">#</a></span>\[m = \frac{1}{b-a} \lim_{N\to\infty} \sum_{i=1}^{N-1} f(x_i)\cdot
 \frac{b-a}{N-1}.\]</div>
 <p>Das Intervall <span class="math notranslate nohighlight">\(b-a\)</span> wird also in <span class="math notranslate nohighlight">\((N-1)\)</span> kleine Stückchen unterteilt. Jedes
 Stückchen ist dabei gleich groß und könnte mit <span class="math notranslate nohighlight">\(\Delta x\)</span> bezeichnet werden. In
@@ -677,7 +679,7 @@ Messwerte im Abstand von 0.5 Sekunden haben, ergibt sich eine Schrittweite von
 <a class="reference internal image-reference" href="../_images/chapter03_sec01_fig03.png"><img alt="../_images/chapter03_sec01_fig03.png" src="../_images/chapter03_sec01_fig03.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Annäherung des Mittelwertes einer Funktion <span class="math notranslate nohighlight">\(f\)</span> über die Summe von Produkten
+<p><span class="caption-number">Abb. 2.1: </span><span class="caption-text">Annäherung des Mittelwertes einer Funktion <span class="math notranslate nohighlight">\(f\)</span> über die Summe von Produkten
 <span class="math notranslate nohighlight">\(f(x_i)\cdot \Delta x\)</span> im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span></span><a class="headerlink" href="#chapter03-sec01-fig03" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
@@ -685,16 +687,16 @@ Messwerte im Abstand von 0.5 Sekunden haben, ergibt sich eine Schrittweite von
 Anzahl der Messungen zunimmt, werden die Stückchen <span class="math notranslate nohighlight">\(\Delta x\)</span> kleiner, dafür
 summieren wir über mehr Rechtecke. Diesen Grenzwert kennen wir schon, es ist der
 orientierte Flächeninhalt der Funktion <span class="math notranslate nohighlight">\(f\)</span> mit der x-Achse, also das Integral</p>
-<div class="math notranslate nohighlight">
-\[m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-12">
+<span class="eqno">(2.12)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-12" title="Link to this equation">#</a></span>\[m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.\]</div>
 <div class="note admonition">
 <p class="admonition-title">Was ist … der Mittelwert einer Funktion?</p>
 <p>Der Mittelwert einer Funktion in einem Intervall ist das bestimmte Integral auf
 diesem Intervall geteilt durch die Intervall-Länge.</p>
 <p>Etwas präziser formuliert berechnet sich der Mittelwert <span class="math notranslate nohighlight">\(m\)</span> einer stetigen
 Funktion <span class="math notranslate nohighlight">\(f\)</span> im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> über die Formel</p>
-<div class="math notranslate nohighlight">
-\[m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.\]</div>
+<div class="math notranslate nohighlight" id="equation-auto-chapter02-chapter02-sec01-13">
+<span class="eqno">(2.13)<a class="headerlink" href="#equation-auto-chapter02-chapter02-sec01-13" title="Link to this equation">#</a></span>\[m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.\]</div>
 </div>
 </section>
 <section id="beispiel">
