@@ -72,10 +72,10 @@ $$f'(t) = \sum_{k=1}^{\infty} \left(\alpha_k \cos(k \omega t) + \beta_k
 Allerdings fällt der erste Term $a_0/2$ weg und die neuen Fourierkoeffizienten
 $\alpha_k$ und $\beta_k$ können mit den Formeln
 
-$\begin{align*}
+$$\begin{aligned}
 \alpha_k &= b_k \cdot k \cdot \omega \\
 \beta_k  &= -a_k \cdot k \cdot \omega
-\end{align*}$
+\end{aligned}$$
 
 berechnet werden.
 

@@ -63,18 +63,18 @@ Zweidimensionales Polarkoordinatensystem
 Die Umrechnung von Polarkoordinaten in kartesische Koordinaten erfolgt mit den
 Formeln:
 
-$\begin{align*}
+$$\begin{aligned}
 x &= r\cdot \cos(\varphi) \\
 y &= r\cdot \sin(\varphi)
-\end{align*}$
+\end{aligned}$$
 
 Bei dem obigen Beispiel ist $r=4$ und $\varphi=30^{\circ}$. Mit den beiden
 Formeln zur Berechnung der kartesischen Koordinaten $x$ und $y$ erhalten wir
 
-$\begin{align*}
+$$\begin{aligned}
 x &= 4 \cdot \cos(30^{\circ}) = 2\sqrt{3}, \\
 y &= 4 \cdot \sin(30^{\circ}) = 2.
-\end{align*}$
+\end{aligned}$$
 
 Zur Erinnerung folgt hier eine Einführung in Polarkoordinaten:
 
@@ -100,7 +100,7 @@ $$\cos(\varphi) =
 width: 75%
 name: fig11_03
 ---
-Die Umrechnung kartesische Koordinaten in Polarkoordinaten nutzt das rechtwinklige Dreieck aus.
+Die Umrechnung kartesische Koordinaten in Polarkoordinaten nutzt das rechtwinklige Dreieck aus
 ```
 
 Mit den Umkehrfunktionen der Sinus- und der Kosinusfunktion erhalten wir

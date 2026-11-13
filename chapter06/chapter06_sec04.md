@@ -23,10 +23,10 @@ Extremwertprobleme und Stabilitätsanalysen im Maschinenbau von großer Bedeutun
 Im vorherigen Kapitel haben wir für die Funktion $f(x,y) = x^3 + y^3 - x^2 +
 2y^2 - 5x + y + 3$ die partiellen Ableitungen erster Ordnung berechnet:
 
-$\begin{align}
+$$\begin{aligned}
 \frac{\partial f(x,y)}{\partial x} &= 3x^2 - 2x - 5, \\
 \frac{\partial f(x,y)}{\partial y} &= 3y^2 + 4y + 1.
-\end{align}$
+\end{aligned}$$
 
 Diese partiellen Ableitungen sind selbst wieder Funktionen von $x$ und $y$, die
 wir erneut ableiten können. Dadurch erhalten wir partielle Ableitungen zweiter
@@ -202,19 +202,19 @@ $$f(x,y,z) = x^2 + 2y^2 + 3z^2 + 2xy - xz + 4yz$$
 
 Die partiellen Ableitungen erster Ordnung sind:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x} &= 2x + 2y - z \\
 \frac{\partial f}{\partial y} &= 4y + 2x + 4z \\
 \frac{\partial f}{\partial z} &= 6z - x + 4y
-\end{align*}$
+\end{aligned}$$
 
 Die Hesse-Matrix ergibt sich durch Berechnung aller zweiten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x^2} &= 2 & \frac{\partial^2 f}{\partial x \partial y} &= 2 & \frac{\partial^2 f}{\partial x \partial z} &= -1 \\
 \frac{\partial^2 f}{\partial y \partial x} &= 2 & \frac{\partial^2 f}{\partial y^2} &= 4 & \frac{\partial^2 f}{\partial y \partial z} &= 4 \\
 \frac{\partial^2 f}{\partial z \partial x} &= -1 & \frac{\partial^2 f}{\partial z \partial y} &= 4 & \frac{\partial^2 f}{\partial z^2} &= 6
-\end{align*}$
+\end{aligned}$$
 
 Damit erhalten wir die Hesse-Matrix:
 

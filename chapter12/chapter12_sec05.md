@@ -474,19 +474,19 @@ $$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) - \frac{117}{25}\cdot e^{2t}.$$
 :class: miniexercise
 Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:
 
-$\begin{align*}
+$$\begin{aligned}
 y_1' &= y_1 + y_2 &\\
 y_2' &= 4 y_1 - 2y_2 & 
-\end{align*} $
+\end{aligned}$$
 ```
 
 ````{admonition} Lösung
 :class: miniexercise, toggle
 
-$\begin{align*}
+$$\begin{aligned}
 y_1(x) &= \mathrm{C}_1 e^{-3x} + \mathrm{C}_2 e^{2x} \\
 y_2(x) &= -4 \mathrm{C}_1 e^{-3x}  + \mathrm{C}_2 e^{2x}
-\end{align*}$
+\end{aligned}$$
 
 ```{dropdown} Lösungsweg
 Das System von Differentialgleichungen lautet in Matrix-Vektor-Schreibweise
@@ -497,12 +497,12 @@ $$\begin{pmatrix} y_1'\\ y_2'\end{pmatrix} =
 
 Das charakteristische Polynom ist
 
-$\begin{align*}
+$$\begin{aligned}
 \det (A-\lambda E) &= \det \begin{pmatrix} 1 - \lambda & 1 \\ 4 & -2-\lambda \end{pmatrix} = \\
 &= (1-\lambda)(-2-\lambda)-4 = \\
 &= \lambda^2 + \lambda - 6 =\\
 &= (\lambda+3)(\lambda-2)
-\end{align*}$
+\end{aligned}$$
 
 Aus der charakteristischen Gleichung 
 
@@ -526,19 +526,19 @@ $$y_2(x) = -4\mathrm{C}_1 e^{-3x} + \mathrm{C}_2 e^{2x}.$$
 :class: miniexercise
 Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:
 
-$\begin{align*}
+$$\begin{aligned}
 y_1' &= y_1  +y_2&\\
 y_2' &= 4y_1 +y_2 &
-\end{align*} $
+\end{aligned}$$
 ```
 
 ````{admonition} Lösung
 :class: miniexercise, toggle
 
-$\begin{align*}
+$$\begin{aligned}
 y_1(x) &= \mathrm{C}_1 e^{-x} + \mathrm{C}_2 e^{3x} \\
 y_2(x) &= -2\mathrm{C}_1 e^{-x} + 2 \mathrm{C}_2 e^{3x}
-\end{align*}$
+\end{aligned}$$
 
 ```{dropdown} Lösungsweg
 Das System von Differentialgleichungen lautet in Matrix-Vektor-Schreibweise
@@ -549,12 +549,12 @@ $$\begin{pmatrix} y_1'\\ y_2'\end{pmatrix} =
 
 Das charakteristische Polynom ist
 
-$\begin{align*}
+$$\begin{aligned}
 \det (A-\lambda E) &= \det \begin{pmatrix} 1 - \lambda & 1 \\ 4 & 1-\lambda \end{pmatrix} = \\
 &= (1-\lambda)^2 -4 = \\
 &= \lambda^2 -2\lambda - 3 =\\
 &= (\lambda-3)(\lambda+1)
-\end{align*}$
+\end{aligned}$$
 
 Aus der charakteristischen Gleichung 
 

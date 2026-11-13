@@ -38,18 +38,18 @@ $$(y - x) + (y+x)\cdot y' = 0$$
 
 ist von 1. Ordnung und lässt sich mit
 
-$\begin{align*}
+$$\begin{aligned}
 p(x, y) &= y - x\\
 q(x, y) &= y + x
-\end{align*}$
+\end{aligned}$$
 
 in der oben beschriebenen Form schreiben. Als nächstes wird überprüft, ob die
 Exaktheitsbedingung erfüllt ist.
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial p(x, y)}{\partial y} &= \frac{\partial}{\partial y}(y - x) = 1, \\
 \frac{\partial q(x, y)}{\partial x} &= \frac{\partial}{\partial x}(y + x) = 1.
-\end{align*}$
+\end{aligned}$$
 
 Beide partielle Ableitungen sind gleich und daher ist die Differentialgleichung
 exakt.
@@ -88,10 +88,10 @@ $$\frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = 0.$$
 
 Das ist genau die Form der exakten Differentialgleichung mit
 
-$\begin{align*}
+$$\begin{aligned}
 p(x,y) &= \frac{\partial F(x,y)}{\partial x} \\
 q(x,y) &= \frac{\partial F(x,y)}{\partial y}
-\end{align*}$
+\end{aligned}$$
 
 Aber wir kommen wir nun auf $F(x,y)$?
 
@@ -146,14 +146,14 @@ $$F(x,y) = yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  + c_1 = \tilde{c}.$$
 
 Wir setzen $C= \tilde{c} - c_1$ und lösen nach $y$ auf:
 
-$\begin{align*}
+$$\begin{aligned}
 yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  = c \qquad &| \cdot 2 \\
 2yx - x^2 + y^2 = 2c \qquad &| +2x^2 \\
 y^2 + 2xy + x^2 = 2c + 2x^2 \qquad & \\
 (y+x)^2 = 2c + 2x^2 \qquad & | \sqrt{} \\
 y + x = \pm \sqrt{2c + 2x^2} \qquad & | -x \\
 y(x) = \pm \sqrt{2c + 2x^2} - x \\
-\end{align*}$
+\end{aligned}$$
 
 Die allgemeine Lösung der Differentialgleichung $(y - x) + (y+x)\cdot y' = 0$
 ist

@@ -25,10 +25,11 @@ f(x_0,y_0)}{\partial x \partial y}\right)^2 > 0.$$
 
 3. Zuletzt entscheidet dann das Vorzeichen von dem Term $\frac{\partial^2 f(x_0,y_0)}{\partial x \partial x}$ darüber, ob ein Minimum oder ein Maximum vorliegt:
   
-$\begin{align*}
+
+$$\begin{aligned}
 \frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} < 0 & \qquad \Rightarrow \text{relatives Maximum} \\
 \frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} > 0 & \qquad \Rightarrow \text{relatives Minimum} \\
-\end{align*}$
+\end{aligned}$$
 ```
 
 ## Extremwerte bei eindimensionalen Funktionen
@@ -123,11 +124,11 @@ Minimum (Tiefpunkt) vorliegt. Dazu muss das Vorzeichen der reinen 2. partiellen
 Ableitung nach $x$ überprüft werden, also das Vorzeichen von $\frac{\partial^2
 f(x_0,y_0)}{\partial x\partial x}$. Es gilt:
 
-$\begin{align*} \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} < 0 &
+$$\begin{aligned} \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} < 0 &
 \qquad \Rightarrow \text{Maximum (Hochpunkt)} \\
 \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} > 0 & \qquad
 \Rightarrow \text{Minimum (Tiefpunkt)} \\
-\end{align*}$
+\end{aligned}$$
 
 Das folgende Video zeigt erneut die hinreichende Bedingung etwas allgemeiner als
 unsere obigen Betrachtungen.
@@ -182,10 +183,10 @@ $$f(x,y) = \frac{1}{1+x^2+y^2}.$$
 
 Als erstes berechnen wir die partiellen Ableitungen nach $x$ und $y$:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f(x,y)}{\partial x} &= \frac{-2x}{(1 + x^2 + y^2)^2} \\
 \frac{\partial f(x,y)}{\partial y} &= \frac{-2y}{(1 + x^2 + y^2)^2} \\
-\end{align*}$
+\end{aligned}$$
 
 Der Gradient der Funktion $f$ lautet also
 
@@ -195,10 +196,10 @@ y^2)^2} \right).$$
 Jetzt werden der Gradient bzw. die partiellen Ableitungen Null gesetzt und wir
 erhalten die beiden folgenden Gleichungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{-2x}{(1 + x^2 + y^2)^2} &= 0 \\
 \frac{-2y}{(1 + x^2 + y^2)^2} &= 0 \\
-\end{align*}$
+\end{aligned}$$
 
 Wir multiplizieren bei jeder Gleichung mit dem Nenner $(1 + x^2 + y^2)^2$ und
 erhalten direkt die Nullstelle der 1. Gleichung $x = 0$ und die Nullstelle der
@@ -210,12 +211,12 @@ $$(x_0, y_0) = (0,0).$$
 Nun wird die Hesse-Matrix berechnet. Dazu werden die 2. partiellen Ableitungen
 gebildet:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f(x,y)}{\partial x \partial x} &= \frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^3} \\
 \frac{\partial^2 f(x,y)}{\partial y \partial x} &= \frac{8xy}{(1 + x^2 + y^2)^3} \\
 \frac{\partial^2 f(x,y)}{\partial x \partial y} &= \frac{8xy}{(1 + x^2 + y^2)^3} \\
 \frac{\partial^2 f(x,y)}{\partial y \partial y} &= -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \\
-\end{align*}$
+\end{aligned}$$
 
 Damit lautet die Hesse-Matrix:
 

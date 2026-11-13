@@ -28,7 +28,7 @@ $$\bar{f} = \frac{1}{b-a}\int_{a}^{b} f(x) \, dx.$$
 
 Wir setzen die lineare Funktion $f(x)=mx+n$ in die Formel ein und erhalten:
 
-$\begin{align*}
+$$\begin{aligned}
 \bar{f}
 &= \frac{1}{b-a}\int_{a}^{b} mx+n \, dx = \\
 &= \frac{1}{b-a} \left[\frac{1}{2}mx^2 + nx \right]_{a}^{b} = \\
@@ -38,7 +38,7 @@ $\begin{align*}
 &= \frac{1}{2} m b + \frac{1}{2} m a + \frac{1}{2}n + \frac{1}{2}n = \\
 &= \frac{1}{2} (mb+n) + \frac{1}{2} (ma+n) = \\
 &= \frac{1}{2} f(b) + \frac{1}{2} f(a).
-\end{align*}$
+\end{aligned}$$
 
 Der Mittelwert der linearen Funktion $f(x) = mx+n$ ist gleich dem arithmetischen Mittel der beiden Funktionswerte $f(a)$ und $f(b)$.
 ```

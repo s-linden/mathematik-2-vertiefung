@@ -26,9 +26,8 @@ Breitengrad, also $f:\mathbb{R}^2\rightarrow\mathbb{R}$.
 width: 50%
 name: chapter06_fig01_solar_map
 ---
-Solarstrahlung in Deutschland
-
-([Quelle:](https://commons.wikimedia.org/wiki/File:SolarGIS-Solar-map-Germany-de.png) "Solar Radiation Map: Globalstrahlung Deutschland, SolarGIS 2011", Autor: SolarGIS Lizenz: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/))
+Solarstrahlung in Deutschland (Quelle: SolarGIS, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:SolarGIS-Solar-map-Germany-de.png);
+Lizenz: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/))
 ```
 
 In diesem Kapitel werden wir uns Funktionen von mehreren unabhängigen Variablen
@@ -170,7 +169,14 @@ xaxis_title='x-Achse', yaxis_title='y-Achse')
 fig.write_html("plots/paraboloid.html")
 ```
 
-<iframe src="plots/paraboloid.html" width="100%" height="500px" frameborder="0"></iframe>
+```{interaktive-abbildung} plots/paraboloid.html
+---
+height: 500
+name: paraboloid
+title: Interaktive Darstellung des Paraboloids f(x,y) = x^2 + y^2
+---
+Interaktive Darstellung des Paraboloids $f(x,y) = x^2 + y^2$
+```
 
 Zusätzlich zur Höhe wurde die Paraboloid-Fläche gemäß der Funktionswerte
 $f(x,y)$ eingefärbt. Die Farbskala rechts gibt an, welche Farbe welchem
@@ -272,7 +278,14 @@ fig.update_layout(
 fig.write_html("plots/contour.html")
 ```
 
-<iframe src="plots/contour.html" width="100%" height="500px" frameborder="0"></iframe>
+```{interaktive-abbildung} plots/contour.html
+---
+height: 500
+name: contour
+title: Höhenlinien des Paraboloids f(x,y) = x^2 + y^2
+---
+Höhenlinien des Paraboloids $f(x,y) = x^2 + y^2$
+```
 
 Die kreisförmigen Höhenlinien in dieser Darstellung zeigen, dass die Funktion
 $f(x,y) = x^2 + y^2$ für alle Punkte $(x,y)$ mit gleichem Abstand vom Ursprung

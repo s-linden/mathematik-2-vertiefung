@@ -37,11 +37,11 @@ Die Berechnung des Schwerpunktes $S(x_S, y_S, z_S)$ eines dreidimensionalen
 Körpers erfolgt analog zur Berechnung des Schwerpunktes von Flächen, indem das
 Volumenintegral jeweils über die Funktionen $x$, $y$ und $z$ berechnet wird. Dabei wird vorausgesetzt, dass wir einen homogenen Körper betrachten, dessen Dichte konstant ist.
 
-$\begin{align*}
+$$\begin{aligned}
 x_s &= \frac{1}{V} \iiint_{V} x \, dV, \\
 y_s &= \frac{1}{V} \iiint_{V} y \, dV, \\
 z_s &= \frac{1}{V} \iiint_{V} z \, dV. \\
-\end{align*}$
+\end{aligned}$$
 
 Das folgende Video geht auf die Bedeutung und Anwendung der Doppel- und
 Dreifachintegrale ein.

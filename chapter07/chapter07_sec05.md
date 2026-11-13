@@ -17,40 +17,41 @@ d) $f(x_1,x_2,x_3) = 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3)$
 :class: miniexercise, toggle
 a)
 
-$\begin{align*} 
+$$\begin{aligned} 
 f(x,y) &= e^{-(x^2+y^2)} \\
 \Rightarrow \quad \nabla f(x,y) &= \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)
-\end{align*}$
+\end{aligned}$$
 
 b)
 
-$\begin{align*}
+$$\begin{aligned}
 f(x,y,z) &= \frac{1+x+y+z}{1+x^2+y^2+z^2}  \\
 \nabla f(x,y,z) &= \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
 &\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
-\end{align*}$
+\end{aligned}$$
 
 c)
 
-$\begin{align*}
+$$\begin{aligned}
 f(x_1,x_2) &= x_1^4 -5x_2^2 - 10x_1x_2 \\
 \Rightarrow \quad \nabla f(x_1,x_2) &= \left( 4x_1^3-10x_2, -10(x_1+x_2) \right) 
-\end{align*}$
+\end{aligned}$$
 
 d)
 
-$\begin{align*}
+$$\begin{aligned}
 f(x_1,x_2,x_3) &= 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3) \\
 \Rightarrow \quad \nabla f(x_1,x_2,x_3) &= \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)\right)
-\end{align*}$
+\end{aligned}$$
 
 ```{dropdown} Lösungsweg
 a) $f(x,y) = e^{-(x^2+y^2)}$ <br>
 Wir berechnen zunächst die partiellen Ableitungen:
-\begin{align*}
+
+$$\begin{aligned}
 \frac{\partial f}{\partial x} &= -2xe^{-x^2-y^2} \\
 \frac{\partial f}{\partial y} &= -2y e^{-x^2-y^2}  
-\end{align*}
+\end{aligned}$$
 Damit ist der Gradient von f:
 
 $$\nabla f(x,y) = \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)$$
@@ -58,23 +59,24 @@ $$\nabla f(x,y) = \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)$$
 b) $f(x,y,z) = \frac{1+x+y+z}{1+x^2+y^2+z^2}$ <br>
 Wir berechnen zunächst die partiellen Ableitungen: 
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x} &=  \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\\
 \frac{\partial f}{\partial y} &=  \frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2} \\  
 \frac{\partial f}{\partial z} &=  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\\  
-\end{align*}$
+\end{aligned}$$
 
 Damit ist der Gradient von f:
-\begin{multline*}\nabla f(x,y,z) = \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
+
+$$\begin{gathered}\nabla f(x,y,z) = \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
 \frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
-\end{multline*}
+\end{gathered}$$
 c) $f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2$ <br>
 Wir berechnen zunächst die partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x_1} &= 4x_1^3-10x_2 \\
 \frac{\partial f}{\partial x_2} &= -10(x_1+x_2)  
-\end{align*}$
+\end{aligned}$$
 
 Damit ist der Gradient von f:
 
@@ -83,11 +85,11 @@ $$\nabla f(x_1,x_2) = \left( 4x_1^3-10x_2, -10(x_1+x_2) \right)$$
 d) $f(x_1,x_2,x_3) = 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3)$ <br>
 Wir berechnen zunächst die partiellen Ableitungen: 
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x} &= 4(x_1-x_2) \\
 \frac{\partial f}{\partial y} &= 3x_2^2\sin(x_3)-4x_1 \\  
 \frac{\partial f}{\partial z} &= x_2^3\cos(x_3) \\  
-\end{align*}$
+\end{aligned}$$
 
 Damit ist der Gradient von f:
 
@@ -122,12 +124,12 @@ a)
 
 $$f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}$$
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f_1}{\partial x} &= 2x\\
 \frac{\partial f_1}{\partial y} &= 2y\\
 \frac{\partial f_2}{\partial x} &= 2x\\
 \frac{\partial f_2}{\partial y} &= -2y 
-\end{align*}$
+\end{aligned}$$
 
 Damit lautet die Jacobi-Matrix
 
@@ -137,12 +139,12 @@ b)
 
 $$f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}$$
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f_1}{\partial x} &= 9x^2y^2\\
 \frac{\partial f_1}{\partial y} &= 6x^3y\\
 \frac{\partial f_2}{\partial x} &= \cos(x)\\
 \frac{\partial f_2}{\partial y} &= 0 
-\end{align*}$
+\end{aligned}$$
 
 Damit lautet die Jacobi-Matrix
 
@@ -156,17 +158,17 @@ Bestimmen Sie die Jacobi-Matrix der verketteten Funktion $h = f \circ g$ mit der
 
 a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x,y) = f(g(x,y))$, wobei
 
-$\begin{align*}
+$$\begin{aligned}
 f:\mathbb{R}^3\mapsto\mathbb{R},   \quad & f(x,y,z) = x^2 y^2 z^2,\\
 g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
-\end{align*}$
+\end{aligned}$$
 
 b) $h:\mathbb{R}^3\mapsto\mathbb{R}^3$ mit $h(x,y,z)=f(g(x,y,z))$, wobei
 
-$\begin{align*}
+$$\begin{aligned}
 f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & f(x,y,z) = \begin{pmatrix} -y \\ -z \\ -x \end{pmatrix}\\
 g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x,y,z) = \begin{pmatrix} x y \\ y z \\ z x \end{pmatrix}
-\end{align*}$
+\end{aligned}$$
 ```
 
 ````{admonition} Lösung
@@ -183,10 +185,10 @@ $$\mathbf{J}_{h}(x,y,z) = \begin{pmatrix} 0 & -z & -y\\ -z & 0 & -x \\ -y & -x &
 ```{dropdown} Lösungsweg
 a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x,y) = f(g(x,y))$, wobei
 
-$\begin{align*}
+$$\begin{aligned}
 f:\mathbb{R}^3\mapsto\mathbb{R},   \quad & f(x,y,z) = x^2 y^2 z^2,\\
 g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
-\end{align*}$
+\end{aligned}$$
 
 Wir berechnen zuerst die Jacobi-Matrizen von $f$ und $g$:
 
@@ -198,12 +200,12 @@ Da $f$ eine skalarwertige Funktion ist, stimmt die Jacobi-Matrix $\mathbf{J}_{f}
 
 Mit der mehrdimensionalen Kettenregel erhalten wir
 
-$\begin{multline*}
+$$\begin{gathered}
 \mathbf{J}_{h} = \mathbf{J}_{f} \cdot \mathbf{J}_{g} =
 \left(2x y^2 z^2, \; 2x^2 y z^2,\; 2x^2 y^2 z\right) \cdot 
 \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ y & x\end{pmatrix} = \\
 \left(2x y^2 z^2 + 2x^2 y^3 z, \; 2x^2 y z^2 + 2x^3 y^2 z \right) 
-\end{multline*} $
+\end{gathered}$$
 
 Als nächstes ersetzen wir noch $z$ durch $x y$ (siehe Definition von $h$) und erhalten
 
@@ -212,10 +214,10 @@ $$\mathbf{J}_{h}(x,y) = \left(2x^3 y^4 + 2x^3 y^4, \; 2x^4 y^3 + 2x^4 y^3\right)
 
 b) $h:\mathbb{R}^3\mapsto\mathbb{R}^3$ mit $h(x,y,z)=f(g(x,y,z))$, wobei
 
-$\begin{align*}
+$$\begin{aligned}
 f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & f(x,y,z) = \begin{pmatrix} -y \\ -z \\ -x \end{pmatrix}\\
 g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x,y,z) = \begin{pmatrix} x y \\ y z \\ z x \end{pmatrix}
-\end{align*}$
+\end{aligned}$$
 
 Wir berechnen zuerst die Jacobi-Matrix von $f$ und $g$:
 

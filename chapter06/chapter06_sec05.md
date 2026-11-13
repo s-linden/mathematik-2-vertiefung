@@ -34,20 +34,20 @@ d) $f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}$
 
 Wir wenden die Kettenregel an:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x_1} &= -\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2} \cdot 4x_1 \\
 &= -\frac{4x_1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}
-\end{align*}$
+\end{aligned}$$
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x_2} &= -\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2} \cdot \frac{x_2}{\sqrt{x_2^2+x_3^2}} \\
 &= -\frac{x_2}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2 \cdot \sqrt{x_2^2+x_3^2}}
-\end{align*}$
+\end{aligned}$$
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x_3} &= -\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2} \cdot \frac{x_3}{\sqrt{x_2^2+x_3^2}} \\
 &= -\frac{x_3}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2 \cdot \sqrt{x_2^2+x_3^2}}
-\end{align*}$
+\end{aligned}$$
 ````
 
 ```{admonition} Übung 6.2
@@ -67,19 +67,19 @@ a) $f(x,y)=x^3+y^3 + x^2y^2+xy+1$
 
 **Schritt 1:** Berechnung der ersten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x} &= 3x^2+2xy^2+y \\
 \frac{\partial f}{\partial y} &= 3y^2+2x^2y+x 
-\end{align*}$
+\end{aligned}$$
 
 **Schritt 2:** Berechnung der zweiten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x^2} &= \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right) = \frac{\partial}{\partial x}(3x^2+2xy^2+y) = 6x + 2y^2 \\
 \frac{\partial^2 f}{\partial x \partial y} &= \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right) = \frac{\partial}{\partial y}(3x^2+2xy^2+y) = 4xy + 1 \\
 \frac{\partial^2 f}{\partial y \partial x} &= \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right) = \frac{\partial}{\partial x}(3y^2+2x^2y+x) = 4xy + 1 \\
 \frac{\partial^2 f}{\partial y^2} &= \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right) = \frac{\partial}{\partial y}(3y^2+2x^2y+x) = 6y + 2x^2
-\end{align*}$
+\end{aligned}$$
 
 **Verifikation des Satzes von Schwarz:**
 Da $\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} = 4xy + 1$, ist der Satz von Schwarz bestätigt.
@@ -90,25 +90,25 @@ b) $f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}$
 
 **Schritt 1:** Berechnung der ersten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x} &= -\frac{1}{(\sqrt{x^2+y^2+z^2})^2} \cdot \frac{\partial}{\partial x}(\sqrt{x^2+y^2+z^2}) \\
 &= -\frac{1}{x^2+y^2+z^2} \cdot \frac{1}{2}(x^2+y^2+z^2)^{-1/2} \cdot 2x \\
 &= -\frac{1}{x^2+y^2+z^2} \cdot \frac{x}{\sqrt{x^2+y^2+z^2}} \\
 &= -\frac{x}{(x^2+y^2+z^2)^{3/2}}
-\end{align*}$
+\end{aligned}$$
 
 Analog berechnen wir:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial y} &= -\frac{y}{(x^2+y^2+z^2)^{3/2}} \\
 \frac{\partial f}{\partial z} &= -\frac{z}{(x^2+y^2+z^2)^{3/2}}
-\end{align*}$
+\end{aligned}$$
 
 **Schritt 2:** Berechnung der zweiten partiellen Ableitungen:
 
 Für die reinen zweiten Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x^2} &= \frac{\partial}{\partial x}\left(-\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
 &= -\frac{\partial}{\partial x}\left(\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
 &= -\left[\frac{1}{(x^2+y^2+z^2)^{3/2}} + x \cdot \frac{\partial}{\partial x}\left(\frac{1}{(x^2+y^2+z^2)^{3/2}}\right)\right] \\
@@ -117,50 +117,50 @@ $\begin{align*}
 &= \frac{-1 \cdot (x^2+y^2+z^2) + 3x^2}{(x^2+y^2+z^2)^{5/2}} \\
 &= \frac{-x^2-y^2-z^2 + 3x^2}{(x^2+y^2+z^2)^{5/2}} \\
 &= \frac{2x^2-y^2-z^2}{(x^2+y^2+z^2)^{5/2}}
-\end{align*}$
+\end{aligned}$$
 
 Durch analoges Vorgehen erhalten wir:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial y^2} &= \frac{2y^2-x^2-z^2}{(x^2+y^2+z^2)^{5/2}} \\
 \frac{\partial^2 f}{\partial z^2} &= \frac{2z^2-x^2-y^2}{(x^2+y^2+z^2)^{5/2}}
-\end{align*}$
+\end{aligned}$$
 
 Für die gemischten Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x \partial y} &= \frac{\partial}{\partial x}\left(-\frac{y}{(x^2+y^2+z^2)^{3/2}}\right) \\
 &= -\frac{\partial}{\partial x}\left(\frac{y}{(x^2+y^2+z^2)^{3/2}}\right) \\
 &= -y \cdot \frac{\partial}{\partial x}\left(\frac{1}{(x^2+y^2+z^2)^{3/2}}\right) \\
 &= -y \cdot \left(-\frac{3}{2}\right)(x^2+y^2+z^2)^{-5/2} \cdot 2x \\
 &= \frac{3xy}{(x^2+y^2+z^2)^{5/2}}
-\end{align*}$
+\end{aligned}$$
 
 Und für die umgekehrte Reihenfolge:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial y \partial x} &= \frac{\partial}{\partial y}\left(-\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
 &= -\frac{\partial}{\partial y}\left(\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
 &= -x \cdot \frac{\partial}{\partial y}\left(\frac{1}{(x^2+y^2+z^2)^{3/2}}\right) \\
 &= -x \cdot \left(-\frac{3}{2}\right)(x^2+y^2+z^2)^{-5/2} \cdot 2y \\
 &= \frac{3xy}{(x^2+y^2+z^2)^{5/2}}
-\end{align*}$
+\end{aligned}$$
 
 Die übrigen gemischten Ableitungen ergeben:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x \partial z} = \frac{\partial^2 f}{\partial z \partial x} &= \frac{3xz}{(x^2+y^2+z^2)^{5/2}} \\
 \frac{\partial^2 f}{\partial y \partial z} = \frac{\partial^2 f}{\partial z \partial y} &= \frac{3yz}{(x^2+y^2+z^2)^{5/2}}
-\end{align*}$
+\end{aligned}$$
 
 **Verifikation des Satzes von Schwarz:**
 Wir können beobachten, dass:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x \partial y} &= \frac{\partial^2 f}{\partial y \partial x} = \frac{3xy}{(x^2+y^2+z^2)^{5/2}} \\
 \frac{\partial^2 f}{\partial x \partial z} &= \frac{\partial^2 f}{\partial z \partial x} = \frac{3xz}{(x^2+y^2+z^2)^{5/2}} \\
 \frac{\partial^2 f}{\partial y \partial z} &= \frac{\partial^2 f}{\partial z \partial y} = \frac{3yz}{(x^2+y^2+z^2)^{5/2}}
-\end{align*}$
+\end{aligned}$$
 
 Damit ist der Satz von Schwarz für alle gemischten Ableitungen bestätigt, da die partiellen Ableitungen zweiter Ordnung unabhängig von der Reihenfolge der Differentiation sind.
 ````
@@ -201,87 +201,88 @@ jedoch viele dieser Kombinationen gleichwertig. Es genau 10 Möglichkeiten:
 
 **Schritt 1:** Berechnung der ersten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x} &= 2xy^2z^2 + 3x^2 \\
 \frac{\partial f}{\partial y} &= 2x^2yz^2 + 3y^2 \\
 \frac{\partial f}{\partial z} &= 2x^2y^2z + 3z^2 \\
-\end{align*}$
+\end{aligned}$$
 
 **Schritt 2:** Berechnung der zweiten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x^2} &= 2y^2z^2 + 6x \\
 \frac{\partial^2 f}{\partial x \partial y} &= 4xyz^2 \\
 \frac{\partial^2 f}{\partial x \partial z} &= 4xy^2z \\
 \frac{\partial^2 f}{\partial y^2} &= 2x^2z^2 + 6y \\
 \frac{\partial^2 f}{\partial y \partial z} &= 4x^2yz \\
 \frac{\partial^2 f}{\partial z^2} &= 2x^2y^2 + 6z \\
-\end{align*}$
+\end{aligned}$$
 
 **Schritt 3:** Berechnung der 10 unterschiedlichen dritten partiellen Ableitungen:
 
 1. Dreimal nach $x$ ableiten:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial x^3} &= \frac{\partial}{\partial x}\left(\frac{\partial^2 f}{\partial x^2}\right) = \frac{\partial}{\partial x}(2y^2z^2 + 6x) = 6
-\end{align*}$
+\end{aligned}$$
 
 2. Zweimal nach $x$, einmal nach $y$:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial y \partial x^2} &= \frac{\partial}{\partial y}\left(\frac{\partial^2 f}{\partial x^2}\right) = \frac{\partial}{\partial y}(2y^2z^2 + 6x) = 4yz^2
-\end{align*}$
+\end{aligned}$$
 
 3. Zweimal nach $x$, einmal nach $z$:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial z \partial x^2} &= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial x^2}\right) = \frac{\partial}{\partial z}(2y^2z^2 + 6x) = 4y^2z
-\end{align*}$
+\end{aligned}$$
 
 4. Einmal nach $x$, zweimal nach $y$:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial y^2 \partial x} &= \frac{\partial}{\partial y}\left(\frac{\partial^2 f}{\partial x \partial y}\right) = \frac{\partial}{\partial y}(4xyz^2) = 4xz^2
-\end{align*}$
+\end{aligned}$$
 
 5. Je einmal nach $x$, $y$ und $z$:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial z \partial y \partial x} &= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial x \partial y}\right) = \frac{\partial}{\partial z}(4xyz^2) = 8xyz
-\end{align*}$
+\end{aligned}$$
 
 6. Einmal nach $x$, zweimal nach $z$:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial z^2 \partial x} &= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial x \partial z}\right) = \frac{\partial}{\partial z}(4xy^2z) = 4xy^2
-\end{align*}$
+\end{aligned}$$
 
 7. Dreimal nach $y$ ableiten:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial y^3} &= \frac{\partial}{\partial y}\left(\frac{\partial^2 f}{\partial y^2}\right) = \frac{\partial}{\partial y}(2x^2z^2 + 6y) = 6
-\end{align*}$
+\end{aligned}$$
 
 8. Zweimal nach $y$, einmal nach $z$:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial z \partial y^2} &= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial y^2}\right) = \frac{\partial}{\partial z}(2x^2z^2 + 6y) = 4x^2z
-\end{align*}$
+\end{aligned}$$
 
 9. Einmal nach $y$, zweimal nach $z$:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial z^2 \partial y} &= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial y \partial z}\right) = \frac{\partial}{\partial z}(4x^2yz) = 4x^2y
-\end{align*}$
+\end{aligned}$$
 
 10. Dreimal nach $z$ ableiten:
-$\begin{align*}
+
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial z^3} &= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial z^2}\right) = \frac{\partial}{\partial z}(2x^2y^2 + 6z) = 6
-\end{align*}$
+\end{aligned}$$
 
 **Zusammenfassung der 10 verschiedenen Werte:**
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^3 f}{\partial x^3} &= 6 \\
 \frac{\partial^3 f}{\partial y \partial x^2} &= 4yz^2 \\
 \frac{\partial^3 f}{\partial z \partial x^2} &= 4y^2z \\
@@ -292,7 +293,7 @@ $\begin{align*}
 \frac{\partial^3 f}{\partial z \partial y^2} &= 4x^2z \\
 \frac{\partial^3 f}{\partial z^2 \partial y} &= 4x^2y \\
 \frac{\partial^3 f}{\partial z^3} &= 6
-\end{align*}$
+\end{aligned}$$
 
 Gemäß dem Satz von Schwarz haben wir damit alle 27 möglichen partiellen
 Ableitungen dritter Ordnung berechnet, die auf diese 10 verschiedenen Werte
@@ -315,19 +316,19 @@ a) $f(x,y) = x^2y + xy^2 - 3x^2 + 2y^2$
 
 **Schritt 1:** Berechnung der ersten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x} &= 2xy + y^2 - 6x \\
 \frac{\partial f}{\partial y} &= x^2 + 2xy + 4y
-\end{align*}$
+\end{aligned}$$
 
 **Schritt 2:** Berechnung der zweiten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x^2} &= 2y - 6 \\
 \frac{\partial^2 f}{\partial x \partial y} &= 2x + 2y \\
 \frac{\partial^2 f}{\partial y \partial x} &= 2x + 2y \\
 \frac{\partial^2 f}{\partial y^2} &= 2x + 4
-\end{align*}$
+\end{aligned}$$
 
 **Schritt 3:** Aufstellung der Hesse-Matrix:
 
@@ -343,15 +344,15 @@ b) $f(x,y,z) = x^2 + y^2 + z^2 - 2xy - 2xz + 3yz$
 
 **Schritt 1:** Berechnung der ersten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x} &= 2x - 2y - 2z \\
 \frac{\partial f}{\partial y} &= 2y - 2x + 3z \\
 \frac{\partial f}{\partial z} &= 2z - 2x + 3y
-\end{align*}$
+\end{aligned}$$
 
 **Schritt 2:** Berechnung der zweiten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x^2} &= 2 \\
 \frac{\partial^2 f}{\partial x \partial y} &= -2 \\
 \frac{\partial^2 f}{\partial x \partial z} &= -2 \\
@@ -361,7 +362,7 @@ $\begin{align*}
 \frac{\partial^2 f}{\partial z \partial x} &= -2 \\
 \frac{\partial^2 f}{\partial z \partial y} &= 3 \\
 \frac{\partial^2 f}{\partial z^2} &= 2
-\end{align*}$
+\end{aligned}$$
 
 **Schritt 3:** Aufstellung der Hesse-Matrix:
 
@@ -380,48 +381,48 @@ c) $f(x,y) = \sin(xy) + x^2 - y^2$
 
 **Schritt 1:** Berechnung der ersten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f}{\partial x} &= y\cos(xy) + 2x \\
 \frac{\partial f}{\partial y} &= x\cos(xy) - 2y
-\end{align*}$
+\end{aligned}$$
 
 **Schritt 2:** Berechnung der zweiten partiellen Ableitungen:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x^2} &= \frac{\partial}{\partial x}(y\cos(xy) + 2x) \\
 &= \frac{\partial}{\partial x}(y\cos(xy)) + \frac{\partial}{\partial x}(2x) \\
 &= y \cdot \frac{\partial}{\partial x}(\cos(xy)) + 2 \\
 &= y \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial x}(xy) + 2 \\
 &= y \cdot (-\sin(xy)) \cdot y + 2 \\
 &= -y^2\sin(xy) + 2
-\end{align*}$
+\end{aligned}$$
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial x \partial y} &= \frac{\partial}{\partial y}(y\cos(xy) + 2x) \\
 &= \frac{\partial}{\partial y}(y\cos(xy)) + \frac{\partial}{\partial y}(2x) \\
 &= \cos(xy) + y \cdot \frac{\partial}{\partial y}(\cos(xy)) + 0 \\
 &= \cos(xy) + y \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial y}(xy) \\
 &= \cos(xy) + y \cdot (-\sin(xy)) \cdot x \\
 &= \cos(xy) - xy\sin(xy)
-\end{align*}$
+\end{aligned}$$
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial y \partial x} &= \frac{\partial}{\partial x}(x\cos(xy) - 2y) \\
 &= \frac{\partial}{\partial x}(x\cos(xy)) + \frac{\partial}{\partial x}(-2y) \\
 &= \cos(xy) + x \cdot \frac{\partial}{\partial x}(\cos(xy)) + 0 \\
 &= \cos(xy) + x \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial x}(xy) \\
 &= \cos(xy) + x \cdot (-\sin(xy)) \cdot y \\
 &= \cos(xy) - xy\sin(xy)
-\end{align*}$
+\end{aligned}$$
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f}{\partial y^2} &= \frac{\partial}{\partial y}(x\cos(xy) - 2y) \\
 &= \frac{\partial}{\partial y}(x\cos(xy)) + \frac{\partial}{\partial y}(-2y) \\
 &= x \cdot \frac{\partial}{\partial y}(\cos(xy)) - 2 \\
 &= x \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial y}(xy) - 2 \\
 &= x \cdot (-\sin(xy)) \cdot x - 2 \\
 &= -x^2\sin(xy) - 2
-\end{align*}$
+\end{aligned}$$
 
 **Schritt 3:** Aufstellung der Hesse-Matrix:
 

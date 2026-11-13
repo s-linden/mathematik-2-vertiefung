@@ -24,22 +24,23 @@ Der Funktionswert in Punkt $(1,2)$ ist $f(1,2) = \frac{5}{6}$.
  
 Die partiellen Ableitungen von $f$ lauten : 
  
-$\begin{align*}
+
+$$\begin{aligned}
 \frac{\partial f(x,y)}{\partial x} &=
 \frac{2x}{x^2+y^2+1} - \frac{2x \left(x^2+y^2\right)}{\left(x^2+y^2+1\right)^2} \\
 \qquad \Rightarrow & \frac{\partial f(1,2)}{\partial x} = \frac{1}{18}\\
 \frac{\partial f(x,y)}{\partial y} &=
 \frac{2y}{x^2+y^2+1}-\frac{2y\left(x^2+y^2\right)}{\left(x^2+y^2+1\right)^2} \\
 \qquad \Rightarrow & \frac{\partial f(1,2)}{\partial y} = \frac{1}{9}\\
-\end{align*}$
+\end{aligned}$$
 
 Damit erhält man das Taylorpolynom von $f$ bei $(x_0,y_0)=(1,2)$ als 
 
-$\begin{align*} 
+$$\begin{aligned} 
 T_{1,f}(x,y)
 & = f(1,2)+\frac{\partial f}{\partial x}(1,2)\cdot(x-1)+\frac{\partial f}{\partial y}(1,2)\cdot(y-2)\\
 & = \frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)\ . 
-\end{align*} $
+\end{aligned}$$
 ```
 ````
 
@@ -65,17 +66,17 @@ Der Funktionswert im Punkt $(1,0)$ ist $f(1,0) = 1$.
  
 Die partiellen Ableitungen von $f$ lauten:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f(x,y)}{\partial x} &= \frac{x}{\sqrt{x^2+y^2}}, \\
 \frac{\partial f(x,y)}{\partial y} &= \frac{y}{\sqrt{x^2+y^2}}.
-\end{align*}$
+\end{aligned}$$
 
 Am Entwicklungspunkt $(x_0,y_0)=(1,0)$ sind die partiellen Ableitungen
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial f(1,0)}{\partial x} &= 1, \\
 \frac{\partial f(1,0)}{\partial y} &= 0.
-\end{align*}$
+\end{aligned}$$
 
 Damit ist das Taylorpolynom  1. Grades von $f$ am Entwicklungspunkt $(x_0,y_0)=(1,0)$ 
 
@@ -101,10 +102,10 @@ und untersuchen Sie, ob in diesen Punkten lokale Minima bzw. Maxima vorliegen.
 ```{dropdown} Lösungsweg
 Die ersten partiellen Ableitungen lauten:
 
-$\begin{align*} 
+$$\begin{aligned} 
 \frac{\partial f(x,y)}{\partial x} &= 3 x^2-1, \\ 
 \frac{\partial f(x,y)}{\partial y} & =3 y^2-1. \\
-\end{align*}$
+\end{aligned}$$
  
 Um die stationären Punkte, also die möglichen Kandidaten zu finden, ist das folgende Gleichungssystem zu lösen: 
  
@@ -125,12 +126,13 @@ Dieses Gleichungssystem hat 4 Lösungen, nämlich
 die die stationären Punkte darstellen.
  
 Um den Typ der stationären Punkte zu bestimmen, werden die zweiten partiellen Ableitungen berechnet:
-\begin{align*}
+
+$$\begin{aligned}
 \frac{\partial^2 f(x,y)}{\partial x \partial x} &= 6x, \\ 
 \frac{\partial^2 f(x,y)}{\partial y \partial x} &= 0, \\
 \frac{\partial^2 f(x,y)}{\partial y \partial y} &= 6y, \\ 
 \frac{\partial^2 f(x,y)}{\partial x \partial y} &= 0.
-\end{align*}
+\end{aligned}$$
 
 Die Hesse-Matrix besteht aus den zweiten partiellen Ableitungen
 
@@ -208,10 +210,10 @@ und untersuchen Sie, ob in diesen Punkten lokale Minima bzw. Maxima vorliegen.
 ```{dropdown} Lösungsweg
 Die ersten partiellen Ableitungen lauten:
 
-$\begin{align*} 
+$$\begin{aligned} 
 \frac{\partial f(x,y)}{\partial x} &= -3 x^2 -3x + 6, \\ 
 \frac{\partial f(x,y)}{\partial y} &= -6 y^2 - 18y + 24. 
-\end{align*}$
+\end{aligned}$$
 
 Um die stationären Punkte zu finden, ist das folgende Gleichungssystem zu lösen: 
 
@@ -233,12 +235,12 @@ die die stationären Punkte darstellen.
  
 Um den Typ der stationären Punkte zu bestimmen, werden die zweiten partiellen Ableitungen berechnet:
 
-$\begin{align*}
+$$\begin{aligned}
 \frac{\partial^2 f(x,y)}{\partial x \partial x} &= -6x-3, \\ 
 \frac{\partial^2 f(x,y)}{\partial y \partial x} &= 0, \\
 \frac{\partial^2 f(x,y)}{\partial y \partial y} &= -12y-18, \\ 
 \frac{\partial^2 f(x,y)}{\partial x \partial y} &= 0. 
-\end{align*}$
+\end{aligned}$$
  
 Die Hesse-Matrix besteht aus den zweiten Ableitungen
  
@@ -322,10 +324,10 @@ $$\Rightarrow y = \frac{50 - \frac{\pi}{8}x^2}{x}, \quad x\neq 0.$$
 
 In die Zielfunktion eingesetzt erhalten wir
 
-$\begin{align*}
+$$\begin{aligned}
 \tilde{U}(x) &= (1+\frac{\pi}{2})x + \frac{100}{x} - \frac{\pi}{4}x = \\
 &= (1+\frac{\pi}{4})x + \frac{100}{x}.
-\end{align*}$
+\end{aligned}$$
 
 Die 1. Ableitung ist
 

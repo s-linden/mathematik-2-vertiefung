@@ -24,9 +24,8 @@ dem Flächeninhalt der Fläche $A$ (siehe Abbildung).
 width: 300px
 name: fig_part10_integral1D
 ---
-Integral entspricht dem Flächeninhalt
-
-([Quelle:](https://commons.wikimedia.org/w/index.php?curid=1039841) "Wikimedia", Autor: 4C - Eigenes Werk, based on JPG version, Lizenz: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/))
+Integral entspricht dem Flächeninhalt (Quelle: 4C, [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=1039841);
+Lizenz: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/))
 ```
 
 Dementsprechend beschreibt das Doppelintegral einer Funktion von zwei Variablen

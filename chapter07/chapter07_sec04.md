@@ -103,7 +103,7 @@ y & x \\
 
 Dann ist die Jacobi-Matrix der verketteten Funktion
 
-$\begin{align*}
+$$\begin{aligned}
 \mathbf{J}_{f\circ g}(r,\varphi) &= \mathbf{J}_{f}(g(r,\varphi)) \cdot \mathbf{J}_{g}(r, \varphi) = \\
 &=
 \begin{pmatrix}
@@ -121,7 +121,7 @@ r\cdot\cos(\varphi) & r\cdot\sin(\varphi) \\
 2r\sin(\varphi)\cos(\varphi) & r^2\left(\cos^2(\varphi)-\sin^2(\varphi) \right)\\
 2r\left(\sin^2(\varphi)-\cos^2(\varphi)\right) & 4r^2\sin(\varphi)\cos(\varphi) \\
 \end{pmatrix}
-\end{align*}$
+\end{aligned}$$
 
 Das gleiche Ergebnis erhalten wir, wenn wir direkt die Jacobi-Matrix der
 verketteten Funktion berechnen. Manchmal ist es einfacher, die Jacobi-Matrizen

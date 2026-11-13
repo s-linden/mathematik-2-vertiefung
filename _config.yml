@@ -24,7 +24,16 @@ html:
   use_repository_button: true
 
 sphinx:
+  local_extensions:
+    nummerierung: _ext/   # Abbildungen, Tabellen und Formeln kapitelweise nummerieren (Abb. 2.1, Tab. 6.1, (7.3))
   config:
+    html_static_path: ["_static"]
+    html_css_files:
+      - nummerierung.css
+    numfig_format:              # Bildunterschriften "Abb. 2.1:" statt "Fig. 1"
+      figure: "Abb. %s:"
+      table: "Tab. %s"
+    math_numfig: true           # Formelnummern kapitelweise, z. B. (7.3)
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     html_js_files: 
       - https://cdn.plot.ly/plotly-latest.min.js #plotly für interaktive Grafiken (in Abschnitt 7.2)
